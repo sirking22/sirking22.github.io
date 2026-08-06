@@ -341,7 +341,10 @@ main {
   .chain-list > li {
     display: grid;
     grid-template-columns: 38fr 62fr;
-    grid-template-areas: "num frame" "text frame";
+    /* Третья строка-пружина обязательна: без неё высокий кадр, занимающий
+       обе строки, растягивает первую, и текст провисает к середине блока. */
+    grid-template-areas: "num frame" "text frame" ". frame";
+    grid-template-rows: auto auto 1fr;
     column-gap: 28px;
     align-items: start;
   }
