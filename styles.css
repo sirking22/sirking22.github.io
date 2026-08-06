@@ -578,6 +578,47 @@ main {
   }
 }
 
+.refusal-grid {
+  display: grid;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+/* Три показателя в ряд, вывод — полосой под ними. Сетка два на два ставила
+   бы вывод вровень с показателем, хотя это разные по роли вещи: первые три
+   отвечают «что случилось», четвёртая — «что из этого следует». */
+@media (min-width: 760px) {
+  .refusal-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .refusal-grid > :last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.card-metric {
+  font-family: var(--font-mono);
+  font-size: clamp(var(--text-xl), 4vw, var(--text-2xl));
+  color: var(--paper);
+  display: block;
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
+}
+
+/* Вывод последней карточки — обычное предложение, а не подпись под числом.
+   Стиль подписей внутри .live-item ставит верхний регистр и 13px: короткое
+   «против контроля» так читается, а фраза в двадцать слов — нет. */
+.card-outcome {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--paper);
+  margin: 0;
+}
+
 /* details */
 details {
   border: 1px solid var(--slate);
