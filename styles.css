@@ -36,9 +36,15 @@ body {
 }
 
 main {
-  max-width: 760px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.body-text,
+.thesis,
+.chain-list p {
+  max-width: 68ch;
 }
 
 .screen {
@@ -73,10 +79,9 @@ main {
 
 .divider {
   border: none;
-  border-top: 1px solid var(--gold);
-  width: 64px;
-  margin: 0 auto;
-  opacity: 0.9;
+  border-top: 1px solid var(--slate);
+  width: 100%;
+  margin: 0;
 }
 
 /* Lists with a gold "point" marker */
@@ -144,6 +149,11 @@ main {
   border-width: 2px;
   color: var(--gold);
   letter-spacing: 0.02em;
+}
+
+.btn-primary::after {
+  content: "→";
+  margin-left: 10px;
 }
 
 /* Diagram: wide screens (>=721px) show the SVG grid, narrow screens show the list below */
@@ -264,7 +274,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--stone);
+  background: var(--charcoal);
   border: 1px solid var(--slate);
   color: var(--paper);
   text-align: center;
@@ -274,8 +284,9 @@ main {
 
 .frame-label {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.4;
+  color: rgba(245, 245, 242, 0.55);
 }
 
 .frame-16x10 {
@@ -299,12 +310,25 @@ main {
 
 /* Chain list */
 .chain-list {
+  list-style: none;
   margin: 0;
-  padding-left: 24px;
+  padding-left: 0;
+  counter-reset: chain-item;
 }
 
 .chain-list > li {
+  counter-increment: chain-item;
   margin-bottom: 32px;
+}
+
+.chain-list > li::before {
+  content: counter(chain-item, decimal-leading-zero);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 8px;
 }
 
 .chain-list p {
@@ -313,15 +337,59 @@ main {
   line-height: 1.55;
 }
 
-.chain-list::marker,
-.chain-list li::marker {
-  color: var(--gold);
-  font-family: var(--font-mono);
+@media (min-width: 900px) {
+  .chain-list > li {
+    display: grid;
+    grid-template-columns: 38fr 62fr;
+    grid-template-areas: "num frame" "text frame";
+    column-gap: 28px;
+    align-items: start;
+  }
+
+  .chain-list > li::before {
+    grid-area: num;
+    margin-bottom: 0;
+  }
+
+  .chain-list > li > p {
+    grid-area: text;
+  }
+
+  .chain-list > li > .frame {
+    grid-area: frame;
+  }
 }
 
 /* Living system */
 .live-item {
+  border: 1px solid var(--slate);
+  padding: 16px;
   margin-bottom: 28px;
+}
+
+.live-item .body-text {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(245, 245, 242, 0.55);
+  margin: 12px 0 0;
+}
+
+@media (min-width: 900px) {
+  #living {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  #living > .section-title,
+  #living > .thesis {
+    grid-column: 1 / -1;
+  }
+
+  #living .live-item {
+    margin-bottom: 0;
+  }
 }
 
 /* details */
