@@ -9,6 +9,30 @@
   --font-serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
   --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-mono: ui-monospace, Consolas, 'SF Mono', monospace;
+
+  /* Шкала отступов. Любое расстояние на странице берётся только отсюда.
+     Новое значение не дописывается — берётся ближайшая ступень. */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 56px;
+  --space-10: 72px;
+
+  /* Шкала кеглей. Те же правила. */
+  --text-xs: 12px;
+  --text-s: 13px;
+  --text-m: 14px;
+  --text-base: 16px;
+  --text-l: 18px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --text-3xl: 40px;
+  --text-4xl: 48px;
 }
 
 * {
@@ -20,9 +44,24 @@ html {
 }
 
 /* Полосы прокрутки: 100vw у плит-подложек шире видимой области ровно на
-   ширину скроллбара, поэтому обрезаем на обоих уровнях, а не только на body. */
+   ширину скроллбара, поэтому обрезаем на обоих уровнях, а не только на body.
+   Обрезка обязана быть именно clip, а не hidden: hidden делает элемент
+   контейнером прокрутки, и тогда sticky-шапка перестаёт прилипать — замерено,
+   при прокрутке на 2037px она уезжала на те же 2037px. Строка с hidden
+   оставлена первой как запасная для браузеров без clip. */
 html {
   overflow-x: hidden;
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -30,15 +69,16 @@ body {
   background: var(--graphite);
   color: var(--paper);
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: var(--text-base);
   line-height: 1.55;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 main {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--space-5);
 }
 
 .body-text,
@@ -48,32 +88,107 @@ main {
 }
 
 .screen {
-  padding: 56px 0;
+  padding: var(--space-9) 0;
+  /* Производная от высоты .topbar (52px) плюс запас на воздух — не ступень шкалы */
+  scroll-margin-top: 64px;
+}
+
+/* Верхняя навигация по блокам */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--graphite);
+  border-bottom: 1px solid var(--slate);
+}
+
+.topbar-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+  height: 52px;
+  display: flex;
+  align-items: center;
+}
+
+.topbar-mark {
+  font-family: var(--font-serif);
+  color: var(--gold);
+  text-decoration: none;
+  font-size: var(--text-l);
+  margin-right: var(--space-6);
+  flex-shrink: 0;
+}
+
+.topbar-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.topbar-nav::-webkit-scrollbar {
+  display: none;
+}
+
+/* Узкий экран: список пунктов шире колонки (замерено 428px против 302px при
+   окне 375). Обрыв на границе выглядит как конец меню, поэтому правый край
+   гасим — затухание читается как «дальше есть ещё». */
+@media (max-width: 600px) {
+  .topbar-nav {
+    -webkit-mask-image: linear-gradient(90deg, #000 82%, transparent 100%);
+    mask-image: linear-gradient(90deg, #000 82%, transparent 100%);
+  }
+}
+
+.topbar-nav li {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.topbar-nav a {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--text-m);
+  color: rgba(245, 245, 242, 0.72);
+  text-decoration: none;
+  padding: var(--space-1) 0;
+}
+
+.topbar-nav a:hover,
+.topbar-nav a:focus-visible {
+  color: var(--paper);
+  box-shadow: inset 0 -2px 0 var(--gold);
 }
 
 .section-title {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: clamp(28px, 6vw, 40px);
+  font-size: clamp(var(--text-2xl), 6vw, var(--text-3xl));
   line-height: 1.2;
-  margin: 0 0 20px;
+  margin: 0 0 var(--space-5);
   color: var(--paper);
 }
 
 .thesis {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: clamp(18px, 3.4vw, 22px);
+  font-size: clamp(var(--text-l), 3.4vw, var(--text-xl));
   line-height: 1.4;
-  margin: 0 0 20px;
+  margin: 0 0 var(--space-5);
   color: var(--paper);
 }
 
 .body-text {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: var(--text-base);
   line-height: 1.6;
-  margin: 0 0 16px;
+  margin: 0 0 var(--space-4);
   color: var(--paper);
 }
 
@@ -88,16 +203,16 @@ main {
 .stats,
 .method-points {
   list-style: none;
-  margin: 0 0 20px;
+  margin: 0 0 var(--space-5);
   padding: 0;
 }
 
 .stats li,
 .method-points li {
   position: relative;
-  padding-left: 22px;
-  margin-bottom: 12px;
-  font-size: 16px;
+  padding-left: var(--space-5);
+  margin-bottom: var(--space-3);
+  font-size: var(--text-base);
   line-height: 1.5;
 }
 
@@ -120,8 +235,8 @@ main {
 .link-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin: 24px 0 0;
+  gap: var(--space-3);
+  margin: var(--space-6) 0 0;
 }
 
 .btn {
@@ -129,31 +244,65 @@ main {
   align-items: center;
   justify-content: center;
   min-height: 44px;
-  padding: 10px 20px;
-  border: 1px solid var(--gold);
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--slate);
   color: var(--paper);
   text-decoration: none;
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: var(--text-base);
   background: var(--charcoal);
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
 }
 
 .btn:hover,
 .btn:focus {
   background: var(--stone);
+  border-color: var(--gold);
+}
+
+.btn:focus-visible,
+.btn-primary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
 }
 
 /* Главное действие финального экрана: золото остаётся сигналом,
    поэтому усиление даётся плотностью линии, а не заливкой. */
 .btn-primary {
-  border-width: 2px;
+  border: 2px solid var(--gold);
   color: var(--gold);
+  background: transparent;
   letter-spacing: 0.02em;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--gold);
+  color: var(--graphite);
+  border-color: var(--gold);
 }
 
 .btn-primary::after {
   content: "→";
-  margin-left: 10px;
+  margin-left: var(--space-3);
+  display: inline-block;
+  transition: transform 160ms ease;
+}
+
+.btn-primary:hover::after,
+.btn-primary:focus::after {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn-primary {
+    transition: none;
+  }
+
+  .btn-primary::after {
+    transition: none;
+  }
 }
 
 /* Diagram: wide screens (>=721px) show the SVG grid, narrow screens show the list below */
@@ -162,8 +311,8 @@ main {
   overflow-y: hidden;
   background: var(--charcoal);
   border: 1px solid var(--slate);
-  margin: 8px 0 28px;
-  padding: 12px;
+  margin: var(--space-2) 0 var(--space-6);
+  padding: var(--space-3);
   width: calc(100vw - 48px);
   max-width: 1200px;
   margin-left: 50%;
@@ -220,13 +369,13 @@ main {
 /* Narrow-screen text fallback for the diagram; always in the DOM */
 .diagram-list {
   display: none;
-  margin: 8px 0 28px;
-  padding-left: 24px;
+  margin: var(--space-2) 0 var(--space-6);
+  padding-left: var(--space-6);
 }
 
 .diagram-list li {
-  margin-bottom: 14px;
-  font-size: 16px;
+  margin-bottom: var(--space-3);
+  font-size: var(--text-base);
   line-height: 1.5;
 }
 
@@ -238,12 +387,13 @@ main {
 
 .diagram-list .branch {
   list-style: none;
-  margin: 8px 0 0;
-  padding-left: 16px;
+  margin: var(--space-2) 0 0;
+  padding-left: var(--space-4);
 }
 
 .diagram-list .branch li {
-  margin-bottom: 6px;
+  margin-bottom: var(--space-2);
+  /* вне шкалы: см. задачу по вторичной типографике */
   font-size: 15px;
 }
 
@@ -252,8 +402,8 @@ main {
 }
 
 .diagram-list .feedback-note {
-  margin: 6px 0 0;
-  font-size: 14px;
+  margin: var(--space-2) 0 0;
+  font-size: var(--text-m);
   font-style: italic;
   color: var(--paper);
   opacity: 0.85;
@@ -278,13 +428,13 @@ main {
   border: 1px solid var(--slate);
   color: var(--paper);
   text-align: center;
-  padding: 12px;
-  margin: 12px 0 20px;
+  padding: var(--space-3);
+  margin: var(--space-3) 0 var(--space-5);
 }
 
 .frame-label {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: var(--text-xs);
   line-height: 1.4;
   color: rgba(245, 245, 242, 0.55);
 }
@@ -303,7 +453,7 @@ main {
   display: inline-flex;
   min-height: 44px;
   width: auto;
-  padding: 8px 14px;
+  padding: var(--space-2) var(--space-3);
   margin: 0;
   vertical-align: middle;
 }
@@ -318,22 +468,22 @@ main {
 
 .chain-list > li {
   counter-increment: chain-item;
-  margin-bottom: 32px;
+  margin-bottom: var(--space-7);
 }
 
 .chain-list > li::before {
   content: counter(chain-item, decimal-leading-zero);
   display: block;
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--text-s);
   letter-spacing: 0.1em;
   color: var(--gold);
-  margin-bottom: 8px;
+  margin-bottom: var(--space-2);
 }
 
 .chain-list p {
-  margin: 0 0 10px;
-  font-size: 16px;
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-base);
   line-height: 1.55;
 }
 
@@ -345,7 +495,7 @@ main {
        обе строки, растягивает первую, и текст провисает к середине блока. */
     grid-template-areas: "num frame" "text frame" ". frame";
     grid-template-rows: auto auto 1fr;
-    column-gap: 28px;
+    column-gap: var(--space-6);
     align-items: start;
   }
 
@@ -366,23 +516,23 @@ main {
 /* Living system */
 .live-item {
   border: 1px solid var(--slate);
-  padding: 16px;
-  margin-bottom: 28px;
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
 }
 
 .live-item .body-text {
-  font-size: 13px;
+  font-size: var(--text-s);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: rgba(245, 245, 242, 0.55);
-  margin: 12px 0 0;
+  margin: var(--space-3) 0 0;
 }
 
 @media (min-width: 900px) {
   #living {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: var(--space-5);
   }
 
   #living > .section-title,
@@ -399,15 +549,15 @@ main {
 details {
   border: 1px solid var(--slate);
   background: var(--charcoal);
-  padding: 4px 16px;
-  margin: 16px 0;
+  padding: var(--space-1) var(--space-4);
+  margin: var(--space-4) 0;
 }
 
 summary {
   cursor: pointer;
-  padding: 12px 0;
+  padding: var(--space-3) 0;
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: var(--text-base);
   min-height: 44px;
   display: flex;
   align-items: center;
@@ -415,68 +565,70 @@ summary {
 
 details p,
 details ul {
+  /* вне шкалы: см. задачу по вторичной типографике */
   font-size: 15px;
   line-height: 1.55;
   color: var(--paper);
 }
 
 details ul {
-  padding-left: 20px;
+  padding-left: var(--space-5);
 }
 
 details li {
-  margin-bottom: 8px;
+  margin-bottom: var(--space-2);
 }
 
 details[open] summary {
   border-bottom: 1px solid var(--slate);
-  margin-bottom: 12px;
+  margin-bottom: var(--space-3);
 }
 
 .not-carried {
   max-width: 760px;
-  margin: 24px auto 40px;
+  margin: var(--space-6) auto var(--space-8);
 }
 
 /* Первый экран: главное — тезис, а не служебный заголовок раздела.
    Поэтому «Кто я и что даю» работает надзаголовком, а тезис берёт
    размер и вес. Тексты при этом остаются ровно теми же. */
 #hero {
-  padding-top: 72px;
-  padding-bottom: 72px;
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
 }
 
 #hero .section-title {
   font-family: var(--font-sans);
-  font-size: 13px;
+  font-size: var(--text-s);
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
-  margin: 0 0 20px;
+  margin: 0 0 var(--space-5);
 }
 
 #hero .thesis {
+  /* вне шкалы: см. задачу по вторичной типографике */
   font-size: clamp(30px, 6.4vw, 48px);
   font-weight: 400;
   line-height: 1.14;
   letter-spacing: -0.01em;
-  margin: 0 0 22px;
+  margin: 0 0 var(--space-5);
   max-width: 16em;
 }
 
 #hero .body-text {
   max-width: 34em;
   color: rgba(245, 245, 242, 0.82);
-  margin-bottom: 28px;
+  margin-bottom: var(--space-6);
 }
 
 /* Числа читаются как показания, а не как строки списка */
 #hero .stats {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 40px;
-  margin: 0 0 30px;
+  gap: var(--space-3) var(--space-8);
+  margin: 0 0 var(--space-7);
 }
 
 #hero .stats li {
@@ -490,7 +642,7 @@ details[open] summary {
 #hero .stats .num {
   display: block;
   font-family: var(--font-mono);
-  font-size: clamp(22px, 4vw, 28px);
+  font-size: clamp(var(--text-xl), 4vw, var(--text-2xl));
   color: var(--gold);
   line-height: 1.2;
 }
@@ -500,7 +652,7 @@ details[open] summary {
 }
 
 #hero .stats li {
-  font-size: 14px;
+  font-size: var(--text-m);
   color: rgba(245, 245, 242, 0.72);
   max-width: 15em;
 }
@@ -550,11 +702,15 @@ details[open] summary {
 
 @media (max-width: 480px) {
   .screen {
-    padding: 40px 0;
+    padding: var(--space-8) 0;
   }
 
   main {
-    padding: 0 16px;
+    padding: 0 var(--space-4);
+  }
+
+  .topbar-inner {
+    padding: 0 var(--space-4);
   }
 
   /* На узком экране камень занимал бы половину строки — оставляем только край */
