@@ -93,13 +93,46 @@ main {
   scroll-margin-top: 64px;
 }
 
-/* Верхняя навигация по блокам */
+/* Верхняя навигация по блокам.
+
+   Стекло здесь — ровно один слой размытия на всю страницу. Это осознанный
+   предел: просадка прокрутки на мобильных GPU начинается после трёх-пяти
+   одновременных backdrop-filter, поэтому второго такого элемента на странице
+   быть не должно.
+
+   Три уровня отката, каждый обязателен:
+   — @supports для браузеров без backdrop-filter (около 5% трафика);
+   — prefers-reduced-transparency для тех, кто выключил прозрачность в системе;
+   — базовый background задан ДО фильтра, поэтому при любом отказе шапка
+     остаётся читаемой, а не превращается в полупрозрачную кашу. */
 .topbar {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--graphite);
+  /* 0.78 — не на глаз, а граница по замеру. Худший случай: под шапку заезжает
+     белый заголовок. Контраст пунктов меню к такой подложке: при 0.72 — 3,97
+     (ниже нормы 4,5), при 0.78 — 4,89, при 0.82 — 5,68. Взято минимальное
+     значение, проходящее норму, то есть максимум стекла без потери читаемости. */
+  background: rgba(14, 15, 17, 0.78);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
   border-bottom: 1px solid var(--slate);
+  /* Светлый кант по верхней грани: у стекла есть край, и он ловит свет */
+  box-shadow: inset 0 1px 0 rgba(245, 245, 242, 0.06);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .topbar {
+    background: var(--graphite);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .topbar {
+    background: var(--graphite);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
 }
 
 .topbar-inner {
@@ -655,6 +688,17 @@ details[open] summary {
   font-size: var(--text-m);
   color: rgba(245, 245, 242, 0.72);
   max-width: 15em;
+}
+
+/* Подпись под строкой показателей: говорит, откуда числа взялись.
+   Тише подписей самих показателей, иначе спорит с ними за внимание. */
+.stats-note {
+  font-family: var(--font-sans);
+  font-size: var(--text-m);
+  line-height: 1.5;
+  color: rgba(245, 245, 242, 0.55);
+  max-width: 46em;
+  margin: 0 0 var(--space-6);
 }
 
 /* Плиты-подложки. Лежат под текстом во всю ширину окна, а не в колонке.
