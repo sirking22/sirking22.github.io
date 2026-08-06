@@ -1,0 +1,372 @@
+:root {
+  --graphite: #0E0F11;
+  --charcoal: #1A1C1F;
+  --stone: #2B2E33;
+  --slate: #3B3F44;
+  --gold: #D4AF37;
+  --paper: #F5F5F2;
+
+  --font-serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, 'SF Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--graphite);
+}
+
+body {
+  margin: 0;
+  background: var(--graphite);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.screen {
+  padding: 56px 0;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(28px, 6vw, 40px);
+  line-height: 1.2;
+  margin: 0 0 20px;
+  color: var(--paper);
+}
+
+.thesis {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(18px, 3.4vw, 22px);
+  line-height: 1.4;
+  margin: 0 0 20px;
+  color: var(--paper);
+}
+
+.body-text {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 16px;
+  color: var(--paper);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--gold);
+  width: 64px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Lists with a gold "point" marker */
+.stats,
+.method-points {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.stats li,
+.method-points li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.stats li::before,
+.method-points li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 0;
+}
+
+.num {
+  font-family: var(--font-mono);
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid var(--gold);
+  color: var(--paper);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  background: var(--charcoal);
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--stone);
+}
+
+/* Главное действие финального экрана: золото остаётся сигналом,
+   поэтому усиление даётся плотностью линии, а не заливкой. */
+.btn-primary {
+  border-width: 2px;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
+
+/* Diagram: wide screens (>=721px) show the SVG grid, narrow screens show the list below */
+.diagram-wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: var(--charcoal);
+  border: 1px solid var(--slate);
+  margin: 8px 0 28px;
+  padding: 12px;
+  width: calc(100vw - 48px);
+  max-width: 1200px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.diagram {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.diagram .node rect,
+.diagram .node polygon {
+  fill: var(--charcoal);
+  stroke: var(--slate);
+  stroke-width: 1.5;
+}
+
+.diagram .node text {
+  fill: var(--paper);
+  font-family: var(--font-sans);
+  font-size: 17px;
+}
+
+.diagram .edge line,
+.diagram .edge-line {
+  stroke: var(--gold);
+  stroke-width: 1.5;
+}
+
+.diagram .edge-curve {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+}
+
+.diagram .edge-feedback {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 5;
+}
+
+.diagram .edge-label {
+  fill: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 17px;
+  text-anchor: middle;
+}
+
+/* Narrow-screen text fallback for the diagram; always in the DOM */
+.diagram-list {
+  display: none;
+  margin: 8px 0 28px;
+  padding-left: 24px;
+}
+
+.diagram-list li {
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.diagram-list::marker,
+.diagram-list li::marker {
+  color: var(--gold);
+  font-family: var(--font-mono);
+}
+
+.diagram-list .branch {
+  list-style: none;
+  margin: 8px 0 0;
+  padding-left: 16px;
+}
+
+.diagram-list .branch li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.diagram-list .branch li::marker {
+  content: none;
+}
+
+.diagram-list .feedback-note {
+  margin: 6px 0 0;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--paper);
+  opacity: 0.85;
+}
+
+@media (max-width: 999px) {
+  .diagram-wrap {
+    display: none;
+  }
+
+  .diagram-list {
+    display: block;
+  }
+}
+
+/* Placeholder frames */
+.frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--stone);
+  border: 1px solid var(--slate);
+  color: var(--paper);
+  text-align: center;
+  padding: 12px;
+  margin: 12px 0 20px;
+}
+
+.frame-label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.frame-16x10 {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.frame-16x9 {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.frame-text {
+  display: inline-flex;
+  min-height: 44px;
+  width: auto;
+  padding: 8px 14px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+/* Chain list */
+.chain-list {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.chain-list > li {
+  margin-bottom: 32px;
+}
+
+.chain-list p {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.chain-list::marker,
+.chain-list li::marker {
+  color: var(--gold);
+  font-family: var(--font-mono);
+}
+
+/* Living system */
+.live-item {
+  margin-bottom: 28px;
+}
+
+/* details */
+details {
+  border: 1px solid var(--slate);
+  background: var(--charcoal);
+  padding: 4px 16px;
+  margin: 16px 0;
+}
+
+summary {
+  cursor: pointer;
+  padding: 12px 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+details p,
+details ul {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--paper);
+}
+
+details ul {
+  padding-left: 20px;
+}
+
+details li {
+  margin-bottom: 8px;
+}
+
+details[open] summary {
+  border-bottom: 1px solid var(--slate);
+  margin-bottom: 12px;
+}
+
+.not-carried {
+  max-width: 760px;
+  margin: 24px auto 40px;
+}
+
+@media (max-width: 480px) {
+  .screen {
+    padding: 40px 0;
+  }
+
+  main {
+    padding: 0 16px;
+  }
+}
