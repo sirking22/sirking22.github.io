@@ -19,6 +19,12 @@ html {
   background: var(--graphite);
 }
 
+/* Полосы прокрутки: 100vw у плит-подложек шире видимой области ровно на
+   ширину скроллбара, поэтому обрезаем на обоих уровнях, а не только на body. */
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   background: var(--graphite);
