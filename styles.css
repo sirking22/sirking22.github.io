@@ -361,6 +361,49 @@ details[open] summary {
   margin: 24px auto 40px;
 }
 
+/* Плиты-подложки. Лежат под текстом во всю ширину окна, а не в колонке.
+   Все три — локальные webp рядом с сайтом, внешних запросов не добавляют. */
+.screen {
+  position: relative;
+  isolation: isolate;
+}
+
+.screen::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Первый экран: камень уходит вправо, слева графит держит текст читаемым */
+#hero::before {
+  background-image:
+    linear-gradient(90deg, var(--graphite) 0%, rgba(14, 15, 17, 0.92) 38%, rgba(14, 15, 17, 0.55) 100%),
+    url("assets/hero-plate.webp");
+  background-position: right center;
+}
+
+/* Лента свидетельств: текстура приглушена, чтобы не спорить с текстом */
+#chain::before {
+  background-image:
+    linear-gradient(180deg, rgba(14, 15, 17, 0.93), rgba(14, 15, 17, 0.88)),
+    url("assets/evidence-backing.webp");
+}
+
+/* Финальный экран: спокойнее остальных */
+#next::before {
+  background-image:
+    linear-gradient(180deg, rgba(14, 15, 17, 0.86), rgba(14, 15, 17, 0.94)),
+    url("assets/final-plate.webp");
+}
+
 @media (max-width: 480px) {
   .screen {
     padding: 40px 0;
@@ -368,5 +411,14 @@ details[open] summary {
 
   main {
     padding: 0 16px;
+  }
+
+  /* На узком экране камень занимал бы половину строки — оставляем только край */
+  #hero::before {
+    background-image:
+      linear-gradient(90deg, var(--graphite) 0%, rgba(14, 15, 17, 0.95) 55%, rgba(14, 15, 17, 0.7) 100%),
+      url("assets/hero-plate.webp");
+    background-size: cover;
+    background-position: 72% center;
   }
 }
