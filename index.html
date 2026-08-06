@@ -79,15 +79,30 @@
 
 <section id="method" class="screen">
   <h2 class="section-title">Метод одной схемой</h2>
-  <p class="thesis">Каждая из этих практик известна по отдельности. Редкость — когда они собраны в один работающий контур на живых данных команды, а не в презентации.</p>
+  <p class="thesis">От сигнала — к проверке. От доказательства — к стандарту.</p>
+  <p class="body-text">Каждая из этих практик известна по отдельности. Редкость — когда они собраны в один работающий контур на живых данных команды, а не в презентации.</p>
 
   <div class="diagram-wrap">
-    <svg viewBox="0 0 1200 900" class="diagram" aria-hidden="true">
+    <svg viewBox="0 -60 1200 960" class="diagram" aria-hidden="true">
       <defs>
         <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
           <path d="M0,0 L10,5 L0,10 z" fill="var(--gold)"></path>
         </marker>
       </defs>
+
+      <g class="zones" aria-hidden="true">
+        <rect class="zone-band" x="0" y="10" width="1200" height="155"></rect>
+        <rect class="zone-edge" x="0" y="10" width="3" height="155"></rect>
+        <text class="zone-label" x="0" y="-25">Бизнес</text>
+
+        <rect class="zone-band" x="0" y="230" width="1200" height="370"></rect>
+        <rect class="zone-edge" x="0" y="230" width="3" height="370"></rect>
+        <text class="zone-label" x="0" y="205">Решение</text>
+
+        <rect class="zone-band" x="0" y="670" width="1200" height="190"></rect>
+        <rect class="zone-edge" x="0" y="670" width="3" height="190"></rect>
+        <text class="zone-label" x="0" y="645">Обучение организации</text>
+      </g>
 
       <!-- row 1, L-to-R: A -> B -> C -> D -->
       <g class="edge">
@@ -213,38 +228,55 @@
     </svg>
   </div>
 
-  <ol class="diagram-list">
-    <li>Сигнал: разрыв в метрике</li>
-    <li>Диагностика: где в воронке</li>
-    <li>Оснований достаточно
-      <ul class="branch">
-        <li>нет — Исследование: закрыть пробел знания</li>
-        <li>да — Основания: сила, свежесть, релевантность</li>
-      </ul>
-    </li>
-    <li>Исследование: закрыть пробел знания</li>
-    <li>Основания: сила, свежесть, релевантность</li>
-    <li>Пул гипотез: ожидание и цена проверки</li>
-    <li>Приоритизация: эффект, уверенность, стоимость</li>
-    <li>Выбранная гипотеза</li>
-    <li>Концепт: чистая проверка одного механизма</li>
-    <li>Задача команды: гайд, критерии, часы</li>
-    <li>Артефакты и релиз</li>
-    <li>Метрики: базовая линия, факт, защитные</li>
-    <li>Механизм подтверждён
-      <ul class="branch">
-        <li>нет — Знание об ограничении</li>
-        <li>да — Повторная проверка и масштабирование</li>
-      </ul>
-    </li>
-    <li>Знание об ограничении
-      <p class="feedback-note">возврат к: Пул гипотез: ожидание и цена проверки</p>
-    </li>
-    <li>Повторная проверка и масштабирование</li>
-    <li>Обновление гайда и типовой задачи
-      <p class="feedback-note">возврат к: Задача команды: гайд, критерии, часы</p>
-    </li>
-  </ol>
+  <div class="diagram-list">
+    <section class="zone-card">
+      <h3 class="zone-card-title">Бизнес</h3>
+      <ol class="zone-card-steps">
+        <li>Сигнал: разрыв в метрике</li>
+        <li>Диагностика: где в воронке</li>
+        <li>Оснований достаточно
+          <ul class="branch">
+            <li>нет — Исследование: закрыть пробел знания</li>
+            <li>да — Основания: сила, свежесть, релевантность</li>
+          </ul>
+        </li>
+        <li>Исследование: закрыть пробел знания</li>
+      </ol>
+    </section>
+
+    <section class="zone-card">
+      <h3 class="zone-card-title">Решение</h3>
+      <ol class="zone-card-steps">
+        <li>Основания: сила, свежесть, релевантность</li>
+        <li>Пул гипотез: ожидание и цена проверки</li>
+        <li>Приоритизация: эффект, уверенность, стоимость</li>
+        <li>Выбранная гипотеза</li>
+        <li>Концепт: чистая проверка одного механизма</li>
+        <li>Задача команды: гайд, критерии, часы</li>
+        <li>Артефакты и релиз</li>
+        <li>Метрики: базовая линия, факт, защитные</li>
+      </ol>
+    </section>
+
+    <section class="zone-card">
+      <h3 class="zone-card-title">Обучение организации</h3>
+      <ol class="zone-card-steps">
+        <li>Механизм подтверждён
+          <ul class="branch">
+            <li>нет — Знание об ограничении</li>
+            <li>да — Повторная проверка и масштабирование</li>
+          </ul>
+        </li>
+        <li>Знание об ограничении
+          <p class="feedback-note">возврат к: Пул гипотез: ожидание и цена проверки</p>
+        </li>
+        <li>Повторная проверка и масштабирование</li>
+        <li>Обновление гайда и типовой задачи
+          <p class="feedback-note">возврат к: Задача команды: гайд, критерии, часы</p>
+        </li>
+      </ol>
+    </section>
+  </div>
 
   <ul class="method-points">
     <li>Работа начинается с разрыва в метрике, а не с идеи.</li>

@@ -399,23 +399,77 @@ main {
   text-anchor: middle;
 }
 
+.diagram .zone-band {
+  fill: rgba(245, 245, 242, 0.03);
+}
+
+.diagram .zone-edge {
+  fill: var(--gold);
+  opacity: 0.55;
+}
+
+.diagram .zone-label {
+  fill: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 22px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 /* Narrow-screen text fallback for the diagram; always in the DOM */
 .diagram-list {
   display: none;
   margin: var(--space-2) 0 var(--space-6);
+  /* Счётчик заводится на всём списке, а не в каждой карточке: зоны делят
+     один цикл из шестнадцати шагов, и нумерация обязана идти насквозь —
+     иначе три карточки читаются как три независимых процесса. */
+  counter-reset: zone-step;
+}
+
+.zone-card {
+  border: 1px solid var(--slate);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.zone-card-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-s);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 var(--space-4);
+}
+
+.zone-card-steps {
+  list-style: none;
+  margin: 0;
   padding-left: var(--space-6);
+}
+
+.zone-card-steps > li {
+  counter-increment: zone-step;
+  position: relative;
+  margin-bottom: var(--space-3);
+  font-size: var(--text-base);
+  line-height: 1.5;
+}
+
+.zone-card-steps > li::before {
+  content: counter(zone-step, decimal-leading-zero);
+  position: absolute;
+  left: calc(var(--space-6) * -1);
+  top: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-s);
+  color: var(--gold);
 }
 
 .diagram-list li {
   margin-bottom: var(--space-3);
   font-size: var(--text-base);
   line-height: 1.5;
-}
-
-.diagram-list::marker,
-.diagram-list li::marker {
-  color: var(--gold);
-  font-family: var(--font-mono);
 }
 
 .diagram-list .branch {
