@@ -182,6 +182,17 @@ main {
     -webkit-mask-image: linear-gradient(90deg, #000 82%, transparent 100%);
     mask-image: linear-gradient(90deg, #000 82%, transparent 100%);
   }
+
+  /* 44px — размер уверенного касания. Замерено: ссылки меню давали 30px,
+     промахнуться на телефоне легко. Отрицательный margin компенсирует
+     вертикальный padding, чтобы полоса меню не стала выше. */
+  .topbar-nav a,
+  .topbar-mark {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
 }
 
 .topbar-nav li {
@@ -629,6 +640,35 @@ main {
   cursor: zoom-in;
 }
 
+/* Снимки — таблицы шириной 1500–1800px. На телефоне они показаны в масштабе
+   0,19 и цифры в них не прочесть; ссылка на полный размер была, но о ней
+   ничто не сообщало. Подпись появляется только там, где она нужна. */
+.shot-link::after {
+  content: "";
+}
+
+@media (max-width: 600px) {
+  .shot-link {
+    position: relative;
+    display: block;
+  }
+
+  .shot-link::after {
+    content: "Открыть в полном размере";
+    position: absolute;
+    right: var(--space-2);
+    bottom: var(--space-2);
+    padding: var(--space-1) var(--space-2);
+    background: rgba(14, 15, 17, 0.82);
+    border: 1px solid var(--slate);
+    border-radius: var(--radius);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    line-height: 1.4;
+    color: var(--paper);
+  }
+}
+
 .walkthrough {
   margin: var(--space-6) 0 var(--space-7);
 }
@@ -640,6 +680,26 @@ main {
   color: rgba(245, 245, 242, 0.62);
   margin-top: var(--space-3);
   max-width: 60ch;
+}
+
+/* Ролик — запись экрана 1280x720. На телефоне он показан в масштабе 0,27,
+   и мелкий текст в интерфейсе читается только в полноэкранном режиме.
+   Кнопка для этого есть у плеера, но сама собой она не объясняется. */
+@media (max-width: 600px) {
+  .walkthrough figcaption::after {
+    content: " Смотреть лучше в полноэкранном режиме.";
+    color: var(--gold);
+  }
+
+  /* Отступ слева съедал 16px из 343 и строка падала до 33 знаков при норме
+     45–75. Правило стоит здесь, а не в верхнем медиазапросе: там оно шло
+     ВЫШЕ базовых .track/.formula/.bridge и при равной специфичности
+     проигрывало им — замерено, padding оставался 16px. */
+  .track,
+  .formula,
+  .bridge {
+    padding-left: var(--space-3);
+  }
 }
 
 /* Chain list */
