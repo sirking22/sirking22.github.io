@@ -225,6 +225,51 @@ main {
   color: var(--paper);
 }
 
+/* Надзаголовок первого экрана. Та же триада, что подписывает зоны схемы —
+   рифма между обещанием и методом должна читаться. */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 var(--space-2);
+}
+
+/* Строка фактов биографии. Приглушена намеренно: это опора, а не заявление. */
+.credentials {
+  font-family: var(--font-mono);
+  font-size: var(--text-s);
+  color: var(--paper);
+  opacity: .65;
+  line-height: 1.7;
+  margin: var(--space-6) 0 var(--space-4);
+}
+
+.numbers { margin-top: var(--space-5); }
+.numbers p { margin: 0 0 var(--space-3); }
+.numbers p:last-child { margin-bottom: 0; }
+
+/* Два трека: суть метода словами до того, как читатель увидит схему. */
+.tracks { margin: var(--space-7) 0 var(--space-5); }
+.track {
+  margin: 0 0 var(--space-4);
+  line-height: 1.7;
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--slate);
+}
+.track:last-child { margin-bottom: 0; }
+.track strong { color: var(--gold); font-weight: 600; }
+
+.formula {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  margin: 0 0 var(--space-7);
+  padding-left: var(--space-4);
+}
+
+.diagram-details { margin-bottom: var(--space-7); }
+
 .divider {
   border: none;
   border-top: 1px solid var(--slate);
@@ -717,22 +762,12 @@ details[open] summary {
   margin: var(--space-6) auto var(--space-8);
 }
 
-/* Первый экран: главное — тезис, а не служебный заголовок раздела.
-   Поэтому «Кто я и что даю» работает надзаголовком, а тезис берёт
-   размер и вес. Тексты при этом остаются ровно теми же. */
+/* Первый экран: главное — тезис, он же <h1>. Служебный заголовок раздела
+   отсюда убран 07.08.2026 — он и надзаголовок .eyebrow рисовались одинаковым
+   мелким золотым капслоком и подряд читались как сбой вёрстки. */
 #hero {
   padding-top: var(--space-10);
   padding-bottom: var(--space-10);
-}
-
-#hero .section-title {
-  font-family: var(--font-sans);
-  font-size: var(--text-s);
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin: 0 0 var(--space-5);
 }
 
 #hero .thesis {
@@ -751,50 +786,9 @@ details[open] summary {
   margin-bottom: var(--space-6);
 }
 
-/* Числа читаются как показания, а не как строки списка */
-#hero .stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3) var(--space-8);
-  margin: 0 0 var(--space-7);
-}
-
-#hero .stats li {
-  padding: 0;
-}
-
-#hero .stats li::before {
-  display: none;
-}
-
-#hero .stats .num {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: clamp(var(--text-xl), 4vw, var(--text-2xl));
-  color: var(--gold);
-  line-height: 1.2;
-}
-
-#hero .stats .num strong {
-  font-weight: 400;
-}
-
-#hero .stats li {
-  font-size: var(--text-m);
-  color: rgba(245, 245, 242, 0.72);
-  max-width: 15em;
-}
-
-/* Подпись под строкой показателей: говорит, откуда числа взялись.
-   Тише подписей самих показателей, иначе спорит с ними за внимание. */
-.stats-note {
-  font-family: var(--font-sans);
-  font-size: var(--text-m);
-  line-height: 1.5;
-  color: rgba(245, 245, 242, 0.55);
-  max-width: 46em;
-  margin: 0 0 var(--space-6);
-}
+/* Правила .stats, .stats-note и #hero .section-title удалены 07.08.2026
+   вместе со своими элементами: проценты ушли с первого экрана под спойлер
+   .numbers, заголовок раздела — в <title> и меню. */
 
 /* Плиты-подложки. Лежат под текстом во всю ширину окна, а не в колонке.
    Все три — локальные webp рядом с сайтом, внешних запросов не добавляют. */
@@ -842,6 +836,14 @@ details[open] summary {
 @media (max-width: 480px) {
   .screen {
     padding: var(--space-8) 0;
+  }
+
+  /* Своё правило, потому что #hero перебивает .screen по специфичности.
+     Без него первый экран занимал 842px при высоте окна 812 и кнопки
+     контакта уходили за нижний край — замерено на 375x812. */
+  #hero {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
   }
 
   main {
