@@ -718,22 +718,53 @@ main {
   margin: 0;
 }
 
-/* details */
+/* Спойлеры. Рамка и подложка убраны 07.08.2026: коробка делала
+   второстепенное заметнее основного текста, вокруг которого стояла.
+   Осталась строка со знаком раскрытия — вес ровно по роли. */
 details {
-  border: 1px solid var(--slate);
-  background: var(--charcoal);
-  padding: var(--space-1) var(--space-4);
+  border: none;
+  background: none;
+  padding: 0;
   margin: var(--space-4) 0;
 }
 
 summary {
   cursor: pointer;
-  padding: var(--space-3) 0;
+  padding: 0;
   font-family: var(--font-sans);
   font-size: var(--text-base);
+  color: var(--gold);
+  /* 44px — размер уверенного касания пальцем, не ступень шкалы */
   min-height: 44px;
   display: flex;
   align-items: center;
+  gap: var(--space-2);
+  list-style: none;
+  opacity: 0.8;
+  transition: opacity 160ms ease;
+}
+
+/* Свой знак вместо системного треугольника: он разный в каждом браузере */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: "+";
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  line-height: 1;
+  width: 1em;
+  text-align: center;
+}
+
+details[open] > summary::before {
+  content: "−";
+}
+
+summary:hover,
+summary:focus-visible {
+  opacity: 1;
 }
 
 details p,
@@ -752,9 +783,8 @@ details li {
   margin-bottom: var(--space-2);
 }
 
-details[open] summary {
-  border-bottom: 1px solid var(--slate);
-  margin-bottom: var(--space-3);
+details[open] > summary {
+  margin-bottom: var(--space-2);
 }
 
 .not-carried {
@@ -811,12 +841,20 @@ details[open] summary {
   background-position: center;
 }
 
-/* Первый экран: камень уходит вправо, слева графит держит текст читаемым */
+/* Первый экран: камень уходит вправо, слева графит держит текст читаемым.
+   Высота подложки отвязана от высоты секции и следует за шириной: плита
+   1600x900, поэтому 16/9. Пока она тянулась на всю секцию, раскрытие
+   спойлера добавляло 153px, cover пересчитывал масштаб с 0.80 до 0.95 —
+   и картинка заметно дёргалась. Нижняя кромка гасится в графит. */
 #hero::before {
+  bottom: auto;
+  aspect-ratio: 16 / 9;
   background-image:
+    linear-gradient(180deg, rgba(14, 15, 17, 0) 62%, var(--graphite) 100%),
     linear-gradient(90deg, var(--graphite) 0%, rgba(14, 15, 17, 0.92) 38%, rgba(14, 15, 17, 0.55) 100%),
     url("assets/hero-plate.webp");
-  background-position: right center;
+  background-size: 100% 100%, 100% 100%, cover;
+  background-position: center, center, right center;
 }
 
 /* Лента свидетельств: текстура приглушена, чтобы не спорить с текстом */
@@ -854,12 +892,16 @@ details[open] summary {
     padding: 0 var(--space-4);
   }
 
-  /* На узком экране камень занимал бы половину строки — оставляем только край */
+  /* На узком экране камень занимал бы половину строки — оставляем только край.
+     Пропорция другая, чем на десктопе: при 16/9 подложка на 375px дала бы
+     полосу в 211px и просто исчезла бы под текстом. */
   #hero::before {
+    aspect-ratio: 4 / 5;
     background-image:
+      linear-gradient(180deg, rgba(14, 15, 17, 0) 58%, var(--graphite) 100%),
       linear-gradient(90deg, var(--graphite) 0%, rgba(14, 15, 17, 0.95) 55%, rgba(14, 15, 17, 0.7) 100%),
       url("assets/hero-plate.webp");
-    background-size: cover;
-    background-position: 72% center;
+    background-size: 100% 100%, 100% 100%, cover;
+    background-position: center, center, 72% center;
   }
 }
