@@ -604,44 +604,42 @@ main {
   }
 }
 
-/* Placeholder frames */
-.frame {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--charcoal);
+/* Правила .frame, .frame-label, .frame-16x10, .frame-16x9 и .frame-text
+   удалены 07.08.2026 вместе с плашками-заглушками: пришли настоящие кадры
+   и запись экрана, а пустая рамка на живом сайте читается как недоделка. */
+
+/* Снимки рабочей системы и запись экрана. Высота своя у каждого — снимки
+   пришли разных пропорций (3,15 / 2,15 / 2,49), а жёсткое 16:9 добавило бы
+   к ним поля или срезало строки таблиц. */
+.shot {
+  display: block;
+  width: 100%;
+  height: auto;
   border: 1px solid var(--slate);
   border-radius: var(--radius);
-  color: var(--paper);
-  text-align: center;
-  padding: var(--space-3);
-  margin: var(--space-3) 0 var(--space-5);
+  background: var(--charcoal);
 }
 
-.frame-label {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  line-height: 1.4;
-  color: rgba(245, 245, 242, 0.55);
+/* Снимок открывается в полный размер по клику. На телефоне колонка 343px,
+   а в кадрах таблицы Notion шириной 1800 — цифры в таком масштабе не
+   прочесть, и без этой ссылки кадр становится просто картинкой «что-то
+   табличное». Ссылка ведёт на сам файл: ни скрипта, ни модального окна. */
+.shot-link {
+  display: block;
+  cursor: zoom-in;
 }
 
-.frame-16x10 {
-  width: 100%;
-  aspect-ratio: 16 / 10;
+.walkthrough {
+  margin: var(--space-6) 0 var(--space-7);
 }
 
-.frame-16x9 {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-}
-
-.frame-text {
-  display: inline-flex;
-  min-height: 44px;
-  width: auto;
-  padding: var(--space-2) var(--space-3);
-  margin: 0;
-  vertical-align: middle;
+.walkthrough figcaption {
+  font-family: var(--font-sans);
+  font-size: var(--text-s);
+  line-height: 1.5;
+  color: rgba(245, 245, 242, 0.62);
+  margin-top: var(--space-3);
+  max-width: 60ch;
 }
 
 /* Chain list */
@@ -715,21 +713,20 @@ main {
   margin: var(--space-3) 0 0;
 }
 
-@media (min-width: 900px) {
-  #living {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-5);
-  }
+/* Сетка из трёх колонок снята 07.08.2026. Она годилась для пустых плашек,
+   но настоящие снимки — таблицы Notion с мелким текстом, и в колонке 313px
+   цифры, ради которых кадр и ставится, не читаются. Замерено: снимки идут
+   в пропорциях 3,15 / 2,15 / 2,49, им нужна вся ширина колонки. */
+/* Здесь карточкой служит сам снимок: своя рамка у него уже есть, вторая
+   вокруг давала двойной кант. */
+#living .live-item {
+  border: none;
+  padding: 0;
+  margin-bottom: var(--space-8);
+}
 
-  #living > .section-title,
-  #living > .thesis {
-    grid-column: 1 / -1;
-  }
-
-  #living .live-item {
-    margin-bottom: 0;
-  }
+#living .live-item .body-text {
+  margin: var(--space-4) 0 0;
 }
 
 .refusal-grid {

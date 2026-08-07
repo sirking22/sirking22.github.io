@@ -323,6 +323,21 @@
        квалификации переходов не ведётся, обещать её нельзя. -->
   <p class="body-text">Сырой запрос бизнеса — увеличить продажи на маркетплейсе без роста бюджета. Диагностика показала: один из разрывов находится ещё до открытия карточки — аэрогриль проигрывает собственному топ-SKU по переходам из выдачи. Вместо задачи «сделать новый визуал» появляется измеримая: найти механизм, который этот разрыв сократит.</p>
 
+  <!-- Запись экрана от владельца 07.08.2026: цель → ключевой результат →
+       гипотеза → концепт → карта фактов → факты артефакта. Один проход по
+       связанным объектам, ровно то, что обещает мост выше.
+       preload="metadata" — файл 4,3 МБ, качать его при загрузке страницы
+       нельзя; браузер берёт только заголовок и первый кадр. Без <script>. -->
+  <figure class="walkthrough">
+    <video class="shot" controls preload="metadata" playsinline
+           width="1280" height="720">
+      <source src="assets/chain-walkthrough.mp4" type="video/mp4">
+      Ваш браузер не проигрывает видео. Файл:
+      <a href="assets/chain-walkthrough.mp4">chain-walkthrough.mp4</a>
+    </video>
+    <figcaption>Запись экрана: один проход по связанным объектам — от цели к ключевому результату, гипотезе, концепту и фактам артефакта.</figcaption>
+  </figure>
+
   <ol class="chain-list">
     <li>
       <p><strong>Бизнес-запрос</strong> — увеличить продажи на маркетплейсе без роста медиабюджета.</p>
@@ -335,39 +350,30 @@
     </li>
     <li>
       <p><strong>Цель цикла</strong> — увеличить переходы из выдачи в карточку без роста бюджета при сохранении защитных метрик.</p>
-      <div class="frame frame-16x10"><span class="frame-label">[КАДР: цель и текущее значение]</span></div>
     </li>
     <li>
       <p><strong>KR</strong> — KR · Переходы с карточек товара: базовая линия и защитные метрики определены до релиза.</p>
-      <div class="frame frame-16x10"><span class="frame-label">[КАДР: KR с базовой линией]</span></div>
     </li>
     <li>
       <p><strong>Гипотеза</strong> — H1 · Хук по скорости: ожидание посчитано от внутреннего потолка компании, а не придумано под красивый кейс.</p>
-      <div class="frame frame-16x10"><span class="frame-label">[КАДР: карточка гипотезы]</span></div>
     </li>
     <li>
       <p><strong>Концепт</strong> — C1 · PDP слайд 1: один механизм проверяется чисто.</p>
-      <div class="frame frame-16x10"><span class="frame-label">[КАДР: карточка концепта]</span></div>
     </li>
     <li>
-      <p><strong>Артефакт — контроль</strong> — <span class="frame frame-text"><span class="frame-label">[ТЕКСТ: одна строка про контрольный вариант]</span></span>.</p>
-      <div class="frame frame-16x10"><span class="frame-label">[КАДР: контрольный вариант карточки]</span></div>
+      <p><strong>Артефакт — контроль</strong> — прежний первый слайд карточки, без изменений.</p>
     </li>
     <li>
       <p><strong>Артефакт — победитель</strong> — Слайд 1 «Здоровый фастфуд за 15 мин».</p>
-      <div class="frame frame-16x10"><span class="frame-label">[КАДР: слайд-победитель]</span></div>
     </li>
     <li>
       <p><strong>Результат теста</strong> — базовая линия, фактический результат, защитные метрики; в кадре пометка «демо-данные».</p>
-      <div class="frame frame-16x10"><span class="frame-label">[КАДР: замер до/после]</span></div>
     </li>
     <li>
       <p><strong>Паттерн</strong> — перенос сработал на 3 из 4 SKU; границы применимости зафиксированы.</p>
-      <div class="frame frame-16x10"><span class="frame-label">[КАДР: вывод с границами применимости]</span></div>
     </li>
     <li>
       <p><strong>Стандарт</strong> — Формат · PDP-хук: стандартом становится подтверждённый механизм — и он меняет следующую задачу. Подтверждённая гипотеза становится форматом — повторяемым креативным процессом с известной ценой и эффектом. Продукт метода — не разовые материалы, а конвейер форматов.</p>
-      <div class="frame frame-16x10"><span class="frame-label">[КАДР: страница формата]</span></div>
     </li>
   </ol>
 </section>
@@ -406,19 +412,31 @@
   <h2 class="section-title">Живая система</h2>
   <p class="thesis">«Я не приписываю себе выручку — я показываю причинную цепочку своего вклада.»</p>
 
+  <!-- Кадры от владельца 07.08.2026, пережаты в WebP. loading=lazy: три
+       снимка стоят в конце страницы, грузить их вместе с первым экраном
+       незачем. Размеры проставлены явно, чтобы верстка не прыгала. -->
   <div class="live-item">
-    <div class="frame frame-16x9"><span class="frame-label">[КАДР: факты метрик]</span></div>
+    <a class="shot-link" href="assets/shot-facts.webp">
+    <img class="shot" src="assets/shot-facts.webp" width="1800" height="572" loading="lazy" decoding="async"
+         alt="Таблица фактов метрик: значение, единица, тип, дата и ключ дедупликации по каждой записи">
+  </a>
     <p class="body-text">Автосбор метрик: 458 свежих фактов за один проход, свежие сверху.</p>
   </div>
 
   <div class="live-item">
-    <div class="frame frame-16x9"><span class="frame-label">[КАДР: контент-план с фактами]</span></div>
+    <a class="shot-link" href="assets/shot-content.webp">
+    <img class="shot" src="assets/shot-content.webp" width="1800" height="839" loading="lazy" decoding="async"
+         alt="Контент-план календарём: у каждой публикации статус, ссылка, тип, вовлечённость и просмотры">
+  </a>
     <p class="body-text">Живые показатели по каждому посту: вовлечённость и охваты.</p>
   </div>
 
   <div class="live-item">
-    <div class="frame frame-16x9"><span class="frame-label">[КАДР: задачник — план/факт часов]</span></div>
-    <p class="body-text">Сроки держит система, а не героизм: план и факт часов видны по каждой задаче.</p>
+    <a class="shot-link" href="assets/shot-tasks.webp">
+    <img class="shot" src="assets/shot-tasks.webp" width="1497" height="601" loading="lazy" decoding="async"
+         alt="Задачник: по каждой задаче эпик, статус, план часов, факт часов и отклонение">
+  </a>
+    <p class="body-text">План и факт часов видны по каждой задаче. Отклонение — не повод наказывать, а материал: из него пересматриваются нормативы на типовую работу.</p>
   </div>
 </section>
 
