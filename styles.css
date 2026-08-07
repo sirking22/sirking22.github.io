@@ -912,24 +912,41 @@ details:last-child {
    580) и залезала на следующий блок. Нижняя кромка гасится в графит. */
 #hero::before {
   background-image:
-    linear-gradient(180deg, rgba(14, 15, 17, 0) 62%, var(--graphite) 100%),
+    /* Затухание начинается ниже фигуры: она приходится примерно на 68%
+       высоты кадра, и при пороге 62% тонула в графите. */
+    linear-gradient(180deg, rgba(14, 15, 17, 0) 80%, var(--graphite) 100%),
     linear-gradient(90deg, var(--graphite) 0%, rgba(14, 15, 17, 0.92) 38%, rgba(14, 15, 17, 0.55) 100%),
     url("assets/hero-plate.webp");
   background-size: 100% 100%, 100% 100%, cover;
-  background-position: center, center, right center;
+  /* Кадр держится за низ, а не за центр. Смысл картинки — фигура у щели
+     света, она стоит на полу в правой нижней четверти. После того как
+     первый экран усох до 500px, cover резал по 110px сверху и снизу и
+     фигура уходила из кадра. Сверху обрезается пустая стена — там ничего
+     нет. */
+  background-position: center, center, right bottom;
 }
 
-/* Лента свидетельств: текстура приглушена, чтобы не спорить с текстом */
+/* Лента свидетельств: текстура приглушена, чтобы не спорить с текстом.
+   Верхние и нижние 10% гасятся в чистый графит — иначе плита обрывается
+   ровно по границе секции и стык между разделами читается полосой. */
 #chain::before {
   background-image:
-    linear-gradient(180deg, rgba(14, 15, 17, 0.93), rgba(14, 15, 17, 0.88)),
+    linear-gradient(180deg,
+      var(--graphite) 0%,
+      rgba(14, 15, 17, 0.93) 10%,
+      rgba(14, 15, 17, 0.88) 90%,
+      var(--graphite) 100%),
     url("assets/evidence-backing.webp");
 }
 
-/* Финальный экран: спокойнее остальных */
+/* Финальный экран: спокойнее остальных. Края гасятся так же. */
 #next::before {
   background-image:
-    linear-gradient(180deg, rgba(14, 15, 17, 0.86), rgba(14, 15, 17, 0.94)),
+    linear-gradient(180deg,
+      var(--graphite) 0%,
+      rgba(14, 15, 17, 0.86) 10%,
+      rgba(14, 15, 17, 0.94) 90%,
+      var(--graphite) 100%),
     url("assets/final-plate.webp");
 }
 
@@ -962,6 +979,9 @@ details:last-child {
       linear-gradient(90deg, var(--graphite) 0%, rgba(14, 15, 17, 0.95) 55%, rgba(14, 15, 17, 0.7) 100%),
       url("assets/hero-plate.webp");
     background-size: 100% 100%, 100% 100%, cover;
-    background-position: center, center, 72% center;
+    /* 80%, а не 72%: на 375px кадр показывает 48% ширины плиты, и при 72%
+       окно обрывалось на 0,853 оригинала — фигура стоит на 0,8625 и не
+       попадала. Замерено. */
+    background-position: center, center, 80% center;
   }
 }
