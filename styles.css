@@ -33,6 +33,11 @@
   --text-2xl: 28px;
   --text-3xl: 40px;
   --text-4xl: 48px;
+
+  /* Скругление. Одно значение на всё, что обведено рамкой: кнопки, плашки
+     кадров, карточки, узлы схемы. Радиус небольшой намеренно — он должен
+     снимать резкость угла, а не превращать блок в пилюлю. */
+  --radius: 6px;
 }
 
 * {
@@ -227,13 +232,25 @@ main {
 
 /* Надзаголовок первого экрана. Та же триада, что подписывает зоны схемы —
    рифма между обещанием и методом должна читаться. */
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+/* Триада — главная надпись первого экрана. Она же подписывает зоны схемы:
+   обещание и метод должны читаться одним словарём. Взята крупным планом
+   по решению владельца 07.08.2026 — до этого она шла надзаголовком в 12px
+   и терялась под тезисом. */
+.triad {
+  font-family: var(--font-sans);
+  /* вне шкалы: кегль первого экрана тянется за шириной окна */
+  font-size: clamp(32px, 7.4vw, 68px);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  color: var(--paper);
+  margin: 0 0 var(--space-5);
+}
+
+/* Точка после каждого слова — не пунктуация, а такт. Золотом, чтобы
+   членение читалось раньше самих слов. */
+.triad .dot {
   color: var(--gold);
-  margin: 0 0 var(--space-2);
 }
 
 /* Строка фактов биографии. Приглушена намеренно: это опора, а не заявление. */
@@ -269,6 +286,18 @@ main {
 }
 
 .diagram-details { margin-bottom: var(--space-7); }
+
+/* Мост между блоками. Тише заголовка и громче обычного абзаца: его работа —
+   переключить читателя, а не сообщить новое. Линия слева та же, что у
+   треков, — это делает его частью того же голоса. */
+.bridge {
+  margin: var(--space-7) 0 0;
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--gold);
+  line-height: 1.6;
+  color: var(--paper);
+  max-width: 44em;
+}
 
 .divider {
   border: none;
@@ -324,6 +353,7 @@ main {
   min-height: 44px;
   padding: var(--space-3) var(--space-5);
   border: 1px solid var(--slate);
+  border-radius: var(--radius);
   color: var(--paper);
   text-decoration: none;
   font-family: var(--font-sans);
@@ -389,6 +419,7 @@ main {
   overflow-y: hidden;
   background: var(--charcoal);
   border: 1px solid var(--slate);
+  border-radius: var(--radius);
   margin: var(--space-2) 0 var(--space-6);
   padding: var(--space-3);
   width: calc(100vw - 48px);
@@ -410,6 +441,15 @@ main {
   fill: var(--charcoal);
   stroke: var(--slate);
   stroke-width: 1.5;
+}
+
+/* Узлы схемы скругляются наравне с остальными рамками страницы. Значение
+   в единицах viewBox, а не в пикселях экрана: схема растягивается примерно
+   в 1,08, поэтому шесть единиц дают на экране те же ~6px, что у кнопок и
+   карточек. Ромбы развилок остаются острыми — их углы несут смысл. */
+.diagram .node rect {
+  rx: 6;
+  ry: 6;
 }
 
 .diagram .node text {
@@ -473,6 +513,7 @@ main {
 
 .zone-card {
   border: 1px solid var(--slate);
+  border-radius: var(--radius);
   padding: var(--space-4);
   margin-bottom: var(--space-6);
 }
@@ -558,6 +599,7 @@ main {
   justify-content: center;
   background: var(--charcoal);
   border: 1px solid var(--slate);
+  border-radius: var(--radius);
   color: var(--paper);
   text-align: center;
   padding: var(--space-3);
@@ -648,6 +690,7 @@ main {
 /* Living system */
 .live-item {
   border: 1px solid var(--slate);
+  border-radius: var(--radius);
   padding: var(--space-4);
   margin-bottom: var(--space-6);
 }
@@ -787,6 +830,13 @@ details[open] > summary {
   margin-bottom: var(--space-2);
 }
 
+/* Спойлер последним в секции добавлял свой отступ к отступу самой секции:
+   до разделителя выходило 72px, после него 56 — асимметрия читалась как
+   провал. Замерено на 1280. */
+details:last-child {
+  margin-bottom: 0;
+}
+
 .not-carried {
   max-width: 760px;
   margin: var(--space-6) auto var(--space-8);
@@ -800,14 +850,21 @@ details[open] > summary {
   padding-bottom: var(--space-10);
 }
 
+/* Тезис ушёл со второго плана: главное теперь триада, он её раскрывает.
+   Раньше стоял в 48px и спорил с ней за первый взгляд.
+   Золото и моноширинный — по разметке владельца 07.08.2026: тем же
+   набором, что строка фактов, формула метода и подписи на схеме. */
 #hero .thesis {
-  /* вне шкалы: см. задачу по вторичной типографике */
-  font-size: clamp(30px, 6.4vw, 48px);
+  font-family: var(--font-mono);
+  /* Ровно кегль формулы в блоке «Метод» — по разметке владельца 07.08.2026.
+     Обе строки золотые и моноширинные, поэтому и размер один. */
+  font-size: var(--text-base);
   font-weight: 400;
-  line-height: 1.14;
-  letter-spacing: -0.01em;
+  line-height: 1.45;
+  letter-spacing: 0;
+  color: var(--gold);
   margin: 0 0 var(--space-5);
-  max-width: 16em;
+  max-width: 40em;
 }
 
 #hero .body-text {
@@ -842,13 +899,13 @@ details[open] > summary {
 }
 
 /* Первый экран: камень уходит вправо, слева графит держит текст читаемым.
-   Высота подложки отвязана от высоты секции и следует за шириной: плита
-   1600x900, поэтому 16/9. Пока она тянулась на всю секцию, раскрытие
-   спойлера добавляло 153px, cover пересчитывал масштаб с 0.80 до 0.95 —
-   и картинка заметно дёргалась. Нижняя кромка гасится в графит. */
+   Подложка снова тянется на всю секцию. Отвязка от высоты понадобилась,
+   пока внутри стоял спойлер: его раскрытие добавляло 153px, cover
+   пересчитывал масштаб с 0.80 до 0.95 и картинка дёргалась. Спойлер
+   переехал в #background, менять высоту первому экрану больше нечему —
+   а с фиксированной пропорцией плита оказывалась выше секции (720 против
+   580) и залезала на следующий блок. Нижняя кромка гасится в графит. */
 #hero::before {
-  bottom: auto;
-  aspect-ratio: 16 / 9;
   background-image:
     linear-gradient(180deg, rgba(14, 15, 17, 0) 62%, var(--graphite) 100%),
     linear-gradient(90deg, var(--graphite) 0%, rgba(14, 15, 17, 0.92) 38%, rgba(14, 15, 17, 0.55) 100%),
@@ -884,6 +941,7 @@ details[open] > summary {
     padding-bottom: var(--space-8);
   }
 
+
   main {
     padding: 0 var(--space-4);
   }
@@ -892,11 +950,8 @@ details[open] > summary {
     padding: 0 var(--space-4);
   }
 
-  /* На узком экране камень занимал бы половину строки — оставляем только край.
-     Пропорция другая, чем на десктопе: при 16/9 подложка на 375px дала бы
-     полосу в 211px и просто исчезла бы под текстом. */
+  /* На узком экране камень занимал бы половину строки — оставляем только край */
   #hero::before {
-    aspect-ratio: 4 / 5;
     background-image:
       linear-gradient(180deg, rgba(14, 15, 17, 0) 58%, var(--graphite) 100%),
       linear-gradient(90deg, var(--graphite) 0%, rgba(14, 15, 17, 0.95) 55%, rgba(14, 15, 17, 0.7) 100%),
