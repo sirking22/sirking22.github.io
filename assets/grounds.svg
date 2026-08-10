@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="1200" height="540" role="img" aria-labelledby="grounds-title">
+  <title id="grounds-title">Путь одного решения: от запроса бизнеса и оснований, собранных из шести источников, через гипотезу, концепт и артефакт — к результату теста</title>
+  <style>
+    .node rect,
+    .node polygon {
+      fill: #1A1C1F;
+      stroke: #3B3F44;
+      stroke-width: 1.5;
+    }
+    .node rect {
+      rx: 6;
+      ry: 6;
+    }
+    .node-key rect {
+      fill: #1A1C1F;
+      stroke: #D4AF37;
+      stroke-width: 2;
+    }
+    .node text {
+      fill: #F5F5F2;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 17px;
+    }
+    .edge line,
+    .edge-line {
+      stroke: #D4AF37;
+      stroke-width: 1.5;
+    }
+    .edge-curve {
+      fill: none;
+      stroke: #D4AF37;
+      stroke-width: 1.5;
+    }
+    .edge-feedback {
+      fill: none;
+      stroke: #D4AF37;
+      stroke-width: 1.5;
+      stroke-dasharray: 6 5;
+    }
+    .edge-label {
+      fill: #D4AF37;
+      font-family: Consolas, ui-monospace, monospace;
+      font-size: 17px;
+      text-anchor: middle;
+    }
+    .zone-band {
+      fill: rgba(245, 245, 242, 0.03);
+    }
+    .zone-edge {
+      fill: #D4AF37;
+      opacity: 0.55;
+    }
+    .zone-label {
+      fill: #D4AF37;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 22px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+  </style>
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D4AF37"></path>
+    </marker>
+  </defs>
+
+  <g class="zones" aria-hidden="true">
+    <rect class="zone-band" x="20" y="20" width="1160" height="36"></rect>
+    <rect class="zone-edge" x="20" y="20" width="3" height="36"></rect>
+    <text class="zone-label" x="36" y="44">ПУТЬ ОДНОГО РЕШЕНИЯ</text>
+  </g>
+
+  <!-- top row connectors -->
+  <g class="edge">
+    <line class="edge-line" x1="148" y1="220" x2="167" y2="220" marker-end="url(#arrowhead)"></line>
+    <line class="edge-line" x1="305" y1="220" x2="324" y2="220" marker-end="url(#arrowhead)"></line>
+    <line class="edge-line" x1="580" y1="220" x2="599" y2="220" marker-end="url(#arrowhead)"></line>
+    <line class="edge-line" x1="737" y1="220" x2="756" y2="220" marker-end="url(#arrowhead)"></line>
+    <line class="edge-line" x1="874" y1="220" x2="893" y2="220" marker-end="url(#arrowhead)"></line>
+    <line class="edge-line" x1="1021" y1="220" x2="1040" y2="220" marker-end="url(#arrowhead)"></line>
+  </g>
+
+  <!-- fan of six sources into "Основания" -->
+  <g class="edges-fan">
+    <path class="edge-curve" d="M80,430 C80,360 344,360 344,290" marker-end="url(#arrowhead)"></path>
+    <path class="edge-curve" d="M272,430 C272,360 387,360 387,290" marker-end="url(#arrowhead)"></path>
+    <path class="edge-curve" d="M484,430 C484,360 430,360 430,290" marker-end="url(#arrowhead)"></path>
+    <path class="edge-curve" d="M696,430 C696,360 474,360 474,290" marker-end="url(#arrowhead)"></path>
+    <path class="edge-curve" d="M893,430 C893,360 517,360 517,290" marker-end="url(#arrowhead)"></path>
+    <path class="edge-curve" d="M1100,430 C1100,360 560,360 560,290" marker-end="url(#arrowhead)"></path>
+  </g>
+
+  <!-- top row nodes -->
+  <g class="node">
+    <rect x="20" y="185" width="128" height="70"></rect>
+    <text x="84" y="214" text-anchor="middle"><tspan x="84" dy="0">Запрос</tspan><tspan x="84" dy="17">бизнеса</tspan></text>
+  </g>
+  <g class="node">
+    <rect x="167" y="185" width="138" height="70"></rect>
+    <text x="236" y="214" text-anchor="middle"><tspan x="236" dy="0">Разрыв в</tspan><tspan x="236" dy="17">метрике</tspan></text>
+  </g>
+  <g class="node node-key">
+    <rect x="324" y="150" width="256" height="140"></rect>
+    <text x="452" y="226" text-anchor="middle"><tspan x="452">ОСНОВАНИЯ</tspan></text>
+  </g>
+  <g class="node">
+    <rect x="599" y="185" width="138" height="70"></rect>
+    <text x="668" y="214" text-anchor="middle"><tspan x="668" dy="0">Гипотеза</tspan><tspan x="668" dy="17">с числом</tspan></text>
+  </g>
+  <g class="node">
+    <rect x="756" y="185" width="118" height="70"></rect>
+    <text x="815" y="226" text-anchor="middle"><tspan x="815">Концепт</tspan></text>
+  </g>
+  <g class="node">
+    <rect x="893" y="185" width="128" height="70"></rect>
+    <text x="957" y="226" text-anchor="middle"><tspan x="957">Артефакт</tspan></text>
+  </g>
+  <g class="node">
+    <rect x="1040" y="185" width="138" height="70"></rect>
+    <text x="1109" y="214" text-anchor="middle"><tspan x="1109" dy="0">Результат</tspan><tspan x="1109" dy="17">теста</tspan></text>
+  </g>
+
+  <!-- six sources -->
+  <g class="node">
+    <rect x="20" y="430" width="120" height="60"></rect>
+    <text x="80" y="454" text-anchor="middle"><tspan x="80" dy="0">Данные</tspan><tspan x="80" dy="17">бизнеса</tspan></text>
+  </g>
+  <g class="node">
+    <rect x="202" y="430" width="140" height="60"></rect>
+    <text x="272" y="454" text-anchor="middle"><tspan x="272" dy="0">Отзывы и</tspan><tspan x="272" dy="17">обращения</tspan></text>
+  </g>
+  <g class="node">
+    <rect x="404" y="430" width="160" height="60"></rect>
+    <text x="484" y="454" text-anchor="middle"><tspan x="484" dy="0">Исследование</tspan><tspan x="484" dy="17">аудитории</tspan></text>
+  </g>
+  <g class="node">
+    <rect x="626" y="430" width="140" height="60"></rect>
+    <text x="696" y="454" text-anchor="middle"><tspan x="696" dy="0">Рынок и</tspan><tspan x="696" dy="17">конкуренты</tspan></text>
+  </g>
+  <g class="node">
+    <rect x="828" y="430" width="130" height="60"></rect>
+    <text x="893" y="454" text-anchor="middle"><tspan x="893" dy="0">Знания</tspan><tspan x="893" dy="17">компании</tspan></text>
+  </g>
+  <g class="node">
+    <rect x="1020" y="430" width="160" height="60"></rect>
+    <text x="1100" y="454" text-anchor="middle"><tspan x="1100" dy="0">Прошлые</tspan><tspan x="1100" dy="17">эксперименты</tspan></text>
+  </g>
+</svg>
