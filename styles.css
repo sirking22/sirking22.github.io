@@ -729,12 +729,17 @@ main {
    на все кнопки. Владелец 10.08.2026 попросил разделить кнопки на залитую
    и контурную (как на референсе с тремя кнопками, серый вид убрали) и
    сделать рамку такой же тонкой линией, как у карточки кейса. */
+/* 18.08.2026, решение владельца: кнопки уменьшены — на первом экране они
+   спорили с заголовком. Высота 44px — нижняя граница удобного нажатия на
+   телефоне, ниже опускать нельзя; ужат только внутренний отступ и кегль.
+   Прежние значения: min-height 44px, padding var(--space-3) var(--space-5),
+   font-size var(--text-base). */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 44px;
-  padding: var(--space-3) var(--space-5);
+  padding: var(--space-2) var(--space-4);
   border-radius: var(--radius);
   /* Своя система координат нужна слою заливки у .btn-outline (см. ниже):
      он ложится absolute по всей кнопке и уходит под текст отрицательным
@@ -743,7 +748,7 @@ main {
   z-index: 0;
   text-decoration: none;
   font-family: var(--font-sans);
-  font-size: var(--text-base);
+  font-size: var(--text-s);
   transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease,
     box-shadow 160ms ease;
 }
@@ -1548,15 +1553,19 @@ details:last-child {
     url("assets/evidence-backing.webp");
 }
 
-/* Финальный экран: спокойнее остальных. Края гасятся так же. */
+/* Финальный экран. 18.08.2026 подложка снята по решению владельца: низ
+   страницы уходил в серый и не сходился с чёрным фоном остальных секций.
+   Причина была не в текстуре, а в градиенте поверх неё — rgba(14,15,17)
+   в середине против --graphite #000000 по краям давала полосу светлее
+   страницы на 14-17 из 255, и текстура final-plate.webp её подчёркивала.
+   Прежнее правило для отката:
+   background-image:
+     linear-gradient(180deg, var(--graphite) 0%, rgba(14,15,17,0.86) 10%,
+       rgba(14,15,17,0.94) 90%, var(--graphite) 100%),
+     url("assets/final-plate.webp"); */
 #next::before {
-  background-image:
-    linear-gradient(180deg,
-      var(--graphite) 0%,
-      rgba(14, 15, 17, 0.86) 10%,
-      rgba(14, 15, 17, 0.94) 90%,
-      var(--graphite) 100%),
-    url("assets/final-plate.webp");
+  background-image: none;
+  background-color: var(--graphite);
 }
 
 /* Кейс RAWMID: карточки «было → стало». Сильные скругления — по просьбе
@@ -1568,6 +1577,14 @@ details:last-child {
    как таблица. Приём взят с референса, который прислал владелец
    (tencent-hunyuan.github.io/Hunyuan3D-WorldClaw) — там текст и демо тоже
    идут парой и меняются местами. */
+/* Абзац под всем кейсом (18.08.2026): откуда взялись три разобранных блока.
+   Отбит от последней карточки как отдельная мысль, а не как её продолжение;
+   ширина по строке чтения, чтобы не растягивался на всю сетку карточек. */
+.case-outro {
+  margin-top: var(--space-7);
+  max-width: 60ch;
+}
+
 .cases {
   list-style: none;
   margin: 0;
