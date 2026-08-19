@@ -111,8 +111,12 @@ body {
   overflow-x: clip;
 }
 
+/* Контентная ширина. 18.08.2026 поднята с 1120 до 1232px, в тот же день
+   владелец попросил сузить на 15% — 1047px. Расширение не помогло: колонка
+   тянулась, строки становились длиннее, читать труднее. Прежние значения для
+   отката: 1232px, до него 1120px. */
 main {
-  max-width: 1120px;
+  max-width: 1047px;
   margin: 0 auto;
   padding: 0 var(--space-5);
 }
@@ -832,6 +836,52 @@ main {
   border-color: var(--gold);
 }
 
+/* Кнопка-почта (18.08.2026). По клику адрес уходит в буфер, рядом на секунду
+   всплывает подтверждение. Стрелка снята: она обещает переход на другую
+   страницу, а кнопка никуда не ведёт — она копирует. mailto остаётся в href
+   как запасной ход: без JS кнопка работает как обычная почтовая ссылка.
+   position:relative нужен подтверждению — оно позиционируется от кнопки. */
+.btn-copy {
+  position: relative;
+}
+.btn-solid.btn-copy::after,
+.btn-outline.btn-copy::after {
+  content: none;
+}
+
+/* Подтверждение копирования. Висит над кнопкой по центру, не участвует в
+   потоке и не двигает соседей. pointer-events:none — чтобы всплывшая плашка
+   не перехватывала повторный клик по кнопке под ней. */
+.copy-toast {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translate(-50%, 4px);
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  background: var(--charcoal);
+  border: 1px solid var(--slate);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 140ms ease, transform 140ms ease;
+}
+.btn-copy.is-copied .copy-toast {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* На «уменьшить движение» плашка появляется без сдвига — только прозрачность. */
+@media (prefers-reduced-motion: reduce) {
+  .copy-toast {
+    transform: translate(-50%, 0);
+    transition: opacity 140ms ease;
+  }
+}
+
 /* Стрелка — признак главного действия, поэтому висит на залитой кнопке
    (раньше была на .btn-primary, до разделения видов на solid/outline). */
 .btn-solid::after {
@@ -1487,7 +1537,11 @@ details:last-child {
      Прежние значения для отката: aspect-ratio: 3 / 4 (под hero-layers-v7.webp,
      1086×1448), до него 4 / 5 (под hero-layers-v6.webp, 1122×1402). */
   aspect-ratio: 2 / 3;
-  max-width: min(600px, 46vw);
+  /* 18.08.2026, решение владельца: кадр уменьшен на 20% — 600→480px и
+     46→37vw. Пропорция 2/3 не тронута, поэтому срез по-прежнему нулевой и
+     отражение на полу остаётся целым. Прежние значения для отката:
+     min(600px, 46vw). */
+  max-width: min(480px, 37vw);
   /* Подложка обязательна: mix-blend-mode на картинке смешивает её с тем, что
      под ней, а .screen объявлен isolation:isolate и отрезает фон страницы.
      Без этого фона наложение просто не сработало бы. */
@@ -1584,6 +1638,10 @@ details:last-child {
   margin-top: var(--space-7);
   max-width: 60ch;
 }
+
+/* Правила .about-title и .about-line сняты 18.08.2026 вместе с блоком «Обо
+   мне», который прожил на странице несколько часов. Разметка блока сохранена
+   комментарием в index.html. */
 
 .cases {
   list-style: none;
