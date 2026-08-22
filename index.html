@@ -33,8 +33,50 @@
      прежнее значение: #0E0F11. -->
 <meta name="theme-color" content="#000000">
 <link rel="stylesheet" href="styles.css">
+
+<!-- Счётчик заходов, 21.08.2026. Поставлен по одной причине: после десяти
+     откликов не было известно, открывают ли витрину по ссылке из письма и
+     доходят ли до кейса RAWMID. Без этих данных нельзя понять, где отсев —
+     на резюме или на самой витрине.
+
+     До подстановки номера счётчика код инертен: METRIKA_ID = 0, ни одного
+     внешнего запроса не уходит. Номер берётся на metrika.yandex.ru после
+     создания счётчика на домен sirking22.github.io.
+
+     Метка адресата передаётся в адресе: sirking22.github.io/?r=dodo —
+     Метрика показывает её в отчёте «Страницы входа», по ней видно, кто
+     именно заходил. -->
+<script>
+window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
+
+(function () {
+  var id = window.METRIKA_ID;
+  if (!id) return;
+
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  for (var j=0;j<e.scripts.length;j++){if(e.scripts[j].src===r){return;}}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,
+  a.parentNode.insertBefore(k,a)})
+  (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=' + id, 'ym');
+
+  ym(id, 'init', { ssr: true, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true, referrer: document.referrer, url: location.href });
+
+  /* Цели. Сам заход почти ничего не говорит: важно, ушёл ли человек в кейс
+     или написал. Без целей в отчёте будет только «был на странице». */
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('behance.net') > -1) ym(id, 'reachGoal', 'behance');
+    else if (href.indexOf('t.me/') > -1) ym(id, 'reachGoal', 'telegram');
+    else if (href.indexOf('mailto:') === 0) ym(id, 'reachGoal', 'mail');
+  });
+})();
+</script>
 </head>
 <body>
+<noscript><div><img src="https://mc.yandex.ru/watch/111837200" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 
 <nav class="topbar">
   <div class="topbar-inner">
