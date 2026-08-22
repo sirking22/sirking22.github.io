@@ -1776,6 +1776,15 @@ details:last-child {
   margin-bottom: var(--space-3);
 }
 
+/* Реплика-переход после кейсов: снимает возражение «у нас не Notion»
+   до того, как читатель дойдёт до раздела «Суть». 21.08.2026. */
+.case-carry {
+  margin: var(--space-9) 0 0;
+  font-size: var(--text-xl);
+  line-height: 1.4;
+  color: var(--gold);
+}
+
 .case-effect {
   margin: var(--space-6) 0 0;
   padding-top: var(--space-5);
