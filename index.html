@@ -14,14 +14,21 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:title" content="Из новой ниши в продажи. Легко.">
 <meta property="og:description" content="Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 7 человек.">
-<meta property="og:image" content="https://sirking22.github.io/assets/og-preview.jpg">
+<!-- Картинка ссылки пересобрана 02.09.2026 под новый заголовок: прежняя
+     og-preview.jpg от 06.08.2026 показывала чёрную тему и заголовок
+     «Креатив без лотереи», то есть страницу, которой больше нет. Имя файла
+     сменено намеренно — Telegram, VK и почтовые клиенты кэшируют превью по
+     адресу, и замена содержимого по тому же имени у них не подхватывается.
+     Исходник кадра — og-source.html рядом с этим файлом (в публикацию не
+     идёт, закрыт .gitignore), рендерится ровно в 1200x630. -->
+<meta property="og:image" content="https://sirking22.github.io/assets/og-preview-v2.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Из новой ниши в продажи. Легко.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Из новой ниши в продажи. Легко.">
 <meta name="twitter:description" content="Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.">
-<meta name="twitter:image" content="https://sirking22.github.io/assets/og-preview.jpg">
+<meta name="twitter:image" content="https://sirking22.github.io/assets/og-preview-v2.jpg">
 
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/icon-16.png">
@@ -344,6 +351,40 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
       <p class="benefit-text">Команда работает в ней каждый день, без параллельных таблиц.</p>
     </li>
   </ul>
+
+  <!-- ЭКРАН 3а текста от 02.09.2026 («Что через неё проходит»). В первой
+       передаче вёрстки его не было вовсе: объёмы существовали только в
+       строке под первым экраном, где они идут мелким кеглем в одном ряду с
+       CTR и теряются. Числа здесь другого рода, чем на экране результата, —
+       там пара «было → стало», здесь пропускная способность. Поэтому ряд
+       стоит вторичным кеглем и внутри секции о системе, а не отдельным
+       экраном: он отвечает на вопрос «сколько эта система тянет», а не
+       «что изменилось».
+       Число 7 встречается на странице дважды — «7 каналов» на экране
+       результата и «7 человек» здесь. Это разные величины, они подписаны и
+       разведены по экранам. -->
+  <div class="volume">
+    <h3 class="volume-title">Что через неё проходит</h3>
+    <ul class="volume-row">
+      <li class="volume-item">
+        <span class="volume-value">10&#8211;15</span>
+        <span class="volume-label">рекламных кампаний в год</span>
+      </li>
+      <li class="volume-item">
+        <span class="volume-value">10+</span>
+        <span class="volume-label">продуктов в год</span>
+      </li>
+      <li class="volume-item">
+        <span class="volume-value">10&#8211;15</span>
+        <span class="volume-label">роликов в месяц</span>
+      </li>
+      <li class="volume-item">
+        <span class="volume-value">7</span>
+        <span class="volume-label">человек в команде, все задачи в одной системе</span>
+      </li>
+    </ul>
+    <p class="volume-note">Каждая цифра живёт внутри системы: с метриками по каналам, базой знаний, квартальной рамкой целей и типовыми задачами, которые уточняются от запуска к запуску.</p>
+  </div>
 </section>
 
 <!-- ЭКРАН 4 -->

@@ -934,6 +934,67 @@ a { color: inherit; }
   grid-column: 2;
 }
 
+
+/* --- Объёмы, что проходит через систему ------------------------------ */
+
+/* Вторичный ряд чисел под пятью свойствами системы. Кегль намеренно вдвое
+   меньше, чем у .result-value: на экране результата числа — главный объект,
+   здесь они справка о масштабе и не должны спорить с ними за внимание.
+   Верхняя линия у пункта тоньше, чем у .result (1px против 2px), по той же
+   причине. */
+.volume {
+  margin-top: var(--space-10);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-7);
+}
+
+.volume-title {
+  font-family: var(--font-cond);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: var(--ink);
+  margin: 0 0 var(--space-6);
+}
+
+.volume-row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-7);
+}
+
+.volume-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.volume-value {
+  font-family: var(--font-cond);
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  line-height: 0.95;
+  color: var(--accent);
+}
+
+.volume-label {
+  font-size: var(--text-m);
+  line-height: 1.4;
+  color: rgba(16, 16, 16, 0.66);
+}
+
+.volume-note {
+  font-size: var(--text-m);
+  line-height: 1.5;
+  color: rgba(16, 16, 16, 0.66);
+  max-width: 72ch;
+  margin: var(--space-6) 0 0;
+}
+
 /* --- Рукописные пометки ---------------------------------------------- */
 
 /* В макете это аннотации автора поверх полей: короткая фраза от руки с
@@ -1082,6 +1143,10 @@ a { color: inherit; }
 
   .results { grid-template-columns: 1fr; gap: var(--space-8); }
 
+  /* Четыре числа в ряд на 860 дают колонку в 190px: подпись «человек в
+     команде, все задачи в одной системе» ломается на пять строк. */
+  .volume-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
   .niche-slot { grid-template-columns: 1fr; padding: var(--space-6); }
 
   .topbar-nav { display: none; }
@@ -1111,6 +1176,8 @@ a { color: inherit; }
   }
 
   .path { grid-template-columns: 1fr; }
+
+  .volume-row { grid-template-columns: 1fr; gap: var(--space-6); }
 
   .link-row .btn { width: 100%; }
 }
