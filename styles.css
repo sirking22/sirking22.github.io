@@ -229,7 +229,8 @@
   /* Ширина боковой пилюли и её отступ от края. Производные, не ступени
      шкалы: ширина подобрана под самую длинную подпись («Результат» в 11px
      занимает 52px плюс поля), отступ снят с референса. */
-  --sidenav-w: 84px;
+  --sidenav-w: 60px;       /* в покое: только номера */
+  --sidenav-w-open: 212px; /* по наведению: номера и названия */
   --sidenav-gap: 20px;
 }
 
@@ -304,32 +305,110 @@ a { color: inherit; }
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-3);
-  padding: var(--space-3) var(--space-2);
+  padding: var(--space-2);
   border-radius: 30px; /* производная: пилюля, значение с референса */
-  background: rgba(246, 244, 239, 0.92);
-  background: rgba(246, 244, 239, 0.72);
-  -webkit-backdrop-filter: blur(14px) saturate(1.4);
-  backdrop-filter: blur(14px) saturate(1.4);
-  border: 1px solid rgba(16, 16, 16, 0.14);
+  /* Матовое белое стекло, 02.09.2026 по просьбе владельца. Прежний фон
+     повторял цвет страницы и стеклом не читался. Первая строка —
+     непрозрачный запасной фон для браузеров без backdrop-filter. */
+  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(18px) saturate(1.6);
+  backdrop-filter: blur(18px) saturate(1.6);
+  border: 1px solid rgba(16, 16, 16, 0.12);
   box-shadow: 0 2px 4px rgba(58, 48, 33, 0.04),
               0 14px 30px rgba(58, 48, 33, 0.10);
+  overflow: hidden;
+  /* Раскрытие по наведению, как в референсе. Анимируется ширина самого
+     меню, а не содержимое: подписи стоят на месте всегда и просто
+     обрезаются, поэтому текст не прыгает по буквам при развороте. */
+  transition: width 0.28s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
-.sidenav-mark {
-  display: block;
-  width: 40px;
-  color: var(--ink);
+/* focus-within, а не только hover: с клавиатуры меню тоже должно
+   раскрываться, иначе табом по нему ходишь вслепую. */
+.sidenav:hover,
+.sidenav:focus-within { width: var(--sidenav-w-open); }
+
+.sidenav-mark,
+.sidenav-write,
+.sidenav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: var(--sidenav-w-open);
+  flex: none;
+  box-sizing: border-box;
   text-decoration: none;
-  padding: var(--space-1) 0;
+  border-radius: 22px; /* производная: половина высоты строки пункта */
 }
 
-.sidenav-mark svg {
+/* Подпись видна только в раскрытом меню. Гасится прозрачностью, а не
+   display: none — иначе при развороте текст появлялся бы рывком. */
+.sidenav-text {
+  font-size: var(--text-m);
+  line-height: 1.2;
+  color: rgba(16, 16, 16, 0.72);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.18s linear;
+}
+
+.sidenav:hover .sidenav-text,
+.sidenav:focus-within .sidenav-text { opacity: 1; }
+
+.sidenav-mark { padding: 0; }
+.sidenav-mark .sidenav-text { font-weight: 600; }
+
+/* Логотип в белой плашке — как в референсе. */
+.sidenav-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 14px; /* производная: скругление плашки логотипа */
+  background: var(--paper);
+  border: 1px solid rgba(16, 16, 16, 0.10);
+  color: var(--ink);
+}
+
+.sidenav-badge svg {
   display: block;
-  width: 100%;
+  width: 26px;
   height: auto;
   fill: currentColor;
+}
+
+/* Тело меню: дорожка прокрутки слева, пункты справа от неё. */
+.sidenav-body {
+  position: relative;
+  padding-left: var(--space-5);
+  width: var(--sidenav-w-open);
+  flex: none;
+  box-sizing: border-box;
+}
+
+.sidenav-track {
+  position: absolute;
+  left: 8px; /* производная: середина между краем пилюли и номером */
+  top: var(--space-2);
+  bottom: var(--space-2);
+  width: 2px;
+  border-radius: 2px;
+  background: rgba(16, 16, 16, 0.14);
+  overflow: hidden;
+}
+
+.sidenav-progress {
+  display: block;
+  width: 100%;
+  height: 0;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: height 0.12s linear;
 }
 
 .sidenav-list {
@@ -339,19 +418,11 @@ a { color: inherit; }
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
-  width: 100%;
 }
 
 .sidenav-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px; /* производная: зазор внутри пункта заведомо меньше зазора между пунктами */
-  width: 100%;
-  box-sizing: border-box;
-  padding: var(--space-2) var(--space-1);
-  border-radius: var(--radius-lg);
-  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  width: calc(var(--sidenav-w-open) - var(--space-5));
 }
 
 .sidenav-num {
@@ -359,42 +430,34 @@ a { color: inherit; }
   font-size: var(--text-s);
   font-weight: 800;
   line-height: 1;
-  color: var(--accent);
-}
-
-/* 11px вне шкалы кеглей: подпись внутри пилюли шириной 84px. Ближайшая
-   ступень 12px даёт «Результат» в 57px и упирается в поля. */
-.sidenav-text {
-  font-size: 11px;
-  line-height: 1.15;
-  letter-spacing: 0.01em;
-  text-align: center;
-  color: rgba(16, 16, 16, 0.68);
+  flex: none;
+  width: 18px; /* производная: ширина двух цифр в этом кегле */
+  color: rgba(16, 16, 16, 0.45);
 }
 
 .sidenav-link:hover { background: rgba(16, 16, 16, 0.06); }
 
-.sidenav-link:focus-visible {
+.sidenav-link:focus-visible,
+.sidenav-write:focus-visible,
+.sidenav-mark:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
-.sidenav-link.is-active { background: var(--ink); }
-.sidenav-link.is-active .sidenav-text { color: var(--surface); }
+/* Текущий раздел: номер акцентом и светлая плашка, как в референсе. */
+.sidenav-link.is-active { background: rgba(16, 16, 16, 0.07); }
+.sidenav-link.is-active .sidenav-num { color: var(--accent); }
+.sidenav-link.is-active .sidenav-text { color: var(--ink); font-weight: 600; }
 
-.sidenav-write {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.sidenav-write { padding: 0; }
+
+.sidenav-badge-icon {
   background: var(--ink);
+  border-color: var(--ink);
   color: var(--surface);
-  text-decoration: none;
 }
 
-.sidenav-write svg {
+.sidenav-badge-icon svg {
   width: 20px;
   height: 20px;
   fill: none;
@@ -404,11 +467,9 @@ a { color: inherit; }
   stroke-linejoin: round;
 }
 
-.sidenav-write:hover { background: var(--accent); }
-
-.sidenav-write:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+.sidenav-write:hover .sidenav-badge-icon {
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 /* --- Кнопки --------------------------------------------------------- */
@@ -419,12 +480,15 @@ a { color: inherit; }
   justify-content: center;
   gap: var(--space-2);
   min-height: 44px; /* производная: минимальная площадь нажатия пальцем */
-  padding: var(--space-3) var(--space-6);
+  /* 02.09.2026: кнопки сужены по просьбе владельца — боковое поле срезано
+     с 24px до 16px, трекинг с 0,08em до 0,05em. Высота не тронута: 44px
+     это минимальная площадь под палец, ниже опускать нельзя. */
+  padding: var(--space-3) var(--space-4);
   border-radius: var(--radius);
   font-family: var(--font-sans);
   font-size: var(--text-xs);
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: none;
   border: 1px solid transparent;
@@ -484,6 +548,12 @@ a { color: inherit; }
    метрик не помещалась и требовала прокрутки. Секция теперь ровно в высоту
    окна, содержимое стоит колонкой, полоса прижата книзу. Кадр ограничен по
    высоте, иначе на низких окнах он выдавливает полосу обратно. */
+/* ЗАМЕР 02.09.2026 после выноса заголовка на всю полосу: при min-height
+   первый экран вырос до 1268px и полоса метрик снова ушла за сгиб —
+   минимум не ограничивает контент сверху, а кадр тянул сетку вниз своей
+   натуральной высотой 556px. Теперь на широком окне высота задана жёстко
+   (правило ниже), кадр ужимается под остаток, а на узком остаётся
+   свободная: там первый экран честно длиннее окна. */
 #hero {
   border-top: 0;
   box-sizing: border-box;
@@ -493,7 +563,11 @@ a { color: inherit; }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: var(--space-7);
+  gap: var(--space-6);
+}
+
+@media (min-width: 861px) {
+  #hero { height: 100vh; }
 }
 
 .hero-grid { flex: 0 1 auto; }
@@ -509,7 +583,7 @@ a { color: inherit; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--accent);
-  margin: 0 0 var(--space-5);
+  margin: 0 0 var(--space-3);
 }
 
 /* Заголовки секций. Ступень --text-4xl (48px) — та же, что «EZ/Display M»
@@ -549,9 +623,19 @@ a { color: inherit; }
    ширине текстового блока, и русский заголовок ломался в шесть строк. */
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 640px) minmax(0, 1fr);
-  gap: var(--space-10);
-  align-items: center;
+  grid-template-columns: minmax(0, 620px) minmax(0, 1fr);
+  gap: var(--space-8);
+  /* stretch, а не center: при center колонка кадра получала высоту по
+     содержимому, height: 100% у картинки не к чему было применить и она
+     вылезала за ряд на 328px — обрезалось overflow сетки (замер
+     02.09.2026: бокс 561x228 при картинке 561x556). */
+  align-items: stretch;
+  /* Ряд забирает остаток высоты первого экрана, а кадр внутри ужимается
+     под него. Без min-height: 0 картинка распирает сетку и выдавливает
+     полосу метрик за сгиб — та же ловушка, что и с полосой до этого. */
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
 }
 
 /* Заголовок первого экрана. ВНЕ ШКАЛЫ намеренно, причина записана здесь:
@@ -574,7 +658,15 @@ a { color: inherit; }
      сторону — буквы выше, строки плотнее, блок читается плитой.
      Отступ до разделителя срезан с 40px до 16px: владелец сказал, что
      воздуха после заголовка слишком много. */
-  font-size: clamp(48px, 9.6vw, 158px);
+  /* 02.09.2026, третья правка: заголовок вышел из колонки на всю полосу и
+     стоит в две строки. Кегль поднят с 9,6vw до 13,2vw — на 1440 это 190px
+     против 138. Замер: строка «ИЗ НОВОЙ НИШИ В» занимает при нём 1030px из
+     1316 доступных, то есть запас есть и на длинном слове перенос не
+     рвётся. */
+  /* 13,2vw давали 190px и оставляли кадру 228px высоты — камень с
+     подписями становился нечитаемым. 12vw = 173px на 1440: две строки
+     сохраняются, кадру достаётся 336px. */
+  font-size: clamp(44px, 12vw, 190px);
   font-weight: 400;
   line-height: 0.86;
   /* Интерлиньяж 0,86 меньше высоты глифа с диакритикой: краткая у «Й» в
@@ -586,7 +678,7 @@ a { color: inherit; }
   letter-spacing: -0.035em;
   text-transform: uppercase;
   color: var(--ink-max);
-  margin: 0 0 var(--space-4);
+  margin: 0 0 var(--space-2);
 }
 
 /* Точка после заголовка — единственная цветная деталь в нём. В макете
@@ -626,12 +718,26 @@ a { color: inherit; }
 }
 
 /* Кегль подзаголовка опущен на ступень (16 -> 14) по просьбе владельца:
-   под вытянутым заголовком прежний размер спорил с ним за внимание. */
+   под вытянутым заголовком прежний размер спорил с ним за внимание.
+   Мера ширины поднята с 52ch до 66ch, чтобы абзац встал в три строки, а
+   не в четыре: при 52ch строка обрывалась на середине мысли. */
 .hero-copy .body-text {
-  max-width: 52ch;
+  max-width: 66ch;
   font-size: var(--text-m);
   line-height: 1.5;
 }
+
+/* Акцент внутри абзаца: тот же узкий гротеск, что у чисел на странице. */
+.hl {
+  font-family: var(--font-cond);
+  font-weight: 800;
+  font-size: var(--text-base);
+  letter-spacing: 0.01em;
+  color: var(--accent);
+}
+
+/* Перенос заголовка только на широком окне. */
+.br-wide { display: inline; }
 
 /* Правила .hero-proof сняты 02.09.2026 вместе с самой строкой: её текст
    перенесён в полосу метрик под первым экраном, см. .rail-item-context. */
@@ -647,12 +753,27 @@ a { color: inherit; }
   margin: 0;
 }
 
-.hero-visual { margin: 0; }
+.hero-visual {
+  margin: 0;
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
 .hero-visual img {
+  /* ЗАМЕР: при max-height кадр получал ширину из атрибута width (1234) и
+     стоял боксом 561x228 — картинка рисовалась по центру пустого поля,
+     прижатая к правому краю с дырой слева. Высота задана жёстко, ширина
+     считается от неё, пропорция держится сама. */
   display: block;
+  height: 100%;
   width: 100%;
-  height: auto;
+  object-fit: contain;
+  /* Кадр прижат к правому краю: слева от него стоит текст, и центровка
+     оставляла между ними дыру. */
+  object-position: right center;
 }
 
 /* --- Полоса доказательства под первым экраном ------------------------ */
@@ -663,14 +784,32 @@ a { color: inherit; }
    прямо расходится с фактом — CTR вырос с 1,7% до 3,4%, то есть вдвое.
    Цифра без предмета, к которому относится, владельцем уже забракована
    как вброс, поэтому в полосе стоят только проверяемые. */
+/* Зерно на тёмной плашке, 02.09.2026 по просьбе владельца. Шум рисуется
+   SVG-фильтром в data-URI, а не картинкой: файла нет, внешнего запроса
+   нет, вес нулевой. Режим наложения soft-light оставляет плашку той же
+   светлоты и добавляет только фактуру. */
+.proof-rail::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
 .proof-rail {
+  position: relative;
+  isolation: isolate;
   background: var(--ink);
   border-radius: var(--radius-lg);
   padding: var(--space-6) var(--space-7);
   /* ЗАМЕР: при --space-9 полоса начиналась на 912px и на окне высотой 900
      уходила под сгиб целиком. Это доказательство, его нельзя прятать —
      ступень опущена на одну. */
-  margin-top: var(--space-8);
+  margin-top: var(--space-6);
   display: grid;
   /* 02.09.2026: колонок стало три — в полосу переехала строка охвата
      из-под подзаголовка. При двух колонках третий пункт падал во второй
@@ -1132,10 +1271,15 @@ a { color: inherit; }
   opacity: 0.65;
 }
 
+/* 02.09.2026: пометка переехала с правого верхнего угла к левому краю
+   колонки. Кадр после переверстки первого экрана стал вдвое ниже, и
+   пометка легла прямо на камень — читались обе надписи поверх друг друга.
+   Слева от камня остаётся ~225px пустого поля, пометка стоит там. */
 .hand-hero {
   position: absolute;
-  right: var(--space-2);
-  top: var(--space-6);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-4deg);
   text-align: left;
   z-index: 2;
 }
@@ -1247,6 +1391,21 @@ a { color: inherit; }
 
   .results { grid-template-columns: 1fr; gap: var(--space-8); }
 
+  /* Принудительный перенос заголовка снимается: на узком окне строки
+     собираются сами, а жёсткий <br> оставлял бы дыру. */
+  .br-wide { display: none; }
+
+  /* ЗАМЕР на 375: пометка стояла абсолютом с поворотом и выходила за левый
+     край на 2px. В колонке шириной 312px места сбоку от кадра нет вовсе —
+     на узком окне она встаёт обычной строкой над ним. */
+  .hand-hero {
+    position: static;
+    transform: rotate(-3deg);
+    margin-bottom: var(--space-3);
+  }
+
+  .hero-visual { flex-direction: column; align-items: flex-start; }
+
   /* Четыре числа в ряд на 860 дают колонку в 190px: подпись «человек в
      команде, все задачи в одной системе» ломается на пять строк. */
   .volume-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1254,7 +1413,8 @@ a { color: inherit; }
   .niche-slot { grid-template-columns: 1fr; padding: var(--space-6); }
 
   /* На узком окне пилюля ложится горизонтально внизу: колонка слева
-     съедает треть ширины экрана. */
+     съедает треть ширины экрана. Раскрытия по наведению на телефоне нет,
+     поэтому подписи там видны всегда, а дорожка прокрутки скрыта. */
   .sidenav {
     left: 50%;
     right: auto;
@@ -1264,15 +1424,36 @@ a { color: inherit; }
     width: auto;
     max-width: calc(100vw - var(--space-8));
     flex-direction: row;
+    align-items: center;
     gap: var(--space-2);
     padding: var(--space-2) var(--space-3);
     border-radius: 24px; /* производная: та же пилюля в меньшем росте */
+    overflow-x: auto;
+    scrollbar-width: none;
   }
 
+  .sidenav::-webkit-scrollbar { display: none; }
+  .sidenav:hover, .sidenav:focus-within { width: auto; }
+
   .sidenav-mark { display: none; }
-  .sidenav-list { flex-direction: row; gap: var(--space-1); width: auto; }
-  .sidenav-link { padding: var(--space-2); }
-  .sidenav-write { width: 36px; height: 36px; }
+  .sidenav-track { display: none; }
+
+  .sidenav-body { width: auto; padding-left: 0; }
+  .sidenav-list { flex-direction: row; gap: var(--space-1); }
+
+  .sidenav-link {
+    width: auto;
+    flex-direction: column;
+    gap: 2px;
+    padding: var(--space-2);
+  }
+
+  .sidenav-link .sidenav-text { opacity: 1; font-size: 11px; }
+  .sidenav-num { width: auto; }
+
+  .sidenav-write { width: auto; }
+  .sidenav-write .sidenav-text { display: none; }
+  .sidenav-badge { width: 36px; height: 36px; border-radius: 12px; }
 }
 
 @media (max-width: 600px) {

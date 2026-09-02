@@ -122,26 +122,38 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
        разметкой, а не через <img>: внешних запросов у сайта ноль, и это
        правило сильнее удобства. Цвет — currentColor. -->
   <a class="sidenav-mark" href="#hero" aria-label="ez — на первый экран">
+    <span class="sidenav-badge">
     <svg viewBox="0 0 508 139" role="img" aria-hidden="true" focusable="false">
         <path d="M90.5569 131.646L160.934 43.3299C163.022 40.7096 161.156 36.8371 157.806 36.8371H82.6585C79.4956 36.8371 77.5839 40.3345 79.2916 42.9967L105.005 83.0832C105.936 84.5347 105.832 86.4194 104.747 87.7597L87.4408 109.138C85.7978 111.167 82.682 111.104 81.1229 109.009L4.75389 6.38804C2.79014 3.74925 4.67352 0 7.96283 0H256.88C260.28 0 262.13 3.97371 259.941 6.57545L194.663 84.1491C192.473 86.7509 194.323 90.7246 197.723 90.7246H244.906C248.062 90.7246 249.975 94.2069 248.282 96.8699L223.237 136.284C222.503 137.439 221.23 138.139 219.861 138.139H93.6852C90.3347 138.139 88.4689 134.266 90.5569 131.646Z"/>
         <path d="M416.619 6.49279L346.242 94.809C344.154 97.4293 346.02 101.302 349.37 101.302L424.517 101.302C427.68 101.302 429.592 97.8044 427.884 95.1422L402.171 55.0557C401.24 53.6042 401.344 51.7195 402.429 50.3792L419.735 29.0012C421.378 26.9715 424.494 27.035 426.053 29.13L502.422 131.751C504.386 134.39 502.502 138.139 499.213 138.139L250.296 138.139C246.895 138.139 245.046 134.165 247.235 131.563L312.513 53.9898C314.703 51.388 312.853 47.4143 309.453 47.4143L262.269 47.4143C259.114 47.4143 257.201 43.932 258.893 41.269L283.939 1.8547C284.673 0.699627 285.946 0 287.315 0H413.491C416.841 0 418.707 3.87252 416.619 6.49279Z"/>
       </svg>
+    </span>
+    <span class="sidenav-text">Арсений / ez</span>
   </a>
 
-  <ul class="sidenav-list">
-    <li><a class="sidenav-link" href="#results"><span class="sidenav-num">01</span><span class="sidenav-text">Результат</span></a></li>
-    <li><a class="sidenav-link" href="#system"><span class="sidenav-num">02</span><span class="sidenav-text">Система</span></a></li>
-    <li><a class="sidenav-link" href="#niche"><span class="sidenav-num">03</span><span class="sidenav-text">Ниша</span></a></li>
-    <li><a class="sidenav-link" href="#case"><span class="sidenav-num">04</span><span class="sidenav-text">Кейс</span></a></li>
-    <li><a class="sidenav-link" href="#next"><span class="sidenav-num">05</span><span class="sidenav-text">Контакт</span></a></li>
-  </ul>
+  <!-- Дорожка прокрутки, как в референсе: серая линия вдоль пунктов, по
+       ней растёт оранжевая. Высоту оранжевой части ставит скрипт внизу
+       страницы от доли прокрученного документа. -->
+  <div class="sidenav-body">
+    <span class="sidenav-track" aria-hidden="true"><span class="sidenav-progress"></span></span>
+    <ul class="sidenav-list">
+      <li><a class="sidenav-link" href="#results"><span class="sidenav-num">01</span><span class="sidenav-text">Результат</span></a></li>
+      <li><a class="sidenav-link" href="#system"><span class="sidenav-num">02</span><span class="sidenav-text">Система</span></a></li>
+      <li><a class="sidenav-link" href="#niche"><span class="sidenav-num">03</span><span class="sidenav-text">Ниша</span></a></li>
+      <li><a class="sidenav-link" href="#case"><span class="sidenav-num">04</span><span class="sidenav-text">Кейс</span></a></li>
+      <li><a class="sidenav-link" href="#next"><span class="sidenav-num">05</span><span class="sidenav-text">Контакт</span></a></li>
+    </ul>
+  </div>
 
-  <!-- Кнопка «Написать» из прежней шапки. В пилюлю шириной 84px слово не
-       встаёт, поэтому здесь конверт с подписью для скринридера. -->
-  <a class="sidenav-write" href="#next" aria-label="Написать" title="Написать">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.6 6.6 12 13l8.4-6.4"/>
-    </svg>
+  <!-- Кнопка «Написать» из прежней шапки. В свёрнутом меню это конверт,
+       в раскрытом рядом с ним появляется слово. -->
+  <a class="sidenav-write" href="#next" title="Написать">
+    <span class="sidenav-badge sidenav-badge-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.6 6.6 12 13l8.4-6.4"/>
+      </svg>
+    </span>
+    <span class="sidenav-text">Написать</span>
   </a>
 </aside>
 
@@ -149,18 +161,30 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
 
 <!-- ЭКРАН 1 -->
 <section id="hero" class="screen">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow">Креативный директор · бренды в e-commerce и на маркетплейсах</p>
+  <!-- 02.09.2026, вторая правка первого экрана: надзаголовок и заголовок
+       вынесены из левой колонки на всю ширину секции. В колонке 640px
+       заголовок вставал в три строки, а владелец просит две и крупнее —
+       две строки такого кегля существуют только во всю полосу. Ниже
+       заголовка сетка прежняя: слева текст и кнопки, справа кадр. -->
+  <p class="eyebrow">Креативный директор · бренды в e-commerce и на маркетплейсах</p>
       <!-- Заголовок принят 02.09.2026. Запасной, который держат наготове:
            «Новая ниша, вдвое больше кликов. Легко.»
            «Легко.» — подпись личного бренда ez. Ставится отдельным словом
            после основной части и красится золотом по прямому указанию
            владельца: это элемент бренда, а не акцент макета, поэтому цвет
            у него свой, не оранжевый. Не редактировать и не убирать. -->
-      <h1 class="hero-title">Из новой ниши в продажи<span class="dot">.</span> <span class="easy">Легко<span class="dot">.</span></span></h1>
+  <!-- Перенос принудительный: автоперенос при этом кегле ставит «В» в
+       начало второй строки и ломает ритм. На узком окне <br> гасится
+       (см. .br-wide в styles.css) и строки собираются сами. -->
+  <h1 class="hero-title">Из новой ниши в<br class="br-wide"> продажи<span class="dot">.</span> <span class="easy">Легко<span class="dot">.</span></span></h1>
+
+  <div class="hero-grid">
+    <div class="hero-copy">
       <p class="hero-divider"></p>
-      <p class="body-text">Разбираю рынок, собираю визуальный язык бренда и ставлю производство, которое держит этот язык на всех каналах. 13 лет в дизайне, 3,5 года во главе креативной команды бренда техники для дома.</p>
+      <!-- Числа выделены акцентом по просьбе владельца: в сплошном сером
+           абзаце срок работы и стаж не читались вовсе. Выделены только
+           проверяемые величины, слова вокруг них не трогаем. -->
+      <p class="body-text">Разбираю рынок, собираю визуальный язык бренда и ставлю производство, которое держит этот язык на всех каналах. <b class="hl">13 лет</b> в дизайне, <b class="hl">3,5 года</b> во главе креативной команды бренда техники для дома.</p>
       <p class="link-row">
         <a class="btn btn-solid" href="#case">Смотреть кейс</a>
         <a class="btn btn-outline" href="#system">Как это устроено</a>
@@ -488,6 +512,27 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
     var s = document.getElementById(id);
     if (s) io.observe(s);
   });
+
+  /* Дорожка прокрутки. Считается от доли прокрученного документа, а не от
+     номера текущего раздела: разделы разной высоты, и по разделам полоса
+     двигалась бы рывками. Пересчёт отложен в requestAnimationFrame —
+     обработчик scroll срабатывает чаще, чем браузер успевает рисовать. */
+  var bar = document.querySelector('.sidenav-progress');
+  if (!bar) return;
+  var ticking = false;
+  function draw() {
+    ticking = false;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var part = max > 0 ? window.pageYOffset / max : 0;
+    bar.style.height = Math.max(0, Math.min(1, part)) * 100 + '%';
+  }
+  window.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(draw);
+  }, { passive: true });
+  window.addEventListener('resize', draw);
+  draw();
 })();
 </script>
 
