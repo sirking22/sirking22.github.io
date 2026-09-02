@@ -105,30 +105,45 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
      нарисованы CSS.
      ==================================================================== -->
 
-<nav class="topbar">
-  <div class="topbar-inner">
-    <!-- Логотип владельца, файл «EZ logo.svg», прислан 10.08.2026. Вставлен
-         разметкой, а не через <img>: внешних запросов у сайта ноль, и это
-         правило сильнее удобства. 02.09.2026 авторская заливка #977E2C
-         заменена на currentColor — прежний цвет подбирался под золото
-         чёрной темы и на кремовом фоне светлой читался грязным пятном. -->
-    <a class="topbar-mark" href="#hero" aria-label="ez — на первый экран">
-      <svg viewBox="0 0 508 139" role="img" aria-hidden="true" focusable="false">
+<!-- БОКОВОЕ МЕНЮ. 02.09.2026 верхняя шапка снята целиком и заменена
+     вертикальной пилюлей слева — решение владельца по референсу
+     tencent-hunyuan.github.io/Hunyuan3D-WorldClaw. Что снято с референса
+     замером, а не на глаз: position fixed, отступ от левого края 18px,
+     центровка по высоте, ширина колонки 60px, скругление 30px, рамка
+     rgba(25,25,22,.22), двойная тень, пункты столбиком с номерами.
+     Отличий два. Ширина здесь 84px, а не 60: русские подписи длиннее
+     английских, «Результат» в 60px не встаёт. И фон у них просто
+     полупрозрачный (backdrop-filter: none) — владелец просил матовое
+     стекло, поэтому здесь добавлено размытие подложки.
+     Освободившиеся 69px высоты шапки ушли первому экрану: полоса метрик
+     до этого в него не помещалась. -->
+<aside class="sidenav" aria-label="Разделы страницы">
+  <!-- Логотип владельца, файл «EZ logo.svg», прислан 10.08.2026. Вставлен
+       разметкой, а не через <img>: внешних запросов у сайта ноль, и это
+       правило сильнее удобства. Цвет — currentColor. -->
+  <a class="sidenav-mark" href="#hero" aria-label="ez — на первый экран">
+    <svg viewBox="0 0 508 139" role="img" aria-hidden="true" focusable="false">
         <path d="M90.5569 131.646L160.934 43.3299C163.022 40.7096 161.156 36.8371 157.806 36.8371H82.6585C79.4956 36.8371 77.5839 40.3345 79.2916 42.9967L105.005 83.0832C105.936 84.5347 105.832 86.4194 104.747 87.7597L87.4408 109.138C85.7978 111.167 82.682 111.104 81.1229 109.009L4.75389 6.38804C2.79014 3.74925 4.67352 0 7.96283 0H256.88C260.28 0 262.13 3.97371 259.941 6.57545L194.663 84.1491C192.473 86.7509 194.323 90.7246 197.723 90.7246H244.906C248.062 90.7246 249.975 94.2069 248.282 96.8699L223.237 136.284C222.503 137.439 221.23 138.139 219.861 138.139H93.6852C90.3347 138.139 88.4689 134.266 90.5569 131.646Z"/>
         <path d="M416.619 6.49279L346.242 94.809C344.154 97.4293 346.02 101.302 349.37 101.302L424.517 101.302C427.68 101.302 429.592 97.8044 427.884 95.1422L402.171 55.0557C401.24 53.6042 401.344 51.7195 402.429 50.3792L419.735 29.0012C421.378 26.9715 424.494 27.035 426.053 29.13L502.422 131.751C504.386 134.39 502.502 138.139 499.213 138.139L250.296 138.139C246.895 138.139 245.046 134.165 247.235 131.563L312.513 53.9898C314.703 51.388 312.853 47.4143 309.453 47.4143L262.269 47.4143C259.114 47.4143 257.201 43.932 258.893 41.269L283.939 1.8547C284.673 0.699627 285.946 0 287.315 0H413.491C416.841 0 418.707 3.87252 416.619 6.49279Z"/>
       </svg>
-    </a>
-    <p class="topbar-name">Арсений / ez</p>
-    <ul class="topbar-nav">
-      <li><a href="#results">Результат</a></li>
-      <li><a href="#system">Система</a></li>
-      <li><a href="#niche">Ниша</a></li>
-      <li><a href="#case">Кейс</a></li>
-      <li><a href="#next">Контакт</a></li>
-    </ul>
-    <a class="btn btn-solid topbar-cta" href="#next">Написать</a>
-  </div>
-</nav>
+  </a>
+
+  <ul class="sidenav-list">
+    <li><a class="sidenav-link" href="#results"><span class="sidenav-num">01</span><span class="sidenav-text">Результат</span></a></li>
+    <li><a class="sidenav-link" href="#system"><span class="sidenav-num">02</span><span class="sidenav-text">Система</span></a></li>
+    <li><a class="sidenav-link" href="#niche"><span class="sidenav-num">03</span><span class="sidenav-text">Ниша</span></a></li>
+    <li><a class="sidenav-link" href="#case"><span class="sidenav-num">04</span><span class="sidenav-text">Кейс</span></a></li>
+    <li><a class="sidenav-link" href="#next"><span class="sidenav-num">05</span><span class="sidenav-text">Контакт</span></a></li>
+  </ul>
+
+  <!-- Кнопка «Написать» из прежней шапки. В пилюлю шириной 84px слово не
+       встаёт, поэтому здесь конверт с подписью для скринридера. -->
+  <a class="sidenav-write" href="#next" aria-label="Написать" title="Написать">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.6 6.6 12 13l8.4-6.4"/>
+    </svg>
+  </a>
+</aside>
 
 <main>
 
@@ -146,7 +161,6 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
       <h1 class="hero-title">Из новой ниши в продажи<span class="dot">.</span> <span class="easy">Легко<span class="dot">.</span></span></h1>
       <p class="hero-divider"></p>
       <p class="body-text">Разбираю рынок, собираю визуальный язык бренда и ставлю производство, которое держит этот язык на всех каналах. 13 лет в дизайне, 3,5 года во главе креативной команды бренда техники для дома.</p>
-      <p class="hero-proof"><b>CTR карточек 1,7% → 3,4%</b> на равных показах. 35+ SKU, семь каналов, команда 7 человек.</p>
       <p class="link-row">
         <a class="btn btn-solid" href="#case">Смотреть кейс</a>
         <a class="btn btn-outline" href="#system">Как это устроено</a>
@@ -180,6 +194,15 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
       <span class="rail-value">2,4 → 0,7</span>
       <span class="rail-label">Кругов правок на задачу</span>
       <span class="rail-note">Запуск перестал упираться в переделки</span>
+    </div>
+    <!-- 02.09.2026, решение владельца: строка «35+ SKU, семь каналов,
+         команда 7 человек» перенесена сюда из-под подзаголовка первого
+         экрана. Там она стояла третьим абзацем подряд и отжимала кнопки
+         вниз; здесь работает подписью к двум числам слева. Крупного числа
+         у пункта нет намеренно: это охват, а не результат. -->
+    <div class="rail-item rail-item-context">
+      <span class="rail-label">Охват</span>
+      <span class="rail-note">35+ SKU, семь каналов, команда 7 человек</span>
     </div>
   </div>
 </section>
@@ -439,6 +462,35 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
      ноль внешних запросов, кроме счётчика. -->
 <script src="vendor/gsap.min.js"></script>
 <script src="vendor/ScrollTrigger.min.js"></script>
+
+<!-- Подсветка текущего раздела в боковом меню. Наблюдатель, а не расчёт на
+     прокрутке: обработчик scroll считает координаты на каждый кадр, а
+     IntersectionObserver будит браузер только на пересечении. Поля -45%
+     сверху и снизу оставляют узкую полосу по центру окна — раздел
+     считается текущим, когда он в середине экрана, а не когда край
+     показался. -->
+<script>
+(function () {
+  var links = [].slice.call(document.querySelectorAll('.sidenav-link'));
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var a = map[e.target.id];
+      if (!a) return;
+      links.forEach(function (l) { l.classList.remove('is-active'); });
+      a.classList.add('is-active');
+    });
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  Object.keys(map).forEach(function (id) {
+    var s = document.getElementById(id);
+    if (s) io.observe(s);
+  });
+})();
+</script>
+
 <script>
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -462,7 +514,6 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
     ['.section-title',      22,   -13,   null,   0.68, 'power3.out',      0,     0.06],
     ['.lead',               16,   -10,   null,   0.55, 'power2.out',   0.06,     0.06],
     ['.body-text',          14,    -8,   null,   0.50, 'power2.out',   0.10,     0.06],
-    ['.hero-proof',         14,    -8,   null,   0.50, 'power2.out',   0.12,        0],
     ['.link-row',           12,    -7,   null,   0.46, 'power2.out',   0.16,        0],
     ['.proof-rail',         24,   -14,   1.02,   0.75, 'power3.out',      0,        0],
     ['.result',             20,   -12,   null,   0.60, 'power3.out',      0,     0.09],
