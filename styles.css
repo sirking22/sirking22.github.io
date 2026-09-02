@@ -1,48 +1,194 @@
+/* ====================================================================
+   ВИТРИНА EZ — СТИЛИ
+
+   Файл пересобран 02.09.2026 под макет Figma «EZ Portfolio — Hybrid
+   Proof Lab», узел 1-18. Это не правка прежнего файла, а новый: макет
+   меняет тему целиком — со чёрно-золотой на светлую с оранжевым, — а в
+   прежних 2035 строках 48 селекторов из 76 уже не имели разметки после
+   пересборки страницы 01.09.2026. Править мёртвый файл дороже, чем
+   написать живой.
+
+   Прежняя редакция сохранена копией в scratchpad сессии:
+   styles.v2-visualdna.css (чёрная тема, Visual DNA, золото).
+
+   ВАЖНО о расхождении канонов. В `references/` лежат шесть листов
+   «ez Visual DNA» — чёрный фон, золото #D4AF37, editorial serif. Макет
+   1-18 задаёт ровно противоположное: кремовый фон, оранжевый #FF4B08,
+   ультраконденсированный гротеск. Верстается макет, потому что задача
+   так поставлена; листы Visual DNA этой странице больше не канон.
+   ==================================================================== */
+
+/* ====================================================================
+   ШРИФТЫ. Подключены локально 02.09.2026 по решению владельца.
+   Ни одного внешнего запроса: файлы лежат в assets/fonts/, скачаны с
+   Google Fonts один раз и отдаются вместе со страницей.
+
+   ЗАМЕНА ОТНОСИТЕЛЬНО МАКЕТА, причина проверена запросом к Google Fonts:
+   Six Caps отдаёт только latin и latin-ext, Barlow Condensed — latin,
+   latin-ext и vietnamese. КИРИЛЛИЦЫ НЕТ НИ У ОДНОГО. Макет английский, а
+   страница русская: этими шрифтами заголовок «Из новой ниши в продажи»
+   не набирается вообще — каждая буква ушла бы в запасной шрифт, и весь
+   смысл выбора начертания пропал бы.
+   Взят Oswald: узкий гротеск с полной кириллицей, ближайший к обоим по
+   плотности и по характеру. Inter оставлен как в макете — у него
+   кириллица есть.
+
+   font-display: swap — текст показывается системным шрифтом сразу и
+   переключается, когда файл дойдёт; иначе первый экран пустует.
+   ==================================================================== */
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/yanone-500-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/yanone-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('assets/fonts/yanone-700-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('assets/fonts/yanone-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/caveat-500-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/caveat-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/inter-400-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/inter-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/inter-500-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/inter-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('assets/fonts/inter-600-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('assets/fonts/inter-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
-  /* 10.08.2026: подогнан под новую генерацию первого экрана (hero-layers.webp,
-     1122×1402). Фон кадра измерен по восьми зонам — все дают один и тот же
-     тон, RGB 12, 11, 13, разброс между зонами меньше 0,5 из 255, виньетки
-     нет. Подгоняется страница под картинку, а не наоборот — так решил
-     владелец 10.08.2026: раз фон страницы и фон кадра совпадут, картинку не
-     нужно ни редактировать, ни растворять по краям. Переменная используется
-     во всех нужных местах уже сейчас (шапка, подложки плит, градиенты
-     масок) — они подхватывают новое значение сами, дублировать незачем.
-     Прежнее значение для отката: #0E0F11. */
-  /* 14.08.2026: подогнан под новый файл первого экрана (hero-layers.webp,
-     1086×1448) по тому же правилу владельца, что и 10.08.2026 — страница
-     идёт за картинкой, а не наоборот. Замер не по восьми точкам, а по всей
-     кайме кадра шириной 10px, из неё исключён низ: там отражение на полу
-     доходит до последней строки файла и в среднее не годится. Кайма даёт
-     RGB 3/4/7. Новый кадр темнее прежнего примерно на 8 из 255 и слегка
-     холоднее, поэтому и страница стала темнее и холоднее — иначе кадр читался
-     бы на ней тёмным прямоугольником с видимой границей.
-     Фон нового кадра не идеально ровный: между углом и боковым краем
-     расхождение около 4 из 255, так что совпадение здесь не до половины
-     единицы, как было с прежним файлом, а в пределах этих четырёх.
-     Переменная задаёт ещё шапку, подложки плит и градиенты масок — они
-     подхватывают новое значение сами.
-     15.08.2026, ещё одна замена кадра: новая генерация 1024×1536 измерена по
-     тем же восьми точкам после сжатия — все семь точек каймы дают 0/0/0, ровно
-     чёрный, без расхождения между углом и боковым краем (восьмая, низ по
-     центру, приходится на отражение и в среднее не идёт). Поэтому переменная
-     опущена до чистого чёрного: прежние 3/4/7 были светлее кадра на 4-7 из 255
-     и давали по границе кадра еле заметную рамку. Побочно градиенты масок
-     нижнего края теперь сходятся с кадром точно, а не в пределах допуска.
-     Прежние значения для отката: #030407 (под hero-layers-v7.webp),
-     #0C0B0D (под hero-layers-v6.webp), до него #0E0F11. */
-  --graphite: #000000;
-  --charcoal: #1A1C1F;
-  --stone: #2B2E33;
-  --slate: #3B3F44;
-  --gold: #D4AF37;
-  --paper: #F5F5F2;
+  /* --- Цвет. Значения сняты из макета (get_design_context, узел 1:19),
+     не подобраны на глаз. -------------------------------------------- */
+  --paper:      #F6F4EF; /* фон страницы */
+  --ink:        #101010; /* основной текст, тёмные плашки и кнопки */
+  --ink-max:    #000000; /* заголовок первого экрана — в макете чистый чёрный */
+  --accent:     #FF4B08; /* акцент: надзаголовок, числа, названия шагов */
+  --accent-deep:#F55214; /* точка после заголовка — на тон глубже акцента */
+  --surface:    #F3F2EF; /* светлый текст на тёмном и фон вторичной кнопки */
+  --muted:      #B8B5AD; /* подписи под числами на тёмном */
+  --line:       #9F9B94; /* границы: вторичная кнопка, разделители */
 
-  --font-serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
-  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: ui-monospace, Consolas, 'SF Mono', monospace;
+  /* Подпись личного бренда «Легко.». 02.09.2026 переведена на акцент макета
+     по решению владельца: золото #D4AF37 давало на кремовом фоне контраст
+     1,9:1 — ниже порога 3:1 даже для крупного текста. Прежнее значение для
+     отката: #D4AF37. Слово остаётся отдельным и цветным, то есть как элемент
+     бренда работает по-прежнему; сменился только оттенок. */
 
-  /* Шкала отступов. Любое расстояние на странице берётся только отсюда.
-     Новое значение не дописывается — берётся ближайшая ступень. */
+  /* Слабая линия по светлому фону. В макете разделители нарисованы
+     векторами; здесь это правило CSS — линию картинкой не заказывают. */
+  --rule: rgba(16, 16, 16, 0.14);
+
+  /* --- Шрифты.
+
+     Макет набран Six Caps (заголовок первого экрана, 200px),
+     Barlow Condensed ExtraBold (числа, названия шагов, логотип) и Inter
+     (весь текст). Ни одного из них в проекте нет, а внешние запросы
+     странице запрещены — правило сильнее удобства, и Google Fonts сюда
+     не подключается. Поэтому в каждом стеке первым стоит имя из макета:
+     если владелец положит файлы в assets/ и добавит @font-face, вид
+     сойдётся с макетом без единой правки ниже. Пока работают системные
+     запасные, и вид отличается — сильнее всего в заголовке, где Six Caps
+     вдвое уже любого системного узкого шрифта.
+
+     Caveat (рукописные пометки макета) не подключается намеренно: по
+     условию задачи аннотации автора макета в вёрстку не идут. */
+  /* Oswald вместо Six Caps: у Six Caps нет кириллицы (проверено запросом к
+     Google Fonts — только latin и latin-ext), а заголовок русский. Oswald
+     узкий, тяжёлый и с полной кириллицей — ближайшее, чем этот заголовок
+     вообще можно набрать. Системные запасные оставлены на случай, если файл
+     шрифта не дойдёт: Impact из них ближе всех по плотности, замерено
+     02.09.2026 — ширина строки «ИЗ НОВОЙ» при кегле 100px: Impact 398,9
+     против 523,1 у Arial Narrow. */
+  --font-display: 'Yanone Kaffeesatz', Impact, 'Arial Narrow', sans-serif;
+  /* Тот же Oswald на числах и названиях шагов: Barlow Condensed из макета
+     тоже без кириллицы (latin, latin-ext, vietnamese). Два узких гротеска на
+     одной странице всё равно спорили бы между собой. */
+  --font-cond:    'Yanone Kaffeesatz', 'Arial Narrow', system-ui, sans-serif;
+  /* Рукописные пометки. В макете они набраны Caveat и по первой передаче в
+     вёрстку не шли; 02.09.2026 владелец сказал, что хочет их на странице. */
+  --font-hand:    'Caveat', 'Segoe Script', cursive;
+  --font-sans:    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* --- Шкала отступов. Любое расстояние берётся только отсюда, новое
+     значение не дописывается — берётся ближайшая ступень. */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -54,7 +200,7 @@
   --space-9: 56px;
   --space-10: 72px;
 
-  /* Шкала кеглей. Те же правила. */
+  /* --- Шкала кеглей. Те же правила. */
   --text-xs: 12px;
   --text-s: 13px;
   --text-m: 14px;
@@ -65,1960 +211,934 @@
   --text-3xl: 40px;
   --text-4xl: 48px;
 
-  /* Скругление. Одно значение на всё, что обведено рамкой: кнопки, плашки
-     кадров, карточки, узлы схемы. Радиус небольшой намеренно — он должен
-     снимать резкость угла, а не превращать блок в пилюлю. */
-  --radius: 6px;
+  /* --- Скругление. Три значения, все три взяты из макета: кнопки и
+     карточки 4px, тёмная полоса метрик 8px, каменные плиты 12px. */
+  --radius: 4px;
+  --radius-lg: 8px;
+  --radius-slab: 12px;
+
+  /* Ширина содержимого. В макете полоса контента 1336px в окне 1440 — то
+     есть поля по 52px. Производные величины, не ступени шкалы.
+     ЗАМЕР 02.09.2026: --wrap стоял на max-width вместе с этими полями, и
+     контент выходил 1232 вместо 1336 — полосе недоставало 104px, а кадру
+     первого экрана 104 из положенных ему 624. Поля теперь прибавляются к
+     ширине, а не вычитаются из неё: max-width = --wrap + два поля = 1440,
+     ровно ширина макета. */
+  --wrap: 1336px;
+  --gutter: 52px;
+  --topbar-h: 64px;
 }
 
-* {
-  box-sizing: border-box;
-}
+/* --- Сброс и база --------------------------------------------------- */
 
-html {
-  background: var(--graphite);
-}
-
-/* Полосы прокрутки: 100vw у плит-подложек шире видимой области ровно на
-   ширину скроллбара, поэтому обрезаем на обоих уровнях, а не только на body.
-   Обрезка обязана быть именно clip, а не hidden: hidden делает элемент
-   контейнером прокрутки, и тогда sticky-шапка перестаёт прилипать — замерено,
-   при прокрутке на 2037px она уезжала на те же 2037px. Строка с hidden
-   оставлена первой как запасная для браузеров без clip. */
+/* overflow-x: clip, а не hidden. hidden делает элемент контейнером
+   прокрутки, и любой position: sticky внутри начинает липнуть к нему, а
+   не к окну — шапка уезжала на всю высоту прокрутки. clip обрезает так
+   же, контейнера прокрутки не создаёт. Строка с hidden оставлена первой
+   как запасная для браузеров без clip. */
 html {
   overflow-x: hidden;
   overflow-x: clip;
-}
-
-html {
   scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+  html { scroll-behavior: auto; }
 }
+
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background: var(--graphite);
-  color: var(--paper);
-  font-family: var(--font-sans);
-  font-size: var(--text-base);
-  line-height: 1.55;
   overflow-x: hidden;
   overflow-x: clip;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* Контентная ширина. 18.08.2026 поднята с 1120 до 1232px, в тот же день
-   владелец попросил сузить на 15% — 1047px. Расширение не помогло: колонка
-   тянулась, строки становились длиннее, читать труднее. Прежние значения для
-   отката: 1232px, до него 1120px. */
-main {
-  max-width: 1047px;
-  margin: 0 auto;
-  padding: 0 var(--space-5);
-}
+img, video { max-width: 100%; }
 
-.body-text,
-.thesis,
-.chain-list p {
-  max-width: 68ch;
-}
+a { color: inherit; }
 
-.screen {
-  padding: var(--space-9) 0;
-  /* Производная от высоты .topbar (52px) плюс запас на воздух — не ступень шкалы */
-  scroll-margin-top: 64px;
-}
+/* --- Шапка ---------------------------------------------------------- */
 
-/* Слайдовый ритм первых трёх экранов (#hero, #method, #system) 08.08.2026:
-   каждый занимает высоту окна и центрирует содержимое по вертикали.
-   Правило стоит НИЖЕ .screen намеренно — при равной специфичности класса
-   позже объявленное побеждает, а .slide обязан перебить padding из .screen
-   (см. историю бага с .track/.formula/.bridge в мобильном медиазапросе ниже). */
-.slide {
-  min-height: 100vh;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-block: var(--space-10);
-}
-
-.slide .section-title {
-  font-size: clamp(28px, 5.5vw, 56px);
-}
-
-/* Верхняя навигация по блокам.
-
-   10.08.2026: раньше здесь был один слой backdrop-filter (стекло) с тремя
-   уровнями отката — @supports для браузеров без backdrop-filter,
-   prefers-reduced-transparency и базовый background до фильтра. Стекло убрано
-   вместе с .topbar (см. комментарий там же), поэтому отпала и вся эта
-   схема отката — фон теперь всегда плотный, откатывать нечего. */
 .topbar {
   position: sticky;
   top: 0;
   z-index: 50;
-  /* 10.08.2026: под шапку уезжает крупная картинка первого экрана, и
-     полупрозрачное размытие поверх неё читалось как грязное наложение —
-     владелец в этот же день отдельно снял приём наложения на этой картинке.
-     Фон сделан плотным, backdrop-filter убран. Прежние значения для отката:
-     background: rgba(14, 15, 17, 0.78);
-     -webkit-backdrop-filter: blur(14px) saturate(140%);
-     backdrop-filter: blur(14px) saturate(140%);
-     (обоснование 0.78 из прежнего замера контраста для отката: при 0.72 — 3,97,
-     при 0.78 — 4,89, при 0.82 — 5,68 к норме 4,5). */
-  background: var(--graphite);
-  border-bottom: 1px solid var(--slate);
-  /* Светлый кант по верхней грани: у стекла есть край, и он ловит свет */
-  box-shadow: inset 0 1px 0 rgba(245, 245, 242, 0.06);
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
 }
 
 .topbar-inner {
-  max-width: 1120px;
+  max-width: calc(var(--wrap) + var(--gutter) * 2);
   margin: 0 auto;
-  padding: 0 var(--space-5);
-  height: 52px;
+  padding: var(--space-3) var(--gutter);
   display: flex;
   align-items: center;
+  gap: var(--space-6);
+  min-height: var(--topbar-h);
 }
 
-/* 10.08.2026: вместо двух букв Georgia здесь знак, присланный владельцем.
-   Свойства шрифта оставлены — если логотип когда-нибудь вернут к тексту,
-   правило не придётся собирать заново. */
+/* Логотип владельца, файл «EZ logo.svg», вставлен разметкой, а не через
+   <img>: внешних запросов у страницы ноль, и лишний файл здесь не нужен.
+   Цвет управляется через fill: currentColor на самом svg — в светлой теме
+   логотип чёрный, тогда как в прежней чёрной теме он был золотым. */
 .topbar-mark {
-  font-family: var(--font-serif);
-  color: var(--gold);
-  text-decoration: none;
-  font-size: var(--text-l);
-  margin-right: var(--space-6);
-  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
+  flex: none;
+  color: var(--ink);
+  text-decoration: none;
 }
 
-/* Высоту знака задаём одну, ширину считает пропорция файла (508×139).
-   10.08.2026, вечер: владелец попросил «лого сделай раза в 2 меньше» —
-   было 20px (20px против 52px полосы, знак читался, но не спорил с пунктами
-   меню), стало 10px. Если знак станет неразличим, ближайшая ступень назад —
-   12px или 14px, решает владелец глазом.
-   Заливка своя, авторская — цвет прописан на путях в разметке. */
 .topbar-mark svg {
-  height: 10px;
-  width: auto;
   display: block;
-  fill: #977E2C;
+  width: 42px;
+  height: auto;
+  fill: currentColor;
+}
+
+.topbar-name {
+  font-size: var(--text-m);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0;
+  flex: none;
 }
 
 .topbar-nav {
-  display: flex;
-  align-items: center;
-  gap: var(--space-5);
   list-style: none;
-  margin: 0;
+  display: flex;
+  gap: var(--space-7);
+  margin: 0 0 0 auto;
   padding: 0;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 
-.topbar-nav::-webkit-scrollbar {
-  display: none;
-}
-
-/* Узкий экран: список пунктов шире колонки (замерено 428px против 302px при
-   окне 375). Обрыв на границе выглядит как конец меню, поэтому правый край
-   гасим — затухание читается как «дальше есть ещё». */
-@media (max-width: 600px) {
-  .topbar-nav {
-    -webkit-mask-image: linear-gradient(90deg, #000 82%, transparent 100%);
-    mask-image: linear-gradient(90deg, #000 82%, transparent 100%);
-  }
-
-  /* 44px — размер уверенного касания. Замерено: ссылки меню давали 30px,
-     промахнуться на телефоне легко. Отрицательный margin компенсирует
-     вертикальный padding, чтобы полоса меню не стала выше. */
-  .topbar-nav a,
-  .topbar-mark {
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-  }
-
-}
-
-.topbar-nav li {
-  flex-shrink: 0;
-  white-space: nowrap;
-}
+.topbar-nav::-webkit-scrollbar { display: none; }
 
 .topbar-nav a {
-  display: inline-block;
-  font-family: var(--font-sans);
-  font-size: var(--text-m);
-  color: rgba(245, 245, 242, 0.72);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   text-decoration: none;
-  padding: var(--space-1) 0;
+  white-space: nowrap;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid transparent;
 }
 
 .topbar-nav a:hover,
-.topbar-nav a:focus-visible {
-  color: var(--paper);
-  box-shadow: inset 0 -2px 0 var(--gold);
+.topbar-nav a:focus-visible { border-bottom-color: var(--accent); }
+
+.topbar-cta { flex: none; margin-left: var(--space-6); }
+
+/* --- Кнопки --------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px; /* производная: минимальная площадь нажатия пальцем */
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
 }
 
-/* Заголовки разделов. Моноширинный и золотая точка в конце — по решению
-   владельца 07.08.2026. Точка ставится стилями, а не в тексте: в разметке
-   заголовок остаётся чистым, а в <title> и меню дублировать её не нужно. */
+.btn-solid {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.btn-solid:hover { background: var(--accent); }
+
+.btn-outline {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.btn-outline:hover { border-color: var(--ink); }
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Подпись «скопировано» рисуется скриптом внутри кнопки почты. */
+.copy-toast {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: var(--surface);
+  border-radius: inherit;
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+}
+
+/* --- Секции --------------------------------------------------------- */
+
+.screen {
+  max-width: calc(var(--wrap) + var(--gutter) * 2);
+  margin: 0 auto;
+  padding: var(--space-10) var(--gutter);
+  /* Производная от высоты шапки плюс воздух, не ступень шкалы: без неё
+     якорная ссылка уводит заголовок секции под прилипающую шапку. */
+  scroll-margin-top: 80px;
+  border-top: 1px solid var(--rule);
+}
+
+/* Верхний отступ первого экрана на ступень меньше общего: шапка и так
+   даёт 64px воздуха над заголовком. */
+#hero {
+  border-top: 0;
+  padding-top: var(--space-8);
+}
+
+.eyebrow {
+  font-size: var(--text-m);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 var(--space-5);
+}
+
+/* Заголовки секций. Ступень --text-4xl (48px) — та же, что «EZ/Display M»
+   в макете: 48px, ExtraBold, интерлиньяж 44,16 (0,92). */
 .section-title {
-  font-family: var(--font-mono);
-  font-weight: 400;
-  /* вне шкалы: 40px моноширинного дают 825px на самом длинном заголовке
-     при колонке 1120 — замерено, запас есть. Ниже 24px не опускаемся, иначе
-     заголовок перестаёт отличаться от тезиса под ним. */
-  font-size: clamp(24px, 5vw, 40px);
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-  margin: 0 0 var(--space-5);
-  color: var(--paper);
+  font-family: var(--font-cond);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 var(--space-6);
+  max-width: 20ch;
 }
 
-.section-title::after {
-  content: ".";
-  color: var(--gold);
-}
+.section-title .accent { color: var(--accent); }
 
-/* Заголовок, который открывает перечисление, а не утверждение: точку в
-   конце заменяет двоеточие. Цвет тот же золотой — знак идёт впереди слов. */
-.section-title.colon::after {
-  content: ":";
-}
-
-/* Тезис раздела говорит тем же голосом, что тезис первого экрана:
-   моноширинный, золотой, кеглем формулы. Один приём на всю страницу. */
-.thesis {
-  font-family: var(--font-mono);
-  font-weight: 400;
-  font-size: var(--text-base);
+.lead {
+  font-size: var(--text-l);
   line-height: 1.45;
-  margin: 0 0 var(--space-5);
-  color: var(--gold);
+  max-width: 60ch;
+  margin: 0 0 var(--space-6);
 }
 
 .body-text {
-  font-family: var(--font-sans);
   font-size: var(--text-base);
-  line-height: 1.6;
-  margin: 0 0 var(--space-4);
-  color: var(--paper);
-}
-
-/* Триада — главная надпись первого экрана. Она же подписывает зоны схемы:
-   обещание и метод должны читаться одним словарём. Взята крупным планом
-   по решению владельца 07.08.2026 — до этого она шла надзаголовком в 12px
-   и терялась под тезисом. */
-.triad {
-  font-family: var(--font-sans);
-  /* вне шкалы: кегль первого экрана тянется за шириной окна.
-     Максимум поднят с 68 до 96 (08.08.2026): заголовок укоротился с 31 знака
-     до 19, и в прежнем кегле занимал 59% колонки — плита перевешивала его
-     справа. При 96px строка выходит 936px в колонку 1080, запас 144px. */
-  font-size: clamp(32px, 7.4vw, 96px);
-  font-weight: 500;
-  line-height: 1.04;
-  letter-spacing: -0.015em;
-  color: var(--paper);
-  margin: 0 0 var(--space-5);
-}
-
-/* Точка после каждого слова — не пунктуация, а такт. Золотом, чтобы
-   членение читалось раньше самих слов. Работает и в заголовке раздела:
-   08.08.2026 триада «Диагностика. Проверка. Стандарт» встала заголовком
-   второго экрана, и такты там нужны те же. */
-/* 14.08.2026: сюда добавлялся display:inline-block, чтобы к точке первого
-   экрана применился transform — к строчным элементам браузер трансформации не
-   применяет вовсе. В тот же день владелец решил, что точке достаточно одной
-   прозрачности, масштаб из анимации снят, и правило стало лишним. Если
-   движение когда-нибудь вернут — вернуть и его, иначе оно снова будет
-   молча игнорироваться. */
-.triad .dot,
-.section-title .dot,
-/* Тем же золотом красится знак равенства в заголовке второго экрана:
-   это тот же приём — служебный знак вперёд слов. */
-.section-title .accent {
-  color: var(--gold);
-}
-
-/* Надзаголовок первого экрана. Добавлен 08.08.2026 отдельно от
-   .section-title — тот с ним не соседствует нигде на странице
-   (см. комментарий в разметке #hero про историю их конфликта). */
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
+  line-height: 1.45;
+  max-width: 62ch;
   margin: 0 0 var(--space-4);
 }
 
-/* Строка фактов биографии. Приглушена намеренно: это опора, а не заявление. */
-/* Секция #background убрана 10.08.2026, правила .credentials и .numbers пока не применяются. */
-.credentials {
-  font-family: var(--font-mono);
-  font-size: var(--text-s);
-  color: var(--paper);
-  opacity: .65;
-  line-height: 1.7;
-  margin: var(--space-6) 0 var(--space-4);
-}
+/* --- ЭКРАН 1. Первый экран ------------------------------------------ */
 
-.numbers { margin-top: var(--space-5); }
-.numbers p { margin: 0 0 var(--space-3); }
-.numbers p:last-child { margin-bottom: 0; }
-
-/* Два трека: суть метода словами до того, как читатель увидит схему. */
-.tracks { margin: var(--space-7) 0 var(--space-5); }
-.track {
-  margin: 0 0 var(--space-4);
-  line-height: 1.7;
-  padding-left: var(--space-4);
-  border-left: 2px solid var(--slate);
-}
-.track:last-child { margin-bottom: 0; }
-.track strong { color: var(--gold); font-weight: 600; }
-
-.formula {
-  font-family: var(--font-mono);
-  color: var(--gold);
-  margin: 0 0 var(--space-7);
-  padding-left: var(--space-4);
-}
-
-.diagram-details { margin-bottom: var(--space-7); }
-
-/* Мост между блоками. Тише заголовка и громче обычного абзаца: его работа —
-   переключить читателя, а не сообщить новое. Линия слева та же, что у
-   треков, — это делает его частью того же голоса. */
-.bridge {
-  margin: var(--space-7) 0 0;
-  padding-left: var(--space-4);
-  border-left: 2px solid var(--gold);
-  line-height: 1.6;
-  color: var(--paper);
-  max-width: 44em;
-}
-
-.divider {
-  border: none;
-  border-top: 1px solid var(--slate);
-  width: 100%;
-  margin: 0;
-}
-
-/* Модификатор для линий внутри одного экрана (#system, макет 10.08.2026):
-   базовый .divider стоит между секциями и margin на нём не рассчитан на
-   такое место — там его роль играет обёртка .screen/.slide снаружи, а сам
-   тег держит margin:0. Внутри секции линия нужна с воздухом по обе стороны,
-   но заметно меньшим, чем между экранами (там разрыв держат padding двух
-   соседних .screen, а не сам <hr>). */
-.divider-inline {
-  margin: var(--space-6) 0;
-}
-
-/* Схема-иллюстрация в #method. 08.08.2026 их было две — assets/grounds.svg и
-   assets/loops.svg; 14.08.2026 обе заменены одним кадром assets/method-map.webp
-   (модификатор .scheme-map ниже). Рамка и подложка — тот же приём, что у
-   .diagram-wrap, чтобы схема без спойлера выглядела частью одной страницы. */
-.scheme {
-  margin: var(--space-9) 0;
-}
-
-.scheme img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 1120px;
-  background: var(--charcoal);
-  border: 1px solid var(--slate);
-  border-radius: var(--radius);
-  padding: var(--space-5);
-}
-
-.scheme figcaption {
-  font-family: var(--font-sans);
-  font-size: var(--text-s);
-  line-height: 1.5;
-  color: rgba(245, 245, 242, 0.62);
-  margin-top: var(--space-3);
-  max-width: 60ch;
-}
-
-/* 14.08.2026: кадр assets/method-map.webp, заменивший обе схемы, несёт
-   собственную светлую кромку и собственные поля внутри блоков. Рамка,
-   подложка и внутреннее поле от .scheme img на нём сняты — иначе выходит
-   рамка в рамке, а тёмная подложка --charcoal светлее самого кадра и
-   проступает по краю полосой. */
-.scheme-map img {
-  background: none;
-  border: 0;
-  padding: 0;
-  max-width: 1200px;
-}
-
-/* Текстовый эквивалент схемы. До 14.08.2026 он подменял собой картинку на
-   всех ширинах до 999px: схема пряталась, а вместо неё разворачивались семь
-   пунктов лестницы и три абзаца — два экрана подряд на телефоне. Владелец
-   назвал это таблицами и попросил вместо них кадр.
-   Теперь кадр показан на любой ширине, а текст лежит в спойлере: содержание
-   не потеряно и доступно и без картинок, но экран им не занят. Кадр плотный,
-   и на узкой ширине его открывают в полный размер по .shot-link. */
-.scheme-text {
-  margin-top: var(--space-4);
-}
-
-.scheme-text .scheme-list {
-  margin-top: var(--space-4);
-}
-
-/* Лестница «факт → доказательство → паттерн → стандарт» в #system.
-   Счётчик и золотой моноширинный маркер — тот же приём, что у
-   .zone-card-steps. */
-.ladder {
-  list-style: none;
-  margin: var(--space-6) 0 0;
-  padding: 0;
-  counter-reset: ladder-step;
+/* Колонка заголовка 640px, как в макете (узел 37:7 — «Hero exact
+   headline», ширина 640 при полосе 1336). Прежние 520px были взяты по
+   ширине текстового блока, и русский заголовок ломался в шесть строк. */
+.hero-grid {
   display: grid;
-  gap: var(--space-5);
+  grid-template-columns: minmax(0, 640px) minmax(0, 1fr);
+  gap: var(--space-10);
+  align-items: center;
 }
 
-.ladder li {
-  counter-increment: ladder-step;
-  position: relative;
-  padding-left: var(--space-6);
-}
-
-.ladder li::before {
-  content: counter(ladder-step, decimal-leading-zero);
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-family: var(--font-mono);
-  font-size: var(--text-s);
-  color: var(--gold);
-}
-
-.ladder li b {
-  display: block;
-  color: var(--paper);
-  font-weight: 600;
-}
-
-.ladder li span {
-  display: block;
-  color: rgba(245, 245, 242, 0.72);
-  font-size: var(--text-m);
-}
-
-@media (min-width: 900px) {
-  .ladder {
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-6);
-  }
-}
-
-/* Модификатор для .scheme-list в #method: семь пунктов, не четыре —
-   раскладку .ladder в четыре колонки нужно отменить на всех ширинах. */
-.ladder.ladder-flow {
-  grid-template-columns: 1fr;
-}
-
-.ladder-flow li:nth-child(3) b {
-  color: var(--gold);
-}
-
-/* Подзаголовок внутри экрана — «Кто я:». Не .section-title: тот открывает
-   раздел, а этот делает поворот внутри него. Моноширинный, как все
-   служебные надписи страницы, но кеглем заметно выше основного текста.
-   10.08.2026: тег <h3 class="who-title"> убран из разметки #system —
-   макет владельца этого подзаголовка не показывает, абзац о пути идёт
-   сразу за линией. Правило оставлено здесь помеченным на случай отката,
-   в разметке класса больше нет нигде на странице. */
-.who-title {
-  font-family: var(--font-mono);
-  font-size: var(--text-xl);
+/* Заголовок первого экрана. ВНЕ ШКАЛЫ намеренно, причина записана здесь:
+   макет задаёт 200px при ширине окна 1440 — это 4,2 ступени сверх шкалы,
+   и ни одна ступень такого кегля не даёт. Кегль тянется за шириной окна,
+   поэтому clamp, а не фиксированное число. Отрицательный трекинг и
+   интерлиньяж 0,95 повторяют макет: строки там стоят вплотную, и именно
+   это делает блок плитой, а не набором строк. */
+.hero-title {
+  font-family: var(--font-display);
+  /* ЗАМЕР: при 187px заголовок вставал в шесть строк и занимал 1067px —
+     первый экран раздувался до 1748px против 920px в макете. Максимум
+     опущен до 140px и кегль тянется за шириной окна с коэффициентом 8,5vw:
+     на 1440 это 122px и четыре строки. Русский заголовок длиннее
+     английского из макета (31 знак против 28 в двух строках), поэтому
+     кегль макета к нему не применим напрямую. */
+  font-size: clamp(48px, 8.5vw, 140px);
   font-weight: 400;
-  line-height: 1.3;
-  color: var(--paper);
-  margin: var(--space-7) 0 var(--space-4);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--ink-max);
+  margin: 0 0 var(--space-8);
 }
 
-/* Ряд из четырёх колонок под абзацем о пути в #system — с макета
-   10.08.2026 (см. комментарий в разметке). Раскрывает среднюю часть
-   прежнего абзаца отдельными карточками: продукт, команда, повторяемые
-   решения, нормы и стандарты. */
-.facets {
-  list-style: none;
-  margin: var(--space-7) 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-7);
-}
+/* Точка после заголовка — единственная цветная деталь в нём. В макете
+   она стоит после «SHIP» и держит весь первый экран: без неё заголовок
+   заканчивается ничем. */
+.hero-title .dot { color: var(--accent-deep); }
 
-/* Номер плюс линия с точкой на конце — один текстовый узел с двумя
-   псевдоэлементами, а не отдельные декоративные теги: точка и линия не
-   несут смысла и не должны попадать в дерево доступности отдельно от «01». */
-.facet-num {
+/* «Легко.» и его точка — акцентом. Точка внутри .easy перекрывает правило
+   выше именно потому, что стоит после него. */
+.hero-title .easy,
+.hero-title .easy .dot { color: var(--accent); }
+
+/* Разделитель между заголовком и подзаголовком: точка и короткая линия.
+   В макете это два вектора; здесь одно правило CSS. */
+.hero-divider {
   display: flex;
   align-items: center;
-  font-family: var(--font-mono);
-  font-size: var(--text-xl);
-  color: var(--gold);
+  gap: var(--space-3);
   margin: 0 0 var(--space-5);
 }
 
-.facet-num::before {
-  content: "";
-  flex: none;
-  width: 5px;
-  height: 5px;
-  margin: 0 var(--space-2);
+.hero-divider::before {
+  content: '';
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--accent);
+  flex: none;
 }
 
-.facet-num::after {
-  content: "";
-  flex: 1 1 auto;
+.hero-divider::after {
+  content: '';
   height: 1px;
-  background: rgba(212, 175, 55, 0.3);
+  width: 250px;
+  max-width: 60%;
+  background: var(--rule);
 }
 
-/* Квадратная рамка — тот же приём, что у .case и у кадров .case-media:
-   1px, скругление подогнано под референс-картинку. box-sizing:content-box
-   держит квадрат ровным: рамка и паддинг добавляются к заданным 24×24,
-   одинаково со всех сторон, поэтому квадрат получается без лишних расчётов.
+.hero-copy .body-text { max-width: 52ch; }
 
-   10.08.2026 вечером, по референсу владельца (золотой куб в квадратной
-   рамке со скруглением, вся фигура светится золотым неоном на чёрном;
-   растр не годится — пришёл только один файл из четырёх, и чёрный фон
-   растра не ляжет на страницу, поэтому вид повторён средствами CSS):
-   — рамка стала ярче: было rgba(212, 175, 55, 0.22), стало 0.55;
-   — добавлено золотое свечение (filter, см. ниже);
-   — скругление снято со шкалы --radius (6px) и поднято до 14px — на
-     референсе оно заметно круче общей ступени. Это не новая ступень шкалы,
-     а разовый повтор пропорции с присланной картинки, только для этой рамки.
-   Рамка нарисована прямо на .facet-icon (это сам <svg>, не обёртка вокруг
-   него — паддинг и бордер стоят на одном элементе со знаком внутри), поэтому
-   filter повешен на этот же элемент: на дочернем элементе он охватил бы
-   только знак и оставил рамку без свечения, а здесь и рамка, и знак — часть
-   одного и того же элемента. Цвет самих линий знака не тронут — остаётся
-   золотым, как было. */
-.facet-icon {
-  box-sizing: content-box;
-  width: 24px;
-  height: 24px;
-  padding: var(--space-3);
-  color: var(--gold);
-  border: 1px solid rgba(212, 175, 55, 0.55);
-  border-radius: 14px;
-  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.45)) drop-shadow(0 0 16px rgba(212, 175, 55, 0.25));
-  margin: 0 0 var(--space-5);
-}
-
-/* 10.08.2026: иконки выглядели чёрными плашками. Причина — у фигур внутри
-   .facet-icon нет своих атрибутов fill/stroke, а по умолчанию SVG заливает
-   фигуру чёрным и не рисует контур. Здесь это лечится разом для всех иконок:
-   заливку снимаем, включаем золотой контур через currentColor (цвет задан
-   выше на .facet-icon). stroke-width/линии — чтобы знак читался тонкой
-   линией, как на референсе владельца. */
-.facet-icon > * {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.facet-name {
-  font-family: var(--font-mono);
-  font-size: var(--text-l);
-  font-weight: 400;
-  color: var(--paper);
-  margin: 0 0 var(--space-2);
-}
-
-/* Цвет повторяет .case-note — тот же приглушённый паперный тон, что уже
-   используется на странице для второстепенного текста под карточкой. */
-.facet-text {
-  font-size: var(--text-m);
-  color: rgba(245, 245, 242, 0.5);
-  margin: 0;
-}
-
-/* Lists with a gold "point" marker */
-.stats,
-.method-points {
-  list-style: none;
-  margin: 0 0 var(--space-5);
-  padding: 0;
-}
-
-.stats li,
-.method-points li {
-  position: relative;
-  padding-left: var(--space-5);
-  margin-bottom: var(--space-3);
+/* Строка с числами под подзаголовком. Числа выделены акцентом, потому
+   что читаются раньше слов вокруг них. */
+.hero-proof {
   font-size: var(--text-base);
-  line-height: 1.5;
+  line-height: 1.45;
+  max-width: 52ch;
+  margin: 0 0 var(--space-7);
 }
 
-.stats li::before,
-.method-points li::before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 0.6em;
-  width: 6px;
-  height: 6px;
-  background: var(--gold);
-  border-radius: 0;
-}
-
-.num {
-  font-family: var(--font-mono);
+.hero-proof b {
+  font-family: var(--font-cond);
+  font-weight: 800;
+  font-size: var(--text-l);
+  color: var(--accent);
+  letter-spacing: 0.01em;
 }
 
 .link-row {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
-  margin: var(--space-6) 0 0;
-}
-
-/* Секция-подводка к почте после трёх блоков кейса (id=cta-mid), добавлена
-   10.08.2026. НЕ полноэкранный слайд: компактные вертикальные отступы по
-   шкале вместо высоты экрана у .slide. Текст и кнопки по центру. */
-.cta-mid {
-  text-align: center;
-  padding-top: var(--space-6);
-  padding-bottom: var(--space-6);
-}
-
-/* Базовый .link-row выровнен влево (flex по умолчанию жмёт к flex-start);
-   в подводке ряд кнопок центрируется. flex-wrap наследуется от .link-row —
-   на узком экране кнопки переносятся, а не слипаются. */
-.cta-mid .link-row {
-  justify-content: center;
-}
-
-/* Сама строка-подводка: акцент, крупнее обычного абзаца. Ширина ограничена
-   ~46ch, чтобы строка не растягивалась во всю колонку; центрируется по
-   горизонтали через margin: 0 auto, отступ снизу — ступень --space-6. */
-.cta-mid-line {
-  font-size: var(--text-l);
-  color: var(--paper);
-  max-width: 46ch;
-  margin: 0 auto var(--space-6);
-  line-height: 1.4;
-}
-
-/* .btn — только каркас; вид (заливка/контур) задаёт модификатор .btn-solid
-   или .btn-outline. Раньше здесь же были border: 1px solid var(--slate),
-   background: var(--charcoal), color: var(--paper) — единый серый вид
-   на все кнопки. Владелец 10.08.2026 попросил разделить кнопки на залитую
-   и контурную (как на референсе с тремя кнопками, серый вид убрали) и
-   сделать рамку такой же тонкой линией, как у карточки кейса. */
-/* 18.08.2026, решение владельца: кнопки уменьшены — на первом экране они
-   спорили с заголовком. Высота 44px — нижняя граница удобного нажатия на
-   телефоне, ниже опускать нельзя; ужат только внутренний отступ и кегль.
-   Прежние значения: min-height 44px, padding var(--space-3) var(--space-5),
-   font-size var(--text-base). */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius);
-  /* Своя система координат нужна слою заливки у .btn-outline (см. ниже):
-     он ложится absolute по всей кнопке и уходит под текст отрицательным
-     z-index. Без z-index:0 здесь он ушёл бы под фон самой секции. */
-  position: relative;
-  z-index: 0;
-  text-decoration: none;
-  font-family: var(--font-sans);
-  font-size: var(--text-s);
-  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease,
-    box-shadow 160ms ease;
-}
-
-/* Раньше .btn:hover/:focus красили фон в var(--stone) и рамку в золото —
-   это был единственный (серый) вид кнопки. Серого вида больше нет, оба
-   новых вида задают собственное наведение ниже. */
-
-.btn:focus-visible,
-.btn-solid:focus-visible,
-.btn-outline:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
-}
-
-/* .btn-solid — залитая кнопка, главное действие (референс: первая кнопка
-   на скриншоте владельца). Рамка 1px — толщина как у карточки кейса
-   (border: 1px solid rgba(212, 175, 55, 0.22) на .case ниже);
-   прозрачность у кнопки моё решение НЕ занижать, в отличие от карточки —
-   на кнопке линия при alpha 0.22 почти не читалась бы, а карточка держит
-   контур за счёт площади. Наведение — не смена заливки (её и так видно),
-   а золотое свечение box-shadow. */
-.btn-solid {
-  background: linear-gradient(180deg, #E4C558 0%, var(--gold) 100%);
-  color: var(--graphite);
-  border: 1px solid var(--gold);
-  letter-spacing: 0.02em;
-}
-
-.btn-solid:hover,
-.btn-solid:focus {
-  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.45), 0 8px 28px rgba(212, 175, 55, 0.30);
-}
-
-/* .btn-outline — контурная кнопка (референс: вторая кнопка на скриншоте).
-   При наведении/фокусе становится залитой — тот же градиент, что у
-   .btn-solid — это прямая просьба владельца. Переход между transparent и
-   linear-gradient не анимируется (background-image не участвует в
-   transition), поэтому смена фона здесь резкая, а не плавная, — заложено
-   намеренно, чтобы потом не искали в этом баг. */
-.btn-outline {
-  background: transparent;
-  color: var(--gold);
-  /* 10.08.2026: рамка сделана тоньше по слову владельца — тем же приёмом, что
-     у карточки «Знания компании» (border: 1px solid rgba(212, 175, 55, 0.22)
-     на .case ниже). Толщина не меняется, меняется только прозрачность цвета.
-     Прежнее значение для отката: border: 1px solid var(--gold);
-     Если приглушённая линия окажется неразличимой на тёмном фоне — вернуть
-     var(--gold), это решение владельца, проверяется глазом. */
-  border: 1px solid rgba(212, 175, 55, 0.22);
-  letter-spacing: 0.02em;
-}
-
-/* Заливка при наведении приходит отдельным слоем, а не сменой background.
-   Причина: градиент — это background-image, а background-image браузер не
-   умеет анимировать, и переход из контура в заливку получался скачком.
-   Владелец просил именно доделать наведение, поэтому слой лежит под текстом
-   постоянно и меняет только прозрачность — её анимировать можно.
-   Строки прежнего решения на случай отката:
-   .btn-outline:hover, .btn-outline:focus {
-     background: linear-gradient(180deg, #E4C558 0%, var(--gold) 100%); } */
-.btn-outline::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  border-radius: inherit;
-  background: linear-gradient(180deg, #E4C558 0%, var(--gold) 100%);
-  opacity: 0;
-  transition: opacity 160ms ease;
-}
-
-.btn-outline:hover::before,
-.btn-outline:focus::before {
-  opacity: 1;
-}
-
-.btn-outline:hover,
-.btn-outline:focus {
-  color: var(--graphite);
-  border-color: var(--gold);
-}
-
-/* Кнопка-почта (18.08.2026). По клику адрес уходит в буфер, рядом на секунду
-   всплывает подтверждение. Стрелка снята: она обещает переход на другую
-   страницу, а кнопка никуда не ведёт — она копирует. mailto остаётся в href
-   как запасной ход: без JS кнопка работает как обычная почтовая ссылка.
-   position:relative нужен подтверждению — оно позиционируется от кнопки. */
-.btn-copy {
-  position: relative;
-}
-.btn-solid.btn-copy::after,
-.btn-outline.btn-copy::after {
-  content: none;
-}
-
-/* Подтверждение копирования. Висит над кнопкой по центру, не участвует в
-   потоке и не двигает соседей. pointer-events:none — чтобы всплывшая плашка
-   не перехватывала повторный клик по кнопке под ней. */
-.copy-toast {
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 8px);
-  transform: translate(-50%, 4px);
-  padding: 6px 10px;
-  border-radius: var(--radius);
-  background: var(--charcoal);
-  border: 1px solid var(--slate);
-  color: var(--paper);
-  font-family: var(--font-sans);
-  font-size: var(--text-xs);
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 140ms ease, transform 140ms ease;
-}
-.btn-copy.is-copied .copy-toast {
-  opacity: 1;
-  transform: translate(-50%, 0);
-}
-
-/* На «уменьшить движение» плашка появляется без сдвига — только прозрачность. */
-@media (prefers-reduced-motion: reduce) {
-  .copy-toast {
-    transform: translate(-50%, 0);
-    transition: opacity 140ms ease;
-  }
-}
-
-/* Стрелка — признак главного действия, поэтому висит на залитой кнопке
-   (раньше была на .btn-primary, до разделения видов на solid/outline). */
-.btn-solid::after {
-  content: "→";
-  margin-left: var(--space-3);
-  display: inline-block;
-  transition: transform 160ms ease;
-}
-
-.btn-solid:hover::after,
-.btn-solid:focus::after {
-  transform: translateX(4px);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .btn,
-  .btn-solid,
-  .btn-outline {
-    transition: none;
-  }
-
-  .btn-solid::after,
-  .btn-outline::before {
-    transition: none;
-  }
-}
-
-/* Diagram: wide screens (>=721px) show the SVG grid, narrow screens show the list below */
-.diagram-wrap {
-  overflow-x: auto;
-  overflow-y: hidden;
-  background: var(--charcoal);
-  border: 1px solid var(--slate);
-  border-radius: var(--radius);
-  margin: var(--space-2) 0 var(--space-6);
-  padding: var(--space-3);
-  width: calc(100vw - 48px);
-  max-width: 1200px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-
-.diagram {
-  display: block;
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  margin: 0 auto;
-}
-
-.diagram .node rect,
-.diagram .node polygon {
-  fill: var(--charcoal);
-  stroke: var(--slate);
-  stroke-width: 1.5;
-}
-
-/* Узлы схемы скругляются наравне с остальными рамками страницы. Значение
-   в единицах viewBox, а не в пикселях экрана: схема растягивается примерно
-   в 1,08, поэтому шесть единиц дают на экране те же ~6px, что у кнопок и
-   карточек. Ромбы развилок остаются острыми — их углы несут смысл. */
-.diagram .node rect {
-  rx: 6;
-  ry: 6;
-}
-
-.diagram .node text {
-  fill: var(--paper);
-  font-family: var(--font-sans);
-  font-size: 17px;
-}
-
-.diagram .edge line,
-.diagram .edge-line {
-  stroke: var(--gold);
-  stroke-width: 1.5;
-}
-
-.diagram .edge-curve {
-  fill: none;
-  stroke: var(--gold);
-  stroke-width: 1.5;
-}
-
-.diagram .edge-feedback {
-  fill: none;
-  stroke: var(--gold);
-  stroke-width: 1.5;
-  stroke-dasharray: 6 5;
-}
-
-.diagram .edge-label {
-  fill: var(--gold);
-  font-family: var(--font-mono);
-  font-size: 17px;
-  text-anchor: middle;
-}
-
-.diagram .zone-band {
-  fill: rgba(245, 245, 242, 0.03);
-}
-
-.diagram .zone-edge {
-  fill: var(--gold);
-  opacity: 0.55;
-}
-
-.diagram .zone-label {
-  fill: var(--gold);
-  font-family: var(--font-sans);
-  font-size: 22px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-/* Narrow-screen text fallback for the diagram; always in the DOM */
-.diagram-list {
-  display: none;
-  margin: var(--space-2) 0 var(--space-6);
-  /* Счётчик заводится на всём списке, а не в каждой карточке: зоны делят
-     один цикл из шестнадцати шагов, и нумерация обязана идти насквозь —
-     иначе три карточки читаются как три независимых процесса. */
-  counter-reset: zone-step;
-}
-
-.zone-card {
-  border: 1px solid var(--slate);
-  border-radius: var(--radius);
-  padding: var(--space-4);
-  margin-bottom: var(--space-6);
-}
-
-.zone-card-title {
-  font-family: var(--font-sans);
-  font-size: var(--text-s);
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin: 0 0 var(--space-4);
-}
-
-.zone-card-steps {
-  list-style: none;
-  margin: 0;
-  padding-left: var(--space-6);
-}
-
-.zone-card-steps > li {
-  counter-increment: zone-step;
-  position: relative;
-  margin-bottom: var(--space-3);
-  font-size: var(--text-base);
-  line-height: 1.5;
-}
-
-.zone-card-steps > li::before {
-  content: counter(zone-step, decimal-leading-zero);
-  position: absolute;
-  left: calc(var(--space-6) * -1);
-  top: 0;
-  font-family: var(--font-mono);
-  font-size: var(--text-s);
-  color: var(--gold);
-}
-
-.diagram-list li {
-  margin-bottom: var(--space-3);
-  font-size: var(--text-base);
-  line-height: 1.5;
-}
-
-.diagram-list .branch {
-  list-style: none;
-  margin: var(--space-2) 0 0;
-  padding-left: var(--space-4);
-}
-
-.diagram-list .branch li {
-  margin-bottom: var(--space-2);
-  /* вне шкалы: см. задачу по вторичной типографике */
-  font-size: 15px;
-}
-
-.diagram-list .branch li::marker {
-  content: none;
-}
-
-.diagram-list .feedback-note {
-  margin: var(--space-2) 0 0;
-  font-size: var(--text-m);
-  font-style: italic;
-  color: var(--paper);
-  opacity: 0.85;
-}
-
-@media (max-width: 999px) {
-  .diagram-wrap {
-    display: none;
-  }
-
-  .diagram-list {
-    display: block;
-  }
-}
-
-/* Правила .frame, .frame-label, .frame-16x10, .frame-16x9 и .frame-text
-   удалены 07.08.2026 вместе с плашками-заглушками: пришли настоящие кадры
-   и запись экрана, а пустая рамка на живом сайте читается как недоделка. */
-
-/* Снимки рабочей системы и запись экрана. Высота своя у каждого — снимки
-   пришли разных пропорций (3,15 / 2,15 / 2,49), а жёсткое 16:9 добавило бы
-   к ним поля или срезало строки таблиц. */
-.shot {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--slate);
-  border-radius: var(--radius);
-  background: var(--charcoal);
-}
-
-/* Снимок открывается в полный размер по клику. На телефоне колонка 343px,
-   а в кадрах таблицы Notion шириной 1800 — цифры в таком масштабе не
-   прочесть, и без этой ссылки кадр становится просто картинкой «что-то
-   табличное». Ссылка ведёт на сам файл: ни скрипта, ни модального окна. */
-.shot-link {
-  display: block;
-  cursor: zoom-in;
-}
-
-/* Снимки — таблицы шириной 1500–1800px. На телефоне они показаны в масштабе
-   0,19 и цифры в них не прочесть; ссылка на полный размер была, но о ней
-   ничто не сообщало. Подпись появляется только там, где она нужна. */
-.shot-link::after {
-  content: "";
-}
-
-@media (max-width: 600px) {
-  .shot-link {
-    position: relative;
-    display: block;
-  }
-
-  .shot-link::after {
-    content: "Открыть в полном размере";
-    position: absolute;
-    right: var(--space-2);
-    bottom: var(--space-2);
-    padding: var(--space-1) var(--space-2);
-    background: rgba(14, 15, 17, 0.82);
-    border: 1px solid var(--slate);
-    border-radius: var(--radius);
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    line-height: 1.4;
-    color: var(--paper);
-  }
-}
-
-/* Применение .walkthrough исчезло 10.08.2026 днём: <figure class="walkthrough">
-   удалена из #chain (повтор того же видео, что и в третьем блоке #case) —
-   см. комментарий в index.html на её месте. Правила не удалены: разметку
-   можно вернуть, а .shot внутри неё используется и сам по себе (снимки в
-   #living: shot-facts.webp, shot-content.webp, shot-tasks.webp).
-   10.08.2026 вечером сама секция #chain убрана целиком (см. комментарий на
-   её месте в index.html) — применения этих правил больше нет вообще нигде
-   на странице, не только у самой фигуры. Оставлены здесь по тому же
-   принципу: разметку можно вернуть, откатывать нечего в CSS. */
-.walkthrough {
-  margin: var(--space-6) 0 var(--space-7);
-}
-
-.walkthrough figcaption {
-  font-family: var(--font-sans);
-  font-size: var(--text-s);
-  line-height: 1.5;
-  color: rgba(245, 245, 242, 0.62);
-  margin-top: var(--space-3);
-  max-width: 60ch;
-}
-
-/* Ролик — запись экрана 1280x720. На телефоне он показан в масштабе 0,27,
-   и мелкий текст в интерфейсе читается только в полноэкранном режиме.
-   Кнопка для этого есть у плеера, но сама собой она не объясняется.
-   Применение исчезло 10.08.2026 вместе с .walkthrough выше — см. комментарий
-   там же. */
-@media (max-width: 600px) {
-  .walkthrough figcaption::after {
-    content: " Смотреть лучше в полноэкранном режиме.";
-    color: var(--gold);
-  }
-
-  /* Отступ слева съедал 16px из 343 и строка падала до 33 знаков при норме
-     45–75. Правило стоит здесь, а не в верхнем медиазапросе: там оно шло
-     ВЫШЕ базовых .track/.formula/.bridge и при равной специфичности
-     проигрывало им — замерено, padding оставался 16px. */
-  .track,
-  .formula,
-  .bridge {
-    padding-left: var(--space-3);
-  }
-}
-
-/* Chain list */
-.chain-list {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-  counter-reset: chain-item;
-}
-
-.chain-list > li {
-  counter-increment: chain-item;
-  margin-bottom: var(--space-7);
-}
-
-.chain-list > li::before {
-  content: counter(chain-item, decimal-leading-zero);
-  display: block;
-  font-family: var(--font-mono);
-  font-size: var(--text-s);
-  letter-spacing: 0.1em;
-  color: var(--gold);
-  margin-bottom: var(--space-2);
-}
-
-.chain-list p {
-  margin: 0 0 var(--space-3);
-  font-size: var(--text-base);
-  line-height: 1.55;
-}
-
-@media (min-width: 900px) {
-  .chain-list > li {
-    display: grid;
-    grid-template-columns: 38fr 62fr;
-    /* Третья строка-пружина обязательна: без неё высокий кадр, занимающий
-       обе строки, растягивает первую, и текст провисает к середине блока. */
-    grid-template-areas: "num frame" "text frame" ". frame";
-    grid-template-rows: auto auto 1fr;
-    column-gap: var(--space-6);
-    align-items: start;
-  }
-
-  .chain-list > li::before {
-    grid-area: num;
-    margin-bottom: 0;
-  }
-
-  .chain-list > li > p {
-    grid-area: text;
-  }
-
-  .chain-list > li > .frame {
-    grid-area: frame;
-  }
-}
-
-/* Living system */
-.live-item {
-  border: 1px solid var(--slate);
-  border-radius: var(--radius);
-  padding: var(--space-4);
-  margin-bottom: var(--space-6);
-}
-
-.live-item .body-text {
-  font-size: var(--text-s);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(245, 245, 242, 0.55);
-  margin: var(--space-3) 0 0;
-}
-
-/* Сетка из трёх колонок снята 07.08.2026. Она годилась для пустых плашек,
-   но настоящие снимки — таблицы Notion с мелким текстом, и в колонке 313px
-   цифры, ради которых кадр и ставится, не читаются. Замерено: снимки идут
-   в пропорциях 3,15 / 2,15 / 2,49, им нужна вся ширина колонки. */
-/* Здесь карточкой служит сам снимок: своя рамка у него уже есть, вторая
-   вокруг давала двойной кант. */
-#living .live-item {
-  border: none;
-  padding: 0;
-  margin-bottom: var(--space-8);
-}
-
-#living .live-item .body-text {
-  margin: var(--space-4) 0 0;
-}
-
-/* Секция #refusal убрана 10.08.2026, правила .refusal-grid, .card-metric и .card-outcome пока не применяются. */
-.refusal-grid {
-  display: grid;
-  gap: var(--space-5);
-  margin-bottom: var(--space-6);
-}
-
-/* Три показателя в ряд, вывод — полосой под ними. Сетка два на два ставила
-   бы вывод вровень с показателем, хотя это разные по роли вещи: первые три
-   отвечают «что случилось», четвёртая — «что из этого следует». */
-@media (min-width: 760px) {
-  .refusal-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .refusal-grid > :last-child {
-    grid-column: 1 / -1;
-  }
-}
-
-.card-metric {
-  font-family: var(--font-mono);
-  font-size: clamp(var(--text-xl), 4vw, var(--text-2xl));
-  color: var(--paper);
-  display: block;
-  margin-bottom: var(--space-3);
-  line-height: 1.2;
-}
-
-/* Вывод последней карточки — обычное предложение, а не подпись под числом.
-   Стиль подписей внутри .live-item ставит верхний регистр и 13px: короткое
-   «против контроля» так читается, а фраза в двадцать слов — нет. */
-.card-outcome {
-  font-family: var(--font-sans);
-  font-size: var(--text-base);
-  line-height: 1.6;
-  text-transform: none;
-  letter-spacing: 0;
-  color: var(--paper);
   margin: 0;
 }
 
-/* Спойлеры. Рамка и подложка убраны 07.08.2026: коробка делала
-   второстепенное заметнее основного текста, вокруг которого стояла.
-   Осталась строка со знаком раскрытия — вес ровно по роли. */
-details {
-  border: none;
-  background: none;
-  padding: 0;
-  margin: var(--space-4) 0;
-}
+.hero-visual { margin: 0; }
 
-summary {
-  cursor: pointer;
-  padding: 0;
-  font-family: var(--font-sans);
-  font-size: var(--text-base);
-  color: var(--gold);
-  /* 44px — размер уверенного касания пальцем, не ступень шкалы */
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  list-style: none;
-  opacity: 0.8;
-  transition: opacity 160ms ease;
-}
-
-/* Свой знак вместо системного треугольника: он разный в каждом браузере */
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary::before {
-  content: "+";
-  font-family: var(--font-mono);
-  font-size: var(--text-base);
-  line-height: 1;
-  width: 1em;
-  text-align: center;
-}
-
-details[open] > summary::before {
-  content: "−";
-}
-
-summary:hover,
-summary:focus-visible {
-  opacity: 1;
-}
-
-details p,
-details ul {
-  /* вне шкалы: см. задачу по вторичной типографике */
-  font-size: 15px;
-  line-height: 1.55;
-  color: var(--paper);
-}
-
-details ul {
-  padding-left: var(--space-5);
-}
-
-details li {
-  margin-bottom: var(--space-2);
-}
-
-details[open] > summary {
-  margin-bottom: var(--space-2);
-}
-
-/* Спойлер последним в секции добавлял свой отступ к отступу самой секции:
-   до разделителя выходило 72px, после него 56 — асимметрия читалась как
-   провал. Замерено на 1280. */
-details:last-child {
-  margin-bottom: 0;
-}
-
-.not-carried {
-  max-width: 760px;
-  margin: var(--space-6) auto var(--space-8);
-}
-
-/* Первый экран: главное — тезис, он же <h1>. Служебный заголовок раздела
-   отсюда убран 07.08.2026 — он и надзаголовок .eyebrow рисовались одинаковым
-   мелким золотым капслоком и подряд читались как сбой вёрстки. */
-/* #hero — id-селектор, специфичность 100 — перебивает .slide (класс,
-   специфичность 20) по padding-top/padding-bottom независимо от порядка
-   объявления в файле. .slide задаёт те же отступы через padding-block:
-   var(--space-10) — значение совпадает с этим id-правилом, конфликта на
-   экране нет. Проверено 08.08.2026 при добавлении .slide: специфичность
-   здесь оставлена явной, а не приведена «в согласие» переписыванием —
-   значения уже одинаковые. */
-/* 10.08.2026, две связанные правки по замечанию владельца («картинка сдвигает
-   верх, низ и бок»).
-
-   Первая — высота. .slide задаёт min-height:100vh, но шапка sticky и стоит в
-   потоке: первый экран начинался на 52px ниже нуля и своим низом уходил за
-   край окна ровно на эти 52px. Не «почти в экран», а гарантированно мимо.
-   calc(100svh - 52px) вычитает шапку и возвращает экран в свои границы.
-
-   Вторая — отступы: с --space-10 (72px) до --space-3 (12px). Владелец обвёл
-   на скриншоте рамку от нижней грани шапки почти до низа окна — 72px сверху
-   и снизу такой рамке места не оставляют. Текст это не задевает: колонки
-   выровнены по центру, а он вдвое ниже картинки. */
-#hero {
-  padding-top: var(--space-2);
-  padding-bottom: var(--space-2);
-  min-height: calc(100svh - 52px);
-}
-
-/* Тезис ушёл со второго плана: главное теперь триада, он её раскрывает.
-   Раньше стоял в 48px и спорил с ней за первый взгляд.
-   Золото и моноширинный — по разметке владельца 07.08.2026: тем же
-   набором, что строка фактов, формула метода и подписи на схеме. */
-/* Оформление тезиса общее для всей страницы, здесь остаётся только длина
-   строки: на первом экране она может быть шире, чем в разделах. */
-#hero .thesis {
-  max-width: 40em;
-}
-
-#hero .body-text {
-  max-width: 34em;
-  color: rgba(245, 245, 242, 0.82);
-  margin-bottom: var(--space-6);
-}
-
-/* Правила .stats, .stats-note и #hero .section-title удалены 07.08.2026
-   вместе со своими элементами: проценты ушли с первого экрана под спойлер
-   .numbers, заголовок раздела — в <title> и меню. */
-
-/* Плиты-подложки. Лежат под текстом во всю ширину окна, а не в колонке.
-   Все три — локальные webp рядом с сайтом, внешних запросов не добавляют. */
-.screen {
-  position: relative;
-  isolation: isolate;
-}
-
-.screen::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 100vw;
-  margin-left: -50vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Первый экран 09.08.2026: фоновая подложка отключена. Раньше здесь во всю
-   ширину лежал камень у щели света (assets/hero-plate.webp) с градиентами,
-   гасящими его слева под текст и снизу в графит. Владелец перевёл первый
-   экран на две колонки — визуал теперь явный <img> в правой колонке
-   (.hero-visual), а не фон. content:none убирает псевдоэлемент только у
-   #hero; #chain и #next свои подложки сохраняют. Прежнее правило (на случай
-   отката): background-image из двух linear-gradient + url(hero-plate.webp),
-   background-size 100% 100%,100% 100%,cover, position center,center,right bottom. */
-#hero::before {
-  content: none;
-}
-
-/* Две зоны первого экрана: текст слева, крупная картинка-объект справа.
-   Подписи к слоям (третья колонка) сняты 09.08.2026 по решению владельца
-   («без текста, картинку покрупнее»). #hero.slide (спец. 120) перебивает
-   flex-раскладку .slide (спец. 20). */
-#hero.slide {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: var(--space-5);
-}
-
-/* Габарит рамки задан по разметке владельца от 10.08.2026: он обвёл на
-   скриншоте прямоугольник от нижней грани шапки до низа окна, пропорция
-   примерно 3:4. Отсюда и формула — высота съедает всё окно за вычетом шапки
-   (52px) и отступов #hero (12+12), ширина следует из пропорции.
-   Потолок 820px нужен на высоких мониторах: без него на 1080px по высоте
-   рамка выросла бы до 1004px, забрала 750px ширины и оставила заголовку
-   меньше 350px — он рассыпался бы на четыре строки.
-   svh, а не vh: на мобильных vh считается по развёрнутому окну, и при
-   свёрнутой адресной строке низ уезжал под край. */
-.hero-visual {
-  justify-self: end;
-  height: min(calc(100svh - 68px), 900px);
-  /* 10.08.2026, вторая правка «максимально большой» (после смены файла на
-     hero-layers.webp, 1122×1402, 4:5 ровно): рамка сделана шире самого
-     файла — 9:10 против 4:5, — и object-fit:cover масштабирует картинку по
-     ширине рамки, срезая по 5,5% сверху и снизу. Поля вокруг объекта в
-     файле — 13% сверху, 11,6% снизу (см. комментарий у <img> в разметке) —
-     объект не задет: воздуха над ним остаётся около 7,5%, под ним около 6%.
-     Взамен объект становится примерно на 11% крупнее при той же высоте
-     рамки. Прежнее значение для отката: aspect-ratio: 4 / 5 (без max-width) —
-     оно было подобрано под предыдущий файл (hero-layers-v4.webp, 3:4).
-
-     10.08.2026, отмена этого приёма: в генерации со столом снизу поля больше
-     нет — отражение доходит до последней строки файла. Считано: при рамке
-     9:10 видно 5,5–94,5% файла, отражение начинается на 88,8%, а маска
-     гасит нижние проценты рамки — вместе срез и гашение съедали отражение
-     целиком, и стол терял смысл. Поэтому пропорция вернулась к 4:5, ровно
-     как у файла: срез нулевой, отражение остаётся. Цена — объект примерно
-     на 12% мельче. Пока снизу есть отражение, рамку шире кадра ставить
-     нельзя; вернуть 9:10 можно только на генерации без пола.
-
-     Ограничитель ширины нужен, чтобы на широких окнах рамка не съедала
-     текстовую колонку. Проценты здесь не работают: колонка сетки объявлена
-     auto, её ширину задаёт само содержимое, и процент отсчитывается от уже
-     разрешённой ширины рамки, а не от контентной ширины страницы. Замерено
-     10.08.2026: max-width:56% дал рамку 288px вместо ожидаемых 604 — ровно
-     56% от её же 515. Поэтому предел задан абсолютом с оглядкой на окно:
-     600px при контентной ширине 1080px оставляет слева не меньше 460px под
-     текст, а 46vw подхватывает узкие окна, где 600px были бы слишком много. */
-  /* 15.08.2026: файл первого экрана снова заменён, теперь 1024×1536 — ровно
-     2:3. Пропорция рамки повторяет пропорцию файла по тому же правилу, что
-     записано выше: пока снизу есть отражение, рамку шире кадра ставить нельзя,
-     иначе cover срежет низ и отражение пропадёт. Оставь здесь прежние 3:4 —
-     срез составил бы по 5,6% сверху и снизу, то есть отражение на полу
-     потерялось бы целиком. Значение продублировано ещё в двух медиазапросах
-     ниже; менять надо все три сразу.
-     Прежние значения для отката: aspect-ratio: 3 / 4 (под hero-layers-v7.webp,
-     1086×1448), до него 4 / 5 (под hero-layers-v6.webp, 1122×1402). */
-  aspect-ratio: 2 / 3;
-  /* 18.08.2026, решение владельца: кадр уменьшен на 20% — 600→480px и
-     46→37vw. Пропорция 2/3 не тронута, поэтому срез по-прежнему нулевой и
-     отражение на полу остаётся целым. Прежние значения для отката:
-     min(600px, 46vw). */
-  max-width: min(480px, 37vw);
-  /* Подложка обязательна: mix-blend-mode на картинке смешивает её с тем, что
-     под ней, а .screen объявлен isolation:isolate и отрезает фон страницы.
-     Без этого фона наложение просто не сработало бы. */
-  background: var(--graphite);
-}
-
-/* Кадр вертикальный, пропорция 0,80 против рамки 0,90 — cover масштабирует
-   по ширине и срезает сверху и снизу, а не по бокам; арифметика среза
-   расписана выше, у .hero-visual.
-
-   Границы кадра здесь больше нет и снимать её нечем: она снята в источнике.
-   История приёмов, которые её лечили, — двумя абзацами ниже, оба сняты
-   10.08.2026 в один день. Причина, по которой лечение вообще понадобилось:
-   у прежних генераций фон был чистый чёрный, RGB 0–1, против графита
-   страницы 14,15,17, и пять единиц из 255 глаз в тёмной теме ловит
-   уверенно. У нынешней генерации фон измерен по восьми зонам и ровный,
-   RGB 12,11,13, а --graphite подогнан под него — совпадение точное, и
-   прямоугольника вокруг картинки нет. Пол с отражением, под который был
-   оставлен нижний градиент, в этой генерации тоже отсутствует. */
 .hero-visual img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* mix-blend-mode:lighten здесь стоял 10.08.2026 и снят в тот же день по
-     слову владельца: приём убирал границу кадра, но поднимал все тени до
-     графита, и камень выцветал в серый. Если чёрный прямоугольник вокруг
-     картинки снова станет заметен — владелец перегенерирует кадр под фон
-     страницы, это его решение. Строка на случай возврата:
-     mix-blend-mode: lighten; плюс background: var(--graphite) на .hero-visual. */
-  /* Маска нижнего края вернулась 10.08.2026 — но по другой причине, чем
-     стояла раньше. Прежде она лечила несовпадение фонов; после подгонки
-     --graphite под измеренный фон кадра лечить нечего, и маску сняли.
-     В генерации со столом появилось отражение, и оно доходит до последней
-     строки файла: замер построчно по центральной полосе даёт на 99,9%
-     высоты среднюю яркость 28,8 и максимум 100 из 255. Без маски кадр
-     обрывает светящееся отражение ножом по границе. Гашение начинается с
-     94%, а не с прежних 92%: нижняя плита заканчивается на 88,8% файла,
-     дальше только пол, и отражению нужно место, чтобы читаться в полную
-     силу — при 92% от него оставалась одна дымка. Рамка теперь 4:5, ровно
-     как файл, срез нулевой, поэтому проценты маски и проценты файла здесь
-     совпадают один в один.
-     Если владелец вернёт картинку без пола, маску снова снять — она
-     съедает нижние 8% кадра. */
-  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 94%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0, #000 94%, transparent 100%);
+  height: auto;
 }
 
-/* Лента свидетельств: текстура приглушена, чтобы не спорить с текстом.
-   Верхние и нижние 10% гасятся в чистый графит — иначе плита обрывается
-   ровно по границе секции и стык между разделами читается полосой.
-   10.08.2026 вечером секция #chain убрана целиком из разметки (см.
-   комментарий на её месте в index.html) — id-селектор ниже больше ни на что
-   не указывает. Правило не удалено по тому же принципу, что и .walkthrough
-   выше: разметку можно вернуть, откатывать нечего. */
-#chain::before {
-  background-image:
-    linear-gradient(180deg,
-      var(--graphite) 0%,
-      rgba(14, 15, 17, 0.93) 10%,
-      rgba(14, 15, 17, 0.88) 90%,
-      var(--graphite) 100%),
-    url("assets/evidence-backing.webp");
+/* --- Полоса доказательства под первым экраном ------------------------ */
+
+/* В макете полоса несёт пять пунктов: +60% CTR lift, 2-3x ER uplift,
+   7 layers, 1 operating loop, 90s proof cycle. Здесь их два. Причина не
+   в вёрстке: четыре из пяти чисел макета не имеют источника, а «+60%»
+   прямо расходится с фактом — CTR вырос с 1,7% до 3,4%, то есть вдвое.
+   Цифра без предмета, к которому относится, владельцем уже забракована
+   как вброс, поэтому в полосе стоят только проверяемые. */
+.proof-rail {
+  background: var(--ink);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-7);
+  /* ЗАМЕР: при --space-9 полоса начиналась на 912px и на окне высотой 900
+     уходила под сгиб целиком. Это доказательство, его нельзя прятать —
+     ступень опущена на одну. */
+  margin-top: var(--space-8);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-7);
 }
 
-/* Финальный экран. 18.08.2026 подложка снята по решению владельца: низ
-   страницы уходил в серый и не сходился с чёрным фоном остальных секций.
-   Причина была не в текстуре, а в градиенте поверх неё — rgba(14,15,17)
-   в середине против --graphite #000000 по краям давала полосу светлее
-   страницы на 14-17 из 255, и текстура final-plate.webp её подчёркивала.
-   Прежнее правило для отката:
-   background-image:
-     linear-gradient(180deg, var(--graphite) 0%, rgba(14,15,17,0.86) 10%,
-       rgba(14,15,17,0.94) 90%, var(--graphite) 100%),
-     url("assets/final-plate.webp"); */
-#next::before {
-  background-image: none;
-  background-color: var(--graphite);
+.rail-item {
+  display: grid;
+  gap: var(--space-1);
+  position: relative;
 }
 
-/* Кейс RAWMID: карточки «было → стало». Сильные скругления — по просьбе
-   владельца 09.08.2026 (референс WorldClaw). Базовый --radius 6px здесь мал
-   намеренно не берётся: у карточек кейса радиус крупный, это их приём. */
-/* Карточки кейса RAWMID. Сильные скругления — по прямой просьбе владельца
-   09.08.2026. Каждая карточка двухколоночная: слева разбор, справа кадр
-   интерфейса; стороны чередуются, иначе три одинаковых блока подряд читаются
-   как таблица. Приём взят с референса, который прислал владелец
-   (tencent-hunyuan.github.io/Hunyuan3D-WorldClaw) — там текст и демо тоже
-   идут парой и меняются местами. */
-/* Абзац под всем кейсом (18.08.2026): откуда взялись три разобранных блока.
-   Отбит от последней карточки как отдельная мысль, а не как её продолжение;
-   ширина по строке чтения, чтобы не растягивался на всю сетку карточек. */
-.case-outro {
-  margin-top: var(--space-7);
-  max-width: 60ch;
+/* Разделитель между пунктами — вертикальная линия, как в макете. */
+.rail-item + .rail-item { padding-left: var(--space-7); }
+
+.rail-item + .rail-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(243, 242, 239, 0.18);
 }
 
-/* Правила .about-title и .about-line сняты 18.08.2026 вместе с блоком «Обо
-   мне», который прожил на странице несколько часов. Разметка блока сохранена
-   комментарием в index.html. */
+.rail-value {
+  font-family: var(--font-cond);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--accent);
+}
 
-.cases {
+.rail-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--surface);
+}
+
+.rail-note {
+  font-size: var(--text-xs);
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+/* --- ЭКРАН 2. Три результата ---------------------------------------- */
+
+/* Экрана с результатом в макете нет вовсе: все четыре его секции про
+   процесс. Он добавлен по условию задачи и идёт сразу за первым, до
+   всего процессного — числа читают раньше, чем описание метода. */
+.results {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-8);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-7);
 }
 
-.case {
-  border: 1px solid rgba(212, 175, 55, 0.22);
-  border-radius: 22px;
-  padding: var(--space-7);
-  background: rgba(255, 255, 255, 0.02);
+.result {
+  border-top: 2px solid var(--ink);
+  padding-top: var(--space-5);
+}
+
+.result-value {
+  display: block;
+  font-family: var(--font-cond);
+  font-size: clamp(var(--text-3xl), 6vw, 88px); /* вне шкалы: числа — главный объект экрана, см. .hero-title */
+  font-weight: 800;
+  line-height: 0.95;
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+}
+
+.result-name {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin: 0 0 var(--space-2);
+}
+
+.result-text {
+  font-size: var(--text-m);
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(16, 16, 16, 0.72);
+}
+
+/* --- ЭКРАН 3. Система: переключатель, мелкая графика ----------------- */
+
+/* Надзаголовок стоит над сеткой: в макете он выше обеих колонок, а вровень
+   идут заголовок и экран. */
+.system-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-6);
+  margin-bottom: var(--space-5);
+}
+
+.system-topline .eyebrow { margin: 0; }
+
+.system-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  /* Отступ между колонками и между строками разведён. Единый gap здесь стоял
-     до 10.08.2026 и не мешал, пока в сетке была одна строка. Как только номер
-     переехал в собственную строку (см. .case-num), те же 32px встали между
-     номером и заголовком: замерено 72px разрыва вместо прежних 8. Между
-     строками зазор не нужен вовсе — его задаёт margin у самого номера. */
-  column-gap: var(--space-7);
-  row-gap: 0;
-  /* Кадр начинается от верха карточки, на одном уровне с номером и названием
-     блока — по разметке владельца на скриншоте 10.08.2026. По центру он
-     висел в пустоте: у блоков разная длина текста, и верхняя кромка кадра
-     каждый раз оказывалась на новой высоте. */
+  /* Пропорция из макета: колонка выбора 420px, экран занимает остаток
+     (в макете 825 при полосе 1336). align-items: start держит верх обеих
+     колонок на одной линии — ради этого правка и делалась. */
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: var(--space-7);
   align-items: start;
 }
 
-/* Чётные карточки зеркалятся: кадр слева, разбор справа. order на обоих
-   элементах, а не только на одном — иначе браузер оставит исходный порядок
-   для того, чей order не задан. */
-.case:nth-child(even) .case-body { order: 2; }
-.case:nth-child(even) .case-media { order: 1; }
+.system-copy { display: grid; align-content: start; }
 
-/* Шаблон колонок тоже зеркалится, иначе кадр на чётной карточке попадает в
-   узкую колонку: замерено — слот 479px против 503px у нечётных, три кадра
-   подряд читались как разные форматы. Кадру всегда достаётся 1.05fr. */
-.case:nth-child(even) {
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-}
+/* Миниатюры отделены от текста воздухом, как в макете, где между интро и
+   первым роликом заметный отступ. */
+.system-copy .selectors { margin-top: var(--space-7); }
 
-/* 18.08.2026, решение владельца: на чётной карточке номер уезжает во вторую
-   колонку — туда, где стоит название блока. Раньше .case-num занимал всю
-   ширину сетки (grid-column: 1 / -1) и на зеркальной карточке оставался
-   слева, над кадром, отвязавшись от заголовка, к которому относится.
-   Здесь размещение задано явно, а не порядком: с auto-placement номер во
-   второй колонке уводил кадр в первую строку, к себе под бок. Строки
-   повторяют нечётную карточку один в один, только зеркально — номер сверху,
-   под ним тело и кадр на одном уровне. */
-.case:nth-child(even) .case-num {
-  grid-column: 2;
-  grid-row: 1;
-}
-.case:nth-child(even) .case-media {
-  grid-column: 1;
-  grid-row: 2;
-}
-.case:nth-child(even) .case-body {
-  grid-column: 2;
-  grid-row: 2;
+.system-stage { display: grid; align-content: start; }
+
+/* Пометка прижата к правому краю верхней строки — её место в макете. */
+.system-topline .hand-system {
+  text-align: right;
+  transform: rotate(3deg);
+  flex: none;
 }
 
-.case-num {
-  font-family: var(--font-mono);
-  font-size: var(--text-s);
-  color: var(--gold);
-  letter-spacing: 0.08em;
-  /* 10.08.2026: номер вынесен из .case-body прямым потомком .case, чтобы кадр
-     (.case-media) начинался на уровне белого заголовка (.case-name), а не
-     номера — по разметке владельца, разница была замерена в 33px. Не задаём
-     эти 33px впрямую: они зависят от кегля .case-num и .case-name и разъедутся
-     при первой же правке шрифта. Вместо этого номер занимает всю ширину сетки
-     .case отдельной строкой (grid-column), и .case-body с .case-media
-     стартуют со второй строки сами, на одном уровне.
-     Отступ снизу — ступень шкалы --space-2 (8px): фактическое расстояние
-     между номером и названием до переноса и было 8px, сохраняем на глаз. */
-  grid-column: 1 / -1;
-  margin-bottom: var(--space-2);
-  /* order:0 явно: .case:nth-child(even) задаёт order:2 у .case-body и order:1
-     у .case-media (зеркалирование чётных карточек, см. правило ниже). Без
-     явного order у .case-num браузер трактует его как order:0 по умолчанию —
-     это и так меньше обоих, но значение выписано явно, чтобы не полагаться
-     на дефолт молча: номер обязан идти первой строкой сетки на любой
-     карточке, чётной или нечётной. */
-  order: 0;
-}
+/* --- Три миниатюры-кнопки ------------------------------------------- */
 
-.case-name {
-  font-family: var(--font-mono);
-  font-size: var(--text-l);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--paper);
-  /* Верхнего отступа нет: заголовок — первый элемент второй строки сетки, и
-     любой отступ сверху опускает его ниже кадра, который стоит в той же
-     строке. Владелец просил ровно обратного — чтобы кадр начинался с уровня
-     белого заголовка. Прежнее значение: margin: var(--space-2) 0 var(--space-6). */
-  margin: 0 0 var(--space-6);
-}
-
-/* «Было» и «Стало» друг под другом: колонка узкая, две колонки в ней дали бы
-   строки по 25 знаков. Стрелка вниз ведёт взгляд по переходу. */
-.case-shift {
+.selectors {
   display: grid;
-  gap: var(--space-5);
+  gap: var(--space-4);
+  align-content: start;
 }
 
-.case-was { color: rgba(245, 245, 242, 0.6); margin: 0; }
-.case-now { color: var(--paper); margin: 0; }
+/* Кнопка, а не ссылка: это смена содержимого на месте, а не переход.
+   Оформление сбрасывается вручную — браузерная кнопка приносит свой фон,
+   рамку и центрирование текста. */
+.selector {
+  display: grid;
+  grid-template-columns: 122px minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+  padding: var(--space-3);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
 
-.case-label {
+.selector:hover { border-color: var(--rule); }
+
+/* Активная подсвечена рамкой акцента и полосой слева — в макете ровно так
+   отмечен выбранный ролик. */
+.selector.is-active {
+  border-color: var(--accent);
+  background: rgba(255, 75, 8, 0.04);
+}
+
+.selector:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Миниатюра. Кадр подставляется фоном из разметки: у каждой кнопки свой
+   файл, и держать три почти одинаковых правила в стилях незачем. */
+.selector-thumb {
+  position: relative;
   display: block;
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
+  aspect-ratio: 122 / 92;
+  border-radius: var(--radius);
+  background: var(--ink) center / cover no-repeat;
+  overflow: hidden;
+}
+
+/* Значок проигрывания — только у той миниатюры, за которой стоит видео. */
+.selector-thumb svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  fill: var(--surface);
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+}
+
+.selector-body { display: block; }
+
+.selector-num {
+  display: block;
+  font-family: var(--font-cond);
+  font-size: var(--text-s);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: var(--space-1);
+}
+
+.selector-name {
+  display: block;
+  font-family: var(--font-cond);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  line-height: 1;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
   margin-bottom: var(--space-2);
 }
 
-.case-was .case-label { color: rgba(245, 245, 242, 0.4); }
-.case-now .case-label { color: var(--gold); }
-
-.case-now::before {
-  content: "↓";
+.selector-desc {
   display: block;
-  color: var(--gold);
-  font-family: var(--font-mono);
-  margin-bottom: var(--space-3);
-}
-
-/* Реплика-переход после кейсов: снимает возражение «у нас не Notion»
-   до того, как читатель дойдёт до раздела «Суть». 21.08.2026. */
-.case-carry {
-  margin: var(--space-9) 0 0;
-  font-size: var(--text-xl);
+  font-size: var(--text-m);
   line-height: 1.4;
-  color: var(--gold);
+  color: rgba(16, 16, 16, 0.66);
 }
 
-.case-effect {
-  margin: var(--space-6) 0 0;
-  padding-top: var(--space-5);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: var(--text-base);
-  line-height: 1.5;
-  color: rgba(245, 245, 242, 0.82);
+/* --- Большой экран --------------------------------------------------- */
+
+.stage {
+  margin: 0;
+  background: var(--ink);
+  border-radius: var(--radius-slab);
+  padding: var(--space-3);
 }
 
-.case-note {
-  margin: var(--space-4) 0 0;
-  font-size: var(--text-s);
-  color: rgba(245, 245, 242, 0.5);
-}
-
-.case-media { margin: 0; }
-
-/* Медиа заняли слоты 10.08.2026, заглушек .case-media-slot больше нет — блок
-   удалён, прежнее правило оставлено здесь в комментарии для отката:
-   .case-media-slot {
-     aspect-ratio: 16 / 10;
-     border: 1px dashed rgba(212, 175, 55, 0.35);
-     border-radius: 16px;
-     background: rgba(212, 175, 55, 0.03);
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     padding: var(--space-5);
-     text-align: center;
-   }
-   .case-media-slot span {
-     font-family: var(--font-mono);
-     font-size: var(--text-s);
-     letter-spacing: 0.06em;
-     color: rgba(212, 175, 55, 0.75);
-   }
-   Слот держал пропорцию 16/10 и обрезал бы кадр. Высота больше не задаётся
-   и пропорция не навязывается: все три файла имеют почти одинаковую
-   пропорцию около 1,95 (1383×709, 1440×742, 2108×1080), и при height:auto
-   ни один кадр не обрезается. Скругление 16px и рамка 1px повторяют
-   карточку .case, внутри которой лежат эти медиа. */
-.case-media img,
-.case-media video {
+.stage-media img,
+.stage-media video {
+  display: block;
   width: 100%;
   height: auto;
+  border-radius: var(--radius);
+  background: var(--ink);
+}
+
+.stage-caption {
+  font-size: var(--text-m);
+  line-height: 1.4;
+  color: var(--muted);
+  padding: var(--space-3) var(--space-2) var(--space-1);
+}
+
+.stage-caption b {
+  color: var(--surface);
+  font-weight: 600;
+}
+
+/* --- Ряд процесса ---------------------------------------------------- */
+
+.flow {
+  list-style: none;
+  margin: var(--space-7) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.flow-step {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  position: relative;
+  padding: 0 var(--space-4);
+}
+
+/* Стрелка между шагами. У последнего её нет — ей некуда указывать. */
+.flow-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: calc(var(--space-4) * -1);
+  top: 16px;
+  width: var(--space-7);
+  height: 7px;
+  background:
+    linear-gradient(var(--accent), var(--accent)) left center / calc(100% - 5px) 1px no-repeat,
+    /* наконечник: две короткие линии под углом */
+    linear-gradient(var(--accent), var(--accent)) right 0 top 0 / 6px 1px no-repeat;
+  opacity: 0.55;
+}
+
+.flow-icon {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.flow-label {
+  font-family: var(--font-cond);
+  font-size: var(--text-base);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* --- Полоса плиток --------------------------------------------------- */
+
+.benefits {
+  list-style: none;
+  margin: var(--space-9) 0 0;
+  padding: var(--space-7) 0 0;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-7);
+}
+
+.benefit {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: start;
+  position: relative;
+}
+
+/* Разделитель между плитками — тонкая линия, как в макете. */
+.benefit + .benefit::before {
+  content: '';
+  position: absolute;
+  left: calc(var(--space-7) / -2);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--rule);
+}
+
+.benefit-icon {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.benefit-name {
+  font-size: var(--text-s);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-2);
+  grid-column: 2;
+}
+
+.benefit-text {
+  font-size: var(--text-m);
+  line-height: 1.4;
+  color: rgba(16, 16, 16, 0.66);
+  margin: 0;
+  grid-column: 2;
+}
+
+/* --- Рукописные пометки ---------------------------------------------- */
+
+/* В макете это аннотации автора поверх полей: короткая фраза от руки с
+   лёгким наклоном и подчёркиванием. По первой передаче они в вёрстку не
+   шли; 02.09.2026 владелец сказал, что хочет их на странице.
+   Подчёркивание рисуется фоном, а не картинкой, и намеренно неровное по
+   краям — прямая линия под рукописным текстом читается как ошибка. */
+.hand {
+  font-family: var(--font-hand);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0;
+  transform: rotate(-4deg);
+  transform-origin: left center;
+  /* ЗАМЕР 02.09.2026: <p> блочный и занимает всю ширину секции, поэтому
+     подчёркивание в 62% растянулось на 830px под рядом процесса и читалось
+     случайной чертой поперёк экрана. fit-content сажает блок по тексту, и
+     62% считаются уже от него. */
+  width: fit-content;
+  max-width: 100%;
+}
+
+.hand::after {
+  content: '';
   display: block;
-  border-radius: 16px;
-  border: 1px solid rgba(212, 175, 55, 0.22);
-  background: var(--graphite);
+  width: 62%;
+  height: 2px;
+  margin-top: var(--space-1);
+  border-radius: 2px;
+  background: var(--accent);
+  opacity: 0.65;
+}
+
+.hand-hero {
+  position: absolute;
+  right: var(--space-2);
+  top: var(--space-6);
+  text-align: left;
+  z-index: 2;
+}
+
+.hero-visual { position: relative; }
+
+.hand-system {
+  transform: rotate(3deg);
+  text-align: left;
+  padding-top: var(--space-2);
+  white-space: nowrap;
+}
+
+.hand-flow {
+  margin: var(--space-5) auto 0;
+  text-align: center;
+  transform: rotate(-2deg);
+}
+
+.hand-flow::after { margin: var(--space-1) auto 0; }
+
+/* --- ЭКРАН 4. Скорость входа ---------------------------------------- */
+
+/* Место под разборы чужих ниш. Пока их нет, рамка стоит пустой с честной
+   подписью, а не заполняется выдуманными примерами: по условию задачи
+   блок верстается сразу, содержимое приходит отдельно. */
+.niche-slot {
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  margin-top: var(--space-7);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-7);
+}
+
+.niche-slot-note {
+  grid-column: 1 / -1;
+  font-size: var(--text-m);
+  color: rgba(16, 16, 16, 0.55);
+  margin: 0;
+}
+
+/* --- ЭКРАН 5. Кейс --------------------------------------------------- */
+
+.case-media {
+  margin: var(--space-7) 0 0;
+}
+
+.case-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  background: var(--ink);
 }
 
 .case-media figcaption {
+  font-size: var(--text-m);
   margin-top: var(--space-3);
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.04em;
-  color: rgba(245, 245, 242, 0.5);
+  color: rgba(16, 16, 16, 0.72);
 }
 
-/* Планшет и узкий десктоп: две колонки не помещаются — стопка. Сверху текст,
-   под ним картинка. Рамка разворачивается из вертикальной в горизонтальную:
-   в стопке ширину диктует колонка, и вертикальный кроп съел бы весь экран
-   по высоте. 3/2 — родная пропорция кадра, срезать тут нечего. */
-@media (max-width: 860px) {
-  #hero.slide {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-  }
+/* --- Появление блоков ------------------------------------------------ */
 
-  .hero-visual {
-    /* Ширину задаём от той высоты, которую готовы отдать кадру, а не наоборот.
-       Раньше здесь стояли width:100% и max-height, и предел высоты просто
-       перебивал aspect-ratio: на окне 846px кадр расплющивался в полосу
-       791×346 с пропорцией 2,29 и срезом 32,5% сверху и снизу — замерено
-       10.08.2026. Пропорция обязана сохраняться, поэтому ограничение
-       переехало на ширину: 0,8 — это и есть 4:5, обратная пропорция кадра.
-       Прежние строки для отката: width: 100%; max-height: 54svh; */
-    justify-self: center;
-    width: min(100%, calc(54svh * 0.8));
-    height: auto;
-    /* Пропорция вертикальная, а не горизонтальная, как было до 10.08.2026.
-       Прежнее значение aspect-ratio: 3 / 2 держалось с той поры, когда на
-       первом экране лежала горизонтальная подложка. Объект во всех
-       присланных генерациях вертикальный, и в рамке 3:2 cover срезал ему
-       по 25% сверху и снизу — замерено на 375px: верх и низ камня уходили
-       из кадра целиком. 4:5 совпадает с пропорцией файла, срез нулевой на
-       любой ширине, потому что высоту теперь ограничивает не max-height, а
-       ширина строкой выше. */
-    /* 14.08.2026: следом за основным правилом — новый файл 3:4. */
-    aspect-ratio: 2 / 3;
-    /* Предел ширины из десктопной раскладки здесь снимается. Он задан как
-       min(600px, 46vw) и на узком экране считается по второму слагаемому:
-       замерено 10.08.2026 на 375px — 46vw дали 172px, и картинка съёжилась
-       до 173×115 при width:100%. В одну колонку кадр обязан быть во всю
-       ширину, ограничивать нечего: текстовая колонка стоит не рядом, а над
-       ним. */
-    max-width: none;
-  }
-
-  /* Карточка кейса в стопку: разбор сверху, кадр под ним. order сбрасывается,
-     иначе на чётных карточках кадр уехал бы над текстом. */
-  .case {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-    padding: var(--space-6);
-  }
-
-  .case:nth-child(even) .case-body,
-  .case:nth-child(even) .case-media { order: 0; }
-
-  /* Шаблон колонок для чётных карточек приходится сбрасывать отдельно.
-     Правило .case выше в этом же медиазапросе задаёт одну колонку, но
-     .case:nth-child(even) специфичнее (класс плюс псевдокласс против одного
-     класса), а медиазапрос специфичность не поднимает — и чётная карточка
-     оставалась двухколоночной на узком экране. Замерено 10.08.2026 при окне
-     846px: первая и третья карточки шли в одну колонку шириной 741px, а
-     вторая делилась на 367 и 350, и её кадр выходил вдвое мельче соседних. */
-  /* Явное размещение чётной карточки снимается вместе с двумя колонками —
-     иначе номер и тело остаются приколоченными ко второй колонке, которой
-     на узком экране уже нет. */
-  .case:nth-child(even) .case-num,
-  .case:nth-child(even) .case-media,
-  .case:nth-child(even) .case-body {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .case:nth-child(even) {
-    grid-template-columns: 1fr;
-  }
-
-  /* Ряд из четырёх колонок #system: на планшете и узком десктопе — две
-     колонки по две в ряд, как задано в СЛАЙС 4 задачи. Тот же класс, что
-     и базовое правило выше по файлу, специфичность равна — здесь этот
-     медиазапрос идёт позже в источнике и потому побеждает; :nth-child не
-     используется, так что баг с перебитой специфичностью из .case здесь
-     не повторяется. */
-  .facets {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .screen {
-    padding: var(--space-8) 0;
-  }
-
-  /* Своё правило, потому что #hero перебивает .screen по специфичности.
-     Без него первый экран занимал 842px при высоте окна 812 и кнопки
-     контакта уходили за нижний край — замерено на 375x812. С 10.08.2026
-     базовое правило #hero задаёт те же 40px, но дубль оставлен намеренно:
-     он не даёт молча вернуть --space-10 наверху и снова сломать мобильный. */
-  #hero {
-    padding-top: var(--space-8);
-    padding-bottom: var(--space-8);
-  }
-
-
-  main {
-    padding: 0 var(--space-4);
-  }
-
-  .topbar-inner {
-    padding: 0 var(--space-4);
-  }
-
-  /* Первый экран на узком экране: одна колонка, текст сверху (обещание —
-     первым), картинка под ним. Прежней фоновой подложки (#hero::before с
-     hero-plate.webp) больше нет — визуал стал явным <img>. */
-  #hero.slide {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-  }
-
-  /* Телефон: кадр ещё компактнее по высоте, иначе текст и кнопки контакта
-     уезжают под нижний край. Пропорция та же вертикальная, что и на планшете,
-     ограничение идёт по max-height. */
-  .hero-visual {
-    /* 14.08.2026: следом за основным правилом — новый файл 3:4. */
-    aspect-ratio: 2 / 3;
-    /* 40svh — потолок, а не выбор: при 44svh первый экран занимал 846px при
-       высоте окна 812 и кнопки контакта уходили за нижний край, замерено на
-       375×812. Ограничение задано через ширину по той же причине, что и в
-       блоке выше: max-height перебивал бы пропорцию и снова расплющивал
-       кадр. 0,8 — обратная пропорция 4:5, то есть при 40svh высоты ширина
-       выходит ровно такой, чтобы кадр в неё поместился целиком, без среза.
-       Прежняя строка для отката: max-height: 40svh; */
-    width: min(100%, calc(40svh * 0.8));
-  }
-
-  /* Ряд из четырёх колонок #system: на телефоне — одна колонка. */
-  .facets {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Появление блоков при прокрутке. Приём с референса, который прислал владелец
-   (tencent-hunyuan.github.io/Hunyuan3D-WorldClaw), встроенным JS — он разрешён
-   для этого сайта с 09.08.2026, внешних запросов по-прежнему ноль.
-
-   Класс .reveal навешивает скрипт, а не разметка. Это не стиль, а требование
-   доступности: без JS элементы никогда не получат opacity:0 и страница
-   останется читаемой целиком.
-
-   14.08.2026: сама анимация переехала на GSAP + ScrollTrigger (скрипт в конце
-   index.html). Своих свойств у .reveal больше нет намеренно: opacity и
-   transform ставит библиотека встроенным стилем, и правило класса всё равно
-   проиграло бы ему в каскаде — два владельца у одного свойства только путают.
-   Класс остался меткой, по которой два правила ниже находят анимируемые блоки.
-   Прежние значения для отката: opacity 0, translateY(24px), переход 0,7 с по
-   cubic-bezier(.22,.61,.36,1), задержка из переменной --reveal-delay, снятие
-   через класс .is-visible (класс больше не используется нигде). */
-
-/* Кто выключил анимации в системе — получает готовую страницу сразу.
-   will-change здесь не нужен: элементы анимируются один раз.
-   !important здесь обязателен с 14.08.2026: библиотека пишет opacity и
-   transform прямо в атрибут стиля, а встроенный стиль сильнее правила класса.
-   Без пометки блоки остались бы невидимыми именно у тех, кто просил меньше
-   движения, — то есть ровно наоборот к смыслу правила. */
+/* Пометка ставится скриптом на элементы, которыми управляет GSAP. Без
+   неё правило «уменьшить движение» ниже не нашло бы эти блоки, и они
+   остались бы невидимыми именно у тех, кто просил меньше движения. */
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1 !important;
+    visibility: visible !important;
     transform: none !important;
   }
 }
 
-/* 10.08.2026: при печати страница не отрисовывается как область просмотра —
-   наблюдатель не срабатывает, а без этого правила на бумагу ушли бы пустые
-   блоки ниже первого экрана. 14.08.2026: причина не изменилась, ScrollTrigger
-   при печати молчит по тому же поводу; !important — по той же причине, что и
-   в правиле выше. */
+/* При печати наблюдатель не срабатывает: страница не отрисовывается как
+   область просмотра, и без этого правила на бумагу ушли бы пустые блоки. */
 @media print {
   .reveal {
     opacity: 1 !important;
+    visibility: visible !important;
     transform: none !important;
   }
+}
+
+/* --- Узкие экраны ---------------------------------------------------- */
+
+@media (max-width: 1100px) {
+  .hero-grid,
+  .system-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .path { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* Стрелка снимается вместе с одним рядом: при переносе она указывала
+     бы с конца строки в пустоту. */
+  .path li:not(:last-child)::after { content: none; }
+}
+
+@media (max-width: 860px) {
+  :root { --gutter: var(--space-6); }
+
+  .screen { padding: var(--space-9) var(--gutter); }
+
+  .results { grid-template-columns: 1fr; gap: var(--space-8); }
+
+  .niche-slot { grid-template-columns: 1fr; padding: var(--space-6); }
+
+  .topbar-nav { display: none; }
+}
+
+@media (max-width: 600px) {
+  .proof-rail {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    padding: var(--space-5);
+  }
+
+  /* В одну колонку разделитель становится горизонтальным: вертикальная
+     линия слева от пункта, стоящего под другим, читается как отступ. */
+  .rail-item + .rail-item {
+    padding-left: 0;
+    padding-top: var(--space-6);
+  }
+
+  .rail-item + .rail-item::before {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: auto;
+    width: auto;
+    height: 1px;
+  }
+
+  .path { grid-template-columns: 1fr; }
+
+  .link-row .btn { width: 100%; }
+}
+
+/* --- Экран 3 на узких окнах ------------------------------------------ */
+
+@media (max-width: 1100px) {
+  .system-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  /* Экран выше выбора: сначала показываем, потом даём переключать. */
+  .system-stage { order: -1; }
+  .system-copy .selectors { margin-top: var(--space-5); }
+  .system-topline .hand-system { text-align: left; }
+  .selectors { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .selector { grid-template-columns: 1fr; gap: var(--space-3); }
+  .benefits { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); }
+  .benefit + .benefit::before { content: none; }
+}
+
+@media (max-width: 860px) {
+  .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); }
+  .flow-step:not(:last-child)::after { content: none; }
+  .benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .selectors { grid-template-columns: 1fr; }
+  .selector { grid-template-columns: 96px minmax(0, 1fr); }
+  .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .benefits { grid-template-columns: 1fr; }
+  .hand-hero { position: static; margin-bottom: var(--space-4); }
 }
