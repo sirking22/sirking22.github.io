@@ -287,7 +287,11 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
   <div class="system-grid">
     <div class="system-copy">
       <h2 class="section-title">Почему это не разовая удача</h2>
-      <p class="lead">Каждое решение идёт одним путём. Сигнал из данных, гипотеза, норма, задача, вывод. Путь не в голове, он записан и лежит в Notion: 15 связанных баз, задачник с нормами часов и правок, метрики из VK, YouTube и маркетплейсов приходят через API.</p>
+      <!-- Один абзац утверждённого текста разбит надвое по макету
+           03.09.2026: первый называет путь, второй говорит, где он лежит.
+           Слова не менялись, поделено по точке. -->
+      <p class="lead">Каждое решение идёт одним путём. Сигнал из данных, гипотеза, норма, задача, вывод.</p>
+      <p class="lead lead-second">Путь не в голове, он записан и лежит в Notion: 15 связанных баз, задачник с нормами часов и правок, метрики из VK, YouTube и маркетплейсов приходят через API.</p>
 
       <div class="selectors" role="tablist" aria-label="Разделы системы">
       <button class="selector is-active" role="tab" aria-selected="true" aria-controls="stage" data-kind="video" data-src="assets/chain-walkthrough.mp4" data-poster="assets/poster-chain.webp" data-caption="Гипотезы. Задача начинается с цели и заканчивается выводом.">
@@ -333,30 +337,35 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
         <circle cx="12" cy="12" r="2.5"/><path d="M7.5 7.5a6.4 6.4 0 0 0 0 9M16.5 16.5a6.4 6.4 0 0 0 0-9M4.5 4.5a10.6 10.6 0 0 0 0 15M19.5 19.5a10.6 10.6 0 0 0 0-15"/>
       </svg>
       <span class="flow-label">Сигнал</span>
+      <span class="flow-note">Метрики из VK, YouTube и маркетплейсов</span>
     </li>
     <li class="flow-step">
       <svg class="flow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="2.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/>
       </svg>
       <span class="flow-label">Гипотеза</span>
+      <span class="flow-note">Задача начинается с цели</span>
     </li>
     <li class="flow-step">
       <svg class="flow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <path d="M12 3.2 21 8l-9 4.8L3 8z"/><path d="M3 12.4 12 17l9-4.6M3 16.4 12 21l9-4.6"/>
       </svg>
       <span class="flow-label">Норма</span>
+      <span class="flow-note">Нормы часов и правок по типу работы</span>
     </li>
     <li class="flow-step">
       <svg class="flow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <rect x="4" y="3.5" width="16" height="17" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/>
       </svg>
       <span class="flow-label">Задача</span>
+      <span class="flow-note">Видно, сколько занимает типовая задача</span>
     </li>
     <li class="flow-step">
       <svg class="flow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <circle cx="12" cy="12" r="8.5"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/>
       </svg>
       <span class="flow-label">Вывод</span>
+      <span class="flow-note">Задача заканчивается выводом</span>
     </li>
   </ol>
 

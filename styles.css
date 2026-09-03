@@ -601,6 +601,9 @@ a { color: inherit; }
   color: var(--ink);
   margin: 0 0 var(--space-6);
   max-width: 20ch;
+  /* Строки выравниваются по длине: в колонке 366px заголовок ломался как
+     «ПОЧЕМУ ЭТО НЕ РАЗОВАЯ / УДАЧА» и последнее слово висело одно. */
+  text-wrap: balance;
 }
 
 .section-title .accent { color: var(--accent); }
@@ -611,6 +614,10 @@ a { color: inherit; }
   max-width: 60ch;
   margin: 0 0 var(--space-6);
 }
+
+/* Второй абзац лида стоит ближе к первому, чем блок лида к следующему
+   элементу: два абзаца — одна мысль, закон близости. */
+.lead + .lead { margin-top: calc(var(--space-6) * -1 + var(--space-4)); }
 
 .body-text {
   font-size: var(--text-base);
@@ -954,7 +961,10 @@ a { color: inherit; }
   /* Пропорция из макета: колонка выбора 420px, экран занимает остаток
      (в макете 825 при полосе 1336). align-items: start держит верх обеих
      колонок на одной линии — ради этого правка и делалась. */
-  grid-template-columns: 420px minmax(0, 1fr);
+  /* 03.09.2026 по макету: колонка выбора заужена с 420px до 30% полосы —
+     в макете она занимает 27%, и экран за счёт этого шире. Доля, а не
+     пиксели: на 1100-1300px фикс 420 съедал у экрана треть. */
+  grid-template-columns: minmax(0, 30%) minmax(0, 1fr);
   gap: var(--space-7);
   align-items: start;
 }
@@ -1019,7 +1029,7 @@ a { color: inherit; }
 .selector-thumb {
   position: relative;
   display: block;
-  aspect-ratio: 122 / 92;
+  aspect-ratio: 16 / 9;
   border-radius: var(--radius);
   background: var(--ink) center / cover no-repeat;
   overflow: hidden;
@@ -1110,32 +1120,37 @@ a { color: inherit; }
 .flow-step {
   display: grid;
   justify-items: center;
-  gap: var(--space-3);
+  /* Название и подпись — одна группа, иконка отдельно: между иконкой и
+     названием отступ вдвое больше внутреннего (закон близости). */
+  gap: var(--space-2);
   position: relative;
-  padding: 0 var(--space-4);
+  /* Поле шага срезано до 8px: при 16px подпись в колонке 141px ломалась
+     в три строки против двух в макете (замер 03.09.2026). */
+  padding: 0 var(--space-2);
 }
+
+.flow-step .flow-icon { margin-bottom: var(--space-2); }
 
 /* Стрелка между шагами. У последнего её нет — ей некуда указывать. */
 .flow-step:not(:last-child)::after {
   content: '';
   position: absolute;
-  right: calc(var(--space-4) * -1);
-  top: 16px;
+  right: calc(var(--space-3) * -1);
+  top: 18px;
   width: var(--space-7);
-  height: 7px;
-  background:
-    linear-gradient(var(--accent), var(--accent)) left center / calc(100% - 5px) 1px no-repeat,
-    /* наконечник: две короткие линии под углом */
-    linear-gradient(var(--accent), var(--accent)) right 0 top 0 / 6px 1px no-repeat;
-  opacity: 0.55;
+  height: 8px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 8'%3E%3Cpath d='M0 4h33M29.5 1.2 33.5 4l-4 2.8' fill='none' stroke='%23ff4b08' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  opacity: 0.7;
 }
 
+/* 03.09.2026 по макету: иконка крупнее и с более плотной обводкой — в
+   макете она держит шаг наравне с подписью, а при 32px терялась. */
 .flow-icon {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   fill: none;
   stroke: var(--accent);
-  stroke-width: 1.3;
+  stroke-width: 1.6;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -1147,6 +1162,17 @@ a { color: inherit; }
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
+}
+
+/* Подпись под шагом. В макете каждый шаг объясняется двумя строками —
+   без них поток читается как список слов. Формулировки собраны из
+   утверждённого текста экрана и подписей к миниатюрам, новых слов нет. */
+.flow-note {
+  font-size: var(--text-xs);
+  line-height: 1.35;
+  text-align: center;
+  color: rgba(16, 16, 16, 0.62);
+  text-wrap: balance;
 }
 
 /* --- Полоса плиток --------------------------------------------------- */
