@@ -971,11 +971,59 @@ a { color: inherit; }
 
 .system-copy { display: grid; align-content: start; }
 
-/* Миниатюры отделены от текста воздухом, как в макете, где между интро и
-   первым роликом заметный отступ. */
-.system-copy .selectors { margin-top: var(--space-7); }
+/* Правило «.system-copy .selectors» снято 03.09.2026 вместе с переносом
+   миниатюр из колонки: они больше не внутри текста. */
 
 .system-stage { display: grid; align-content: start; }
+
+/* Секция ровно в высоту окна, 03.09.2026. Тем же приёмом собран первый
+   экран: секция — колонка, один элемент внутри неё помечен .fit-grow и
+   забирает остаток высоты, остальные стоят своей. Медиа внутри растущего
+   элемента вписывается целиком (object-fit: contain).
+   Причина: секция системы вырастала до 1534px при окне 900 и третья
+   миниатюра резалась сгибом, кейс — до 1124px. Правило проверяется
+   автоматически: automation/showcase-check/check-fit.mjs.
+   На узком окне высота не фиксируется — там текст длиннее экрана честно. */
+.screen-fit {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  /* Поля секции срезаны с 72px до 24px: в секции с жёсткой высотой они
+     съедали 144px из 900, и растущему ряду оставалось 286 при нужных 361
+     (замер 03.09.2026). Воздух между секциями держит линия сверху. */
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+@media (min-width: 861px) {
+  .screen-fit { height: 100vh; }
+}
+
+.fit-grow {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* stretch вместо start: колонка экрана должна получить высоту ряда,
+   иначе height:100% у .stage не к чему применить и кадр рисуется своей
+   натуральной высотой поверх потока (замер 03.09.2026). */
+#system .system-grid {
+  align-items: stretch;
+  /* Строка ограничена высотой контейнера. Без этого grid-строка auto
+     растягивается под содержимое и колонки вылезают за секцию: экран
+     налезал на поток (замер 03.09.2026: ряд 286, колонки 361). */
+  grid-template-rows: minmax(0, 1fr);
+}
+/* Колонка экрана: строка тянется на всю высоту ячейки, иначе height:100%
+   у .stage считается от auto и кадр рисуется натуральной высотой 486
+   вместо доступных 382 (замер 03.09.2026). */
+#system .system-stage {
+  min-height: 0;
+  height: 100%;
+  align-content: stretch;
+  grid-template-rows: minmax(0, 1fr);
+}
 
 /* Пометка прижата к правому краю верхней строки — её место в макете. */
 .system-topline .hand-system {
@@ -988,8 +1036,12 @@ a { color: inherit; }
 
 .selectors {
   display: grid;
+  /* Три ролика в ряд под экраном: одна группа, читается как плейлист.
+     В колонке они вытягивали её на 174px длиннее правой. */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-4);
   align-content: start;
+  flex: 0 0 auto;
 }
 
 /* Кнопка, а не ссылка: это смена содержимого на месте, а не переход.
@@ -1083,13 +1135,29 @@ a { color: inherit; }
   background: var(--ink);
   border-radius: var(--radius-slab);
   padding: var(--space-3);
+  /* Высота приходит от колонки, а не от картинки: иначе кадр 16:9 задаёт
+     секции свою высоту и правило «секция в окно» ломается. */
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.stage-media {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
 }
 
 .stage-media img,
 .stage-media video {
   display: block;
   width: 100%;
-  height: auto;
+  /* contain, а не cover: кадр интерфейса обрезать нельзя — на нём
+     показывают содержимое базы, а не фактуру. */
+  height: 100%;
+  object-fit: contain;
   border-radius: var(--radius);
   background: var(--ink);
 }
@@ -1110,7 +1178,8 @@ a { color: inherit; }
 
 .flow {
   list-style: none;
-  margin: var(--space-7) 0 0;
+  /* Отступ даёт gap секции — свой margin складывался бы с ним. */
+  margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1179,9 +1248,10 @@ a { color: inherit; }
 
 .benefits {
   list-style: none;
-  margin: var(--space-9) 0 0;
-  padding: var(--space-7) 0 0;
-  border-top: 1px solid var(--rule);
+  /* 03.09.2026: блок открывает секцию «Ёмкость», линия и верхний отступ
+     теперь приходят от самой секции. */
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: var(--space-7);
@@ -1242,7 +1312,7 @@ a { color: inherit; }
    Верхняя линия у пункта тоньше, чем у .result (1px против 2px), по той же
    причине. */
 .volume {
-  margin-top: var(--space-10);
+  margin-top: var(--space-9);
   border-top: 1px solid var(--rule);
   padding-top: var(--space-7);
 }
@@ -1387,6 +1457,25 @@ a { color: inherit; }
 }
 
 /* --- ЭКРАН 5. Кейс --------------------------------------------------- */
+
+/* Кадр кейса вписывается в остаток высоты секции, а не задаёт её:
+   при width/height из атрибутов видео 1440x742 растягивало секцию до
+   1124px при окне 900. Колонка нужна, чтобы height:100% у видео было от
+   чего считать — без неё процент падает на auto и берётся натуральная
+   высота 636 при доступных 420 (замер 03.09.2026). */
+.case-media {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.case-media video,
+.case-media img {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+  object-fit: contain;
+}
 
 .case-media {
   margin: var(--space-7) 0 0;

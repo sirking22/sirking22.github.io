@@ -275,7 +275,7 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
      колонок, а вровень идут именно заголовок и экран.
      Ряд процесса переехал под экран, в правую колонку — там же, где он
      стоит в макете, а не полосой во всю ширину. -->
-<section id="system" class="screen">
+<section id="system" class="screen screen-fit">
   <!-- Надзаголовок и рукописная пометка стоят одной строкой над сеткой: в
        макете пометка висит на уровне надзаголовка, а вровень идут заголовок
        и экран. Пока пометка лежала над экраном, она опускала его на 59px. -->
@@ -284,7 +284,7 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
     <p class="hand hand-system">Живая база,<br>открыта целиком</p>
   </div>
 
-  <div class="system-grid">
+  <div class="system-grid fit-grow">
     <div class="system-copy">
       <h2 class="section-title">Почему это не разовая удача</h2>
       <!-- Один абзац утверждённого текста разбит надвое по макету
@@ -293,7 +293,23 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
       <p class="lead">Каждое решение идёт одним путём. Сигнал из данных, гипотеза, норма, задача, вывод.</p>
       <p class="lead lead-second">Путь не в голове, он записан и лежит в Notion: 15 связанных баз, задачник с нормами часов и правок, метрики из VK, YouTube и маркетплейсов приходят через API.</p>
 
-      <div class="selectors" role="tablist" aria-label="Разделы системы">
+    </div>
+
+    <div class="system-stage">
+      <figure class="stage" id="stage">
+      <div class="stage-media"></div>
+      <figcaption class="stage-caption"></figcaption>
+    </figure>
+
+
+    </div>
+  </div>
+
+  <!-- 03.09.2026: миниатюры вынесены из левой колонки в ряд под
+       экраном, поток — отдельной строкой под ними. Причина в замере:
+       левая колонка была на 174px длиннее правой, секция вырастала до
+       1534px при окне 900 и третья миниатюра резалась сгибом. -->
+  <div class="selectors" role="tablist" aria-label="Разделы системы">
       <button class="selector is-active" role="tab" aria-selected="true" aria-controls="stage" data-kind="video" data-src="assets/chain-walkthrough.mp4" data-poster="assets/poster-chain.webp" data-caption="Гипотезы. Задача начинается с цели и заканчивается выводом.">
         <span class="selector-thumb" style="background-image:url('assets/poster-chain.webp')">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13l11-6.5z"/></svg>
@@ -323,13 +339,6 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
         </span>
       </button>
     </div>
-    </div>
-
-    <div class="system-stage">
-      <figure class="stage" id="stage">
-      <div class="stage-media"></div>
-      <figcaption class="stage-caption"></figcaption>
-    </figure>
 
       <ol class="flow">
     <li class="flow-step">
@@ -368,11 +377,14 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
       <span class="flow-note">Задача заканчивается выводом</span>
     </li>
   </ol>
-
       <p class="hand hand-flow">Решение принимается здесь</p>
-    </div>
-  </div>
+</section>
 
+<!-- Свойства системы и её объёмы вынесены из секции о системе
+     03.09.2026: вместе они давали 1534px при окне 900. Экран 3а
+     утверждённого текста и без того отдельный, а пять свойств —
+     итог, который читается после того, как показан сам путь. -->
+<section id="capacity" class="screen">
   <ul class="benefits">
     <li class="benefit">
       <svg class="benefit-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -462,12 +474,12 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
 </section>
 
 <!-- ЭКРАН 5 -->
-<section id="case" class="screen">
+<section id="case" class="screen screen-fit">
   <p class="eyebrow">Кейс</p>
   <h2 class="section-title">Из каталога техники в клуб по интересу</h2>
   <p class="lead">Бренд техники для дома, 35+ SKU, семь каналов. Бренд-платформа, визуальный язык, клуб вокруг продукта.</p>
 
-  <figure class="case-media">
+  <figure class="case-media fit-grow">
     <video controls muted loop playsinline data-autoplay preload="metadata" poster="assets/poster-materials.webp"
            width="1440" height="742">
       <source src="assets/case-materials.mp4" type="video/mp4">
