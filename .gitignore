@@ -11,3 +11,7 @@ copy-*.md
 
 # Исходник картинки ссылки: рендерится в assets/og-preview.jpg, сам не публикуется
 og-source.html
+
+# Пробная раздача TT Bluescreens: лицензия «free for personal use»,
+# веб-публикацию не покрывает. Примерка идёт локально.
+assets/fonts/TTBluescreens-*.ttf
