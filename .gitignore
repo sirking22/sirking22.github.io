@@ -15,3 +15,6 @@ og-source.html
 # Пробная раздача TT Bluescreens: лицензия «free for personal use»,
 # веб-публикацию не покрывает. Примерка идёт локально.
 assets/fonts/TTBluescreens-*.ttf
+
+# Английский исходник картинки ссылки: рендерится в assets/og-preview-en-v1.jpg
+og-source-en.html
