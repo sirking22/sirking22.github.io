@@ -6512,3 +6512,313 @@ main > section {
 @media (min-width: 1100px) {
   #next .contact-scene .contact-photos { width: 22.85cqw; height: auto; align-self: stretch; flex: none; } /* высота — ровно колонка текста, ширина ±2px */
 }
+
+/* 18.09.2026, просьба владельца: стрелки «Команды» того же размера, что у
+   кейса (2,5 -> 2,125cqw, правило 5866 было старше общего уменьшения).
+   Подпись под кадром ближе: зазор = высота строки подписи (0,82 x 1,5),
+   внутреннее расстояние группы «кадр + подпись» меньше внешнего до плашки. */
+@media (min-width: 1100px) {
+  .team-scene .case-nav { width: 2.125cqw; height: 2.125cqw; }
+  .team-scene .slider-caption { margin-top: 1.23cqw; }
+}
+
+/* 18.09.2026: «Ниша» возвращена. Правило #capacity { scroll-snap-align: none }
+   (id) било общее main > section:not([hidden]) — при mandatory экран был бы
+   недостижим, как раньше контакт. */
+@media (min-width: 1100px) {
+  html main > section#capacity { scroll-snap-align: start; }
+}
+/* «Ниша» на окнах 16:10: сцена стояла у верха, под ней 90–145px пустоты
+   (gaps, 1440x900 и 1728x1117). Как у контакта: секция — колонка, сцена по центру. */
+@media (min-width: 1100px) {
+  #capacity:has(> .scene) { display: flex; flex-direction: column; justify-content: center; }
+  #capacity > .scene { margin: 0 auto; }
+}
+
+/* 19.09.2026, файлы владельца «Разделитель 1–3» (папка «Графика»):
+   stones-divider — полоса по центру стыка системы и команды, stones-r-v3 —
+   у правой кромки на стыке команды и контакта, stones-bl — левый нижний угол
+   контакта вместо прежнего правого. Разделители лежат поверх линии стыка. */
+.edge-join-a, .edge-join-b { z-index: 2; }
+.edge-join-a::before, .edge-join-b::before, .edge-bottom::before {
+  -webkit-mask-image: none; mask-image: none; mix-blend-mode: normal;
+}
+.edge-join-a::before {
+  left: 50%; width: 520px; height: 70px; transform: translate(-50%, -50%);
+  background-image: url('assets/stones-divider.webp');
+  background-size: 520px 70px; background-position: 0 0;
+}
+.edge-join-b::before {
+  left: auto; right: 0; width: 180px; height: 213px;
+  background-image: url('assets/stones-r-v3.webp');
+  background-size: 180px 213px; background-position: 0 0;
+}
+.edge-bottom::before {
+  right: auto; left: calc(-1 * (var(--sidenav-w) + var(--sidenav-gap) * 2));
+  width: 230px; height: 178px;
+  background-image: url('assets/stones-bl.webp');
+  background-size: 230px 178px; background-position: 0 0;
+}
+@media (max-width: 1100px) { .edge-join-a, .edge-join-b { display: none; } }
+
+/* 19.09.2026. «НИША» — ЧЕТЫРЕ КАМНЯ ВОРОТ. Композиция по макету владельца:
+   слева рубрика, заголовок в четыре строки (последняя акцентом) и абзац;
+   справа четыре камня в ряд, под каждым номер, плита и хронология.
+   Камни — jpg с фоном, приведённым к белому: подложка var(--paper) и
+   умножение дают ровно цвет бумаги без края. */
+#capacity { border-top: 1px solid var(--rule); }
+.gate-stones { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6) var(--space-4); }
+.gate-stone { display: flex; flex-direction: column; gap: var(--space-3); margin: 0; }
+.gate-stone-art { background: var(--paper); }
+.gate-stone-art img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
+.gate-stone-copy { display: flex; flex-direction: column; border-left: 1px solid var(--rule); padding-left: var(--space-3); }
+.gate-num { font-family: var(--font-display); font-weight: 700; color: var(--accent); line-height: 1; font-size: 28px; }
+.gate-name { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; line-height: 1; margin: 6px 0 0; font-size: 22px; color: var(--ink); }
+.gate-years { list-style: none; margin: 10px 0 0; padding: 0; font-size: 13px; line-height: 1.45; color: var(--ink); }
+.gate-years b { color: var(--accent); font-weight: 600; margin-right: 0.35em; }
+.gate-accent { color: var(--accent); }
+@media (min-width: 1100px) {
+  .gate-scene .gate-copy { position: absolute; left: 8.333cqw; top: 10cqw; width: 27cqw; display: flex; flex-direction: column; gap: 1.25cqw; }
+  .gate-scene .section-title { font-size: 4.6cqw; }
+  .gate-scene .lead { font-size: 0.9375cqw; max-width: 22cqw; margin: 0; }
+  .gate-scene .gate-stones {
+    position: absolute; left: 37.5cqw; top: 4.2cqw; width: 54.167cqw;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.667cqw;
+  }
+  .gate-scene .gate-stone { gap: 1cqw; }
+  .gate-scene .gate-stone-copy { padding-left: 1.04cqw; border-left-width: 0.052cqw; }
+  .gate-scene .gate-num { font-size: 1.98cqw; }
+  .gate-scene .gate-name { font-size: 1.6cqw; margin-top: 0.4cqw; }
+  .gate-scene .gate-years { font-size: 0.729cqw; margin-top: 0.7cqw; }
+}
+/* Края кадров камней растворены: у jpg фон к краям чуть темнее белого,
+   и умножение проявляло прямоугольник. Год — отдельной колонкой, перенос
+   строки встаёт под текст, а не под год. */
+.gate-stone-art img {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 8%, #000 92%, transparent 100%), linear-gradient(to right, transparent 0, #000 10%, #000 90%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, transparent 0, #000 8%, #000 92%, transparent 100%), linear-gradient(to right, transparent 0, #000 10%, #000 90%, transparent 100%);
+  mask-composite: intersect;
+}
+.gate-years li { display: grid; grid-template-columns: 3.2em 1fr; }
+.gate-years b { margin-right: 0; }
+@media (min-width: 1100px) { .gate-scene .gate-stones { top: 6.5cqw; } }
+/* 19.09.2026, владелец: под полосой камней между системой и командой линии
+   стыка нет, сами камни на 20% меньше (520x70 -> 416x56). */
+#team { border-top: 0; }
+.edge-join-a::before { width: 416px; height: 56px; background-size: 416px 56px; }
+
+/* 19.09.2026: камни «Ниши» — один кадр владельца над колонками подписей.
+   Фон кадра приведён к белому, ложится на бумагу умножением, края гаснут. */
+.gate-art { margin: 0 0 var(--space-4); background: var(--paper); }
+.gate-art img {
+  display: block; width: 100%; height: auto; mix-blend-mode: multiply;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 6%, #000 92%, transparent 100%), linear-gradient(to right, transparent 0, #000 4%, #000 96%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, transparent 0, #000 6%, #000 92%, transparent 100%), linear-gradient(to right, transparent 0, #000 4%, #000 96%, transparent 100%);
+  mask-composite: intersect;
+}
+@media (min-width: 1100px) {
+  .gate-scene .gate-art { position: absolute; left: 37.5cqw; top: 3.6cqw; width: 54.167cqw; margin: 0; }
+  .gate-scene .gate-stones { top: 38.2cqw; }
+}
+/* 19.09.2026, владелец: боковое затухание белило нижние камни ворот по
+   краям. Бока гаснут только ниже 81% высоты кадра (низ камней — 80%). */
+@media (min-width: 1100px) {
+  #hero .hero-visual img {
+    -webkit-mask-image:
+      linear-gradient(to bottom, #000 78%, transparent 92%),
+      linear-gradient(to bottom, #000 81%, transparent 85%),
+      linear-gradient(to right, transparent 0, #000 9%, #000 91%, transparent 100%);
+    mask-image:
+      linear-gradient(to bottom, #000 78%, transparent 92%),
+      linear-gradient(to bottom, #000 81%, transparent 85%),
+      linear-gradient(to right, transparent 0, #000 9%, #000 91%, transparent 100%);
+  }
+}
+/* Кадр «Для ниши 2» во всю ширину: камни у краёв больше не режутся. Ширина
+   подобрана так, чтобы шаг камней на кадре (21,9% ширины) совпал с шагом
+   колонок подписей (13,958cqw), середина ряда — с серединой колонок. */
+@media (min-width: 1100px) {
+  .gate-scene .gate-art { left: 33.6cqw; top: 3.2cqw; width: 63.77cqw; }
+  .gate-scene .gate-stones { top: 38.6cqw; }
+}
+
+/* 20.09.2026: кадр «Для ниши 3» без дуги. Шаг камней 21,57% ширины кадра,
+   середина ряда — 49,26%: ширина 64,71cqw ставит камни над колонками. */
+@media (min-width: 1100px) {
+  .gate-scene .gate-art { left: 32.7cqw; top: 2cqw; width: 64.71cqw; }
+  .gate-scene .gate-stones { top: 38.8cqw; }
+}
+/* 20.09.2026, владелец: линий на стыках экранов нет нигде — границу держат
+   воздух и камни. Магнит мягче: proximity вместо mandatory, экран
+   подтягивается, когда прокрутка и так остановилась рядом. */
+main > section.screen { border-top: 0; }
+@media (min-width: 1100px) {
+  html { scroll-snap-type: y proximity; }
+}
+/* Линия у «Ниши» ставилась правилом с id — снимается таким же. */
+html main > section#capacity { border-top: 0; }
+
+/* 20.09.2026, владелец: экран должен доезжать до края, магнит вернулся в
+   mandatory; плавность самого притягивания задаёт браузер. */
+@media (min-width: 1100px) {
+  html { scroll-snap-type: y mandatory; }
+}
+
+/* Пометка от руки в «Нише» и стрелка от неё к колонкам с годами. */
+.gate-arrow { display: block; width: 90px; height: 45px; color: var(--accent); opacity: 0.7; margin-top: var(--space-2); }
+@media (min-width: 1100px) {
+  .gate-scene .hand-gate { position: absolute; left: 8.333cqw; top: 40cqw; font-size: 1.15cqw; }
+  .gate-scene .gate-arrow { position: absolute; left: 20cqw; top: 43.4cqw; width: 9cqw; height: 4.5cqw; margin: 0; }
+}
+/* Пометка и стрелка лежат внутри .gate-copy, поэтому их координаты
+   считаются от неё: 10cqw сцены уже учтены. */
+@media (min-width: 1100px) {
+  .gate-scene .hand-gate { left: 0; top: 30cqw; }
+  .gate-scene .gate-arrow { left: 12cqw; top: 32.4cqw; }
+}
+
+/* ======================================================================
+   20.09.2026. НАБОР РУКОПИСНЫХ ОТМЕТОК.
+   Рисованные обводки лежат фоном-картинкой в data-URI: их можно вешать на
+   любое слово или блок, они тянутся за текстом и не мешают выделению.
+   Цвет задаётся stroke внутри картинки, поэтому акцент прописан как
+   %23FF4B08 (это #FF4B08 в адресе). Пометка привязывается к экрану, а не
+   к слайду: слайды сменяются, подпись остаётся.
+   .mark-underline — подчёркивание от руки вместо оранжевого текста;
+   .mark-circle    — обводка овалом вокруг слова или числа;
+   .mark-bracket   — скобка слева от строки списка.
+   ====================================================================== */
+.mark-underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9 C 45 3, 92 12, 140 6 S 186 4, 197 8' fill='none' stroke='%23FF4B08' stroke-width='3' stroke-linecap='round' opacity='0.75'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left calc(100% + 0.18em);
+  background-size: 100% 0.32em;
+  padding-bottom: 0.18em;
+}
+.mark-circle {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80' preserveAspectRatio='none'%3E%3Cpath d='M104 6 C 40 2, 6 22, 12 44 C 18 68, 96 78, 146 72 C 190 66, 198 34, 176 18 C 158 6, 120 3, 96 8' fill='none' stroke='%23FF4B08' stroke-width='3' stroke-linecap='round' opacity='0.7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 118% 148%;
+  padding: 0.1em 0.35em;
+}
+.mark-bracket {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 100' preserveAspectRatio='none'%3E%3Cpath d='M11 3 C 4 18, 3 44, 4 50 C 3 58, 4 82, 11 97' fill='none' stroke='%23FF4B08' stroke-width='3' stroke-linecap='round' opacity='0.6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0.5em 100%;
+  padding-left: 0.9em;
+}
+/* 20.09.2026, пересохранённый кадр «Для ниши 3»: шаг камней 21,82% ширины,
+   середина ряда 47,25%. Кадр обрезан по камням, поэтому стал ниже. */
+@media (min-width: 1100px) {
+  .gate-scene .gate-art { left: 34.36cqw; top: 1.5cqw; width: 63.96cqw; }
+  .gate-scene .gate-stones { top: 37.2cqw; }
+}
+
+/* Рукописные пометки экранов: кейс, команда, контакт. */
+.hand-team, .hand-contact, .hand-case { transform: rotate(-3deg); }
+@media (min-width: 1100px) {
+  .case-scene .hand-case { position: absolute; left: 8.333cqw; top: 46cqw; font-size: 1.15cqw; z-index: 2; }
+  .team-scene .hand-team { position: absolute; left: 8.333cqw; top: 43cqw; font-size: 1.15cqw; z-index: 2; }
+  .contact-scene .hand-contact { position: absolute; left: 8.333cqw; top: 41cqw; font-size: 1.15cqw; z-index: 2; }
+}
+
+/* Обводка числа в полосе: svg лежит поверх значения, цвет — от текста. */
+.ring-host { position: relative; display: inline-block; }
+.ring-mark { position: absolute; left: -9%; top: -32%; width: 118%; height: 164%; color: var(--accent); opacity: 0.85; pointer-events: none; }
+
+/* Значок камня перед названием колонки в «Нише». */
+.gate-icon { width: 1em; height: 1.33em; color: var(--accent); vertical-align: -0.28em; margin-right: 0.3em; }
+/* Пометка «Команды» встала под плашкой и обрезалась — поднята в свободную
+   полосу под столбиком вкладок, над плашкой чисел. */
+@media (min-width: 1100px) { .team-scene .hand-team { top: 31cqw; } }
+/* Пометка «Команды» наезжала на столбик вкладок — переставлена в пустую
+   полосу под подписью кадра, над плашкой чисел. */
+@media (min-width: 1100px) { .team-scene .hand-team { left: 50cqw; top: 30.5cqw; } }
+/* Пометка «Команды» — справа от подписи кадра: единственное свободное
+   место между кадром и плашкой чисел (замер 20.09.2026). */
+@media (min-width: 1100px) { .team-scene .hand-team { left: 76cqw; top: 28.6cqw; } }
+/* На экране «Команды» свободного поля между кадром и плашкой нет: пометка
+   лежит на самом кадре, в правом нижнем углу, и написана цветом бумаги. */
+@media (min-width: 1100px) {
+  .team-scene .hand-team { left: 77cqw; top: 21cqw; color: var(--paper); z-index: 3; }
+}
+/* Кадр «Команды» меняется слайдами: на светлом ролике белая пометка
+   пропадала. Пометка ушла под плашку чисел, в свободную полосу внизу. */
+@media (min-width: 1100px) {
+  .team-scene .hand-team { left: 8.333cqw; top: 40cqw; color: var(--ink); }
+}
+/* Считаем от низа сцены: верх у «Команды» занят кадром и плашкой. */
+@media (min-width: 1100px) {
+  .team-scene .hand-team { top: auto; bottom: 1.5cqw; }
+}
+
+/* 20.09.2026, замечания владельца.
+   1. Подчёркивание тянулось по ширине слова вместе с толщиной линии: у
+      длинных слов оно становилось нитью, у коротких — жирной дугой. Линия
+      рисуется с non-scaling-stroke, поэтому толщина одна при любой ширине,
+      а волна тянется.
+   2. Кадр «Ниши» срезался маской сверху — верхнего затухания больше нет,
+      снизу оно начинается позже, и под камнями остаётся поле. */
+.mark-underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M3 7 C 50 2, 96 10, 142 5 S 188 3, 197 7' fill='none' stroke='%23FF4B08' stroke-width='2.4' stroke-linecap='round' vector-effect='non-scaling-stroke' opacity='0.8'/%3E%3C/svg%3E");
+  background-size: 100% 0.26em;
+  background-position: left calc(100% + 0.12em);
+  padding-bottom: 0.12em;
+}
+.gate-art img {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 94%, transparent 100%), linear-gradient(to right, transparent 0, #000 3%, #000 97%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0, #000 94%, transparent 100%), linear-gradient(to right, transparent 0, #000 3%, #000 97%, transparent 100%);
+}
+@media (min-width: 1100px) {
+  .gate-scene .gate-art { top: 1cqw; }
+  .gate-scene .gate-stones { top: 38.2cqw; }
+}
+/* Полоса подчёркивания считалась в em: под заголовком в 60px она
+   растягивалась в 16px и читалась размашистой дугой, а не чертой. Высота
+   полосы задана в пикселях — волна одинаковая под любым кеглем. */
+.mark-underline {
+  background-size: 100% 6px;
+  background-position: left calc(100% + 2px);
+  padding-bottom: 2px;
+}
+
+/* 21.09.2026, замечания владельца.
+   1. Линия читалась волной, а не подчёркиванием: размах кривой был почти
+      во всю высоту полосы. Размах уменьшен до доли пикселя, линия идёт
+      ровно под словом и лишь чуть дрожит, как от руки.
+   2. В «Нише» сняты номера колонок и стрелка; пометка о годах переставлена
+      вплотную к таблице.
+   3. Обводка в плашке «Команды» шла вокруг всей строки «2,4 → 0,7» и от
+      этого вытягивалась в плоский эллипс. Теперь она вокруг результата.
+   ====================================================================== */
+.mark-underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 6.8 C 38 5.4, 74 7.9, 112 6.4 C 144 5.2, 172 7.2, 198 6.1' fill='none' stroke='%23FF4B08' stroke-width='3' stroke-linecap='round' vector-effect='non-scaling-stroke' opacity='0.9'/%3E%3C/svg%3E");
+  background-size: 100% 6px;
+  background-position: left calc(100% + 2px);
+  padding-bottom: 2px;
+}
+@media (min-width: 1100px) {
+  .gate-scene .hand-gate { left: 21.7cqw; top: 29.6cqw; white-space: nowrap; }
+}
+/* Замер 21.09.2026: «0,7» — коробка 17×19 px, почти квадрат. Доли от неё
+   давали вертикальный овал, поэтому обводка считается от кегля строки. */
+.ring-mark { left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 2.5em; height: 2.05em; }
+
+/* 21.09.2026, слово владельца: «размер, как у надписи „Реальные базы“, и
+   межстрочное чуть поменьше». Замер: .hand-system идёт 25,74 px при сцене
+   1268 px — это 2,03cqw. Пометки экранов стояли на 1,15cqw (14,6 px) и
+   рядом с ней читались мелочью. Пометка «Ниши» от крупного кегля упиралась
+   в таблицу, поэтому её левый край подвинут. */
+.hand { line-height: 0.88; }
+@media (min-width: 1100px) {
+  .case-scene .hand-case,
+  .team-scene .hand-team,
+  .contact-scene .hand-contact,
+  .gate-scene .hand-gate { font-size: 2.03cqw; }
+  .gate-scene .hand-gate { left: 18.7cqw; }
+}
