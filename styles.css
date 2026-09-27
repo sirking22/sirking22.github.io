@@ -6822,3 +6822,633 @@ html main > section#capacity { border-top: 0; }
   .gate-scene .hand-gate { font-size: 2.03cqw; }
   .gate-scene .hand-gate { left: 18.7cqw; }
 }
+
+/* ======================================================================
+   26.09.2026. НАБОР РУКОПИСНЫХ ОТМЕТОК, ВТОРОЕ ПОКОЛЕНИЕ, И ЭКРАН «ЦИКЛ».
+
+   Владелец 26.09.2026: рукописного мало и оно сведено к подчёркиванию.
+   Под каждой подписью .hand стояла прямая полоса ::after в 2px — она ничего
+   не сообщала, только помечала, что это подпись. Полоса снята, вместо неё
+   рисованная стрелка от подписи к тому, что подпись комментирует.
+
+   Стрелка лежит в потоке под текстом подписи, размер задан в em, поэтому
+   она едет вместе с кеглем в сценах на cqw и не требует координат на
+   каждом экране. Направление задаётся только поворотом.
+
+   Набор: .hand-arrow — стрелка (шесть направлений);
+          .mark-tick  — галочка от руки у доказанного;
+          .mark-star  — звёздочка-сноска;
+          .mark-strike — зачёркивание волной у отменённого варианта.
+   Все со stroke-dasharray дорисовываются по скроллу: .mark-draw уже
+   обрабатывается скриптом внизу index.html.
+   ====================================================================== */
+
+.hand::after { content: none; }
+
+.hand-arrow {
+  display: block;
+  width: 4.4em;
+  height: 2em;
+  margin-top: 0.05em;
+  color: var(--accent);
+  opacity: 0.85;
+  overflow: visible;
+}
+.hand-arrow--up-right   { transform: rotate(-8deg); }
+.hand-arrow--right      { transform: rotate(14deg); }
+.hand-arrow--up         { transform: rotate(-42deg); }
+.hand-arrow--down       { transform: scaleY(-1) rotate(-32deg); }
+.hand-arrow--down-right { transform: scaleY(-1) rotate(-10deg); }
+.hand-arrow--left       { transform: scaleX(-1) rotate(-8deg); }
+
+.mark-tick {
+  width: 1.05em;
+  height: 1.05em;
+  color: var(--accent);
+  vertical-align: -0.12em;
+  margin-right: 0.3em;
+}
+.mark-star {
+  width: 0.7em;
+  height: 0.7em;
+  color: var(--accent);
+  vertical-align: 0.45em;
+  margin-left: 0.15em;
+}
+/* Зачёркивание волной: линия идёт по середине слова, толщина не зависит
+   от длины — тот же приём non-scaling-stroke, что у .mark-underline. */
+.mark-strike {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 7.4 C 42 4.6, 82 8.4, 122 5.6 C 152 3.8, 176 7.4, 198 5.2' fill='none' stroke='%23FF4B08' stroke-width='3' stroke-linecap='round' vector-effect='non-scaling-stroke' opacity='0.85'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 100% 6px;
+  opacity: 0.55;
+}
+
+/* --- ЭКРАН 3а. ЦИКЛ --------------------------------------------------
+   Лента из шести этапов, под каждым его базы, снизу полоса автоматизации,
+   сверху две дуги возврата. Автоматизация намеренно не узел: она работает
+   на всех шести шагах сразу, узлом сбоку читалась бы как ещё один шаг.
+   -------------------------------------------------------------------- */
+
+.flow-scene {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.flow-headrow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: end;
+}
+.flow-lead .lead { margin: 0; }
+
+.flow-board { position: relative; }
+
+/* Высота поля под дуги возврата. Дуги лежат над лентой, лента отступает
+   ровно на эту величину — иначе подписи возвратов сели бы на номера. */
+.flow-board { --flow-arc: clamp(46px, 5.2vw, 84px); }
+.flow-returns {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: var(--flow-arc);
+  pointer-events: none;
+}
+.flow-arcs {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: var(--accent);
+  opacity: 0.55;
+}
+.flow-return-label {
+  position: absolute;
+  top: 0.1em;
+  font-family: var(--font-hand);
+  font-size: clamp(14px, 1.15vw, 20px);
+  line-height: 1;
+  color: var(--accent);
+  white-space: nowrap;
+  transform: rotate(-3deg);
+}
+.flow-return-label--a { left: 15.5%; }
+.flow-return-label--b { left: 40.5%; }
+
+.flow-track {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(12px, 1.3vw, 26px);
+  margin: 0;
+  padding: calc(var(--flow-arc) + var(--space-2)) 0 0;
+  list-style: none;
+  counter-reset: none;
+}
+.flow-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  padding-top: 0.85rem;
+  border-top: 2px solid rgba(26, 26, 26, 0.14);
+}
+/* Уголок на линии между этапами: показывает ход слева направо. У
+   последнего узла его нет — оттуда ход уходит вверх, по дугам возврата. */
+.flow-node::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: calc(-0.5 * clamp(12px, 1.3vw, 26px) - 4px);
+  width: 8px; height: 8px;
+  border-top: 2px solid var(--accent);
+  border-right: 2px solid var(--accent);
+  transform: rotate(45deg);
+  opacity: 0.8;
+}
+.flow-node:last-child::after { content: none; }
+
+.flow-num {
+  font-size: clamp(11px, 0.78vw, 14px);
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+.flow-icon {
+  width: clamp(26px, 2.1vw, 38px);
+  height: clamp(26px, 2.1vw, 38px);
+  color: var(--accent);
+}
+.flow-name {
+  margin: 0;
+  font-size: clamp(17px, 1.5vw, 26px);
+  line-height: 1.1;
+}
+.flow-what {
+  margin: 0;
+  font-size: clamp(12px, 0.92vw, 16px);
+  line-height: 1.35;
+  opacity: 0.68;
+}
+.flow-bases {
+  margin: 0.25em 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: clamp(11.5px, 0.88vw, 15px);
+  line-height: 1.5;
+}
+.flow-bases li { position: relative; padding-left: 0.85em; }
+.flow-bases li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.62em;
+  width: 4px; height: 1px;
+  background: var(--accent);
+  opacity: 0.7;
+}
+.flow-metric {
+  margin: 0.5em 0 0;
+  padding-top: 0.45em;
+  border-top: 1px dashed rgba(26, 26, 26, 0.22);
+  font-size: clamp(11.5px, 0.88vw, 15px);
+  line-height: 1.35;
+  color: var(--accent);
+}
+
+.flow-rail {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin: var(--space-4) 0 0;
+  padding: 0.7em 1em;
+  border: 1px dashed rgba(26, 26, 26, 0.24);
+  border-radius: 6px;
+  font-size: clamp(12px, 0.92vw, 16px);
+  line-height: 1.35;
+}
+.flow-rail-icon {
+  flex: none;
+  width: clamp(24px, 1.8vw, 32px);
+  height: clamp(24px, 1.8vw, 32px);
+  color: var(--accent);
+}
+.flow-rail-name {
+  flex: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.flow-rail-text { opacity: 0.72; }
+
+.flow-foot {
+  margin: 0;
+  font-size: clamp(11px, 0.8vw, 14px);
+  opacity: 0.5;
+}
+/* Подпись экрана стоит по центру под лентой, стрелка под ней — тоже. */
+.hand-flow .hand-arrow { margin-left: auto; margin-right: auto; }
+
+@media (max-width: 1099px) {
+  .flow-headrow { grid-template-columns: 1fr; gap: var(--space-3); align-items: start; }
+  .flow-returns { display: none; }
+  .flow-track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: var(--space-4);
+    padding-top: 0;
+  }
+  /* Уголок ведёт вправо только внутри ряда: у третьего и шестого узла
+     строка кончается, и уголок показывал бы за край сетки. */
+  .flow-node:nth-child(3n)::after { content: none; }
+}
+@media (max-width: 640px) {
+  .flow-track { grid-template-columns: 1fr; row-gap: var(--space-3); }
+  .flow-node::after { content: none; }
+  .flow-rail { flex-wrap: wrap; }
+}
+
+/* ======================================================================
+   26.09.2026, правка по замеру. ЭКРАН «ЦИКЛ» ПЕРЕВЕДЁН В СЦЕНУ.
+
+   Замер check-all: край #flow на 1920 лёг -8..1920 при полосе сетки
+   160..1760, на 1384 — 49..1326 при полосе 164..1220. Экран был собран на
+   clamp и vw и поэтому не знал ни про поля страницы, ни про сцену.
+
+   Все остальные экраны от 1100px живут внутри .scene: это канва 1920x1080
+   с container-type: inline-size, и всё внутри считается в cqw — долях
+   ширины сцены. Композиция тогда одна при любом окне. Экран «Цикл»
+   переведён на тот же порядок: левый край 8.333cqw (160 из 1920), правый
+   91.667cqw, как у «Системы» и «Команды».
+
+   Ниже 1100px сцены нет, там экран остаётся обычным потоком.
+   ====================================================================== */
+
+/* Поток только для узких окон: от 1100px .scene снова display: block и
+   раскладку задают абсолютные координаты в cqw. */
+@media (max-width: 1099px) {
+  .flow-scene { display: flex; flex-direction: column; gap: var(--space-4); }
+}
+
+@media (min-width: 1100px) {
+  .flow-scene .flow-rubric { position: absolute; left: 8.333cqw; top: 3.125cqw; }
+
+  .flow-scene .flow-headrow {
+    position: absolute;
+    left: 8.333cqw; top: 7.3cqw; width: 83.333cqw;
+    display: grid;
+    grid-template-columns: 45cqw minmax(0, 1fr);
+    gap: 3.333cqw;
+    align-items: end;
+  }
+  .flow-scene .flow-title { font-size: 4.2cqw; }
+  .flow-scene .flow-lead .lead { font-size: 0.833cqw; max-width: 35cqw; }
+
+  .flow-scene .flow-board {
+    position: absolute;
+    left: 8.333cqw; top: 18.4cqw; width: 83.333cqw;
+    --flow-arc: 4.2cqw;
+  }
+  .flow-scene .flow-track {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1.042cqw;
+    padding-top: calc(var(--flow-arc) + 0.833cqw);
+  }
+  .flow-scene .flow-node {
+    gap: 0.26cqw;
+    padding-top: 0.625cqw;
+    border-top-width: 0.104cqw;
+  }
+  .flow-scene .flow-node::after {
+    top: -0.26cqw;
+    right: -0.94cqw;
+    width: 0.42cqw; height: 0.42cqw;
+    border-top-width: 0.104cqw;
+    border-right-width: 0.104cqw;
+  }
+  .flow-scene .flow-num { font-size: 0.677cqw; letter-spacing: 0.052cqw; }
+  .flow-scene .flow-icon { width: 1.77cqw; height: 1.77cqw; }
+  .flow-scene .flow-name { font-size: 1.354cqw; }
+  .flow-scene .flow-what { font-size: 0.729cqw; }
+  .flow-scene .flow-bases { font-size: 0.729cqw; margin-top: 0.156cqw; }
+  .flow-scene .flow-bases li { padding-left: 0.625cqw; }
+  .flow-scene .flow-bases li::before { top: 0.6em; width: 0.26cqw; height: 0.052cqw; }
+  .flow-scene .flow-metric {
+    font-size: 0.729cqw;
+    margin-top: 0.36cqw;
+    padding-top: 0.31cqw;
+    border-top-width: 0.052cqw;
+  }
+
+  .flow-scene .flow-return-label { font-size: 1.042cqw; }
+
+  .flow-scene .flow-rail {
+    margin-top: 1.25cqw;
+    gap: 0.625cqw;
+    padding: 0.52cqw 0.833cqw;
+    border-width: 0.052cqw;
+    border-radius: 0.21cqw;
+    font-size: 0.833cqw;
+  }
+  .flow-scene .flow-rail-icon { width: 1.56cqw; height: 1.56cqw; }
+
+  .flow-scene .flow-foot {
+    position: absolute;
+    left: 8.333cqw;
+    bottom: 2.6cqw;
+    font-size: 0.625cqw;
+  }
+  /* Подпись от руки стоит от той же вертикали, что и весь экран. */
+  .flow-scene .hand-flow {
+    position: absolute;
+    left: 8.333cqw;
+    bottom: 4.6cqw;
+    margin: 0;
+    font-size: 1.15cqw;
+    text-align: left;
+  }
+  .flow-scene .hand-flow .hand-arrow { margin-left: 0; margin-right: 0; }
+}
+
+/* Замер check-fit 26.09.2026: на узком окне экран «Цикл» вытягивался до
+   1981px при 1257–1468 у соседних — шесть этапов вставали в один столбец.
+   На узком окне лента идёт в два столбца по три ряда. */
+@media (max-width: 640px) {
+  .flow-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ======================================================================
+   26.09.2026, второй круг правок владельца по рукописным пометкам.
+
+   1. Стрелки дорисовывались штрихом и не доезжали: замер показал
+      stroke-dashoffset, равный длине линии, поэтому от стрелки оставались
+      только круглые концы — на экране кейса владелец увидел три точки.
+      Класс .mark-draw с новых значков снят, они стоят сразу.
+   2. Первый экран: «Один цикл на всё» — кольцо из четырёх стрелок, а не
+      одна стрелка. Подпись про цикл и должна показывать цикл.
+   3. Кейс: три галочки столбиком слева от подписи — «сразу много
+      выполненных пунктов». Подпись переехала правее, под правый край
+      текстовой колонки.
+   4. Система: подпись сдвинута правее, стрелка развёрнута влево-вверх,
+      к кадру с базой.
+   5. Команда: справа от подписи значок робота.
+   6. Контакт: подпись «Отвечаю сам» снята целиком.
+   7. Ниша: стрелка снята, значок под «Год — когда слой появился» ещё
+      выбирается.
+   ====================================================================== */
+
+.mark-loop {
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  margin-top: 0.18em;
+  color: var(--accent);
+  opacity: 0.9;
+}
+.mark-ticks {
+  flex: none;
+  width: 1em;
+  height: 3em;
+  color: var(--accent);
+  opacity: 0.9;
+}
+.mark-robot {
+  flex: none;
+  width: 2.1em;
+  height: 2.1em;
+  color: var(--accent);
+  opacity: 0.9;
+}
+.hand-arrow--up-left { transform: scaleX(-1) rotate(-42deg); }
+
+/* Галочки стоят слева от текста: в разметке значок идёт после подписи,
+   поэтому порядок разворачивается раскладкой, а не перестановкой. */
+.hand-case {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5em;
+}
+.hand-team {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+}
+
+@media (min-width: 1100px) {
+  /* Замер 26.09.2026: текстовая колонка кейса 8.33..44.79cqw, низ 44.45;
+     карусель 46.25..91.31. Подпись встаёт под правым краем колонки. */
+  .case-scene .hand-case { left: 33.5cqw; top: 45.6cqw; }
+  /* Замер: кадр системы кончается на 67.59cqw, панель «Демо» 68.69..91.
+     Подпись была на 69.09 — сдвинута правее, стрелка уходит влево-вверх. */
+  .sys-scene .hand-system { position: absolute; left: 72cqw; top: 42.34cqw; }
+}
+
+/* Замер 26.09.2026 после переноса:
+   1. Подпись кейса правым краем доходила до 47.36cqw и заезжала на
+      карусель (46.25..91.31) — сдвинута левее.
+   2. Подпись системы осталась на 69.09: её держит более сильный селектор
+      с id, поэтому сдвиг задан через #system.
+   3. Кольцо в 2.5em выходило шире половины подписи — уменьшено. */
+@media (min-width: 1100px) {
+  .case-scene .hand-case { left: 31.5cqw; }
+  #system .sys-scene .hand-system { left: 72cqw; }
+}
+.mark-loop { width: 2em; height: 2em; }
+
+/* ======================================================================
+   27.09.2026. ЗНАЧОК СЛОЁВ, ИМПУЛЬС И ПОДСВЕТКА ЦИКЛА.
+   Владелец выбрал: у подписи про годы — стопка слоёв, а не стрелка;
+   анимация цикла показывает, что каждый следующий оборот короче.
+   ====================================================================== */
+
+.mark-layers {
+  display: block;
+  width: 2em;
+  height: 2em;
+  margin-top: 0.18em;
+  color: var(--accent);
+  opacity: 0.9;
+}
+
+/* Импульс бежит по линии над узлами. Базовый размер в пикселях: ниже
+   1100px сцены нет и cqw там не считается. */
+.flow-pulse {
+  position: absolute;
+  left: 0; top: 0;
+  width: 10px; height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(255, 75, 8, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.flow-node { transition: border-top-color 0.25s ease; }
+.flow-node .flow-icon { opacity: 0.72; transition: opacity 0.25s ease, transform 0.25s ease; }
+.flow-node .flow-num { transition: opacity 0.25s ease; opacity: 0.8; }
+.flow-node.is-lit { border-top-color: var(--accent); }
+.flow-node.is-lit .flow-icon { opacity: 1; transform: translateY(-2px) scale(1.06); }
+.flow-node.is-lit .flow-num { opacity: 1; }
+
+@media (min-width: 1100px) {
+  .flow-scene .flow-pulse {
+    width: 0.57cqw; height: 0.57cqw;
+    margin: -0.285cqw 0 0 -0.285cqw;
+    box-shadow: 0 0 0 0.21cqw rgba(255, 75, 8, 0.18);
+  }
+}
+
+/* Замер кеглей подписей 27.09.2026: hero 26px, кейс, команда и ниша по
+   32px, цикл 18px. Значки в 2–2,1em выходили выше двух строк подписи
+   (робот 71 и слои 69 при высоте текста около 61) — соразмерены. */
+.mark-robot { width: 1.6em; height: 1.6em; }
+.mark-layers { width: 1.6em; height: 1.6em; }
+.mark-ticks { width: 0.78em; height: 2.3em; }
+
+/* Замер 27.09.2026: на 375 боковая навигация идёт горизонтальной полосой,
+   список пунктов и кнопка письма — соседи внутри панели. Замер: панель
+   20..355, список 29..317, кнопка 325..361 — не хватает шести пикселей,
+   и кнопка вылезает. Список сжимается и прокручивается вбок, кнопка
+   держит свой размер. */
+@media (max-width: 640px) {
+  .sidenav-body { flex: 1 1 auto; min-width: 0; }
+  .sidenav-list { overflow-x: auto; scrollbar-width: none; }
+  .sidenav-list::-webkit-scrollbar { display: none; }
+  .sidenav-write { flex: 0 0 auto; }
+}
+
+/* ======================================================================
+   27.09.2026, третий круг правок владельца.
+
+   1. ОПТИКА КНОПОК. Замер по буквам: кнопка 44px, базовая линия на 22,
+      высота заглавных 9. Над буквами оставалось 13px, под ними 22 —
+      прописной текст без нижних выносных стоял выше оптического центра
+      на 4,5px. Отступы перераспределены, высота кнопки не изменилась.
+   2. СТРЕЛКИ. Стрелка стояла в потоке под подписью и показывала в саму
+      подпись. Теперь она выходит из блока подписи в сторону объекта и
+      не влияет на размер блока: подпись комментирует кадр — стрелка и
+      идёт к кадру.
+   3. СХЕМА. Подписи возвратов и названия этапов крупнее на 20%,
+      галочки на кейсе мельче на 20%, подписи переставлены к тому, что
+      они комментируют.
+   ====================================================================== */
+
+.btn { padding-top: 16px; padding-bottom: 8px; }
+
+.hand { position: relative; }
+.hand-arrow {
+  position: absolute;
+  margin: 0;
+  width: 4.4em;
+  height: 2em;
+}
+.hand-arrow--up-left    { left: -4.1em;  top: -1.5em;    transform: scaleX(-1) rotate(-30deg); }
+.hand-arrow--up-right   { right: -4.1em; top: -1.5em;    transform: rotate(-30deg); }
+.hand-arrow--down-right { right: -4.1em; bottom: -1.6em; transform: scaleY(-1) rotate(-30deg); }
+.hand-arrow--down-left  { left: -4.1em;  bottom: -1.6em; transform: scale(-1, -1) rotate(-30deg); }
+
+/* Галочки на кейсе мельче: рядом с двумя строками подписи они спорили
+   с текстом по массе. */
+.mark-ticks { width: 0.62em; height: 1.84em; }
+
+@media (min-width: 1100px) {
+  /* Кейс: подпись переехала к кадрам, под карусель (46.25..91.31, низ
+     50.21) — единственное свободное поле рядом с тем, что она
+     комментирует. */
+  .case-scene .hand-case { left: 47cqw; top: 51cqw; }
+
+  /* Цикл: подпись «Круг замыкается здесь» встала у правого края схемы,
+     над местом, где дуги возврата уходят от шестого этапа (84.7cqw), и
+     показывает туда стрелкой вниз-вправо. */
+  .flow-scene .hand-flow { top: 14.2cqw; bottom: auto; }
+
+  /* Подписи возвратов и названия этапов крупнее на 20%. */
+  .flow-scene .flow-return-label { font-size: 1.25cqw; }
+  .flow-scene .flow-name { font-size: 1.63cqw; }
+}
+
+/* Замер: подпись цикла осталась у левого края — в прошлом слое задан был
+   только отступ сверху. Лид занимает 56..91cqw и кончается на 15.87;
+   дуги у правого края опускаются до 22.35cqw, выше них пусто. Подпись
+   встаёт в этот просвет и показывает вниз-вправо, к месту схода дуг. */
+@media (min-width: 1100px) {
+  .flow-scene .hand-flow { left: 74.5cqw; top: 16.3cqw; }
+}
+
+/* Между лидом и подписью цикла оставалось 0,2cqw — подпись опущена. */
+@media (min-width: 1100px) {
+  .flow-scene .hand-flow { top: 16.8cqw; }
+}
+
+/* Замер check-fit 27.09.2026: стрелки стали абсолютными и на узких окнах
+   уходили за левый край экрана (левый край пути −41 при нуле). Сцены там
+   нет, подписи стоят в потоке у левого края, и выносить стрелку наружу
+   некуда — ниже 1100px она снова встаёт под подписью. */
+@media (max-width: 1099px) {
+  .hand-arrow {
+    position: static;
+    display: block;
+    margin-top: 0.1em;
+    left: auto; right: auto; top: auto; bottom: auto;
+  }
+}
+
+/* ======================================================================
+   27.09.2026, четвёртый круг правок владельца.
+   1. Кейс: подпись в свободный угол справа от заголовка, над абзацем.
+   2. Система: стрелка заезжала на тёмное окно (левый конец 62,8cqw при
+      правом крае кадра 67,6) — подпись сдвинута правее, стрелка теперь
+      останавливается у края кадра.
+   3. Цикл: подпись «Круг замыкается здесь» того же кегля, что подпись на
+      «Системе» (2,02cqw вместо 1,15). Подпись «Форматы» поднята.
+   4. Команда: подпись поднята, стрелка снята — остаётся робот.
+   ====================================================================== */
+
+@media (min-width: 1100px) {
+  .case-scene .hand-case { left: 33cqw; top: 13cqw; }
+
+  #system .sys-scene .hand-system { left: 76.5cqw; }
+
+  .flow-scene .hand-flow { left: 74cqw; top: 16.6cqw; font-size: 2.02cqw; }
+  /* Вынос стрелки уменьшен: при новом кегле подписи прежний вынос уводил
+     её за правый край сцены. */
+  .flow-scene .hand-flow .hand-arrow { right: -2.6em; }
+
+  .flow-scene .flow-return-label--b { top: -1.1cqw; }
+
+  .team-scene .hand-team { bottom: 3.6cqw; }
+}
+
+/* Замер после переноса:
+   1. Кейс: на 33/13 подпись легла прямо на заголовок (7,51..43,97 по
+      ширине, 11,23..20,23 по высоте). Свободно только над заголовком,
+      справа от строки про бренд-платформу, — подпись поднята туда.
+      Правый край 46,03 при начале карусели 46,25.
+   2. Система: стрелка всё ещё заходила на кадр на 0,27cqw — подпись
+      сдвинута ещё правее.
+   3. Цикл: при новом кегле стрелка ложилась на подпись (общая зона
+      81,5..85,5 по ширине). Стрелка укорочена и опущена под подпись,
+      её низ остаётся выше первой строки узлов (23,43cqw). */
+@media (min-width: 1100px) {
+  .case-scene .hand-case { top: 5.5cqw; }
+  #system .sys-scene .hand-system { left: 77cqw; }
+  .flow-scene .hand-flow .hand-arrow {
+    width: 2.8em;
+    right: -0.6em;
+    bottom: -1.5em;
+  }
+}
+
+/* Замер: под подписью цикла стрелке места нет — от низа подписи (20,15)
+   до первой строки узлов (23,43) три с небольшим cqw, а повёрнутая
+   стрелка занимает шесть. Стрелка переставлена справа от подписи и
+   развёрнута вниз-влево, остриём к месту схода дуг (84,7 / 22,35). */
+@media (min-width: 1100px) {
+  .flow-scene .hand-flow .hand-arrow {
+    width: 2.6em;
+    height: 1.4em;
+    left: auto;
+    top: auto;
+    right: -2.7em;
+    bottom: -1.2em;
+    transform: scale(-1, -1) rotate(-22deg);
+  }
+}
