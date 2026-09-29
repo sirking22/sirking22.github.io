@@ -41,7 +41,7 @@
      другого оттенка. 02.09.2026 обновлено вместе со сменой темы на светлую,
      прежнее значение под чёрную тему: #000000. -->
 <meta name="theme-color" content="#F1EDE6">
-<link rel="stylesheet" href="styles.css?v=20260928">
+<link rel="stylesheet" href="styles.css?v=20260928c">
 
 <!-- Счётчик заходов, 21.08.2026. Единственное исключение из правила «ноль
      внешних запросов»: после десяти откликов не было известно, открывают ли
@@ -440,7 +440,7 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
   <div class="scene flow-scene fit-grow">
     <p class="section-rubric flow-rubric"><span class="rubric-num">03</span> Цикл</p>
     <div class="flow-headrow">
-      <h2 class="section-title flow-title">Один оборот: от разрыва до <span class="mark-underline">стандарта</span></h2>
+      <h2 class="section-title flow-title">Один оборот: от<br>разрыва до <span class="mark-circle">стандарта</span></h2>
       <div class="flow-lead"><p class="lead">Шесть этапов, под каждым свои базы Notion со связями между ними. Последний шаг возвращает знание в начало: паттерны в разведку, форматы в ставку. Снизу всё тянет автоматизация.</p></div>
     </div>
     <div class="flow-board">
@@ -467,7 +467,6 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
       </ol>
       <p class="flow-rail"><svg class="flow-rail-icon" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24 H44" stroke-dasharray="2 5"/><circle cx="12" cy="24" r="3.5"/><circle cx="24" cy="24" r="3.5"/><circle cx="36" cy="24" r="3.5"/></g></svg><span class="flow-rail-name">Автоматизация</span><span class="flow-rail-text">Notion Worker и воркер на Cloudflare, плюс агенты: сбор фактов, ночные прогоны, обновление баз — на всех шести шагах сразу.</span></p>
     </div>
-    <p class="flow-foot">Замер за один проход автосбора, сентябрь 2026.</p>
     <p class="hand hand-flow">Круг замыкается<br>здесь<svg class="hand-arrow hand-arrow--down-right" viewBox="0 0 120 54" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"><path d="M4 46 C 26 44, 58 38, 82 18"/><path d="M67 12 l17 4"/><path d="M84 16 l-5 17"/></g></svg></p>
   </div>
 </section>
@@ -1193,7 +1192,7 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
   var lens = arcs.map(function (p) { return p.getTotalLength ? p.getTotalLength() : 0; });
   function hideArcs() {
     arcs.forEach(function (p, i) {
-      if (lens[i]) gsap.set(p, { strokeDasharray: lens[i], strokeDashoffset: lens[i] });
+      if (lens[i]) gsap.set(p, { strokeDasharray: lens[i], strokeDashoffset: lens[i], opacity: 0 });
     });
   }
   function clearLit() { nodes.forEach(function (n) { n.classList.remove('is-lit'); }); }
@@ -1226,6 +1225,9 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
         tl.to(pulse, { x: xs[i], duration: d, ease: 'power1.inOut' });
         tl.call(lit(nodes[i]));
       }
+      /* 28.09.2026: скрытый путь с круглым концом оставлял точку в начале —
+         у наконечников стрелок висели точки. Пути прозрачны, пока не рисуются. */
+      tl.set(arcs, { opacity: 1 });
       tl.to(arcs, { strokeDashoffset: 0, duration: 0.5, stagger: 0.14, ease: 'power2.out' });
       tl.to(pulse, { opacity: 0, duration: 0.22 }, '-=0.3');
       tl.call(function () { clearLit(); hideArcs(); });
