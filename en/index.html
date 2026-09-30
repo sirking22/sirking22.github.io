@@ -41,7 +41,7 @@
      другого оттенка. 02.09.2026 обновлено вместе со сменой темы на светлую,
      прежнее значение под чёрную тему: #000000. -->
 <meta name="theme-color" content="#F1EDE6">
-<link rel="stylesheet" href="../styles.css?v=20260930a">
+<link rel="stylesheet" href="../styles.css?v=20261001c">
 
 <!-- Счётчик заходов, 21.08.2026. Единственное исключение из правила «ноль
      внешних запросов»: после десяти откликов не было известно, открывают ли
@@ -455,8 +455,22 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
             <path d="M500 88 l11.8 4.2"/><path d="M500 88 l8.7 -13.8"/>
           </g>
         </svg>
-        <span class="flow-return-label flow-return-label--a">Patterns</span>
-        <span class="flow-return-label flow-return-label--b">Formats</span>
+        <svg class="flow-arc-notes" viewBox="0 0 1200 60.5">
+          <!-- 01.10.2026: подписи идут вдоль дуг, как в референсе «Let's draw a map». Своё поле
+               без растяжения: 1200 × 60,5 — пропорция полосы дуг в сцене (83,34 × 4,2cqw),
+               поэтому буквы не плющатся. Пути те же, что в .flow-arcs, y × 0,605, развёрнуты
+               слева направо, чтобы текст шёл по ним не вверх ногами. След дуг виден всегда:
+               анимация рисует дуги только в конце оборота, а подписи читаются постоянно.
+               Вторая подпись под своей дугой: над ней она пересекала верхнюю (замер 01.10). -->
+          <g class="flow-arc-trace" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke">
+            <path id="flow-arc-a" d="M200 52 C 300 3.6, 1096 8.5, 1100 56.9"/>
+            <path d="M200 52 l12.1 0.4"/><path d="M200 52 l7.1 -9.8"/>
+            <path id="flow-arc-b" d="M500 53.2 C 620 19.4, 1088 26.6, 1100 56.9"/>
+            <path d="M500 53.2 l11.8 2.5"/><path d="M500 53.2 l8.7 -8.3"/>
+          </g>
+          <text class="flow-arc-note" dy="-5"><textPath href="#flow-arc-a" startOffset="7%">patterns back to research</textPath></text>
+          <text class="flow-arc-note" dy="16"><textPath href="#flow-arc-b" startOffset="24%">formats back to the bet</textPath></text>
+        </svg>
       </div>
       <span class="flow-pulse" aria-hidden="true"></span>
       <ol class="flow-track">
