@@ -7485,3 +7485,23 @@ html main > section#capacity { border-top: 0; }
     transform: scaleY(-1) rotate(-10deg);
   }
 }
+
+/* 30.09.2026, просьба владельца: тёмные стрелки выбивались из кадра.
+   Тон стрелки подбирает скрипт слайдера по яркости кадра под ней
+   (is-on-light / is-on-dark): на светлом кадре — светлый дымчатый круг с
+   тёмной стрелкой, на тёмном — прозрачный светлый круг с белой. Без замера —
+   нейтральный полупрозрачный тёмный. */
+.case-nav {
+  background: rgba(16, 16, 16, 0.22);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+}
+.case-nav.is-on-light { background: rgba(255, 255, 255, 0.55); border-color: rgba(16, 16, 16, 0.12); color: rgba(16, 16, 16, 0.82); }
+.case-nav.is-on-light:hover { background: rgba(255, 255, 255, 0.85); border-color: rgba(16, 16, 16, 0.3); color: #101010; }
+.case-nav.is-on-dark { background: rgba(255, 255, 255, 0.14); border-color: rgba(255, 255, 255, 0.3); color: #fff; }
+.case-nav.is-on-dark:hover { background: rgba(255, 255, 255, 0.28); border-color: rgba(255, 255, 255, 0.55); }
+.case-nav svg { stroke-width: 2; }

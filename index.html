@@ -1074,6 +1074,7 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
       if (tabs[i]) tabs[i].setAttribute('aria-selected', 'true');
       if (cap) cap.textContent = slides[i].dataset.caption || '';
       placeDots();
+      tone();
       /* 18.09.2026: на слайде с видео автолистание ждёт конца ролика,
          иначе превью до/после обрывается на третьей секунде. */
       slides.forEach(function (s2, j) {
@@ -1084,6 +1085,49 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
       });
     }
     function stop() { clearInterval(timer); timer = null; }
+    /* 30.09.2026: стрелка берёт тон по яркости кадра под ней — на светлом
+       кадре тёмная стрелка в светлом круге, на тёмном светлая. Замер —
+       средняя яркость участка картинки под кнопкой с учётом object-fit;
+       кнопка вне картинки (contain) берёт тон фона рамки. */
+    var navs = [root.querySelector(':scope > .case-nav-prev'), root.querySelector(':scope > .case-nav-next')].filter(Boolean);
+    var probe = document.createElement('canvas');
+    probe.width = probe.height = 8;
+    function luma(r, g, b) { return 0.2126 * r + 0.7152 * g + 0.0722 * b; }
+    function lumaUnder(btn) {
+      var s = slides[i], img = s && (s.querySelector('.case-slide.is-active img') || s.querySelector('img'));
+      var b = btn.getBoundingClientRect();
+      if (img && img.complete && img.naturalWidth && b.width) {
+        var r = img.getBoundingClientRect(), nw = img.naturalWidth, nh = img.naturalHeight;
+        var k = getComputedStyle(img).objectFit === 'contain' ? Math.min(r.width / nw, r.height / nh) : Math.max(r.width / nw, r.height / nh);
+        var ox = r.left + (r.width - nw * k) / 2, oy = r.top + (r.height - nh * k) / 2;
+        var x0 = Math.max(0, (b.left - ox) / k), y0 = Math.max(0, (b.top - oy) / k);
+        var x1 = Math.min(nw, (b.right - ox) / k), y1 = Math.min(nh, (b.bottom - oy) / k);
+        if (x1 - x0 > 1 && y1 - y0 > 1) {
+          try {
+            var c = probe.getContext('2d', { willReadFrequently: true });
+            c.clearRect(0, 0, 8, 8);
+            c.drawImage(img, x0, y0, x1 - x0, y1 - y0, 0, 0, 8, 8);
+            var d = c.getImageData(0, 0, 8, 8).data, sum = 0, cnt = 0;
+            for (var p = 0; p < d.length; p += 4) { if (d[p + 3] > 127) { sum += luma(d[p], d[p + 1], d[p + 2]); cnt++; } }
+            if (cnt) return sum / cnt;
+          } catch (e) { return null; }
+        }
+      }
+      var box = root.querySelector(':scope > .case-slides');
+      var bg = box && getComputedStyle(box).backgroundColor.match(/[d.]+/g);
+      if (bg && (bg.length < 4 || +bg[3] > 0.5)) return luma(+bg[0], +bg[1], +bg[2]);
+      return null;
+    }
+    function tone() {
+      navs.forEach(function (btn) {
+        var l = lumaUnder(btn);
+        btn.classList.toggle('is-on-light', l !== null && l >= 150);
+        btn.classList.toggle('is-on-dark', l !== null && l < 150);
+      });
+      var up = root.parentElement && root.parentElement.closest('.case-slider');
+      if (up && up._tone) up._tone();
+    }
+    root._tone = tone;
     /* 18.09.2026: у кейса рамка по размеру кадра, и точки стоят на одном
        расстоянии от низа текущей картинки, а не от квадрата области.
        offset*, а не getBoundingClientRect: появление при прокрутке
@@ -1095,8 +1139,10 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
       if (!img || !box || !img.offsetHeight) return;
       root.style.setProperty('--dots-top', (box.offsetTop + slides[i].offsetTop + img.offsetTop + img.offsetHeight) + 'px');
     }
-    root.querySelectorAll('img').forEach(function (im) { im.addEventListener('load', placeDots); });
+    root.querySelectorAll('img').forEach(function (im) { im.addEventListener('load', function () { placeDots(); tone(); }); });
     window.addEventListener('resize', placeDots);
+    window.addEventListener('resize', tone);
+    tone();
     function start() {
       stop();
       /* 18.09.2026: на слайде с видео таймер не заводится вовсе — слайд
