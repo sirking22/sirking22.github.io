@@ -7505,3 +7505,13 @@ html main > section#capacity { border-top: 0; }
 .case-nav.is-on-dark { background: rgba(255, 255, 255, 0.14); border-color: rgba(255, 255, 255, 0.3); color: #fff; }
 .case-nav.is-on-dark:hover { background: rgba(255, 255, 255, 0.28); border-color: rgba(255, 255, 255, 0.55); }
 .case-nav svg { stroke-width: 2; }
+
+/* 30.09.2026: овал .mark-circle рисовался фоном строчного span с размером
+   118% × 148% — фон обрезается рамкой самого span, и концы овала на экране
+   «Цикл» пропадали. Овал вынесен в ::after, который выходит за рамку. */
+.mark-circle { position: relative; background-image: none; }
+.mark-circle::after {
+  content: ""; position: absolute; left: -9%; right: -9%; top: -24%; bottom: -24%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80' preserveAspectRatio='none'%3E%3Cpath d='M104 6 C 40 2, 6 22, 12 44 C 18 68, 96 78, 146 72 C 190 66, 198 34, 176 18 C 158 6, 120 3, 96 8' fill='none' stroke='%23FF4B08' stroke-width='3' stroke-linecap='round' opacity='0.7'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  pointer-events: none;
+}
