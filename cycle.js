@@ -180,7 +180,11 @@
   s += g('ag', badge([N[0][0] + 11, N[0][1] - 10]) + badge([fq.mid[0] + 2, fq.mid[1] + 11]));
   var by = K.band.y, bx0 = K.band.x0, bx1 = K.band.x1;
   var band = g('band', '<line x1="' + bx0 + '" y1="' + (by - 14) + '" x2="' + bx1 + '" y2="' + (by - 14) + '" stroke="' + INK + '" stroke-width="0.8"/>' + badge([bx0 + 6, by - 3.5]) + '<text x="' + (bx0 + 18) + '" y="' + by + '" class="t-base"><tspan class="t-core">Агенты</tspan>   уже ведут: сбор KPI-фактов, ночные прогоны   ·   Claude Code · Codex · ChatGPT · Notion Workers · 43 скилла</text>');
-  svg.innerHTML = '<g class="fig">' + s + '</g>' + band;
+  // 05.10.2026, владелец по кадру: схема на 10% мельче и прижата к низу —
+  // воздух между заголовком и схемой. Масштаб вокруг середины строки агентов
+  // (500, 545): нижний край остаётся на месте, верх уходит вниз на ~4,7% ширины
+  var FIT = { s: 0.9, ax: 500, ay: 545 };
+  svg.innerHTML = '<g class="all" transform="translate(' + f(FIT.ax * (1 - FIT.s)) + ' ' + f(FIT.ay * (1 - FIT.s)) + ') scale(' + FIT.s + ')"><g class="fig">' + s + '</g>' + band + '</g>';
 
   var fig = svg.querySelector('g.fig');
   // схема по центру сцены: середина рамки колец с подписями (без подписей
