@@ -12,6 +12,44 @@
   if (!scene) return;
   var svg = scene.querySelector('svg'), capEl = document.querySelector('#flow .cycle-cap');
 
+  // 06.10.2026: тексты по языку страницы — русская и английская версии витрины
+  var EN = /^en/.test(document.documentElement.lang);
+  var TX = EN ? {
+    stages: [
+      { n: 'Research', t: '', b: ['market map, references'] },
+      { n: 'Diagnosis', t: '', b: ['gap: goal vs. actuals'] },
+      { n: 'Hypothesis', t: '', b: ['what we change', 'and the effect we expect'] },
+      { n: 'Concept', t: '', b: ['mockup, prototype, team brief'] },
+      { n: 'Test', t: '', b: ['measured on the audience'] },
+      { n: 'Insight', t: '', b: ['what held up', 'and where it stops'] },
+      { n: 'Format', t: '', b: ['template and skill for the team'] }
+    ],
+    inner: ['standard task', 'production', 'acceptance', 'release', 'actuals'],
+    stream: 'regular output', scale: 'scale', hub: 'Knowledge', hubLines: ['evidence', '→ atoms', '→ patterns'],
+    agents: 'Agents', band: '   already run: KPI fact collection, nightly runs   ·   Claude Code · Codex · ChatGPT · Notion Workers · 43 skills',
+    stg: ['Research and references', 'The gap between goal and actuals', 'Hypothesis: what to change and why', 'Concept, delivered through the team', 'Test on the audience', 'Insight, with its limits stated', 'What is proven becomes a format'],
+    inn: ['Scale: the format moves into regular output as a standard task', 'Production from the standard task', 'Acceptance against the format\u2019s criteria', 'Release on the output plan', 'Actuals: metrics and effort'],
+    cap: { dev: 'Outer ring — development: finding and testing the new', fact: 'Output actuals build up as knowledge', concl: 'Test insights join them: evidence → atoms → patterns', gen: 'Patterns feed new hypotheses', agents: '\u201cA\u201d marks the transitions agents already run: fact collection, nightly runs' }
+  } : {
+    // b — что выходит на этапе (выбор владельца 04.10 вместо названий баз Notion);
+    // t — английский термин над названием, в английской версии не нужен
+    stages: [
+      { n: 'Исследование', t: 'research', b: ['карта рынка, референсы'] },
+      { n: 'Диагностика', t: 'diagnosis', b: ['разрыв: цель против факта'] },
+      { n: 'Гипотеза', t: 'hypothesis', b: ['что меняем', 'и какой эффект ждём'] },
+      { n: 'Концепт', t: 'concept', b: ['макет, прототип, ТЗ команде'] },
+      { n: 'Тест', t: 'test', b: ['замер на аудитории'] },
+      { n: 'Вывод', t: 'insight', b: ['что подтвердилось', 'и где граница'] },
+      { n: 'Формат', t: 'format', b: ['шаблон и скилл для команды'] }
+    ],
+    inner: ['типовая задача', 'производство', 'приёмка', 'релиз', 'факт'],
+    stream: 'регулярный выпуск', scale: 'масштаб', hub: 'Знание', hubLines: ['доказательства', '→ атомы', '→ паттерны'],
+    agents: 'Агенты', band: '   уже ведут: сбор KPI-фактов, ночные прогоны   ·   Claude Code · Codex · ChatGPT · Notion Workers · 43 скилла',
+    stg: ['Исследования и референсы', 'Разрыв между целью и фактом', 'Гипотеза: что изменить и почему', 'Концепт и реализация через команду', 'Тест на аудитории', 'Вывод с границами применимости', 'Подтверждённое становится форматом'],
+    inn: ['Масштаб: формат уходит в регулярный выпуск типовой задачей', 'Производство по типовой задаче', 'Приёмка по критериям формата', 'Релиз по плану выпуска', 'Факт: метрики и трудозатраты'],
+    cap: { dev: 'Внешнее кольцо — развитие: поиск и проверка нового', fact: 'Факты выпуска копятся в знании', concl: 'Выводы тестов — туда же: доказательства → атомы → паттерны', gen: 'Паттерны питают новые гипотезы', agents: 'Метки «A» — переходы, которые уже ведут агенты: сбор фактов, ночные прогоны' }
+  };
+
   var INK = '#101010', LINE = '#9F9B94', ACC = '#FF4B08';
   var rad = function (a) { return a * Math.PI / 180; }, f = function (n) { return n.toFixed(1); };
   var clamp = function (p) { return p < 0 ? 0 : p > 1 ? 1 : p; };
@@ -21,17 +59,9 @@
 
   // ---- смысл: этапы через 360/7 от верхней точки; b — что выходит на этапе
   var STEP = 360 / 7;
-  var STAGES = [
-    { n: 'Исследование', t: 'research', b: ['карта рынка, референсы'] },
-    { n: 'Диагностика', t: 'diagnosis', b: ['разрыв: цель против факта'] },
-    { n: 'Гипотеза', t: 'hypothesis', b: ['что меняем', 'и какой эффект ждём'] },
-    { n: 'Концепт', t: 'concept', b: ['макет, прототип, ТЗ команде'] },
-    { n: 'Тест', t: 'test', b: ['замер на аудитории'] },
-    { n: 'Вывод', t: 'insight', b: ['что подтвердилось', 'и где граница'] },
-    { n: 'Формат', t: 'format', b: ['шаблон и скилл для команды'] }
-  ].map(function (x, i) { x.a = -90 + i * STEP; return x; });
+  var STAGES = TX.stages.map(function (x, i) { x.a = -90 + i * STEP; return x; });
   var SECT = [['DISCOVER', 0, 0], ['DEFINE', 1, 2], ['DEVELOP', 3, 3], ['DELIVER', 4, 4], ['LEARN', 5, 6]];
-  var INNER = ['типовая задача', 'производство', 'приёмка', 'релиз', 'факт'];
+  var INNER = TX.inner;
 
   // ---- композиция K3 в поле 1000 × 562,5
   var K = { c1: [700, 318], R: 140, c2: [318, 345], RI: 98, dir2: -1,
@@ -40,29 +70,9 @@
     band: { y: 534, x0: 145, x1: 855 } };
 
   // ---- сценарий
-  var STG = [
-    'Исследования и референсы',
-    'Разрыв между целью и фактом',
-    'Гипотеза: что изменить и почему',
-    'Концепт и реализация через команду',
-    'Тест на аудитории',
-    'Вывод с границами применимости',
-    'Подтверждённое становится форматом'
-  ];
-  var INN = [
-    'Масштаб: формат уходит в регулярный выпуск типовой задачей',
-    'Производство по типовой задаче',
-    'Приёмка по критериям формата',
-    'Релиз по плану выпуска',
-    'Факт: метрики и трудозатраты'
-  ];
-  var CAP = {
-    dev: 'Внешнее кольцо — развитие: поиск и проверка нового',
-    fact: 'Факты выпуска копятся в знании',
-    concl: 'Выводы тестов — туда же: доказательства → атомы → паттерны',
-    gen: 'Паттерны питают новые гипотезы',
-    agents: 'Метки «A» — переходы, которые уже ведут агенты: сбор фактов, ночные прогоны'
-  };
+  var STG = TX.stg;
+  var INN = TX.inn;
+  var CAP = TX.cap;
   var R1 = ['r1', 'tick', 'sect'].concat(STAGES.map(function (_, i) { return 'n' + i; }));
   var R2 = ['r2', 'stream'].concat(INNER.map(function (_, i) { return 'i' + i; }));
   var BEATS = [{ d: 1.3, cap: CAP.dev, show: [['r1', 0, 1.2], ['tick', 0.3, 0.8], ['sect', 0.6, 0.7]] }]
@@ -151,7 +161,7 @@
   s += '<circle data-k="r1" cx="' + cx + '" cy="' + cy + '" r="' + R + '" fill="none" stroke="' + INK + '" stroke-width="1.3" pathLength="1" stroke-dasharray="1 1" transform="rotate(-90 ' + cx + ' ' + cy + ')"/>';
   // регулярный выпуск
   s += g('r2', '<circle cx="' + qx + '" cy="' + qy + '" r="' + RI + '" fill="none" stroke="' + INK + '" stroke-width="0.9" stroke-dasharray="5 3"/>', 'style="transform-origin:' + qx + 'px ' + qy + 'px"');
-  s += g('stream', up('stream', K.c2, RI + 8, RI + 17, 90, 42, 't-stream', 'регулярный выпуск'));
+  s += g('stream', up('stream', K.c2, RI + 8, RI + 17, 90, 42, 't-stream', TX.stream));
   K.inner.forEach(function (x, k) {
     var a = x[0], side = x[1], P = p2(RI, a), w = INNER[k], lab;
     if (Array.isArray(side)) lab = '<text x="' + f(P[0] + side[0]) + '" y="' + f(P[1] + side[1]) + '" class="t-inner" text-anchor="' + side[2] + '">' + w + '</text>';
@@ -162,12 +172,12 @@
     s += g('i' + k, '<circle class="dot" cx="' + f(P[0]) + '" cy="' + f(P[1]) + '" r="3"/>' + lab, 'class="inn" style="transform-origin:' + f(P[0]) + 'px ' + f(P[1]) + 'px"');
   });
   // знание в центре восьмёрки
-  s += g('hub', '<circle class="hc" cx="' + hx + '" cy="' + hy + '" r="' + hr + '" fill="var(--paper)" stroke="' + INK + '" stroke-width="1"/><text x="' + hx + '" y="' + (hy - 10) + '" class="t-core" text-anchor="middle">Знание</text>'
-    + ['доказательства', '→ атомы', '→ паттерны'].map(function (l, i) { return '<text x="' + hx + '" y="' + (hy + 3 + i * 10.5) + '" class="t-base" text-anchor="middle">' + l + '</text>'; }).join(''), 'class="hub"');
+  s += g('hub', '<circle class="hc" cx="' + hx + '" cy="' + hy + '" r="' + hr + '" fill="var(--paper)" stroke="' + INK + '" stroke-width="1"/><text x="' + hx + '" y="' + (hy - 10) + '" class="t-core" text-anchor="middle">' + TX.hub + '</text>'
+    + TX.hubLines.map(function (l, i) { return '<text x="' + hx + '" y="' + (hy + 3 + i * 10.5) + '" class="t-base" text-anchor="middle">' + l + '</text>'; }).join(''), 'class="hub"');
   // мост «масштаб»: формат → типовая задача, дугой над подписью этапа
   var T0 = p2(RI, K.inner[0][0]), br = bent([N[6][0], N[6][1] - 13], toward(T0, N[6], 5), K.bend);
   s += '<path data-k="bridge" id="' + u + 'bridge" d="' + br.d + '" fill="none" stroke="' + ACC + '" stroke-width="1.4" pathLength="1" stroke-dasharray="1 1" data-mk="' + mk + '"/>';
-  s += g('bridgeL', '<path id="' + u + 'brl" d="' + br.rev + '" fill="none"/><text class="t-hand" dy="-7"><textPath href="#' + u + 'brl" startOffset="50%" text-anchor="middle">масштаб</textPath></text>');
+  s += g('bridgeL', '<path id="' + u + 'brl" d="' + br.rev + '" fill="none"/><text class="t-hand" dy="-7"><textPath href="#' + u + 'brl" startOffset="50%" text-anchor="middle">' + TX.scale + '</textPath></text>');
   // факт выпуска → знание; вывод теста → знание; паттерны → гипотеза
   var F = p2(RI, K.inner[4][0]), fq = bent(toward(F, ph(160), 5), toward(ph(160), F, 3), 0);
   s += '<path data-k="fact" id="' + u + 'fact" d="' + fq.d + '" fill="none" stroke="' + ACC + '" stroke-width="1.2" stroke-dasharray="2 3" marker-end="' + mk + '"/>';
@@ -194,7 +204,7 @@
   // агенты: метки на переходах и строка внизу
   s += g('ag', badge([N[0][0] + 11, N[0][1] - 10]) + badge([fq.mid[0] + 2, fq.mid[1] + 11]));
   var by = K.band.y, bx0 = K.band.x0, bx1 = K.band.x1;
-  var band = g('band', '<line x1="' + bx0 + '" y1="' + (by - 14) + '" x2="' + bx1 + '" y2="' + (by - 14) + '" stroke="' + INK + '" stroke-width="0.8"/>' + badge([bx0 + 6, by - 3.5]) + '<text x="' + (bx0 + 18) + '" y="' + by + '" class="t-base"><tspan class="t-core">Агенты</tspan>   уже ведут: сбор KPI-фактов, ночные прогоны   ·   Claude Code · Codex · ChatGPT · Notion Workers · 43 скилла</text>');
+  var band = g('band', '<line x1="' + bx0 + '" y1="' + (by - 14) + '" x2="' + bx1 + '" y2="' + (by - 14) + '" stroke="' + INK + '" stroke-width="0.8"/>' + badge([bx0 + 6, by - 3.5]) + '<text x="' + (bx0 + 18) + '" y="' + by + '" class="t-base"><tspan class="t-core">' + TX.agents + '</tspan>' + TX.band + '</text>');
   // 05.10.2026, владелец по кадру: схема на 10% мельче и прижата к низу —
   // воздух между заголовком и схемой. Масштаб вокруг середины строки агентов
   // (500, 545): нижний край остаётся на месте, верх уходит вниз на ~4,7% ширины
