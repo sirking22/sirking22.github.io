@@ -7555,3 +7555,50 @@ html main > section#capacity { border-top: 0; }
   .flow-scene .flow-board { top: 21.733cqw; }
   .flow-scene .hand-flow { top: 19.933cqw; }
 }
+
+
+/* 05.10.2026: экран «Цикл» — сцена со стенда source/cycle-gpt/stand.html.
+   Сцена — общая .scene витрины: 16:9, от 1100px её размер и поля секции
+   задают общие правила, ниже — свои строки здесь. Всё внутри — в долях
+   ширины сцены; рубрика и заголовок стоят на сетке 160/1920 и в тех же
+   кеглях, что у «Команды» (замер 05.10: рубрика 1,146cqw, заголовок
+   4,583cqw). Серые тона в схеме — те же, что на стенде, принятом 04.10. */
+@media (min-width: 861px) {
+  #flow .cycle-list { display: none; }
+  #flow .cycle-scene { display: block; position: relative; aspect-ratio: 16 / 9; width: min(100%, calc((100dvh - 48px) * 16 / 9)); margin: auto; flex: 0 0 auto; container-type: inline-size; }
+  #flow .cycle-scene > svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  #flow .cycle-rubric, #flow .cycle-title, #flow .cycle-cap { position: absolute; left: 8.333cqw; margin: 0; }
+  #flow .cycle-rubric { top: 4.17cqw; font-size: 1.146cqw; letter-spacing: 0.047cqw; }
+  #flow .cycle-title { top: 7.05cqw; font-size: 4.583cqw; max-width: none; line-height: 0.9; letter-spacing: -0.02em; }
+  #flow .cycle-cap { top: 17.6cqw; width: 24cqw; font-size: 1.146cqw; line-height: 1.45; color: #3d3a36; }
+}
+@media (min-width: 1100px) {
+  #flow.screen-fit:has(> .scene) { padding: 0; gap: 0; }
+  #flow .cycle-scene { width: min(100%, calc(100dvh * 16 / 9)); }
+}
+.cycle-scene svg text { font-family: var(--font-sans); }
+.cycle-scene .t-name { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.cycle-scene .t-term { font-size: 9px; letter-spacing: .08em; text-transform: uppercase; fill: var(--accent); }
+.cycle-scene .t-base { font-size: 9.5px; fill: #8a867f; }
+.cycle-scene .t-num { font-size: 9px; font-weight: 600; fill: var(--ink); }
+.cycle-scene .t-core { font-size: 11px; font-weight: 600; fill: var(--ink); }
+.cycle-scene .t-sector { font-size: 9px; font-weight: 600; letter-spacing: .2em; fill: #a39f97; }
+.cycle-scene .t-inner { font-size: 10.5px; fill: #55524d; }
+.cycle-scene .t-stream { font-size: 8.5px; letter-spacing: .16em; text-transform: uppercase; fill: #9a968f; }
+.cycle-scene .t-hand { font-family: var(--font-hand); font-size: 15px; fill: var(--accent); }
+.cycle-scene .t-badge { font-size: 7px; font-weight: 700; fill: #fff; }
+.cycle-scene g.n .nc { fill: var(--paper); stroke: var(--ink); stroke-width: 1.1; }
+.cycle-scene g.n.on .nc { fill: var(--accent); stroke: var(--accent); }
+.cycle-scene g.n.on .t-num { fill: #fff; }
+.cycle-scene g.inn .dot { fill: var(--ink); }
+.cycle-scene g.inn.on .dot { fill: var(--accent); }
+.cycle-scene g.inn.on text { fill: var(--ink); font-weight: 600; }
+.cycle-scene g.hub.on .hc { stroke: var(--accent); stroke-width: 1.6; }
+.cycle-scene g.n:hover .b { opacity: 1 !important; }
+/* узкое окно: сцена не читается (подписи мельче 8px) — заголовок и список */
+@media (max-width: 860px) {
+  #flow .cycle-scene > svg, #flow .cycle-cap { display: none; }
+  .cycle-list h3 { font-size: 18px; font-weight: 600; margin: var(--space-6) 0 var(--space-2); }
+  .cycle-list ol { margin: 0; padding-left: 1.4em; font-size: 16px; line-height: 1.5; }
+  .cycle-list p { margin: var(--space-4) 0 0; font-size: 16px; line-height: 1.5; }
+}
