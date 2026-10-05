@@ -7602,3 +7602,20 @@ html main > section#capacity { border-top: 0; }
   .cycle-list ol { margin: 0; padding-left: 1.4em; font-size: 16px; line-height: 1.5; }
   .cycle-list p { margin: var(--space-4) 0 0; font-size: 16px; line-height: 1.5; }
 }
+
+/* 05.10.2026: кадр кейса крупнее, колонка уже и левее (решение владельца).
+   Было: колонка 8,33..44,79, кадр 46,42..91,48 (45,06), подпись 32,9..46,03.
+   Стало: кадр 51cqw (+13 %) на 43..94, верх 2,4, точки под ним через 1,2 —
+   низ точек 55,1 при высоте сцены 56,25. Колонка 5,5..40,5, подпись левее. */
+@media (min-width: 1100px) {
+  #case .case-scene .case-copy { left: 5.5cqw; width: 35cqw; }
+  #case .case-scene .lead,
+  #case .case-scene .case-role,
+  #case .case-scene .case-clubs { max-width: 32cqw; }
+  #case .case-scene .case-media { left: 43cqw; top: 2.4cqw; width: 51cqw; }
+  #case .case-scene .case-media.case-slider .case-dots { margin-top: 1.2cqw; }
+  .case-scene .hand-case { left: 27cqw; }
+}
+/* слайд-приложение: живой кадр во iframe вместо картинки */
+.case-slide iframe { display: block; width: 100%; height: 100%; border: 0; }
+#case .case-scene .case-media .case-slide iframe { border-radius: 0.417cqw; }

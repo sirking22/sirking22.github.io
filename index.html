@@ -336,16 +336,16 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
          четырёх пунктов снята. Слайды 2-4 ждут материал владельца. -->
     <div class="case-media case-slider" data-interval="3000" aria-roledescription="карусель" aria-label="Кадры кейса RAWMID">
       <div class="case-slides">
-        <figure class="case-slide is-active" aria-roledescription="слайд" aria-label="1 из 7">
+        <figure class="case-slide is-active" aria-roledescription="слайд" aria-label="1 из 7"><img src="assets/case-lifestyle.webp" width="1672" height="1115" alt="Продукты бренда в бытовой сцене: бутылка и ланч-бокс в руках."></figure>
+        <figure class="case-slide" aria-roledescription="слайд" aria-label="2 из 7"><img src="assets/case-pack-before.webp" width="1074" height="899" alt="Упаковка линейки до пересборки: разнородные коробки без общего языка."></figure>
+        <figure class="case-slide" aria-roledescription="слайд" aria-label="3 из 7"><img src="assets/case-pack-after.webp" width="1079" height="899" alt="Упаковка после пересборки: единый визуальный язык на всей линейке."></figure>
+        <figure class="case-slide" aria-roledescription="слайд" aria-label="4 из 7" data-dwell="32000"><iframe src="rawmid-app/slide.html?embed=1" loading="lazy" title="Приложение «RAWMID Клуб»: прототип сам проходит путь от QR на коробке до клуба и следующей покупки"></iframe></figure>
+        <figure class="case-slide" aria-roledescription="слайд" aria-label="5 из 7"><img src="assets/case-moodboard.webp" width="2200" height="1561" alt="Подборка кадров и раскадровок для съёмок бренда."></figure>
+        <figure class="case-slide" aria-roledescription="слайд" aria-label="6 из 7"><img src="assets/case-social.webp" width="2200" height="1294" alt="Макеты для соцсетей: рецепты и продукты в едином визуальном языке."></figure>
+        <figure class="case-slide" aria-roledescription="слайд" aria-label="7 из 7">
           <img src="assets/raw-club-set.webp" width="1254" height="1254"
                alt="Набор RAW-клуба: блендер, бутылки, кружка, фартук, сумка, упаковка техники RAWMID">
         </figure>
-        <figure class="case-slide" aria-roledescription="слайд" aria-label="2 из 7"><img src="assets/case-pack-before.webp" width="1074" height="899" alt="Упаковка линейки до пересборки: разнородные коробки без общего языка."></figure>
-        <figure class="case-slide" aria-roledescription="слайд" aria-label="3 из 7"><img src="assets/case-pack-after.webp" width="1079" height="899" alt="Упаковка после пересборки: единый визуальный язык на всей линейке."></figure>
-        <figure class="case-slide" aria-roledescription="слайд" aria-label="4 из 7"><img src="assets/case-social.webp" width="2200" height="1294" alt="Макеты для соцсетей: рецепты и продукты в едином визуальном языке."></figure>
-        <figure class="case-slide" aria-roledescription="слайд" aria-label="5 из 7"><img src="assets/case-moodboard.webp" width="2200" height="1561" alt="Подборка кадров и раскадровок для съёмок бренда."></figure>
-        <figure class="case-slide" aria-roledescription="слайд" aria-label="6 из 7"><img src="assets/case-lifestyle.webp" width="1672" height="1115" alt="Продукты бренда в бытовой сцене: бутылка и ланч-бокс в руках."></figure>
-        <figure class="case-slide" aria-roledescription="слайд" aria-label="7 из 7"><img src="assets/case-decision-scheme.webp?v=2" width="1800" height="1800" alt="Схема решения RAWMID: пять наблюдений об аудитории и технике, что из каждого сделано, идея бренда и результаты."></figure>
       </div>
       <button class="case-nav case-nav-prev" type="button" aria-label="Предыдущий кадр"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
       <button class="case-nav case-nav-next" type="button" aria-label="Следующий кадр"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -1066,6 +1066,8 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
       if (dots[i]) dots[i].setAttribute('aria-selected', 'true');
       if (tabs[i]) tabs[i].setAttribute('aria-selected', 'true');
       if (cap) cap.textContent = slides[i].dataset.caption || '';
+      var fr = slides[i].querySelector(':scope > iframe');
+      if (fr && fr.contentWindow) fr.contentWindow.postMessage('rawmid-restart', '*');
       placeDots();
       tone();
       /* 18.09.2026: на слайде с видео автолистание ждёт конца ролика,
@@ -1127,7 +1129,7 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
        масштабирует блок, и замер с трансформом дал бы сдвиг. */
     function placeDots() {
       if (!root.classList.contains('case-media')) return;
-      var img = slides[i].querySelector('img');
+      var img = slides[i].querySelector('img, iframe');
       var box = root.querySelector(':scope > .case-slides');
       if (!img || !box || !img.offsetHeight) return;
       root.style.setProperty('--dots-top', (box.offsetTop + slides[i].offsetTop + img.offsetTop + img.offsetHeight) + 'px');
@@ -1141,7 +1143,9 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
       /* 18.09.2026: на слайде с видео таймер не заводится вовсе — слайд
          перелистывается по событию ended, иначе ролик обрывается на 3-й секунде. */
       if (slides[i] && slides[i].querySelector('video')) { playActive(); return; }
-      if (!still && !hover && visible) timer = setInterval(function () { show(i + 1); }, ms);
+      /* 05.10.2026: слайд с data-dwell (живой кадр приложения) стоит своё время,
+         следующий снова листается по ms. */
+      if (!still && !hover && visible) timer = setInterval(function () { show(i + 1); start(); }, +(slides[i] && slides[i].dataset.dwell) || ms);
     }
     function playActive() {
       var v = slides[i] && slides[i].querySelector('video');
