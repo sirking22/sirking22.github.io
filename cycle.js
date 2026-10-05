@@ -90,6 +90,21 @@
     });
     return { app: app, beats: beats, T: t };
   })();
+  // Подряд идущие шаги с одним признаком (dim, focus, hub) — один отрезок
+  // времени. Окно по каждому шагу отдельно гасило признак на стыке шагов:
+  // первое кольцо мигало при каждом переходе по второму (владелец, 05.10)
+  var spanCache = {};
+  function spans(key, test) {
+    if (spanCache[key]) return spanCache[key];
+    var out = [];
+    S.beats.forEach(function (x) {
+      if (!test(x)) return;
+      var l = out[out.length - 1];
+      if (l && Math.abs(l[1] - x.t0) < 1e-6) l[1] = x.t1; else out.push([x.t0, x.t1]);
+    });
+    return (spanCache[key] = out);
+  }
+  function level(sp, t, w) { var v = 0; sp.forEach(function (s) { v = Math.max(v, win(t, s[0], s[1], w)); }); return v; }
   var MODE = function (k) { return ['r1', 'bridge', 'gen'].indexOf(k) >= 0 ? 'draw' : k === 'r2' ? 'grow' : /^[nim]\d$/.test(k) ? 'pop' : 'fade'; };
 
   // ---- сборка
@@ -205,12 +220,12 @@
   // ---- кадр: состояние сцены как функция времени
   function render(t) {
     var b = S.beats.filter(function (x) { return t < x.t1; })[0] || S.beats[S.beats.length - 1], lt = t - b.t0;
-    var lit = function (key, i) { var fo = 0; S.beats.forEach(function (x) { if (x[key] && (i === undefined || x[key].indexOf(i) >= 0)) fo = Math.max(fo, win(t, x.t0, x.t1, 0.3)); }); return fo; };
+    var lit = function (key, i) { return level(spans(key + ':' + i, function (x) { return x[key] && (i === undefined || x[key].indexOf(i) >= 0); }), t, 0.3); };
     els.forEach(function (p) {
       var k = p[0], el = p[1];
       // подложка m<i> появляется вместе с узлом n<i>, но не тускнеет
       var sub = k[0] === 'm', ap = S.app[sub ? 'n' + k.slice(1) : k], pr = ap ? clamp((t - ap.t0) / ap.d) : 0, e = eo(pr), m = MODE(k);
-      var dm = 0; if (!sub) S.beats.forEach(function (x) { if (x.dim && x.dim.indexOf(k) >= 0) dm = Math.max(dm, win(t, x.t0, x.t1, 0.4)); });
+      var dm = sub ? 0 : level(spans('dim:' + k, function (x) { return x.dim && x.dim.indexOf(k) >= 0; }), t, 0.4);
       var df = 1 - 0.78 * dm;
       if (m === 'draw') {
         el.style.strokeDashoffset = 1 - e; el.style.opacity = (pr > 0 ? 1 : 0) * df;
@@ -239,10 +254,11 @@
   }
 
   // ---- проигрыватель: идёт, пока экран в кадре; итог держится 4 с, затем повтор
-  var HOLD = 4, now = 0, held = 0, playing = false, last = 0, raf = 0;
+  // SPEED: владелец 05.10 — основная анимация на 20% быстрее; пауза на итоге — в секундах
+  var SPEED = 1.2, HOLD = 4, now = 0, held = 0, playing = false, last = 0, raf = 0;
   function tick(ts) {
     var dt = last ? Math.min((ts - last) / 1000, 0.1) : 0; last = ts;
-    if (now < S.T) now = Math.min(S.T, now + dt);
+    if (now < S.T) now = Math.min(S.T, now + dt * SPEED);
     else { held += dt; if (held > HOLD) { now = 0; held = 0; } }
     render(now);
     raf = requestAnimationFrame(tick);
