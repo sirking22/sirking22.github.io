@@ -25,15 +25,15 @@ body{background:#1c1f24;min-height:100vh;display:flex;flex-direction:column;alig
 .photo2 .prod{display:block}
 .tap{position:absolute;width:70px;height:70px;margin:-35px 0 0 -35px;border-radius:50%;background:rgba(255,255,255,.35);box-shadow:0 0 0 3px rgba(255,255,255,.9),0 6px 20px rgba(14,24,40,.35);pointer-events:none;opacity:0;z-index:5}
 /* правая колонка */
-.col{position:absolute;left:690px;top:120px;width:470px}
+.col{position:absolute;left:690px;top:86px;width:470px}
 .logo{font:700 22px Onest;letter-spacing:.12em;color:var(--blue)}
 .phrase{font:700 56px/1.04 Onest;letter-spacing:-.03em;margin-top:18px}
-.beat{margin-top:44px;padding:26px 28px;border-radius:28px;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+.beat{margin-top:32px;padding:26px 28px;border-radius:28px;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
   box-shadow:0 0 0 1px rgba(16,24,40,.05),0 6px 16px -6px rgba(16,24,40,.08),0 22px 44px -16px rgba(31,91,184,.16)}
 .beat .n{font:600 16px Onest;letter-spacing:.1em;color:var(--blue)}
-.beat .t{font:700 38px/1.08 Onest;letter-spacing:-.02em;margin-top:10px}
-.beat .s{font:500 20px/1.35 Onest;color:var(--ink2);margin-top:10px}
-.prog{display:flex;gap:8px;margin-top:22px}
+.beat .t{font:700 31px/1.08 Onest;letter-spacing:-.02em;margin-top:10px;white-space:nowrap}
+.beat .s{font:500 19px/1.35 Onest;color:var(--ink2);margin-top:10px;min-height:2.7em}
+.prog{display:flex;gap:8px;margin-top:18px}
 .prog i{flex:1;height:6px;border-radius:6px;background:rgba(16,24,40,.1);overflow:hidden}
 .prog i b{display:block;height:100%;width:0;background:var(--blue);border-radius:6px}
 .prog i.d b{width:100%;background:var(--leaf)}
@@ -69,7 +69,7 @@ const BG3F={spread:'spread-out-b',spreadA:'spread-out-a',corner:'corner-2',hero:
 if(BG){stage.classList.add('photo');stage.style.backgroundImage=BG==='old'?'url(candidates/bg/bg-a.png)':BG3.includes(BG)?`url(candidates/bg3/${BG3F[BG]}.webp)`:`url(candidates/bg2/bg-${BG}.png)`;}
 [['spread','Ингредиенты'],['spreadA','Ингредиенты 2']].forEach(([k,l])=>{const a=document.createElement('a');a.href='?bg='+k;a.textContent=l;if((BG||'')===k)a.className='on';document.getElementById('pick').appendChild(a)});
 
-const BEATS=[
+const BEATS_RU=[
   ['QR на коробке','Сканировал — и сразу готовит. Без регистрации','Вход'],
   ['Первое блюдо за 5 минут','Три шага с видео и таймером','Рецепт'],
   ['Победа раньше анкеты','Значок и XP — до того, как спросили имя','Победа'],
@@ -77,6 +77,17 @@ const BEATS=[
   ['Клуб, а не покупка','Фото в ленте, лайки, конкурсы с призами','Клуб'],
   ['Следующая покупка','Освоил блендер — дегидратор со скидкой клуба','Допродажа'],
 ];
+// ?lang=en — подписи кадра для английской витрины; экраны прототипа остаются русскими
+const EN=Q.get('lang')==='en';
+const BEATS=EN?[
+  ['QR on the box','Scan it and start cooking. No sign-up','Entry'],
+  ['First dish in 5 minutes','Three steps with video and a timer','Recipe'],
+  ['A win before the form','A badge and XP before we ask your name','Win'],
+  ['7 days build a habit','A new dish every day on the same appliance','Week'],
+  ['A club, not a purchase','Photos in the feed, likes, contests with prizes','Club'],
+  ['The next purchase','Mastered the blender — a dehydrator at a club discount','Upsell'],
+]:BEATS_RU;
+if(EN){document.documentElement.lang='en';document.querySelector('.logo').textContent='RAWMID CLUB';document.querySelector('.phrase').innerHTML='Bought a blender —<br>joined the club'}
 const prog=document.getElementById('prog'),labs=document.getElementById('labs');
 BEATS.forEach(b=>{prog.insertAdjacentHTML('beforeend','<i><b></b></i>');labs.insertAdjacentHTML('beforeend',`<span>${b[2]}</span>`)});
 
