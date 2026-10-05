@@ -7570,7 +7570,8 @@ html main > section#capacity { border-top: 0; }
   #flow .cycle-rubric, #flow .cycle-title, #flow .cycle-cap { position: absolute; left: 8.333cqw; margin: 0; }
   #flow .cycle-rubric { top: 4.17cqw; font-size: 1.146cqw; letter-spacing: 0.047cqw; }
   #flow .cycle-title { top: 7.05cqw; font-size: 4.583cqw; max-width: none; line-height: 0.9; letter-spacing: -0.02em; }
-  #flow .cycle-cap { top: 17.6cqw; width: 24cqw; font-size: 1.146cqw; line-height: 1.45; color: #3d3a36; }
+  /* 06.10.2026: подпись ближе к заголовку — один смысловой блок; зазор от базовой линии заголовка до верха букв подписи — 1,4 межстрочного заголовка (окно 1384×713 после появления заголовка: было 36,8 при межстрочном 10,3) (владелец: правило внутреннего и внешнего) */
+  #flow .cycle-cap { top: 15.25cqw; width: 24cqw; font-size: 1.146cqw; line-height: 1.45; color: #3d3a36; }
 }
 @media (min-width: 1100px) {
   #flow.screen-fit:has(> .scene) { padding: 0; gap: 0; }
@@ -7595,9 +7596,15 @@ html main > section#capacity { border-top: 0; }
 .cycle-scene g.inn.on text { fill: var(--ink); font-weight: 600; }
 .cycle-scene g.hub.on .hc { stroke: var(--accent); stroke-width: 1.6; }
 .cycle-scene g.n:hover .b { opacity: 1 !important; }
+/* 06.10.2026: пункты схемы кликаются — текст под заголовком; повтор — кнопкой */
+.cycle-scene g.n, .cycle-scene g.inn, .cycle-scene g.hub { cursor: pointer; outline: none; }
+.cycle-scene g.n:focus-visible .nc, .cycle-scene g.hub:focus-visible .hc { stroke: var(--accent); stroke-width: 2; }
+#flow .cycle-replay { position: absolute; top: 4.17cqw; right: 8.333cqw; left: auto; margin: 0; padding: 0; line-height: 1.45; background: none; border: 0; border-bottom: 1px solid currentColor; cursor: pointer; font-size: 1.146cqw; letter-spacing: 0.047cqw; }
+#flow .cycle-replay:hover, #flow .cycle-replay:focus-visible { color: var(--accent); outline: none; }
+#flow .cycle-replay[hidden] { display: none; }
 /* узкое окно: сцена не читается (подписи мельче 8px) — заголовок и список */
 @media (max-width: 860px) {
-  #flow .cycle-scene > svg, #flow .cycle-cap { display: none; }
+  #flow .cycle-scene > svg, #flow .cycle-cap, #flow .cycle-replay { display: none; }
   .cycle-list h3 { font-size: 18px; font-weight: 600; margin: var(--space-6) 0 var(--space-2); }
   .cycle-list ol { margin: 0; padding-left: 1.4em; font-size: 16px; line-height: 1.5; }
   .cycle-list p { margin: var(--space-4) 0 0; font-size: 16px; line-height: 1.5; }

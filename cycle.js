@@ -5,7 +5,9 @@
    восьмёрки знание; метки «A» — только переходы, которые уже ведут агенты.
    Кадр — функция времени render(t), как на стенде. Правка смысла или
    раскладки — сначала на стенде, потом сюда: стенд остаётся черновиком.
-   Сцена проигрывается, когда экран в кадре, держит итог и повторяется.
+   Сцена проигрывается один раз, когда экран в кадре, и держит итог; повтор —
+   кнопкой «Проиграть заново». Клик по пункту схемы (этап, точка выпуска,
+   знание) ставит итог и пишет его текст под заголовком (владелец, 06.10.2026).
    При prefers-reduced-motion сразу стоит итоговый кадр. */
 (function () {
   var scene = document.querySelector('#flow .cycle-scene');
@@ -26,7 +28,7 @@
     ],
     inner: ['standard task', 'production', 'acceptance', 'release', 'actuals'],
     stream: 'regular output', scale: 'scale', hub: 'Knowledge', hubLines: ['evidence', '→ atoms', '→ patterns'],
-    agents: 'Agents', band: '   already run: KPI fact collection, nightly runs   ·   Claude Code · Codex · ChatGPT · Notion Workers · 43 skills',
+    replay: 'Replay', agents: 'Agents', band: '   already run: KPI fact collection, nightly runs   ·   Claude Code · Codex · ChatGPT · Notion Workers · 43 skills',
     stg: ['Research and references', 'The gap between goal and actuals', 'Hypothesis: what to change and why', 'Concept, delivered through the team', 'Test on the audience', 'Insight, with its limits stated', 'What is proven becomes a format'],
     inn: ['Scale: the format moves into regular output as a standard task', 'Production from the standard task', 'Acceptance against the format\u2019s criteria', 'Release on the output plan', 'Actuals: metrics and effort'],
     cap: { dev: 'Outer ring — development: finding and testing the new', fact: 'Output actuals build up as knowledge', concl: 'Test insights join them: evidence → atoms → patterns', gen: 'Patterns feed new hypotheses', agents: '\u201cA\u201d marks the transitions agents already run: fact collection, nightly runs' }
@@ -44,7 +46,7 @@
     ],
     inner: ['типовая задача', 'производство', 'приёмка', 'релиз', 'факт'],
     stream: 'регулярный выпуск', scale: 'масштаб', hub: 'Знание', hubLines: ['доказательства', '→ атомы', '→ паттерны'],
-    agents: 'Агенты', band: '   уже ведут: сбор KPI-фактов, ночные прогоны   ·   Claude Code · Codex · ChatGPT · Notion Workers · 43 скилла',
+    replay: 'Проиграть заново', agents: 'Агенты', band: '   уже ведут: сбор KPI-фактов, ночные прогоны   ·   Claude Code · Codex · ChatGPT · Notion Workers · 43 скилла',
     stg: ['Исследования и референсы', 'Разрыв между целью и фактом', 'Гипотеза: что изменить и почему', 'Концепт и реализация через команду', 'Тест на аудитории', 'Вывод с границами применимости', 'Подтверждённое становится форматом'],
     inn: ['Масштаб: формат уходит в регулярный выпуск типовой задачей', 'Производство по типовой задаче', 'Приёмка по критериям формата', 'Релиз по плану выпуска', 'Факт: метрики и трудозатраты'],
     cap: { dev: 'Внешнее кольцо — развитие: поиск и проверка нового', fact: 'Факты выпуска копятся в знании', concl: 'Выводы тестов — туда же: доказательства → атомы → паттерны', gen: 'Паттерны питают новые гипотезы', agents: 'Метки «A» — переходы, которые уже ведут агенты: сбор фактов, ночные прогоны' }
@@ -263,24 +265,50 @@
     if (capEl) capEl.style.opacity = win(t, b.t0, b.t1 + 1, 0.35);
   }
 
-  // ---- проигрыватель: идёт, пока экран в кадре; итог держится 4 с, затем повтор
-  // SPEED: владелец 05.10 — основная анимация на 20% быстрее; пауза на итоге — в секундах
-  var SPEED = 1.2, HOLD = 4, now = 0, held = 0, playing = false, last = 0, raf = 0;
+  // ---- выбор пункта: итоговый кадр, пункт подсвечен, его текст под заголовком
+  var PICK = { hub: CAP.concl };
+  STG.forEach(function (x, i) { PICK['n' + i] = x; });
+  INN.forEach(function (x, j) { PICK['i' + j] = x; });
+  var sel = null;
+  function pick(k) {
+    sel = k;
+    nodes.forEach(function (n, i) { var on = k === 'n' + i; n.classList.toggle('on', on); n.querySelector('.b').style.opacity = on ? 1 : 0; });
+    inner.forEach(function (n, i) { n.classList.toggle('on', k === 'i' + i); });
+    hub.classList.toggle('on', k === 'hub');
+    var c = k ? PICK[k] : '';
+    if (capEl) { capEl.textContent = c; capEl.dataset.t = c; capEl.style.opacity = 1; }
+  }
+
+  // ---- проигрыватель: идёт, пока экран в кадре, один раз; итог держится
+  // SPEED: владелец 05.10 — на 20% быстрее (1,2), 06.10 — ещё чуть быстрее
+  var SPEED = 1.4, now = 0, playing = false, done = false, last = 0, raf = 0;
+  var replay = document.createElement('button');
+  replay.type = 'button'; replay.className = 'section-rubric cycle-replay'; replay.textContent = TX.replay; replay.hidden = true;
+  scene.appendChild(replay);
   function tick(ts) {
     var dt = last ? Math.min((ts - last) / 1000, 0.1) : 0; last = ts;
-    if (now < S.T) now = Math.min(S.T, now + dt * SPEED);
-    else { held += dt; if (held > HOLD) { now = 0; held = 0; } }
+    now = Math.min(S.T, now + dt * SPEED);
     render(now);
-    raf = requestAnimationFrame(tick);
+    if (now >= S.T) finish(); else raf = requestAnimationFrame(tick);
   }
-  function play() { if (playing) return; playing = true; last = 0; raf = requestAnimationFrame(tick); }
+  function play() { if (playing || done) return; playing = true; last = 0; raf = requestAnimationFrame(tick); }
   function pause() { playing = false; cancelAnimationFrame(raf); }
+  function finish() { pause(); done = true; now = S.T; render(S.T); pick(sel); replay.hidden = still; }
+  function restart() { pick(null); done = false; now = 0; replay.hidden = true; render(0); play(); }
+  function choose(k) { if (!done) finish(); pick(sel === k ? null : k); }
+  replay.addEventListener('click', restart);
+  nodes.concat(inner, [hub]).forEach(function (el) {
+    var k = el.dataset.k;
+    el.setAttribute('tabindex', '0');
+    el.addEventListener('click', function () { choose(k); });
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(k); } });
+  });
   var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  render(still ? S.T : 0);
+  if (still) finish(); else render(0);
   center();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(center);
   window.addEventListener('resize', center);
-  window.__cycle = { render: render, T: S.T, beats: S.beats, pause: pause, play: play };
+  window.__cycle = { render: render, T: S.T, beats: S.beats, pause: pause, play: play, pick: pick, restart: restart, state: function () { return { now: now, done: done, playing: playing, sel: sel }; } };
   if (still) return;
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (es) {
