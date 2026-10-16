@@ -97,7 +97,10 @@ window.GOATCOUNTER_CODE = 'ezswatch';
   function goal(name) {
     if (id && window.ym) ym(id, 'reachGoal', name);
     if (gc && window.goatcounter && window.goatcounter.count) {
-      window.goatcounter.count({ path: 'goal-' + name, title: name, event: true });
+      /* Метка адресата в имени события: GoatCounter не связывает цель с заходом,
+         по имени отчёт видит, чей отклик довёл до кейса. */
+      var tag = (location.search.match(/[?&]r=([^&#]+)/) || [])[1] || '';
+      window.goatcounter.count({ path: 'goal-' + name + (tag ? ':' + tag.toLowerCase() : ''), title: name, event: true });
     }
   }
   document.addEventListener('click', function (ev) {
