@@ -51,9 +51,15 @@
 <script>
 window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
 
+/* Запасной счётчик, 15.10.2026: Яндекс.Метрика не принимала заходы. GoatCounter
+   (бесплатный, без cookie) считает заход вместе с меткой ?r=, цели — событиями.
+   Код — поддомен из адреса вида CODE.goatcounter.com; пока пусто, не грузится. */
+window.GOATCOUNTER_CODE = 'ezswatch';
+
 (function () {
   var id = window.METRIKA_ID;
-  if (!id) return;
+  var gc = window.GOATCOUNTER_CODE;
+  if (!id && !gc) return;
 
   /* Свои и машинные заходы в счёт не идут — 07.09.2026. За две недели из 13
      визитов живыми были два: остальное дали headless-браузеры (превью-ссылки,
@@ -67,24 +73,40 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
   } catch (e) {}
   if (navigator.webdriver) return;
 
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-  m[i].l=1*new Date();
-  for (var j=0;j<e.scripts.length;j++){if(e.scripts[j].src===r){return;}}
-  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,
-  a.parentNode.insertBefore(k,a)})
-  (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=' + id, 'ym');
+  if (id) {
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j=0;j<e.scripts.length;j++){if(e.scripts[j].src===r){return;}}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,
+    a.parentNode.insertBefore(k,a)})
+    (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=' + id, 'ym');
 
-  ym(id, 'init', { ssr: true, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true, referrer: document.referrer, url: location.href });
+    ym(id, 'init', { ssr: true, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true, referrer: document.referrer, url: location.href });
+  }
+
+  if (gc) {
+    var g = document.createElement('script');
+    g.async = true;
+    g.src = 'https://gc.zgo.at/count.js';
+    g.setAttribute('data-goatcounter', 'https://' + gc + '.goatcounter.com/count');
+    document.head.appendChild(g);
+  }
 
   /* Цели. Сам заход почти ничего не говорит: важно, ушёл ли человек в кейс
      или написал. */
+  function goal(name) {
+    if (id && window.ym) ym(id, 'reachGoal', name);
+    if (gc && window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: 'goal-' + name, title: name, event: true });
+    }
+  }
   document.addEventListener('click', function (ev) {
     var a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
     if (!a) return;
     var href = a.getAttribute('href') || '';
-    if (href.indexOf('behance.net') > -1) ym(id, 'reachGoal', 'behance');
-    else if (href.indexOf('t.me/') > -1) ym(id, 'reachGoal', 'telegram');
-    else if (href.indexOf('mailto:') === 0) ym(id, 'reachGoal', 'mail');
+    if (href.indexOf('behance.net') > -1) goal('behance');
+    else if (href.indexOf('t.me/') > -1) goal('telegram');
+    else if (href.indexOf('mailto:') === 0) goal('mail');
   });
 })();
 </script>
