@@ -60,6 +60,7 @@ h1, h2, p, figure, blockquote { margin: 0; }
 .hero { display: grid; place-items: center; }
 .hero img, .hero video { width: 100%; height: auto; max-height: 78vh; object-fit: contain; }
 .hero.empty { min-height: 56vh; }
+.capture-placeholder { min-height: clamp(180px, 32vw, 560px); padding: 24px; text-align: center; overflow-wrap: anywhere; }
 .case-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin: 40px 0 64px; }
 .case-heading h1 { font-size: clamp(28px, 4vw, 64px); font-weight: 400; line-height: 1.1; }
 .case-heading p { color: var(--mute); }
@@ -125,6 +126,7 @@ h1, h2, p, figure, blockquote { margin: 0; }
 .experience-entry { border-top: 1px solid var(--mute); }
 .experience-entry:last-child { border-bottom: 1px solid var(--mute); }
 .experience-entry summary { display: flex; align-items: baseline; gap: 24px; padding: 20px 0; cursor: pointer; list-style: none; }
+.experience-entry summary > span:first-child { min-width: 0; }
 .experience-entry summary::-webkit-details-marker { display: none; }
 .experience-entry summary span:nth-child(2) { color: var(--mute); margin-left: auto; }
 .disclosure-mark::before { content: '+'; }
