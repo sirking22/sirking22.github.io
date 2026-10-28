@@ -9,7 +9,7 @@
   const tiles = [...document.querySelectorAll('.tile')];
   const grid = document.querySelector('.grid');
   const quote = document.querySelector('.owner-quote');
-  // Save the approved composition so "All" restores the original 4 / 3 / 2 rows.
+  // Save the approved composition so "All" restores the original row composition.
   const composition = rows.map(row => [...row.children]);
 
   if (filters) {
