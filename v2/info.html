@@ -22,16 +22,20 @@
 </header>
 <main>
 <h1 class="page-title">Инфо</h1>
-<div class="resume">
-<div class="resume-intro">
+<div class="info-sections">
+<!-- О себе, дисциплины и этап метода — дословно из текущей витрины.
+     Компании не названы в источнике: каждая запись остаётся заглушкой места работы. -->
+<section class="info-section" aria-labelledby="bio-title">
+<h2 id="bio-title">01 / О себе</h2>
+<div class="info-biography">
 <img class="photo" src="../assets/owner-photo-a.webp" width="500" height="500" alt="Арсений Охотин">
-<p>Быстро осваиваюсь в новой нише, нахожу рабочие форматы и наращиваю показатели бизнеса.</p>
-</div>
-<div class="resume-body">
-<!-- Дословно из index.html#capacity и #hero; компании и окончания периодов неизвестны. -->
-<section>
-<h2>По дисциплинам</h2>
-<ul class="disciplines">
+<div><p class="info-lead">Быстро осваиваюсь в новой нише, нахожу рабочие форматы и наращиваю показатели бизнеса.</p>
+<div class="info-facts"><p>15+ лет<br>В дизайне</p><p>3,5 года<br>Во главе команды 10+ человек</p></div>
+<a href="https://spb.hh.ru/resume/f86210ecff00f938880039ed1f44717065716c" rel="noopener">Резюме ↗</a></div>
+</div></section>
+<section class="info-section" aria-labelledby="disciplines-title">
+<h2 id="disciplines-title">02 / По дисциплинам</h2>
+<ol class="disciplines">
 <li>Айдентика</li>
 <li>упаковка</li>
 <li>SMM</li>
@@ -39,39 +43,34 @@
 <li>Арт-дирекшн</li>
 <li>ИИ в продакшене</li>
 <li>Гайды и стандарт съёмки</li>
-</ul>
+</ol></section>
+<section class="info-section" aria-labelledby="method-title">
+<h2 id="method-title">03 / Метод</h2>
+<div class="info-method"><p>Норма по каждому типу работы посчитана по истории. Часы или круги правок выше нормы — сигнал.</p><a href="method.html">Метод ↗</a></div>
 </section>
-<section>
-<h2>Опыт</h2>
+<section class="info-section" aria-labelledby="experience-title">
+<h2 id="experience-title">04 / Опыт</h2>
 <div class="experience">
-<div class="experience-row">
-<span>2019 — [...]</span>
-<span>[компания]</span>
-<span>Арт-дирекшн</span>
-</div>
-<div class="experience-row">
-<span>2022 — [...]</span>
-<span>[компания]</span>
-<span>Команда in-house, работа в Notion</span>
-</div>
-<div class="experience-row">
-<span>2025 — [...]</span>
-<span>[компания]</span>
-<span>Креативный директор</span>
-</div>
-</div>
-</section>
-<section class="resume-facts">
-<h2>О себе</h2>
-<p>15+ лет<br>В дизайне</p>
-<p>3,5 года<br>Во главе команды 10+ человек</p>
-<a href="https://spb.hh.ru/resume/f86210ecff00f938880039ed1f44717065716c" rel="noopener">Резюме ↗</a>
-</section>
-</div>
+<details class="experience-entry">
+<summary><span>[место работы 1]</span><span>[годы]</span><span class="disclosure-mark" aria-hidden="true"></span></summary>
+<div class="experience-content"><p>[роль]</p><p>[опыт и результаты]</p></div>
+</details>
+<details class="experience-entry">
+<summary><span>[место работы 2]</span><span>[годы]</span><span class="disclosure-mark" aria-hidden="true"></span></summary>
+<div class="experience-content"><p>[роль]</p><p>[опыт и результаты]</p></div>
+</details>
+<details class="experience-entry">
+<summary><span>[место работы 3]</span><span>[годы]</span><span class="disclosure-mark" aria-hidden="true"></span></summary>
+<div class="experience-content"><p>[роль]</p><p>[опыт и результаты]</p></div>
+</details>
+</div></section>
 </div>
 </main>
-<footer class="contact" id="contact">
-<p class="contact-prompt">[призыв, текст позже]</p>
+<footer class="contact conversation" id="contact">
+<div class="conversation-copy">
+<p class="conversation-label">[строка над призывом]</p>
+<a class="conversation-question" href="mailto:ezmail2222@gmail.com">[Есть задача?] ↗</a>
+</div>
 <div class="contact-links">
 <a class="contact-button" href="mailto:ezmail2222@gmail.com">Написать на почту ↗</a>
 <a href="https://t.me/ezd22" rel="noopener">Telegram ↗</a>
