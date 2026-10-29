@@ -1,0 +1,4711 @@
+{
+  "verbatim": [
+    {
+      "file": "v2/en/404.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "P.conversation-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "FIGCAPTION.",
+      "ru": "Упаковка линейки до пересборки: разнородные коробки без общего языка.",
+      "en": "Line packaging before the rebuild: mismatched boxes with no shared language.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "FIGCAPTION.",
+      "ru": "Упаковка после пересборки: единый визуальный язык на всей линейке.",
+      "en": "Packaging after the rebuild: one visual language across the line.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "P.brand-signature",
+      "ru": "Легко.",
+      "en": "Easy.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "P.",
+      "ru": "Быстро осваиваюсь в новой нише, нахожу рабочие форматы и наращиваю показатели бизнеса. Исследования, продакшн и аналитику ставлю на ИИ, и дальше они работают автоматом.",
+      "en": "I get up to speed in a new niche fast, find the formats that work and grow the business numbers. I set up research, production and analytics on AI, and from there they run on their own.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN.work-description",
+      "ru": "RAWMID · бренд-платформа и визуальная система",
+      "en": "RAWMID · brand platform and visual system",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN.work-description",
+      "ru": "Ролик до разбора и после.",
+      "en": "A video before the review and after.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN.work-description",
+      "ru": "Задачи, часы и правки вместо переписки.",
+      "en": "Tasks, hours and revisions instead of chat threads.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A.",
+      "ru": "Резюме ↗",
+      "en": "Resume (PDF)",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "SPAN.",
+      "ru": "Креативный директор",
+      "en": "Creative director",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "DT.",
+      "ru": "Дизайн, фото, видео, SMM",
+      "en": "Design, photo, video, SMM",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "DD.",
+      "ru": "10+ человек",
+      "en": "10+ people",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "DT.",
+      "ru": "В месяц",
+      "en": "A month",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "DD.",
+      "ru": "15–20 роликов",
+      "en": "15–20 videos",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "DT.",
+      "ru": "Рекламных в год",
+      "en": "Ad campaigns a year",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "DD.",
+      "ru": "10+ кампаний",
+      "en": "10+ campaigns",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "DT.",
+      "ru": "В год",
+      "en": "Launched a year",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "DD.",
+      "ru": "10+ продуктов",
+      "en": "10+ products",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "DT.",
+      "ru": "Круги правок на задачу",
+      "en": "Revision rounds per task",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P.conversation-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P",
+      "ru": "15+ лет",
+      "en": "15+ years",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P",
+      "ru": "В дизайне",
+      "en": "In design",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P",
+      "ru": "3,5 года",
+      "en": "3.5 years",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P",
+      "ru": "Во главе команды 10+ человек",
+      "en": "Leading a team of 10+",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "IMG@alt",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "P.page-intro",
+      "ru": "Как принимается решение",
+      "en": "How a decision gets made",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "H2.",
+      "ru": "Сигнал",
+      "en": "Signal",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "H2.",
+      "ru": "Основания",
+      "en": "Evidence",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "H2.",
+      "ru": "Цель и гипотеза",
+      "en": "Goal and hypothesis",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "H2.",
+      "ru": "Производство",
+      "en": "Production",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "H2.",
+      "ru": "Выпуск",
+      "en": "Release",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "H2.",
+      "ru": "Ответ и норма",
+      "en": "Response and standard",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "P.",
+      "ru": "Демо-пример: одна цель от сигнала до нормы. Каждый шаг — своя база Notion, связи между ними живые. Названия заменены номерами: показана механика, а не содержание.",
+      "en": "Demo: one goal from signal to standard. Each step is its own Notion database, and the links between them are live. Names are replaced with numbers, so what you see is the mechanics.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION.",
+      "ru": "Загрузка команды: по каждому человеку задачи, часы и сроки.",
+      "en": "Team load: tasks, hours and deadlines for each person.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION.",
+      "ru": "Типовые задачи: среднее время и число правок по типу работы.",
+      "en": "Standard tasks: average time and revision rounds by type of work.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION.",
+      "ru": "База идей: список идей с описанием, статусом и связями.",
+      "en": "Idea base: ideas with description, status and links.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION.",
+      "ru": "Карточка базы знаний «Свет общих планов»: разбор света и тени на двух кадрах.",
+      "en": "Knowledge-base card “Lighting wide shots”: light and shadow broken down on two frames.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Типовые задачи: среднее время и число правок по типу работы.",
+      "en": "Standard tasks: average time and revision rounds by type of work.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "P.",
+      "ru": "Приложение «RAWMID Клуб»: прототип сам проходит путь от QR на коробке до клуба и следующей покупки",
+      "en": "RAWMID Club app: the prototype plays the path from the QR on the box to the club and the next purchase",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "P.",
+      "ru": "Собрал бренд-платформу: идея, миссия, ценности, исследования аудитории. Связал её с продуктовой логикой, языком и группами покупателей и с подачей контента для каждой группы. Визуальный язык проиллюстрировал и масштабировал на упаковку, мерч и материалы.",
+      "en": "Built the brand platform: idea, mission, values, audience research. Tied it to the product logic, the brand language and buyer groups, and to how content speaks to each group. Illustrated the visual language and scaled it across packaging, merch and marketing materials.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "P.",
+      "ru": "Макеты для соцсетей: рецепты и продукты в едином визуальном языке.",
+      "en": "Social layouts: recipes and products in one visual language.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "FIGCAPTION.",
+      "ru": "Макеты для соцсетей: рецепты и продукты в едином визуальном языке.",
+      "en": "Social layouts: recipes and products in one visual language.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "FIGCAPTION.",
+      "ru": "Подборка кадров и раскадровок для съёмок бренда.",
+      "en": "Shot references and storyboards for brand shoots.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "FIGCAPTION.",
+      "ru": "Набор RAW-клуба: блендер, бутылки, кружка, фартук, сумка, упаковка техники RAWMID",
+      "en": "RAW club kit: blender, bottles, mug, apron, bag and RAWMID appliance packaging",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "FIGCAPTION.",
+      "ru": "Упаковка после пересборки: единый визуальный язык на всей линейке.",
+      "en": "Packaging after the rebuild: one visual language across the line.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "FIGCAPTION.",
+      "ru": "Продукты бренда в бытовой сцене: бутылка и ланч-бокс в руках.",
+      "en": "Brand products in an everyday scene: a bottle and a lunch box in hand.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "P.",
+      "ru": "Упаковка после пересборки: единый визуальный язык на всей линейке.",
+      "en": "Packaging after the rebuild: one visual language across the line.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "FIGCAPTION.",
+      "ru": "Упаковка линейки до пересборки: разнородные коробки без общего языка.",
+      "en": "Line packaging before the rebuild: mismatched boxes with no shared language.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "FIGCAPTION.",
+      "ru": "Упаковка после пересборки: единый визуальный язык на всей линейке.",
+      "en": "Packaging after the rebuild: one visual language across the line.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "P.",
+      "ru": "Бренд: от идеи до клубов",
+      "en": "Brand: from idea to clubs",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "P.",
+      "ru": "Собрал бренд-платформу: идея, миссия, ценности, исследования аудитории. Связал её с продуктовой логикой, языком и группами покупателей и с подачей контента для каждой группы. Визуальный язык проиллюстрировал и масштабировал на упаковку, мерч и материалы.",
+      "en": "Built the brand platform: idea, mission, values, audience research. Tied it to the product logic, the brand language and buyer groups, and to how content speaks to each group. Illustrated the visual language and scaled it across packaging, merch and marketing materials.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "P.",
+      "ru": "Бренд техники для дома, 35+ SKU, 7 каналов, 10+ продуктов и 10 кампаний в год. CTR карточек 1,7% → 3,4%, вовлечённость AI-визуалов ×1,5–2.",
+      "en": "Home-appliance brand, 35+ SKUs, 7 channels, 10+ products and 10 campaigns a year. Product-card CTR 1.7% → 3.4%, engagement on AI visuals ×1.5–2.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "IMG@alt",
+      "ru": "Набор RAW-клуба: блендер, бутылки, кружка, фартук, сумка, упаковка техники RAWMID",
+      "en": "RAW club kit: blender, bottles, mug, apron, bag and RAWMID appliance packaging",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "IMG@alt",
+      "ru": "Продукты бренда в бытовой сцене: бутылка и ланч-бокс в руках.",
+      "en": "Brand products in an everyday scene: a bottle and a lunch box in hand.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "P.",
+      "ru": "Разбор подачи",
+      "en": "Pitch review",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "P.",
+      "ru": "Ролик до разбора и после.",
+      "en": "A video before the review and after.",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "A.brand",
+      "ru": "Арсений Охотин",
+      "en": "Arseniy Okhotin",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "A.",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "P.contact-prompt",
+      "ru": "Ищу роль креативного директора",
+      "en": "Looking for a creative director role",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "A.contact-button",
+      "ru": "Написать на почту ↗",
+      "en": "ezmail2222@gmail.com",
+      "source": "en/index.html"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "A@aria-label",
+      "ru": "Контакт",
+      "en": "Contact",
+      "source": "en/index.html"
+    }
+  ],
+  "placeholders": [
+    {
+      "file": "v2/en/404.html",
+      "where": "TITLE",
+      "ru": "404 — Арсений Охотин",
+      "en": "[EN: 404 — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "H1",
+      "ru": "[Страница не найдена]",
+      "en": "[EN: Страница не найдена]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A",
+      "ru": "Работы ↗",
+      "en": "[EN: Работы ↗]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A",
+      "ru": "Ищу роль",
+      "en": "[EN: Ищу роль]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A",
+      "ru": "креативного",
+      "en": "[EN: креативного]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A",
+      "ru": "директора ↗",
+      "en": "[EN: директора ↗]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "META@content",
+      "ru": "404 — Арсений Охотин",
+      "en": "[EN: 404 — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/case-rawmid-style.html",
+      "where": "TITLE",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "[EN: RAWMID — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/case-rawmid-style.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/case-rawmid-style.html",
+      "where": "META@content",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "[EN: RAWMID — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/case-rawmid-style.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "TITLE",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "[EN: RAWMID — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "P",
+      "ru": "[…] · фирменный стиль · [роль] · [команда]",
+      "en": "[EN: … · фирменный стиль · роль · команда]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "H2",
+      "ru": "Варианты",
+      "en": "[EN: Варианты]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "P",
+      "ru": "[до и после; отвергнутые варианты — позже]",
+      "en": "[EN: до и после; отвергнутые варианты — позже]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "H2",
+      "ru": "Критерий выбора",
+      "en": "[EN: Критерий выбора]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "P",
+      "ru": "[критерий выбора, текст позже]",
+      "en": "[EN: критерий выбора, текст позже]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "H2",
+      "ru": "Почему этот",
+      "en": "[EN: Почему этот]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "P",
+      "ru": "[почему этот, текст позже]",
+      "en": "[EN: почему этот, текст позже]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "META@content",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "[EN: RAWMID — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "IMG@alt",
+      "ru": "Коробки техники RAWMID с разными макетами упаковки",
+      "en": "[EN: Коробки техники RAWMID с разными макетами упаковки]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "where": "IMG@alt",
+      "ru": "Ряд коробок техники RAWMID с общим оформлением",
+      "en": "[EN: Ряд коробок техники RAWMID с общим оформлением]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "TITLE",
+      "ru": "Работы — Арсений Охотин",
+      "en": "[EN: Работы — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "/ Креативный директор",
+      "en": "[EN: / Креативный директор]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "H1",
+      "ru": "Из новой ниши",
+      "en": "[EN: Из новой ниши]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "H1",
+      "ru": "в поток продаж.",
+      "en": "[EN: в поток продаж.]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "BUTTON",
+      "ru": "Все",
+      "en": "[EN: Все]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "BUTTON",
+      "ru": "Айдентика",
+      "en": "[EN: Айдентика]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "BUTTON",
+      "ru": "Упаковка",
+      "en": "[EN: Упаковка]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "BUTTON",
+      "ru": "Веб",
+      "en": "[EN: Веб]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "P",
+      "ru": "Работ: 12",
+      "en": "[EN: Работ: 12]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "рекламный концепт · не заказ",
+      "en": "[EN: рекламный концепт · не заказ]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "Система Notion",
+      "en": "[EN: Система Notion]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "P",
+      "ru": "[цитата владельца — выбор позже]",
+      "en": "[EN: цитата владельца — выбор позже]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "FIGCAPTION",
+      "ru": "Арсений Охотин / [источник], [год]",
+      "en": "[EN: Арсений Охотин / источник, год]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "упаковка · концепт, не заказ",
+      "en": "[EN: упаковка · концепт, не заказ]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "перформанс-креатив, AI · концепт",
+      "en": "[EN: перформанс-креатив, AI · концепт]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "приложение",
+      "en": "[EN: приложение]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[кадры позже]",
+      "en": "[EN: кадры позже]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[описание позже]",
+      "en": "[EN: описание позже]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "Имя",
+      "en": "[EN: Имя]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "Айдентика",
+      "en": "[EN: Айдентика]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "Кресло-читалка",
+      "en": "[EN: Кресло-читалка]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "Айдентика",
+      "en": "[EN: Айдентика]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "Фирменные стили",
+      "en": "[EN: Фирменные стили]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "Фирменные стили",
+      "en": "[EN: Фирменные стили]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[кадры позже]",
+      "en": "[EN: кадры позже]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[название]",
+      "en": "[EN: название]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SPAN",
+      "ru": "ребрендинг",
+      "en": "[EN: ребрендинг]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "META@content",
+      "ru": "Работы — Арсений Охотин",
+      "en": "[EN: Работы — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "SECTION@aria-label",
+      "ru": "Заявление",
+      "en": "[EN: Заявление]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "DIV@aria-label",
+      "ru": "Фильтр по дисциплинам",
+      "en": "[EN: Фильтр по дисциплинам]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "DIV@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "RAWMID, фирменный стиль",
+      "en": "[EN: RAWMID, фирменный стиль]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Коллаж фотографий техники, блюд и раскадровок RAWMID",
+      "en": "[EN: Коллаж фотографий техники, блюд и раскадровок RAWMID]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Коробки техники RAWMID с разными макетами упаковки",
+      "en": "[EN: Коробки техники RAWMID с разными макетами упаковки]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Ряд коробок техники RAWMID с общим оформлением",
+      "en": "[EN: Ряд коробок техники RAWMID с общим оформлением]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Макеты постов RAWMID с фотографиями продуктов и рецептов",
+      "en": "[EN: Макеты постов RAWMID с фотографиями продуктов и рецептов]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "Dyson V15, рекламный концепт · не заказ",
+      "en": "[EN: Dyson V15, рекламный концепт · не заказ]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: уличный щит",
+      "en": "[EN: Dyson V15: уличный щит]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: лайтбокс у остановки",
+      "en": "[EN: Dyson V15: лайтбокс у остановки]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: пост 4:5",
+      "en": "[EN: Dyson V15: пост 4:5]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: сторис 9:16",
+      "en": "[EN: Dyson V15: сторис 9:16]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: шапка рассылки",
+      "en": "[EN: Dyson V15: шапка рассылки]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: баннер 3:1",
+      "en": "[EN: Dyson V15: баннер 3:1]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "RAWMID, видео-визуал",
+      "en": "[EN: RAWMID, видео-визуал]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "VIDEO@aria-label",
+      "ru": "RAWMID: видео до и после",
+      "en": "[EN: RAWMID: видео до и после]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "VIDEO@aria-label",
+      "ru": "RAWMID: видеоматериалы",
+      "en": "[EN: RAWMID: видеоматериалы]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "Система Notion",
+      "en": "[EN: Система Notion]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Таблица Notion с задачами, часами и сроками по сотрудникам",
+      "en": "[EN: Таблица Notion с задачами, часами и сроками по сотрудникам]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "Scandic, упаковка · концепт, не заказ",
+      "en": "[EN: Scandic, упаковка · концепт, не заказ]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Жёлтая жестяная коробка Scandic с рисунками",
+      "en": "[EN: Жёлтая жестяная коробка Scandic с рисунками]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "Karuna, перформанс-креатив, AI · концепт, не заказ",
+      "en": "[EN: Karuna, перформанс-креатив, AI · концепт, не заказ]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Плакат Karuna с входящим звонком на экране телефона",
+      "en": "[EN: Плакат Karuna с входящим звонком на экране телефона]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Плакат Karuna «Проверь прежде чем отвечать»",
+      "en": "[EN: Плакат Karuna «Проверь прежде чем отвечать»]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "RAWMID, приложение",
+      "en": "[EN: RAWMID, приложение]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "RAWMID Клуб: день 3 из 7",
+      "en": "[EN: RAWMID Клуб: день 3 из 7]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "RAWMID Клуб: рецепт зелёного смузи",
+      "en": "[EN: RAWMID Клуб: рецепт зелёного смузи]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "RAWMID Клуб: шаг приготовления в блендере",
+      "en": "[EN: RAWMID Клуб: шаг приготовления в блендере]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "Имя, Айдентика",
+      "en": "[EN: Имя, Айдентика]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Жёлтый контур и белая надпись на тёмном фоне",
+      "en": "[EN: Жёлтый контур и белая надпись на тёмном фоне]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "Кресло-читалка, Айдентика",
+      "en": "[EN: Кресло-читалка, Айдентика]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Коллаж фотографий детей и бирюзовый логотип «Кресло читалка»",
+      "en": "[EN: Коллаж фотографий детей и бирюзовый логотип «Кресло читалка»]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "Фирменные стили, 2017",
+      "en": "[EN: Фирменные стили, 2017]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Фирменный стиль: облака",
+      "en": "[EN: Фирменный стиль: облака]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Фирменный стиль: граффити",
+      "en": "[EN: Фирменный стиль: граффити]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "IMG@alt",
+      "ru": "Сиреневый знак и надпись Yajevika на белом фоне",
+      "en": "[EN: Сиреневый знак и надпись Yajevika на белом фоне]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "where": "A@aria-label",
+      "ru": "[название], ребрендинг",
+      "en": "[EN: название, ребрендинг]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "TITLE",
+      "ru": "Инфо — Арсений Охотин",
+      "en": "[EN: Инфо — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "H1",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "H2",
+      "ru": "01 / О себе",
+      "en": "[EN: 01 / О себе]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P",
+      "ru": "Быстро осваиваюсь в новой нише, нахожу рабочие форматы и наращиваю показатели бизнеса.",
+      "en": "[EN: Быстро осваиваюсь в новой нише, нахожу рабочие форматы и наращиваю показатели бизнеса.]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "H2",
+      "ru": "02 / По дисциплинам",
+      "en": "[EN: 02 / По дисциплинам]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "LI",
+      "ru": "Айдентика",
+      "en": "[EN: Айдентика]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "LI",
+      "ru": "Упаковка",
+      "en": "[EN: Упаковка]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "LI",
+      "ru": "Веб",
+      "en": "[EN: Веб]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "LI",
+      "ru": "Арт-дирекшн",
+      "en": "[EN: Арт-дирекшн]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "LI",
+      "ru": "ИИ в продакшене",
+      "en": "[EN: ИИ в продакшене]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "LI",
+      "ru": "Гайды и стандарт съёмки",
+      "en": "[EN: Гайды и стандарт съёмки]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "H2",
+      "ru": "03 / Метод",
+      "en": "[EN: 03 / Метод]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P",
+      "ru": "Норма по каждому типу работы посчитана по истории. Часы или круги правок выше нормы — сигнал.",
+      "en": "[EN: Норма по каждому типу работы посчитана по истории. Часы или круги правок выше нормы — сигнал.]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A",
+      "ru": "Метод ↗",
+      "en": "[EN: Метод ↗]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "H2",
+      "ru": "04 / Опыт",
+      "en": "[EN: 04 / Опыт]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "SPAN",
+      "ru": "Арт-дирекшн",
+      "en": "[EN: Арт-дирекшн]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P",
+      "ru": "[опыт и результаты]",
+      "en": "[EN: опыт и результаты]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "SPAN",
+      "ru": "Команда in-house, работа в Notion",
+      "en": "[EN: Команда in-house, работа в Notion]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P",
+      "ru": "[опыт и результаты]",
+      "en": "[EN: опыт и результаты]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P",
+      "ru": "[…]",
+      "en": "[EN: …]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "P",
+      "ru": "[опыт и результаты]",
+      "en": "[EN: опыт и результаты]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "H2",
+      "ru": "05 / Метрики",
+      "en": "[EN: 05 / Метрики]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "DT",
+      "ru": "CTR карточек",
+      "en": "[EN: CTR карточек]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A",
+      "ru": "Ищу роль",
+      "en": "[EN: Ищу роль]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A",
+      "ru": "креативного",
+      "en": "[EN: креативного]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A",
+      "ru": "директора ↗",
+      "en": "[EN: директора ↗]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "META@content",
+      "ru": "Инфо — Арсений Охотин",
+      "en": "[EN: Инфо — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "TITLE",
+      "ru": "Метод — Арсений Охотин",
+      "en": "[EN: Метод — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "H1",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "P",
+      "ru": "Норма по каждому типу работы посчитана по истории. Часы или круги правок выше нормы — сигнал. Так же подсвечиваются формат, потерявший отклик, и точка контакта с провалом по метрике.",
+      "en": "[EN: Норма по каждому типу работы посчитана по истории. Часы или круги правок выше нормы — сигнал. Так же подсвечиваются формат, потерявший отклик, и точка контакта с провалом по метрике.]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A",
+      "ru": "[RAWMID · фирменный стиль — пример этапа уточнить] ↗",
+      "en": "[EN: RAWMID · фирменный стиль — пример этапа уточнить ↗]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "P",
+      "ru": "Под сигнал поднимаются основания: задачи категории, шаги задачи и ожидаемые результаты, группы аудитории и чем занята категория у конкурентов. Из них видно, где именно просело.",
+      "en": "[EN: Под сигнал поднимаются основания: задачи категории, шаги задачи и ожидаемые результаты, группы аудитории и чем занята категория у конкурентов. Из них видно, где именно просело.]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A",
+      "ru": "RAWMID · фирменный стиль ↗",
+      "en": "[EN: RAWMID · фирменный стиль ↗]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "P",
+      "ru": "Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли.",
+      "en": "[EN: Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли.]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A",
+      "ru": "[RAWMID · приложение — пример этапа уточнить] ↗",
+      "en": "[EN: RAWMID · приложение — пример этапа уточнить ↗]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "P",
+      "ru": "Концепт уходит в задачи: исполнитель, срок, красный флаг по просрочке, план и факт часов. Отсюда же берётся норма для следующего сигнала.",
+      "en": "[EN: Концепт уходит в задачи: исполнитель, срок, красный флаг по просрочке, план и факт часов. Отсюда же берётся норма для следующего сигнала.]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A",
+      "ru": "RAWMID · фирменный стиль ↗",
+      "en": "[EN: RAWMID · фирменный стиль ↗]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A",
+      "ru": "RAWMID · упаковка и мерч ↗",
+      "en": "[EN: RAWMID · упаковка и мерч ↗]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A",
+      "ru": "RAWMID · видео-визуал ↗",
+      "en": "[EN: RAWMID · видео-визуал ↗]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "P",
+      "ru": "Материал выходит наружу и попадает в базу релизов: канал, дата, версия. Каждый релиз связан со своим материалом и целью, к нему и подтягиваются метрики.",
+      "en": "[EN: Материал выходит наружу и попадает в базу релизов: канал, дата, версия. Каждый релиз связан со своим материалом и целью, к нему и подтягиваются метрики.]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A",
+      "ru": "[RAWMID · видео-визуал — пример этапа уточнить] ↗",
+      "en": "[EN: RAWMID · видео-визуал — пример этапа уточнить ↗]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "P",
+      "ru": "Статистика приходит в базу фактов с источником и периодом и поднимается в ключевые результаты. Подтвердившееся закрепляется нормой в типовой задаче.",
+      "en": "[EN: Статистика приходит в базу фактов с источником и периодом и поднимается в ключевые результаты. Подтвердившееся закрепляется нормой в типовой задаче.]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A",
+      "ru": "[RAWMID · фирменный стиль — пример этапа уточнить] ↗",
+      "en": "[EN: RAWMID · фирменный стиль — пример этапа уточнить ↗]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "FIGCAPTION",
+      "ru": "Путь одного решения",
+      "en": "[EN: Путь одного решения]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "META@content",
+      "ru": "Метод — Арсений Охотин",
+      "en": "[EN: Метод — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "IMG@alt",
+      "ru": "Схема этапов принятия решения с соединяющими стрелками",
+      "en": "[EN: Схема этапов принятия решения с соединяющими стрелками]"
+    },
+    {
+      "file": "v2/en/method.html",
+      "where": "IMG@alt",
+      "ru": "Четыре карточки Signal, Decision, Production и Proof, соединённые кольцом",
+      "en": "[EN: Четыре карточки Signal, Decision, Production и Proof, соединённые кольцом]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "TITLE",
+      "ru": "AI pipeline — Арсений Охотин",
+      "en": "[EN: AI pipeline — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "DIV",
+      "ru": "[кадры позже]",
+      "en": "[EN: кадры позже]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "P",
+      "ru": "[…] · [дисциплина] · [роль] · [команда]",
+      "en": "[EN: … · дисциплина · роль · команда]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "H2",
+      "ru": "01 / Продакшен",
+      "en": "[EN: 01 / Продакшен]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "P",
+      "ru": "[текст позже]",
+      "en": "[EN: текст позже]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "DIV",
+      "ru": "[кадры позже]",
+      "en": "[EN: кадры позже]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "H2",
+      "ru": "02 / [кейс для заказчика, адаптировать позже]",
+      "en": "[EN: 02 / кейс для заказчика, адаптировать позже]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "P",
+      "ru": "[текст позже]",
+      "en": "[EN: текст позже]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "DIV",
+      "ru": "[кадры позже]",
+      "en": "[EN: кадры позже]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "SPAN",
+      "ru": "следующая работа →",
+      "en": "[EN: следующая работа →]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "SPAN",
+      "ru": "Имя, Айдентика",
+      "en": "[EN: Имя, Айдентика]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "META@content",
+      "ru": "AI pipeline — Арсений Охотин",
+      "en": "[EN: AI pipeline — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "where": "NAV@aria-label",
+      "ru": "Другие работы",
+      "en": "[EN: Другие работы]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "TITLE",
+      "ru": "Dyson V15 · рекламный концепт · не заказ — Арсений Охотин",
+      "en": "[EN: Dyson V15 · рекламный концепт · не заказ — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "P",
+      "ru": "[…] · рекламный концепт · [роль] · [команда]",
+      "en": "[EN: … · рекламный концепт · роль · команда]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "P",
+      "ru": "концепт, не заказ",
+      "en": "[EN: концепт, не заказ]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "FIGCAPTION",
+      "ru": "DYSON_V15_/_01 · РЕКЛАМНЫЙ КОНЦЕПТ",
+      "en": "[EN: DYSON_V15_/_01 · РЕКЛАМНЫЙ КОНЦЕПТ]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "FIGCAPTION",
+      "ru": "DYSON_V15_/_02 · РЕКЛАМНЫЙ КОНЦЕПТ",
+      "en": "[EN: DYSON_V15_/_02 · РЕКЛАМНЫЙ КОНЦЕПТ]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "FIGCAPTION",
+      "ru": "DYSON_V15_/_03 · РЕКЛАМНЫЙ КОНЦЕПТ",
+      "en": "[EN: DYSON_V15_/_03 · РЕКЛАМНЫЙ КОНЦЕПТ]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "FIGCAPTION",
+      "ru": "DYSON_V15_/_04 · РЕКЛАМНЫЙ КОНЦЕПТ",
+      "en": "[EN: DYSON_V15_/_04 · РЕКЛАМНЫЙ КОНЦЕПТ]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "FIGCAPTION",
+      "ru": "DYSON_V15_/_05 · РЕКЛАМНЫЙ КОНЦЕПТ",
+      "en": "[EN: DYSON_V15_/_05 · РЕКЛАМНЫЙ КОНЦЕПТ]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "FIGCAPTION",
+      "ru": "DYSON_V15_/_06 · РЕКЛАМНЫЙ КОНЦЕПТ",
+      "en": "[EN: DYSON_V15_/_06 · РЕКЛАМНЫЙ КОНЦЕПТ]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "H2",
+      "ru": "01 / Инсайт",
+      "en": "[EN: 01 / Инсайт]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "P",
+      "ru": "[инсайт, текст позже]",
+      "en": "[EN: инсайт, текст позже]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "H2",
+      "ru": "02 / Идея",
+      "en": "[EN: 02 / Идея]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "P",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[EN: идея одной фразой, текст позже]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "H2",
+      "ru": "03 / Исполнение",
+      "en": "[EN: 03 / Исполнение]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "P",
+      "ru": "[исполнение, текст позже]",
+      "en": "[EN: исполнение, текст позже]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "H2",
+      "ru": "04 / Результат",
+      "en": "[EN: 04 / Результат]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "P",
+      "ru": "[результат, текст позже]",
+      "en": "[EN: результат, текст позже]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "SPAN",
+      "ru": "следующая работа →",
+      "en": "[EN: следующая работа →]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "SPAN",
+      "ru": "RAWMID · видео-визуал",
+      "en": "[EN: RAWMID · видео-визуал]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "META@content",
+      "ru": "Dyson V15 · рекламный концепт · не заказ — Арсений Охотин",
+      "en": "[EN: Dyson V15 · рекламный концепт · не заказ — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: уличный щит вечером, зелёный лазер на полу",
+      "en": "[EN: Dyson V15: уличный щит вечером, зелёный лазер на полу]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "DIV@aria-label",
+      "ru": "Все кадры работы",
+      "en": "[EN: Все кадры работы]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: уличный щит",
+      "en": "[EN: Dyson V15: уличный щит]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: лайтбокс у остановки",
+      "en": "[EN: Dyson V15: лайтбокс у остановки]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: пост 4:5",
+      "en": "[EN: Dyson V15: пост 4:5]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: сторис 9:16",
+      "en": "[EN: Dyson V15: сторис 9:16]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: шапка рассылки",
+      "en": "[EN: Dyson V15: шапка рассылки]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "IMG@alt",
+      "ru": "Dyson V15: баннер 3:1",
+      "en": "[EN: Dyson V15: баннер 3:1]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "where": "NAV@aria-label",
+      "ru": "Другие работы",
+      "en": "[EN: Другие работы]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "TITLE",
+      "ru": "Фирменные стили · 2017 — Арсений Охотин",
+      "en": "[EN: Фирменные стили · 2017 — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "H1",
+      "ru": "Фирменные стили",
+      "en": "[EN: Фирменные стили]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "P",
+      "ru": "2017 · [дисциплина] · [роль] · [команда]",
+      "en": "[EN: 2017 · дисциплина · роль · команда]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "FIGCAPTION",
+      "ru": "EARLY_IDENTITIES_/_01 · ФИРМЕННЫЕ СТИЛИ",
+      "en": "[EN: EARLY_IDENTITIES_/_01 · ФИРМЕННЫЕ СТИЛИ]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "FIGCAPTION",
+      "ru": "EARLY_IDENTITIES_/_02 · ФИРМЕННЫЕ СТИЛИ · Brand set 1 · 2017 ·",
+      "en": "[EN: EARLY_IDENTITIES_/_02 · ФИРМЕННЫЕ СТИЛИ · Brand set 1 · 2017 ·]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "FIGCAPTION",
+      "ru": "EARLY_IDENTITIES_/_03 · ФИРМЕННЫЕ СТИЛИ · Yajevika · 2017 ·",
+      "en": "[EN: EARLY_IDENTITIES_/_03 · ФИРМЕННЫЕ СТИЛИ · Yajevika · 2017 ·]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "H2",
+      "ru": "01 / Инсайт",
+      "en": "[EN: 01 / Инсайт]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "P",
+      "ru": "[инсайт, текст позже]",
+      "en": "[EN: инсайт, текст позже]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "H2",
+      "ru": "02 / Идея",
+      "en": "[EN: 02 / Идея]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "P",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[EN: идея одной фразой, текст позже]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "H2",
+      "ru": "03 / Исполнение",
+      "en": "[EN: 03 / Исполнение]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "P",
+      "ru": "[исполнение, текст позже]",
+      "en": "[EN: исполнение, текст позже]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "H2",
+      "ru": "04 / Результат",
+      "en": "[EN: 04 / Результат]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "P",
+      "ru": "[результат, текст позже]",
+      "en": "[EN: результат, текст позже]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "SPAN",
+      "ru": "следующая работа →",
+      "en": "[EN: следующая работа →]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "SPAN",
+      "ru": "[название] · ребрендинг",
+      "en": "[EN: название · ребрендинг]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "META@content",
+      "ru": "Фирменные стили · 2017 — Арсений Охотин",
+      "en": "[EN: Фирменные стили · 2017 — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "IMG@alt",
+      "ru": "Фирменный стиль: облака",
+      "en": "[EN: Фирменный стиль: облака]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "DIV@aria-label",
+      "ru": "Все кадры работы",
+      "en": "[EN: Все кадры работы]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "IMG@alt",
+      "ru": "Фирменный стиль: облака",
+      "en": "[EN: Фирменный стиль: облака]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "IMG@alt",
+      "ru": "Фирменный стиль: граффити",
+      "en": "[EN: Фирменный стиль: граффити]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "IMG@alt",
+      "ru": "Сиреневый знак и надпись Yajevika на белом фоне",
+      "en": "[EN: Сиреневый знак и надпись Yajevika на белом фоне]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "where": "NAV@aria-label",
+      "ru": "Другие работы",
+      "en": "[EN: Другие работы]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "TITLE",
+      "ru": "Имя · 2021 · Айдентика — Арсений Охотин",
+      "en": "[EN: Имя · 2021 · Айдентика — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "H1",
+      "ru": "Имя",
+      "en": "[EN: Имя]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "P",
+      "ru": "2021 · Айдентика · [роль] · [команда]",
+      "en": "[EN: 2021 · Айдентика · роль · команда]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "FIGCAPTION",
+      "ru": "ИМЯ_/_01 · АЙДЕНТИКА",
+      "en": "[EN: ИМЯ_/_01 · АЙДЕНТИКА]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "H2",
+      "ru": "01 / Инсайт",
+      "en": "[EN: 01 / Инсайт]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "P",
+      "ru": "[инсайт, текст позже]",
+      "en": "[EN: инсайт, текст позже]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "H2",
+      "ru": "02 / Идея",
+      "en": "[EN: 02 / Идея]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "P",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[EN: идея одной фразой, текст позже]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "H2",
+      "ru": "03 / Исполнение",
+      "en": "[EN: 03 / Исполнение]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "P",
+      "ru": "[исполнение, текст позже]",
+      "en": "[EN: исполнение, текст позже]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "H2",
+      "ru": "04 / Результат",
+      "en": "[EN: 04 / Результат]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "P",
+      "ru": "[результат, текст позже]",
+      "en": "[EN: результат, текст позже]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "A",
+      "ru": "Смотреть на Behance ↗",
+      "en": "[EN: Смотреть на Behance ↗]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "SPAN",
+      "ru": "следующая работа →",
+      "en": "[EN: следующая работа →]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "SPAN",
+      "ru": "Кресло-читалка · 2020",
+      "en": "[EN: Кресло-читалка · 2020]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "META@content",
+      "ru": "Имя · 2021 · Айдентика — Арсений Охотин",
+      "en": "[EN: Имя · 2021 · Айдентика — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "IMG@alt",
+      "ru": "Жёлтый контур и белая надпись на тёмном фоне",
+      "en": "[EN: Жёлтый контур и белая надпись на тёмном фоне]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "DIV@aria-label",
+      "ru": "Все кадры работы",
+      "en": "[EN: Все кадры работы]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "IMG@alt",
+      "ru": "Жёлтый контур и белая надпись на тёмном фоне",
+      "en": "[EN: Жёлтый контур и белая надпись на тёмном фоне]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "where": "NAV@aria-label",
+      "ru": "Другие работы",
+      "en": "[EN: Другие работы]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "TITLE",
+      "ru": "Karuna · перформанс-креатив, AI · концепт — Арсений Охотин",
+      "en": "[EN: Karuna · перформанс-креатив, AI · концепт — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "P",
+      "ru": "[…] · перформанс-креатив, AI · [роль] · [команда]",
+      "en": "[EN: … · перформанс-креатив, AI · роль · команда]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "P",
+      "ru": "концепт, не заказ",
+      "en": "[EN: концепт, не заказ]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "FIGCAPTION",
+      "ru": "KARUNA_/_01 · ПЕРФОРМАНС-КРЕАТИВ, AI",
+      "en": "[EN: KARUNA_/_01 · ПЕРФОРМАНС-КРЕАТИВ, AI]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "FIGCAPTION",
+      "ru": "KARUNA_/_02 · ПЕРФОРМАНС-КРЕАТИВ, AI",
+      "en": "[EN: KARUNA_/_02 · ПЕРФОРМАНС-КРЕАТИВ, AI]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "H2",
+      "ru": "01 / Инсайт",
+      "en": "[EN: 01 / Инсайт]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "P",
+      "ru": "[инсайт, текст позже]",
+      "en": "[EN: инсайт, текст позже]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "H2",
+      "ru": "02 / Идея",
+      "en": "[EN: 02 / Идея]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "P",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[EN: идея одной фразой, текст позже]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "H2",
+      "ru": "03 / Исполнение",
+      "en": "[EN: 03 / Исполнение]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "P",
+      "ru": "[исполнение, текст позже]",
+      "en": "[EN: исполнение, текст позже]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "H2",
+      "ru": "04 / Результат",
+      "en": "[EN: 04 / Результат]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "P",
+      "ru": "[результат, текст позже]",
+      "en": "[EN: результат, текст позже]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "SPAN",
+      "ru": "следующая работа →",
+      "en": "[EN: следующая работа →]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "SPAN",
+      "ru": "RAWMID · приложение",
+      "en": "[EN: RAWMID · приложение]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "META@content",
+      "ru": "Karuna · перформанс-креатив, AI · концепт — Арсений Охотин",
+      "en": "[EN: Karuna · перформанс-креатив, AI · концепт — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "IMG@alt",
+      "ru": "Плакат Karuna с входящим звонком на экране телефона",
+      "en": "[EN: Плакат Karuna с входящим звонком на экране телефона]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "DIV@aria-label",
+      "ru": "Все кадры работы",
+      "en": "[EN: Все кадры работы]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "IMG@alt",
+      "ru": "Плакат Karuna с входящим звонком на экране телефона",
+      "en": "[EN: Плакат Karuna с входящим звонком на экране телефона]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "IMG@alt",
+      "ru": "Плакат Karuna «Проверь прежде чем отвечать»",
+      "en": "[EN: Плакат Karuna «Проверь прежде чем отвечать»]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "where": "NAV@aria-label",
+      "ru": "Другие работы",
+      "en": "[EN: Другие работы]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "TITLE",
+      "ru": "Кресло-читалка · 2020 · Айдентика — Арсений Охотин",
+      "en": "[EN: Кресло-читалка · 2020 · Айдентика — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "H1",
+      "ru": "Кресло-читалка",
+      "en": "[EN: Кресло-читалка]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "P",
+      "ru": "2020 · Айдентика · [роль] · [команда]",
+      "en": "[EN: 2020 · Айдентика · роль · команда]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "FIGCAPTION",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_01 · АЙДЕНТИКА",
+      "en": "[EN: КРЕСЛО-ЧИТАЛКА_/_01 · АЙДЕНТИКА]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "FIGCAPTION",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_02 · АЙДЕНТИКА",
+      "en": "[EN: КРЕСЛО-ЧИТАЛКА_/_02 · АЙДЕНТИКА]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "FIGCAPTION",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_03 · АЙДЕНТИКА",
+      "en": "[EN: КРЕСЛО-ЧИТАЛКА_/_03 · АЙДЕНТИКА]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "FIGCAPTION",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_04 · АЙДЕНТИКА",
+      "en": "[EN: КРЕСЛО-ЧИТАЛКА_/_04 · АЙДЕНТИКА]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "FIGCAPTION",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_05 · АЙДЕНТИКА",
+      "en": "[EN: КРЕСЛО-ЧИТАЛКА_/_05 · АЙДЕНТИКА]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "FIGCAPTION",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_06 · АЙДЕНТИКА",
+      "en": "[EN: КРЕСЛО-ЧИТАЛКА_/_06 · АЙДЕНТИКА]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "FIGCAPTION",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_07 · АЙДЕНТИКА",
+      "en": "[EN: КРЕСЛО-ЧИТАЛКА_/_07 · АЙДЕНТИКА]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "FIGCAPTION",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_09 · АЙДЕНТИКА",
+      "en": "[EN: КРЕСЛО-ЧИТАЛКА_/_09 · АЙДЕНТИКА]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "H2",
+      "ru": "01 / Инсайт",
+      "en": "[EN: 01 / Инсайт]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "P",
+      "ru": "[инсайт, текст позже]",
+      "en": "[EN: инсайт, текст позже]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "H2",
+      "ru": "02 / Идея",
+      "en": "[EN: 02 / Идея]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "P",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[EN: идея одной фразой, текст позже]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "H2",
+      "ru": "03 / Исполнение",
+      "en": "[EN: 03 / Исполнение]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "P",
+      "ru": "[исполнение, текст позже]",
+      "en": "[EN: исполнение, текст позже]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "H2",
+      "ru": "04 / Результат",
+      "en": "[EN: 04 / Результат]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "P",
+      "ru": "[результат, текст позже]",
+      "en": "[EN: результат, текст позже]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "A",
+      "ru": "Смотреть на Behance ↗",
+      "en": "[EN: Смотреть на Behance ↗]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "SPAN",
+      "ru": "следующая работа →",
+      "en": "[EN: следующая работа →]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "SPAN",
+      "ru": "Фирменные стили · 2017",
+      "en": "[EN: Фирменные стили · 2017]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "META@content",
+      "ru": "Кресло-читалка · 2020 · Айдентика — Арсений Охотин",
+      "en": "[EN: Кресло-читалка · 2020 · Айдентика — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "IMG@alt",
+      "ru": "Коллаж фотографий детей и бирюзовый логотип «Кресло читалка»",
+      "en": "[EN: Коллаж фотографий детей и бирюзовый логотип «Кресло читалка»]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "DIV@aria-label",
+      "ru": "Все кадры работы",
+      "en": "[EN: Все кадры работы]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "IMG@alt",
+      "ru": "Коллаж фотографий детей и бирюзовый логотип «Кресло читалка»",
+      "en": "[EN: Коллаж фотографий детей и бирюзовый логотип «Кресло читалка»]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "IMG@alt",
+      "ru": "Схема миссии, ценностей и аудитории детского проекта",
+      "en": "[EN: Схема миссии, ценностей и аудитории детского проекта]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "IMG@alt",
+      "ru": "Золотистые пиктограммы и повторяющиеся узоры",
+      "en": "[EN: Золотистые пиктограммы и повторяющиеся узоры]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "IMG@alt",
+      "ru": "Бирюзовый логотип «Кресло читалка» и эмблема с книгой",
+      "en": "[EN: Бирюзовый логотип «Кресло читалка» и эмблема с книгой]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "IMG@alt",
+      "ru": "Золотистая и бирюзовая палитры и образцы шрифтов",
+      "en": "[EN: Золотистая и бирюзовая палитры и образцы шрифтов]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "IMG@alt",
+      "ru": "Круглые эмблемы, пиктограммы и цветные паттерны",
+      "en": "[EN: Круглые эмблемы, пиктограммы и цветные паттерны]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "IMG@alt",
+      "ru": "Блокноты, сумка, значки и канцелярские принадлежности с эмблемами",
+      "en": "[EN: Блокноты, сумка, значки и канцелярские принадлежности с эмблемами]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "IMG@alt",
+      "ru": "Бирюзовые и золотистые рекламные баннеры с фотографиями",
+      "en": "[EN: Бирюзовые и золотистые рекламные баннеры с фотографиями]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "where": "NAV@aria-label",
+      "ru": "Другие работы",
+      "en": "[EN: Другие работы]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "TITLE",
+      "ru": "Система Notion — Арсений Охотин",
+      "en": "[EN: Система Notion — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "DIV",
+      "ru": "[видео: hub.png, снимает владелец]",
+      "en": "[EN: видео: hub.png, снимает владелец]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "H1",
+      "ru": "Система Notion",
+      "en": "[EN: Система Notion]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "P",
+      "ru": "[…] · [дисциплина] · [роль] · [команда]",
+      "en": "[EN: … · дисциплина · роль · команда]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "DIV",
+      "ru": "[видео: hub.mp4, снимает владелец]",
+      "en": "[EN: видео: hub.mp4, снимает владелец]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "H2",
+      "ru": "01 / Почему горят сроки и кто перегружен?",
+      "en": "[EN: 01 / Почему горят сроки и кто перегружен?]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "P",
+      "ru": "Концепт уходит в задачи: исполнитель, срок, красный флаг по просрочке, план и факт часов. Отсюда же берётся норма для следующего сигнала.",
+      "en": "[EN: Концепт уходит в задачи: исполнитель, срок, красный флаг по просрочке, план и факт часов. Отсюда же берётся норма для следующего сигнала.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION",
+      "ru": "Продакшн-трекер: задачи с исполнителем, статусом, красным флагом по срокам и загрузкой по людям.",
+      "en": "[EN: Продакшн-трекер: задачи с исполнителем, статусом, красным флагом по срокам и загрузкой по людям.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "DIV",
+      "ru": "[видео: q1-deadlines.mp4, снимает владелец]",
+      "en": "[EN: видео: q1-deadlines.mp4, снимает владелец]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "H2",
+      "ru": "02 / Сколько на самом деле стоит единица контента?",
+      "en": "[EN: 02 / Сколько на самом деле стоит единица контента?]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "P",
+      "ru": "Норма по каждому типу работы посчитана по истории. Часы или круги правок выше нормы — сигнал. Так же подсвечиваются формат, потерявший отклик, и точка контакта с провалом по метрике.",
+      "en": "[EN: Норма по каждому типу работы посчитана по истории. Часы или круги правок выше нормы — сигнал. Так же подсвечиваются формат, потерявший отклик, и точка контакта с провалом по метрике.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION",
+      "ru": "Плейбук: по каждому типу работы число задач, среднее время и среднее число правок — это и есть норма.",
+      "en": "[EN: Плейбук: по каждому типу работы число задач, среднее время и среднее число правок — это и есть норма.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION",
+      "ru": "Задачи с отклонением часов от нормы, в %",
+      "en": "[EN: Задачи с отклонением часов от нормы, в %]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "DIV",
+      "ru": "[видео: q2-cost.mp4, снимает владелец]",
+      "en": "[EN: видео: q2-cost.mp4, снимает владелец]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "H2",
+      "ru": "03 / Что выходит на неделе и где опубликовано?",
+      "en": "[EN: 03 / Что выходит на неделе и где опубликовано?]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "P",
+      "ru": "Материал выходит наружу и попадает в базу релизов: канал, дата, версия. Каждый релиз связан со своим материалом и целью, к нему и подтягиваются метрики.",
+      "en": "[EN: Материал выходит наружу и попадает в базу релизов: канал, дата, версия. Каждый релиз связан со своим материалом и целью, к нему и подтягиваются метрики.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION",
+      "ru": "Контент-календарь на месяц",
+      "en": "[EN: Контент-календарь на месяц]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION",
+      "ru": "База релизов: публикация, канал, дата, связанный материал и снятые метрики.",
+      "en": "[EN: База релизов: публикация, канал, дата, связанный материал и снятые метрики.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "DIV",
+      "ru": "[видео: q3-week.mp4, снимает владелец]",
+      "en": "[EN: видео: q3-week.mp4, снимает владелец]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "H2",
+      "ru": "04 / Что сработало и что масштабировать?",
+      "en": "[EN: 04 / Что сработало и что масштабировать?]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "P",
+      "ru": "Статистика приходит в базу фактов с источником и периодом и поднимается в ключевые результаты. Подтвердившееся закрепляется нормой в типовой задаче.",
+      "en": "[EN: Статистика приходит в базу фактов с источником и периодом и поднимается в ключевые результаты. Подтвердившееся закрепляется нормой в типовой задаче.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "DIV",
+      "ru": "[видео: goals.png, снимает владелец]",
+      "en": "[EN: видео: goals.png, снимает владелец]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION",
+      "ru": "Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли.",
+      "en": "[EN: Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION",
+      "ru": "«Артефакты»: материалы с охватом и метриками",
+      "en": "[EN: «Артефакты»: материалы с охватом и метриками]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION",
+      "ru": "База фактов: метрика, значение, период, источник и ключ дедупликации.",
+      "en": "[EN: База фактов: метрика, значение, период, источник и ключ дедупликации.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "H2",
+      "ru": "05 / На чём основаны идеи?",
+      "en": "[EN: 05 / На чём основаны идеи?]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "P",
+      "ru": "Под сигнал поднимаются основания: задачи категории, шаги задачи и ожидаемые результаты, группы аудитории и чем занята категория у конкурентов. Из них видно, где именно просело.",
+      "en": "[EN: Под сигнал поднимаются основания: задачи категории, шаги задачи и ожидаемые результаты, группы аудитории и чем занята категория у конкурентов. Из них видно, где именно просело.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION",
+      "ru": "Аудитория",
+      "en": "[EN: Аудитория]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION",
+      "ru": "Стратегия конкурентов",
+      "en": "[EN: Стратегия конкурентов]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION",
+      "ru": "База задач аудитории: задача категории, шаги задачи, контекст и ожидаемый результат.",
+      "en": "[EN: База задач аудитории: задача категории, шаги задачи, контекст и ожидаемый результат.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "H2",
+      "ru": "06 / До и после",
+      "en": "[EN: 06 / До и после]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "P",
+      "ru": "[текст позже]",
+      "en": "[EN: текст позже]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "FIGCAPTION",
+      "ru": "Команда до и после системы",
+      "en": "[EN: Команда до и после системы]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "SPAN",
+      "ru": "следующая работа →",
+      "en": "[EN: следующая работа →]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "SPAN",
+      "ru": "Scandic, упаковка · концепт, не заказ",
+      "en": "[EN: Scandic, упаковка · концепт, не заказ]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "META@content",
+      "ru": "Система Notion — Арсений Охотин",
+      "en": "[EN: Система Notion — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Таблица продакшна в Notion с исполнителями, статусами и сроками",
+      "en": "[EN: Таблица продакшна в Notion с исполнителями, статусами и сроками]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Таблица Notion с задачами, часами и сроками по сотрудникам",
+      "en": "[EN: Таблица Notion с задачами, часами и сроками по сотрудникам]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Таблица Notion с типами работ, временем и числом правок",
+      "en": "[EN: Таблица Notion с типами работ, временем и числом правок]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Задачи с отклонением часов от нормы, в %",
+      "en": "[EN: Задачи с отклонением часов от нормы, в %]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Контент-календарь на месяц",
+      "en": "[EN: Контент-календарь на месяц]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Таблица релизов с каналами, датами и метриками",
+      "en": "[EN: Таблица релизов с каналами, датами и метриками]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "VIDEO@aria-label",
+      "ru": "Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли.",
+      "en": "[EN: Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли.]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "VIDEO@aria-label",
+      "ru": "«Артефакты»: материалы с охватом и метриками",
+      "en": "[EN: «Артефакты»: материалы с охватом и метриками]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Таблица метрик со значениями, периодами и источниками",
+      "en": "[EN: Таблица метрик со значениями, периодами и источниками]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Таблица аудитории в Notion",
+      "en": "[EN: Таблица аудитории в Notion]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Таблица конкурентов в Notion",
+      "en": "[EN: Таблица конкурентов в Notion]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Таблица задач аудитории с контекстом и ожидаемым результатом",
+      "en": "[EN: Таблица задач аудитории с контекстом и ожидаемым результатом]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Таблица идей с описаниями и статусами",
+      "en": "[EN: Таблица идей с описаниями и статусами]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "IMG@alt",
+      "ru": "Карточка Notion с двумя кадрами и разбором света и тени",
+      "en": "[EN: Карточка Notion с двумя кадрами и разбором света и тени]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "VIDEO@aria-label",
+      "ru": "Команда до и после системы",
+      "en": "[EN: Команда до и после системы]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "where": "NAV@aria-label",
+      "ru": "Другие работы",
+      "en": "[EN: Другие работы]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "TITLE",
+      "ru": "RAWMID · приложение — Арсений Охотин",
+      "en": "[EN: RAWMID · приложение — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "P",
+      "ru": "[…] · приложение · [роль] · [команда]",
+      "en": "[EN: … · приложение · роль · команда]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "FIGCAPTION",
+      "ru": "RAWMID_APP_/_01 · ПРИЛОЖЕНИЕ",
+      "en": "[EN: RAWMID_APP_/_01 · ПРИЛОЖЕНИЕ]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "FIGCAPTION",
+      "ru": "RAWMID_APP_/_02 · ПРИЛОЖЕНИЕ",
+      "en": "[EN: RAWMID_APP_/_02 · ПРИЛОЖЕНИЕ]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "FIGCAPTION",
+      "ru": "RAWMID_APP_/_03 · ПРИЛОЖЕНИЕ",
+      "en": "[EN: RAWMID_APP_/_03 · ПРИЛОЖЕНИЕ]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "H2",
+      "ru": "01 / Инсайт",
+      "en": "[EN: 01 / Инсайт]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "P",
+      "ru": "[инсайт, текст позже]",
+      "en": "[EN: инсайт, текст позже]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "H2",
+      "ru": "02 / Идея",
+      "en": "[EN: 02 / Идея]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "H2",
+      "ru": "03 / Исполнение",
+      "en": "[EN: 03 / Исполнение]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "P",
+      "ru": "[исполнение, текст позже]",
+      "en": "[EN: исполнение, текст позже]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "H2",
+      "ru": "04 / Результат",
+      "en": "[EN: 04 / Результат]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "P",
+      "ru": "[результат, текст позже]",
+      "en": "[EN: результат, текст позже]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "SPAN",
+      "ru": "следующая работа →",
+      "en": "[EN: следующая работа →]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "META@content",
+      "ru": "RAWMID · приложение — Арсений Охотин",
+      "en": "[EN: RAWMID · приложение — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "IMG@alt",
+      "ru": "RAWMID Клуб: день 3 из 7",
+      "en": "[EN: RAWMID Клуб: день 3 из 7]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "DIV@aria-label",
+      "ru": "Все кадры работы",
+      "en": "[EN: Все кадры работы]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "IMG@alt",
+      "ru": "RAWMID Клуб: день 3 из 7",
+      "en": "[EN: RAWMID Клуб: день 3 из 7]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "IMG@alt",
+      "ru": "RAWMID Клуб: рецепт зелёного смузи",
+      "en": "[EN: RAWMID Клуб: рецепт зелёного смузи]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "IMG@alt",
+      "ru": "RAWMID Клуб: шаг приготовления в блендере",
+      "en": "[EN: RAWMID Клуб: шаг приготовления в блендере]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "where": "NAV@aria-label",
+      "ru": "Другие работы",
+      "en": "[EN: Другие работы]"
+    },
+    {
+      "file": "v2/en/work/rawmid-packaging.html",
+      "where": "TITLE",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "[EN: RAWMID — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/rawmid-packaging.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/rawmid-packaging.html",
+      "where": "META@content",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "[EN: RAWMID — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/rawmid-packaging.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "TITLE",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "[EN: RAWMID — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "P",
+      "ru": "[…] · фирменный стиль · [роль] · [команда]",
+      "en": "[EN: … · фирменный стиль · роль · команда]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "H2",
+      "ru": "01 / Бренд-платформа",
+      "en": "[EN: 01 / Бренд-платформа]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "DIV",
+      "ru": "[кадры позже]",
+      "en": "[EN: кадры позже]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "H2",
+      "ru": "02 / Айдентика",
+      "en": "[EN: 02 / Айдентика]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "P",
+      "ru": "[логотип до и после обновления, шрифты, паттерны — позже]",
+      "en": "[EN: логотип до и после обновления, шрифты, паттерны — позже]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "DIV",
+      "ru": "[кадры позже]",
+      "en": "[EN: кадры позже]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "H2",
+      "ru": "03 / Рекламные кампании и виды постов",
+      "en": "[EN: 03 / Рекламные кампании и виды постов]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "H2",
+      "ru": "04 / Карточки товаров",
+      "en": "[EN: 04 / Карточки товаров]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "P",
+      "ru": "[текст позже]",
+      "en": "[EN: текст позже]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "DIV",
+      "ru": "[кадры позже]",
+      "en": "[EN: кадры позже]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "H2",
+      "ru": "05 / Упаковка и мерч",
+      "en": "[EN: 05 / Упаковка и мерч]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "P",
+      "ru": "Визуальный язык проиллюстрировал и масштабировал на упаковку, мерч и материалы.",
+      "en": "[EN: Визуальный язык проиллюстрировал и масштабировал на упаковку, мерч и материалы.]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "H2",
+      "ru": "06 / До и после",
+      "en": "[EN: 06 / До и после]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "H2",
+      "ru": "01 / Инсайт",
+      "en": "[EN: 01 / Инсайт]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "P",
+      "ru": "[инсайт, текст позже]",
+      "en": "[EN: инсайт, текст позже]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "H2",
+      "ru": "02 / Идея",
+      "en": "[EN: 02 / Идея]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "H2",
+      "ru": "03 / Исполнение",
+      "en": "[EN: 03 / Исполнение]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "H2",
+      "ru": "04 / Результат",
+      "en": "[EN: 04 / Результат]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "A",
+      "ru": "ещё по упаковке ↗",
+      "en": "[EN: ещё по упаковке ↗]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "A",
+      "ru": "Смотреть на Behance ↗",
+      "en": "[EN: Смотреть на Behance ↗]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "SPAN",
+      "ru": "следующая работа →",
+      "en": "[EN: следующая работа →]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "SPAN",
+      "ru": "Dyson V15 · рекламный концепт · не заказ",
+      "en": "[EN: Dyson V15 · рекламный концепт · не заказ]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "META@content",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "[EN: RAWMID — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "IMG@alt",
+      "ru": "Коллаж фотографий техники, блюд и раскадровок RAWMID",
+      "en": "[EN: Коллаж фотографий техники, блюд и раскадровок RAWMID]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "IMG@alt",
+      "ru": "Макеты постов RAWMID с фотографиями продуктов и рецептов",
+      "en": "[EN: Макеты постов RAWMID с фотографиями продуктов и рецептов]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "IMG@alt",
+      "ru": "Коллаж фотографий техники, блюд и раскадровок RAWMID",
+      "en": "[EN: Коллаж фотографий техники, блюд и раскадровок RAWMID]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "IMG@alt",
+      "ru": "Ряд коробок техники RAWMID с общим оформлением",
+      "en": "[EN: Ряд коробок техники RAWMID с общим оформлением]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "IMG@alt",
+      "ru": "Коробки техники RAWMID с разными макетами упаковки",
+      "en": "[EN: Коробки техники RAWMID с разными макетами упаковки]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "IMG@alt",
+      "ru": "Ряд коробок техники RAWMID с общим оформлением",
+      "en": "[EN: Ряд коробок техники RAWMID с общим оформлением]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "where": "NAV@aria-label",
+      "ru": "Другие работы",
+      "en": "[EN: Другие работы]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "TITLE",
+      "ru": "RAWMID · видео-визуал — Арсений Охотин",
+      "en": "[EN: RAWMID · видео-визуал — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "P",
+      "ru": "[…] · видео-визуал · [роль] · [команда]",
+      "en": "[EN: … · видео-визуал · роль · команда]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "FIGCAPTION",
+      "ru": "RAWMID_VIDEO_/_01 · ВИДЕО-ВИЗУАЛ",
+      "en": "[EN: RAWMID_VIDEO_/_01 · ВИДЕО-ВИЗУАЛ]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "FIGCAPTION",
+      "ru": "RAWMID_VIDEO_/_02 · ВИДЕО-ВИЗУАЛ",
+      "en": "[EN: RAWMID_VIDEO_/_02 · ВИДЕО-ВИЗУАЛ]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "H2",
+      "ru": "01 / Инсайт",
+      "en": "[EN: 01 / Инсайт]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "P",
+      "ru": "[инсайт, текст позже]",
+      "en": "[EN: инсайт, текст позже]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "H2",
+      "ru": "02 / Идея",
+      "en": "[EN: 02 / Идея]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "H2",
+      "ru": "03 / Исполнение",
+      "en": "[EN: 03 / Исполнение]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "H2",
+      "ru": "04 / Результат",
+      "en": "[EN: 04 / Результат]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "P",
+      "ru": "[результат, текст позже]",
+      "en": "[EN: результат, текст позже]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "SPAN",
+      "ru": "следующая работа →",
+      "en": "[EN: следующая работа →]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "SPAN",
+      "ru": "Система Notion",
+      "en": "[EN: Система Notion]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "META@content",
+      "ru": "RAWMID · видео-визуал — Арсений Охотин",
+      "en": "[EN: RAWMID · видео-визуал — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "VIDEO@aria-label",
+      "ru": "RAWMID: видео до и после",
+      "en": "[EN: RAWMID: видео до и после]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "DIV@aria-label",
+      "ru": "Все кадры работы",
+      "en": "[EN: Все кадры работы]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "VIDEO@aria-label",
+      "ru": "RAWMID: видео до и после",
+      "en": "[EN: RAWMID: видео до и после]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "VIDEO@aria-label",
+      "ru": "RAWMID: видеоматериалы",
+      "en": "[EN: RAWMID: видеоматериалы]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "where": "NAV@aria-label",
+      "ru": "Другие работы",
+      "en": "[EN: Другие работы]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "TITLE",
+      "ru": "[название] · ребрендинг — Арсений Охотин",
+      "en": "[EN: название · ребрендинг — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "DIV",
+      "ru": "[кадры позже]",
+      "en": "[EN: кадры позже]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "H1",
+      "ru": "[название]",
+      "en": "[EN: название]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "P",
+      "ru": "2020 · ребрендинг · [роль] · [команда]",
+      "en": "[EN: 2020 · ребрендинг · роль · команда]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "DIV",
+      "ru": "[кадры позже]",
+      "en": "[EN: кадры позже]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "H2",
+      "ru": "01 / Инсайт",
+      "en": "[EN: 01 / Инсайт]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "P",
+      "ru": "[инсайт, текст позже]",
+      "en": "[EN: инсайт, текст позже]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "H2",
+      "ru": "02 / Идея",
+      "en": "[EN: 02 / Идея]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "P",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[EN: идея одной фразой, текст позже]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "H2",
+      "ru": "03 / Исполнение",
+      "en": "[EN: 03 / Исполнение]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "P",
+      "ru": "[исполнение, текст позже]",
+      "en": "[EN: исполнение, текст позже]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "H2",
+      "ru": "04 / Результат",
+      "en": "[EN: 04 / Результат]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "P",
+      "ru": "[результат, текст позже]",
+      "en": "[EN: результат, текст позже]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "A",
+      "ru": "Смотреть на Behance ↗",
+      "en": "[EN: Смотреть на Behance ↗]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "SPAN",
+      "ru": "следующая работа →",
+      "en": "[EN: следующая работа →]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "SPAN",
+      "ru": "RAWMID · фирменный стиль",
+      "en": "[EN: RAWMID · фирменный стиль]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "META@content",
+      "ru": "[название] · ребрендинг — Арсений Охотин",
+      "en": "[EN: название · ребрендинг — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "where": "NAV@aria-label",
+      "ru": "Другие работы",
+      "en": "[EN: Другие работы]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "TITLE",
+      "ru": "Scandic · упаковка · концепт, не заказ — Арсений Охотин",
+      "en": "[EN: Scandic · упаковка · концепт, не заказ — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "A",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "A",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "A",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "P",
+      "ru": "[…] · упаковка · [роль] · [команда]",
+      "en": "[EN: … · упаковка · роль · команда]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "P",
+      "ru": "концепт, не заказ",
+      "en": "[EN: концепт, не заказ]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "FIGCAPTION",
+      "ru": "SCANDIC_/_01 · УПАКОВКА",
+      "en": "[EN: SCANDIC_/_01 · УПАКОВКА]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "FIGCAPTION",
+      "ru": "SCANDIC_/_02 · УПАКОВКА",
+      "en": "[EN: SCANDIC_/_02 · УПАКОВКА]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "FIGCAPTION",
+      "ru": "SCANDIC_/_03 · УПАКОВКА",
+      "en": "[EN: SCANDIC_/_03 · УПАКОВКА]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "FIGCAPTION",
+      "ru": "SCANDIC_/_04 · УПАКОВКА",
+      "en": "[EN: SCANDIC_/_04 · УПАКОВКА]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "FIGCAPTION",
+      "ru": "SCANDIC_/_05 · УПАКОВКА",
+      "en": "[EN: SCANDIC_/_05 · УПАКОВКА]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "FIGCAPTION",
+      "ru": "SCANDIC_/_06 · УПАКОВКА",
+      "en": "[EN: SCANDIC_/_06 · УПАКОВКА]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "H2",
+      "ru": "01 / Инсайт",
+      "en": "[EN: 01 / Инсайт]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "P",
+      "ru": "[инсайт, текст позже]",
+      "en": "[EN: инсайт, текст позже]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "H2",
+      "ru": "02 / Идея",
+      "en": "[EN: 02 / Идея]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "P",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[EN: идея одной фразой, текст позже]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "H2",
+      "ru": "03 / Исполнение",
+      "en": "[EN: 03 / Исполнение]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "P",
+      "ru": "[исполнение, текст позже]",
+      "en": "[EN: исполнение, текст позже]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "H2",
+      "ru": "04 / Результат",
+      "en": "[EN: 04 / Результат]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "P",
+      "ru": "[результат, текст позже]",
+      "en": "[EN: результат, текст позже]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "SPAN",
+      "ru": "следующая работа →",
+      "en": "[EN: следующая работа →]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "SPAN",
+      "ru": "Karuna · перформанс-креатив, AI · концепт, не заказ",
+      "en": "[EN: Karuna · перформанс-креатив, AI · концепт, не заказ]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "META@content",
+      "ru": "Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.",
+      "en": "[EN: Креативный директор. Разбираю рынок, собираю визуальный язык бренда и ставлю производство. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7.]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "META@content",
+      "ru": "Scandic · упаковка · концепт, не заказ — Арсений Охотин",
+      "en": "[EN: Scandic · упаковка · концепт, не заказ — Арсений Охотин]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "META@content",
+      "ru": "Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.",
+      "en": "[EN: Креативный директор. CTR карточек 1,7% → 3,4% на равных показах, кругов правок 2,4 → 0,7. 35+ SKU, семь каналов, команда 10+ человек.]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "NAV@aria-label",
+      "ru": "Основная навигация",
+      "en": "[EN: Основная навигация]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "A@aria-label",
+      "ru": "Работы",
+      "en": "[EN: Работы]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "A@aria-label",
+      "ru": "Метод",
+      "en": "[EN: Метод]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "A@aria-label",
+      "ru": "Инфо",
+      "en": "[EN: Инфо]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "IMG@alt",
+      "ru": "Жёлтая жестяная коробка Scandic с рисунками",
+      "en": "[EN: Жёлтая жестяная коробка Scandic с рисунками]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "DIV@aria-label",
+      "ru": "Все кадры работы",
+      "en": "[EN: Все кадры работы]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "IMG@alt",
+      "ru": "Жёлтая жестяная коробка Scandic с рисунками",
+      "en": "[EN: Жёлтая жестяная коробка Scandic с рисунками]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "IMG@alt",
+      "ru": "Голубая жестяная коробка Scandic с рисунками",
+      "en": "[EN: Голубая жестяная коробка Scandic с рисунками]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "IMG@alt",
+      "ru": "Синяя жестяная коробка Scandic с неоновыми рисунками",
+      "en": "[EN: Синяя жестяная коробка Scandic с неоновыми рисунками]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "IMG@alt",
+      "ru": "Красная коробка Scandic с логотипом МТС",
+      "en": "[EN: Красная коробка Scandic с логотипом МТС]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "IMG@alt",
+      "ru": "Открытая коробка Scandic с надписью VK Fest 2024",
+      "en": "[EN: Открытая коробка Scandic с надписью VK Fest 2024]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "IMG@alt",
+      "ru": "Коробка Scandic на столе рядом с кофейным стаканом и ключами",
+      "en": "[EN: Коробка Scandic на столе рядом с кофейным стаканом и ключами]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "where": "NAV@aria-label",
+      "ru": "Другие работы",
+      "en": "[EN: Другие работы]"
+    }
+  ]
+}

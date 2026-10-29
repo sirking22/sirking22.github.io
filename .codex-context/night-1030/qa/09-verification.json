@@ -1,0 +1,900 @@
+{
+  "views": [
+    {
+      "file": "v2/en/404.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/404.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 0,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../404.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/404.html",
+      "robots": "noindex",
+      "tiles": 0,
+      "placeholderCount": 8
+    },
+    {
+      "file": "v2/en/case-rawmid-style.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/rawmid-style.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 8,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/rawmid-style.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/rawmid-style.html",
+      "tiles": 0,
+      "placeholderCount": 25
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/drafts/rawmid-decision.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 2,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../drafts/rawmid-decision.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/drafts/rawmid-decision.html",
+      "robots": "noindex",
+      "tiles": 0,
+      "placeholderCount": 10
+    },
+    {
+      "file": "v2/en/index.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/index.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 22,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../index.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/",
+      "tiles": 12,
+      "placeholderCount": 47
+    },
+    {
+      "file": "v2/en/info.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/info.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 1,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../info.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/info.html",
+      "tiles": 0,
+      "placeholderCount": 30
+    },
+    {
+      "file": "v2/en/method.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/method.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 2,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../method.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/method.html",
+      "tiles": 0,
+      "placeholderCount": 19
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/ai-pipeline.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 0,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/ai-pipeline.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/ai-pipeline.html",
+      "tiles": 0,
+      "placeholderCount": 13
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/dyson-v15.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 7,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/dyson-v15.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/dyson-v15.html",
+      "tiles": 0,
+      "placeholderCount": 21
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/early-identities.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 4,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/early-identities.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/early-identities.html",
+      "tiles": 0,
+      "placeholderCount": 18
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/imya.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 2,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/imya.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/imya.html",
+      "tiles": 0,
+      "placeholderCount": 17
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/karuna.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 3,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/karuna.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/karuna.html",
+      "tiles": 0,
+      "placeholderCount": 17
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/kreslo-chitalka.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 9,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/kreslo-chitalka.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/kreslo-chitalka.html",
+      "tiles": 0,
+      "placeholderCount": 24
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/notion-system.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 13,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/notion-system.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/notion-system.html",
+      "tiles": 0,
+      "placeholderCount": 37
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/rawmid-app.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 4,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/rawmid-app.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/rawmid-app.html",
+      "tiles": 0,
+      "placeholderCount": 15
+    },
+    {
+      "file": "v2/en/work/rawmid-packaging.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/rawmid-style.html#packaging",
+      "lang": "en",
+      "overflow": 0,
+      "images": 8,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/rawmid-style.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/rawmid-style.html",
+      "tiles": 0,
+      "placeholderCount": 25
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/rawmid-style.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 8,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/rawmid-style.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/rawmid-style.html",
+      "tiles": 0,
+      "placeholderCount": 25
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/rawmid-video.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 0,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/rawmid-video.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/rawmid-video.html",
+      "tiles": 0,
+      "placeholderCount": 14
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/rebranding.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 0,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/rebranding.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/rebranding.html",
+      "tiles": 0,
+      "placeholderCount": 18
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/scandic.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 7,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/scandic.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/scandic.html",
+      "tiles": 0,
+      "placeholderCount": 21
+    },
+    {
+      "file": "v2/en/404.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/404.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 0,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../404.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/404.html",
+      "robots": "noindex",
+      "tiles": 0,
+      "placeholderCount": 8
+    },
+    {
+      "file": "v2/en/case-rawmid-style.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/rawmid-style.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 8,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/rawmid-style.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/rawmid-style.html",
+      "tiles": 0,
+      "placeholderCount": 25
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/drafts/rawmid-decision.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 2,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../drafts/rawmid-decision.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/drafts/rawmid-decision.html",
+      "robots": "noindex",
+      "tiles": 0,
+      "placeholderCount": 10
+    },
+    {
+      "file": "v2/en/index.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/index.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 22,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../index.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/",
+      "tiles": 12,
+      "placeholderCount": 47
+    },
+    {
+      "file": "v2/en/info.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/info.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 1,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../info.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/info.html",
+      "tiles": 0,
+      "placeholderCount": 30
+    },
+    {
+      "file": "v2/en/method.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/method.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 2,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../method.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/method.html",
+      "tiles": 0,
+      "placeholderCount": 19
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/ai-pipeline.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 0,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/ai-pipeline.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/ai-pipeline.html",
+      "tiles": 0,
+      "placeholderCount": 13
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/dyson-v15.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 7,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/dyson-v15.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/dyson-v15.html",
+      "tiles": 0,
+      "placeholderCount": 21
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/early-identities.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 4,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/early-identities.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/early-identities.html",
+      "tiles": 0,
+      "placeholderCount": 18
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/imya.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 2,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/imya.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/imya.html",
+      "tiles": 0,
+      "placeholderCount": 17
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/karuna.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 3,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/karuna.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/karuna.html",
+      "tiles": 0,
+      "placeholderCount": 17
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/kreslo-chitalka.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 9,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/kreslo-chitalka.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/kreslo-chitalka.html",
+      "tiles": 0,
+      "placeholderCount": 24
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/notion-system.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 13,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/notion-system.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/notion-system.html",
+      "tiles": 0,
+      "placeholderCount": 37
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/rawmid-app.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 4,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/rawmid-app.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/rawmid-app.html",
+      "tiles": 0,
+      "placeholderCount": 15
+    },
+    {
+      "file": "v2/en/work/rawmid-packaging.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/rawmid-style.html#packaging",
+      "lang": "en",
+      "overflow": 0,
+      "images": 8,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/rawmid-style.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/rawmid-style.html",
+      "tiles": 0,
+      "placeholderCount": 25
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/rawmid-style.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 8,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/rawmid-style.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/rawmid-style.html",
+      "tiles": 0,
+      "placeholderCount": 25
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/rawmid-video.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 0,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/rawmid-video.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/rawmid-video.html",
+      "tiles": 0,
+      "placeholderCount": 14
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/rebranding.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 0,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/rebranding.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/rebranding.html",
+      "tiles": 0,
+      "placeholderCount": 18
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "width": 375,
+      "status": 200,
+      "url": "http://127.0.0.1:8765/v2/en/work/scandic.html",
+      "lang": "en",
+      "overflow": 0,
+      "images": 7,
+      "broken": [],
+      "unwrapped": [],
+      "switch": [
+        {
+          "text": "RU",
+          "href": "../../work/scandic.html",
+          "lang": "ru"
+        }
+      ],
+      "canonical": "https://okhotin.site/v2/en/work/scandic.html",
+      "tiles": 0,
+      "placeholderCount": 21
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "filters": [
+    {
+      "width": 1440,
+      "key": "identity",
+      "visible": 5,
+      "status": "[EN: Работ]: 5",
+      "pressed": "true"
+    },
+    {
+      "width": 1440,
+      "key": "packaging",
+      "visible": 2,
+      "status": "[EN: Работ]: 2",
+      "pressed": "true"
+    },
+    {
+      "width": 1440,
+      "key": "web",
+      "visible": 2,
+      "status": "[EN: Работ]: 2",
+      "pressed": "true"
+    },
+    {
+      "width": 1440,
+      "key": "ai",
+      "visible": 4,
+      "status": "[EN: Работ]: 4",
+      "pressed": "true"
+    },
+    {
+      "width": 1440,
+      "key": "all",
+      "visible": 12,
+      "status": "[EN: Работ]: 12",
+      "pressed": "true"
+    },
+    {
+      "width": 375,
+      "key": "identity",
+      "visible": 5,
+      "status": "[EN: Работ]: 5",
+      "pressed": "true"
+    },
+    {
+      "width": 375,
+      "key": "packaging",
+      "visible": 2,
+      "status": "[EN: Работ]: 2",
+      "pressed": "true"
+    },
+    {
+      "width": 375,
+      "key": "web",
+      "visible": 2,
+      "status": "[EN: Работ]: 2",
+      "pressed": "true"
+    },
+    {
+      "width": 375,
+      "key": "ai",
+      "visible": 4,
+      "status": "[EN: Работ]: 4",
+      "pressed": "true"
+    },
+    {
+      "width": 375,
+      "key": "all",
+      "visible": 12,
+      "status": "[EN: Работ]: 12",
+      "pressed": "true"
+    }
+  ],
+  "switches": [
+    {
+      "width": 1440,
+      "url": "http://127.0.0.1:8765/v2/en/index.html"
+    },
+    {
+      "width": 375,
+      "url": "http://127.0.0.1:8765/v2/en/index.html"
+    }
+  ],
+  "ruStatus": "Работ: 5",
+  "ruAllStatus": "Работ: 12",
+  "static": {
+    "pages": 19,
+    "switches": 38,
+    "localReferences": 350,
+    "placeholders": 583,
+    "defects": []
+  },
+  "passed": true
+}

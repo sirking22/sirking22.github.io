@@ -54,7 +54,8 @@
       selected.forEach(tile => { tile.hidden = false; });
       quote.hidden = discipline !== 'all';
       grid.dataset.filter = discipline;
-      document.getElementById('filter-status').textContent = `Работ: ${selected.length}`;
+      const status = document.getElementById('filter-status');
+      status.textContent = `${status.dataset.countLabel || 'Работ'}: ${selected.length}`;
       resets.forEach(reset => reset());
     });
   }
