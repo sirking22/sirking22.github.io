@@ -1,0 +1,308 @@
+[
+  {
+    "path": "v2/case-rawmid-style.html",
+    "landed": "/v2/work/rawmid-style.html",
+    "initial": 1018241,
+    "total": 1820771,
+    "largest": {
+      "path": "/assets/case-social.webp",
+      "bytes": 484538
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/drafts/rawmid-decision.html",
+    "landed": "/v2/drafts/rawmid-decision.html",
+    "initial": 435499,
+    "total": 435499,
+    "largest": {
+      "path": "/assets/case-pack-after.webp",
+      "bytes": 159338
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/index.html",
+    "landed": "/v2/index.html",
+    "initial": 3471841,
+    "total": 3588855,
+    "largest": {
+      "path": "/assets/dyson/set-ooh-street.webp",
+      "bytes": 555542
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 66.84375,
+      "href": "info.html#contact"
+    }
+  },
+  {
+    "path": "v2/info.html",
+    "landed": "/v2/info.html",
+    "initial": 187580,
+    "total": 187580,
+    "largest": {
+      "path": "/assets/owner-photo-a.webp",
+      "bytes": 24882
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "info.html#contact"
+    }
+  },
+  {
+    "path": "v2/method.html",
+    "landed": "/v2/method.html",
+    "initial": 162859,
+    "total": 538591,
+    "largest": {
+      "path": "/assets/operating-loop.webp",
+      "bytes": 297582
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/ai-pipeline.html",
+    "landed": "/v2/work/ai-pipeline.html",
+    "initial": 159726,
+    "total": 159726,
+    "largest": {
+      "path": "/assets/icon-32.png",
+      "bytes": 1400
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/dyson-v15.html",
+    "landed": "/v2/work/dyson-v15.html",
+    "initial": 1337000,
+    "total": 1667208,
+    "largest": {
+      "path": "/assets/dyson/set-ooh-street.webp",
+      "bytes": 555542
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/early-identities.html",
+    "landed": "/v2/work/early-identities.html",
+    "initial": 178255,
+    "total": 178255,
+    "largest": {
+      "path": "/assets/style-graffiti-bird.webp",
+      "bytes": 12318
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/imya.html",
+    "landed": "/v2/work/imya.html",
+    "initial": 164676,
+    "total": 164676,
+    "largest": {
+      "path": "/v2/assets/style-kan-dark.webp",
+      "bytes": 4020
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/karuna.html",
+    "landed": "/v2/work/karuna.html",
+    "initial": 316964,
+    "total": 316964,
+    "largest": {
+      "path": "/v2/assets/karuna-01.webp",
+      "bytes": 100560
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/kreslo-chitalka.html",
+    "landed": "/v2/work/kreslo-chitalka.html",
+    "initial": 1158091,
+    "total": 1368955,
+    "largest": {
+      "path": "/v2/assets/kreslo-01.webp",
+      "bytes": 247520
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/notion-system.html",
+    "landed": "/v2/work/notion-system.html",
+    "initial": 506308,
+    "total": 1674910,
+    "largest": {
+      "path": "/assets/shot-facts-2026-09.webp",
+      "bytes": 210256
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/rawmid-app.html",
+    "landed": "/v2/work/rawmid-app.html",
+    "initial": 215041,
+    "total": 239687,
+    "largest": {
+      "path": "/v2/assets/rawmid-app-01.webp",
+      "bytes": 31878
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/rawmid-packaging.html",
+    "landed": "/v2/work/rawmid-style.html",
+    "initial": 1820771,
+    "total": 1820771,
+    "largest": {
+      "path": "/assets/case-social.webp",
+      "bytes": 484538
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": -2630.8125,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/rawmid-style.html",
+    "landed": "/v2/work/rawmid-style.html",
+    "initial": 1018241,
+    "total": 1820771,
+    "largest": {
+      "path": "/assets/case-social.webp",
+      "bytes": 484538
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/rawmid-video.html",
+    "landed": "/v2/work/rawmid-video.html",
+    "initial": 283475,
+    "total": 283475,
+    "largest": {
+      "path": "/v2/assets/rawmid-video-02.webp",
+      "bytes": 76938
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/rebranding.html",
+    "landed": "/v2/work/rebranding.html",
+    "initial": 159963,
+    "total": 159963,
+    "largest": {
+      "path": "/assets/icon-32.png",
+      "bytes": 1400
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  },
+  {
+    "path": "v2/work/scandic.html",
+    "landed": "/v2/work/scandic.html",
+    "initial": 817303,
+    "total": 817303,
+    "largest": {
+      "path": "/v2/assets/scandic-01.webp",
+      "bytes": 133054
+    },
+    "broken": [],
+    "overflow": 0,
+    "contact": {
+      "text": "Контакт",
+      "y": 71.1875,
+      "href": "../info.html#contact"
+    }
+  }
+]

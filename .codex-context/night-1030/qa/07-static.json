@@ -1,0 +1,19 @@
+{
+  "pages": 19,
+  "imgInstances": 84,
+  "uniqueImages": 51,
+  "largest": {
+    "page": "v2/method.html",
+    "src": "assets/operating-loop.webp",
+    "bytes": 297582
+  },
+  "errors": [],
+  "oversize": [],
+  "contrast": {
+    "8a8a8a": 3.4522201871078138,
+    "767676": 4.542224959605253,
+    "d4af37": 2.1028249983513,
+    "887020": 4.788646103171703,
+    "101010": 19.028110547666497
+  }
+}

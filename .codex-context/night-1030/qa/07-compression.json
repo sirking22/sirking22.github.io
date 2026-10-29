@@ -1,0 +1,38 @@
+[
+  {
+    "source": "assets\\case-moodboard.webp",
+    "target": "v2\\assets\\optimized-case-moodboard.webp",
+    "before": 367198,
+    "after": 283594,
+    "width": 1600,
+    "height": 1135,
+    "quality": 88
+  },
+  {
+    "source": "assets\\case-social.webp",
+    "target": "v2\\assets\\optimized-case-social.webp",
+    "before": 484538,
+    "after": 292398,
+    "width": 1600,
+    "height": 941,
+    "quality": 82
+  },
+  {
+    "source": "assets\\dyson\\set-ooh-stop.webp",
+    "target": "v2\\assets\\optimized-dyson-set-ooh-stop.webp",
+    "before": 321828,
+    "after": 258016,
+    "width": 1200,
+    "height": 1800,
+    "quality": 82
+  },
+  {
+    "source": "assets\\dyson\\set-ooh-street.webp",
+    "target": "v2\\assets\\optimized-dyson-set-ooh-street.webp",
+    "before": 555542,
+    "after": 263182,
+    "width": 1600,
+    "height": 1067,
+    "quality": 82
+  }
+]

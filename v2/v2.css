@@ -1,11 +1,11 @@
 ﻿:root {
   --bg: #fff;
   --ink: #101010;
-  --mute: #8a8a8a;
+  --mute: #767676;
   --gap: 16px;
   --side: 32px;
   --section: 96px;
-  --brand-gold: #d4af37;
+  --brand-gold: #887020;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 400 14px/1.45 Inter, sans-serif; }

@@ -1,0 +1,1238 @@
+{
+  "rows": [
+    {
+      "path": "v2/404.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/404.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/case-rawmid-style.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-style.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/drafts/rawmid-decision.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/drafts/rawmid-decision.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/index.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/",
+      "viewport": true,
+      "contactY": 48,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/info.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/info.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/method.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/method.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/ai-pipeline.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/ai-pipeline.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/dyson-v15.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/dyson-v15.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/early-identities.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/early-identities.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/imya.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/imya.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/karuna.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/karuna.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/kreslo-chitalka.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/kreslo-chitalka.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/notion-system.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/notion-system.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rawmid-app.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-app.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rawmid-packaging.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-style.html",
+      "viewport": true,
+      "contactY": -4862,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rawmid-style.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-style.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rawmid-video.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-video.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rebranding.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rebranding.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/scandic.html",
+      "width": 1920,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/scandic.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/404.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/404.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/case-rawmid-style.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-style.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/drafts/rawmid-decision.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/drafts/rawmid-decision.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/index.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/",
+      "viewport": true,
+      "contactY": 48,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/info.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/info.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/method.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/method.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/ai-pipeline.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/ai-pipeline.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/dyson-v15.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/dyson-v15.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/early-identities.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/early-identities.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/imya.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/imya.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/karuna.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/karuna.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/kreslo-chitalka.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/kreslo-chitalka.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/notion-system.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/notion-system.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rawmid-app.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-app.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rawmid-packaging.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-style.html",
+      "viewport": true,
+      "contactY": -3369,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rawmid-style.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-style.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rawmid-video.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-video.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rebranding.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rebranding.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/scandic.html",
+      "width": 800,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/scandic.html",
+      "viewport": true,
+      "contactY": 50,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/404.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/404.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/case-rawmid-style.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-style.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/drafts/rawmid-decision.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/drafts/rawmid-decision.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/index.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/",
+      "viewport": true,
+      "contactY": 66.84375,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/info.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/info.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/method.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/method.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/ai-pipeline.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/ai-pipeline.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/dyson-v15.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/dyson-v15.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/early-identities.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/early-identities.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/imya.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/imya.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/karuna.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/karuna.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/kreslo-chitalka.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/kreslo-chitalka.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/notion-system.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/notion-system.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rawmid-app.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-app.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rawmid-packaging.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-style.html",
+      "viewport": true,
+      "contactY": -2630.8125,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rawmid-style.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-style.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rawmid-video.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rawmid-video.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/rebranding.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/rebranding.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    },
+    {
+      "path": "v2/work/scandic.html",
+      "width": 375,
+      "overflow": 0,
+      "broken": [],
+      "attributes": [],
+      "lang": "ru",
+      "canonical": "https://okhotin.site/v2/work/scandic.html",
+      "viewport": true,
+      "contactY": 71.1875,
+      "focus": {
+        "tag": "A",
+        "outline": "solid",
+        "width": "2px"
+      },
+      "errors": []
+    }
+  ],
+  "keyboard": [
+    {
+      "tag": "BUTTON",
+      "filter": "all",
+      "tile": false,
+      "name": null,
+      "outline": "solid"
+    },
+    {
+      "tag": "BUTTON",
+      "filter": "identity",
+      "tile": false,
+      "name": null,
+      "outline": "solid"
+    },
+    {
+      "tag": "BUTTON",
+      "filter": "packaging",
+      "tile": false,
+      "name": null,
+      "outline": "solid"
+    },
+    {
+      "tag": "BUTTON",
+      "filter": "web",
+      "tile": false,
+      "name": null,
+      "outline": "solid"
+    },
+    {
+      "tag": "BUTTON",
+      "filter": "ai",
+      "tile": false,
+      "name": null,
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "RAWMID, фирменный стиль",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "Dyson V15, рекламный концепт · не заказ",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "RAWMID, видео-визуал",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "Система Notion",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "Scandic, упаковка · концепт, не заказ",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "Karuna, перформанс-креатив, AI · концепт, не заказ",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "RAWMID, приложение",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "AI pipeline",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "Имя, Айдентика",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "Кресло-читалка, Айдентика",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "Фирменные стили, 2017",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "[название], ребрендинг",
+      "outline": "solid"
+    },
+    {
+      "tag": "BUTTON",
+      "filter": "all",
+      "tile": false,
+      "name": null,
+      "outline": "solid"
+    },
+    {
+      "tag": "BUTTON",
+      "filter": "identity",
+      "tile": false,
+      "name": null,
+      "outline": "solid"
+    },
+    {
+      "tag": "BUTTON",
+      "filter": "packaging",
+      "tile": false,
+      "name": null,
+      "outline": "solid"
+    },
+    {
+      "tag": "BUTTON",
+      "filter": "web",
+      "tile": false,
+      "name": null,
+      "outline": "solid"
+    },
+    {
+      "tag": "BUTTON",
+      "filter": "ai",
+      "tile": false,
+      "name": null,
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "RAWMID, фирменный стиль",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "Dyson V15, рекламный концепт · не заказ",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "RAWMID, видео-визуал",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "Система Notion",
+      "outline": "solid"
+    },
+    {
+      "tag": "A",
+      "tile": true,
+      "name": "Scandic, упаковка · концепт, не заказ",
+      "outline": "solid"
+    }
+  ],
+  "filters": [
+    {
+      "pressed": [
+        "identity"
+      ],
+      "count": 5,
+      "status": "Работ: 5"
+    },
+    {
+      "pressed": [
+        "packaging"
+      ],
+      "count": 2,
+      "status": "Работ: 2"
+    },
+    {
+      "pressed": [
+        "web"
+      ],
+      "count": 2,
+      "status": "Работ: 2"
+    },
+    {
+      "pressed": [
+        "ai"
+      ],
+      "count": 4,
+      "status": "Работ: 4"
+    },
+    {
+      "pressed": [
+        "all"
+      ],
+      "count": 12,
+      "status": "Работ: 12"
+    }
+  ],
+  "motion": {
+    "normal": 1,
+    "reduced": 0,
+    "videos": [
+      {
+        "paused": true,
+        "loop": false,
+        "autoplay": false,
+        "controls": true
+      },
+      {
+        "paused": true,
+        "loop": false,
+        "autoplay": false,
+        "controls": true
+      },
+      {
+        "paused": true,
+        "loop": false,
+        "autoplay": false,
+        "controls": true
+      }
+    ],
+    "restored": [
+      {
+        "paused": true,
+        "loop": true
+      },
+      {
+        "paused": true,
+        "loop": true
+      },
+      {
+        "paused": true,
+        "loop": true
+      }
+    ],
+    "changed": {
+      "paused": true,
+      "loop": false
+    }
+  },
+  "contact": [
+    {
+      "text": "Ищу роль креативного директора ↗",
+      "top": 564,
+      "bottom": 669.5625
+    },
+    {
+      "text": "Написать на почту ↗",
+      "top": 701.5625,
+      "bottom": 747.859375
+    }
+  ]
+}

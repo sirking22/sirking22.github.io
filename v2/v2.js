@@ -107,6 +107,19 @@
     resets.push(() => { hovered = false; visible = false; sync(); });
   });
 
+  // Standalone videos remain user-controlled when reduced motion is requested.
+  document.querySelectorAll('video:not(.tile video)').forEach(video => {
+    const autoplay = video.autoplay;
+    const loop = video.loop;
+    const sync = () => {
+      video.autoplay = autoplay && !reduced.matches;
+      video.loop = loop && !reduced.matches;
+      if (reduced.matches) video.pause();
+    };
+    controllers.push(sync);
+    sync();
+  });
+
   const syncAll = () => controllers.forEach(sync => sync());
   reduced.addEventListener('change', syncAll);
   touch.addEventListener('change', syncAll);
