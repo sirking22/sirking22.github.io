@@ -1,0 +1,56 @@
+[
+  {
+    "file": "car-a.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 204116
+  },
+  {
+    "file": "car-b.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 244256
+  },
+  {
+    "file": "car-c.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 273122
+  },
+  {
+    "file": "car-d.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 210660
+  },
+  {
+    "file": "demo-fon-1-19-2026-10-26.webp",
+    "width": 1440,
+    "height": 900,
+    "bytes": 50934
+  },
+  {
+    "file": "demo-screen2-types-2026-10-26.webp",
+    "width": 1440,
+    "height": 900,
+    "bytes": 63510
+  },
+  {
+    "file": "slide-1.png",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 1386282
+  },
+  {
+    "file": "slide-2.png",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 205317
+  },
+  {
+    "file": "slide-3.png",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 213161
+  }
+]
