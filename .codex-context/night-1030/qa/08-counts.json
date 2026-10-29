@@ -1,0 +1,73 @@
+{
+  "sources": 75,
+  "sourceBytes": 765275,
+  "curatedQuotes": 135,
+  "candidateParagraphs": 779,
+  "cases": 12,
+  "measured": [
+    {
+      "width": 1440,
+      "overflow": 0,
+      "loadedImages": 22,
+      "images": 22,
+      "transfer": 2958501,
+      "contact": {
+        "url": "http://127.0.0.1:8765/v2/info.html#contact",
+        "links": [
+          {
+            "text": "Ищу роль\nкреативного\nдиректора ↗",
+            "href": "mailto:ezmail2222@gmail.com",
+            "top": 352.125,
+            "bottom": 637.265625
+          },
+          {
+            "text": "Написать на почту ↗",
+            "href": "mailto:ezmail2222@gmail.com",
+            "top": 669.265625,
+            "bottom": 715.5625
+          },
+          {
+            "text": "Telegram ↗",
+            "href": "https://t.me/ezd22",
+            "top": 682.265625,
+            "bottom": 702.5625
+          }
+        ]
+      },
+      "years": 4,
+      "roles": 0
+    },
+    {
+      "width": 375,
+      "overflow": 0,
+      "loadedImages": 12,
+      "images": 22,
+      "transfer": 2453725,
+      "contact": {
+        "url": "http://127.0.0.1:8765/v2/info.html#contact",
+        "links": [
+          {
+            "text": "Ищу роль\nкреативного\nдиректора ↗",
+            "href": "mailto:ezmail2222@gmail.com",
+            "top": 564,
+            "bottom": 669.5625
+          },
+          {
+            "text": "Написать на почту ↗",
+            "href": "mailto:ezmail2222@gmail.com",
+            "top": 701.5625,
+            "bottom": 747.859375
+          },
+          {
+            "text": "Telegram ↗",
+            "href": "https://t.me/ezd22",
+            "top": 714.5625,
+            "bottom": 734.859375
+          }
+        ]
+      },
+      "years": 4,
+      "roles": 0
+    }
+  ]
+}
