@@ -134,7 +134,7 @@ h1, h2, p, figure, blockquote { margin: 0; }
 .experience-content { display: grid; gap: 12px; padding: 0 0 24px; }
 .conversation-copy { width: 100%; }
 .conversation-label { font-size: 12px; margin-bottom: 24px; }
-.conversation-question { display: inline-block; font-size: clamp(32px, 6vw, 88px); line-height: 1.1; letter-spacing: -.03em; white-space: nowrap; }
+.conversation-question { display: inline-block; font-size: clamp(32px, 6vw, 88px); line-height: 1.1; letter-spacing: -.03em; white-space: normal; }
 @media (max-width: 1023px) {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px var(--gap); }
   .mosaic-row { display: contents; }
