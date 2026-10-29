@@ -1,91 +1,177 @@
-# Приёмка v2 — пакет 04-qa
+# Финальная приёмка ночи 29→30.10 — пакет 10-final
 
-Локальный HTTP-сайт, headless Chromium через Playwright CLI; viewport высотой 1080 px, кэш отключён. Включены все 17 HTML, в том числе два meta-refresh редиректа.
+Итоговая версия после 09-en. Локальный HTTP-сервер, Chromium через установленный Playwright CLI; viewport 1920/1440/800/375 × 1080. Все внешние HTTP-запросы перехвачены ответом 204, сеть не использовалась. Загрузка/воспроизведение внешних сервисов не подтверждается. Кэш отключён маршрутизацией.
 
-PASS означает: изображения и постеры декодированы, видео загружены и воспроизводятся, горизонтальный выход 0 px, console.error/pageerror 0, неуспешных сетевых запросов 0, внешних HTTP(S)-ссылок без rel="noopener" 0. Текстовые заглушки не считаются битым медиа.
+38 HTML × 4 ширины = **152/152 PASS**. Каждый PASS: изображения декодируются, видео загружаются и currentTime > 0, постеры декодируются, горизонтальный выход 0 px, console.error/pageerror 0, неуспешные запросы/HTTP ≥400 0, внешние HTTP(S)-ссылки имеют rel=noopener. Перенаправления дождались правильной страницы и якоря. Медиа на странице назначения повторно учитываются для адресов перенаправления.
 
-| Страница (от v2/) | Ширина, px | Результат |
-| --- | ---: | --- |
-| index.html | 1920 | PASS |
-| info.html | 1920 | PASS |
-| method.html | 1920 | PASS |
-| case-rawmid-style.html | 1920 | PASS; редирект → work/rawmid-style.html (с якорем #packaging для rawmid-packaging) |
-| work/ai-pipeline.html | 1920 | PASS |
-| work/dyson-v15.html | 1920 | PASS |
-| work/early-identities.html | 1920 | PASS |
-| work/imya.html | 1920 | PASS |
-| work/karuna.html | 1920 | PASS |
-| work/kreslo-chitalka.html | 1920 | PASS |
-| work/notion-system.html | 1920 | PASS |
-| work/rawmid-app.html | 1920 | PASS |
-| work/rawmid-packaging.html | 1920 | PASS; редирект → work/rawmid-style.html (с якорем #packaging для rawmid-packaging) |
-| work/rawmid-style.html | 1920 | PASS |
-| work/rawmid-video.html | 1920 | PASS |
-| work/rebranding.html | 1920 | PASS |
-| work/scandic.html | 1920 | PASS |
-| index.html | 1440 | PASS |
-| info.html | 1440 | PASS |
-| method.html | 1440 | PASS |
-| case-rawmid-style.html | 1440 | PASS; редирект → work/rawmid-style.html (с якорем #packaging для rawmid-packaging) |
-| work/ai-pipeline.html | 1440 | PASS |
-| work/dyson-v15.html | 1440 | PASS |
-| work/early-identities.html | 1440 | PASS |
-| work/imya.html | 1440 | PASS |
-| work/karuna.html | 1440 | PASS |
-| work/kreslo-chitalka.html | 1440 | PASS |
-| work/notion-system.html | 1440 | PASS |
-| work/rawmid-app.html | 1440 | PASS |
-| work/rawmid-packaging.html | 1440 | PASS; редирект → work/rawmid-style.html (с якорем #packaging для rawmid-packaging) |
-| work/rawmid-style.html | 1440 | PASS |
-| work/rawmid-video.html | 1440 | PASS |
-| work/rebranding.html | 1440 | PASS |
-| work/scandic.html | 1440 | PASS |
-| index.html | 800 | PASS |
-| info.html | 800 | PASS |
-| method.html | 800 | PASS |
-| case-rawmid-style.html | 800 | PASS; редирект → work/rawmid-style.html (с якорем #packaging для rawmid-packaging) |
-| work/ai-pipeline.html | 800 | PASS |
-| work/dyson-v15.html | 800 | PASS |
-| work/early-identities.html | 800 | PASS |
-| work/imya.html | 800 | PASS |
-| work/karuna.html | 800 | PASS |
-| work/kreslo-chitalka.html | 800 | PASS |
-| work/notion-system.html | 800 | PASS |
-| work/rawmid-app.html | 800 | PASS |
-| work/rawmid-packaging.html | 800 | PASS; редирект → work/rawmid-style.html (с якорем #packaging для rawmid-packaging) |
-| work/rawmid-style.html | 800 | PASS |
-| work/rawmid-video.html | 800 | PASS |
-| work/rebranding.html | 800 | PASS |
-| work/scandic.html | 800 | PASS |
-| index.html | 375 | PASS |
-| info.html | 375 | PASS |
-| method.html | 375 | PASS |
-| case-rawmid-style.html | 375 | PASS; редирект → work/rawmid-style.html (с якорем #packaging для rawmid-packaging) |
-| work/ai-pipeline.html | 375 | PASS |
-| work/dyson-v15.html | 375 | PASS |
-| work/early-identities.html | 375 | PASS |
-| work/imya.html | 375 | PASS |
-| work/karuna.html | 375 | PASS |
-| work/kreslo-chitalka.html | 375 | PASS |
-| work/notion-system.html | 375 | PASS |
-| work/rawmid-app.html | 375 | PASS |
-| work/rawmid-packaging.html | 375 | PASS; редирект → work/rawmid-style.html (с якорем #packaging для rawmid-packaging) |
-| work/rawmid-style.html | 375 | PASS |
-| work/rawmid-video.html | 375 | PASS |
-| work/rebranding.html | 375 | PASS |
-| work/scandic.html | 375 | PASS |
+| Страница | Ширина, px | Результат | Изображения | Видео | Постеры | Выход, px |
+| --- | ---: | --- | ---: | ---: | ---: | ---: |
+| v2/404.html | 1920 | PASS | 0 | 0 | 0 | 0 |
+| v2/404.html | 1440 | PASS | 0 | 0 | 0 | 0 |
+| v2/404.html | 800 | PASS | 0 | 0 | 0 | 0 |
+| v2/404.html | 375 | PASS | 0 | 0 | 0 | 0 |
+| v2/case-rawmid-style.html | 1920 | PASS | 8 | 0 | 0 | 0 |
+| v2/case-rawmid-style.html | 1440 | PASS | 8 | 0 | 0 | 0 |
+| v2/case-rawmid-style.html | 800 | PASS | 8 | 0 | 0 | 0 |
+| v2/case-rawmid-style.html | 375 | PASS | 8 | 0 | 0 | 0 |
+| v2/drafts/rawmid-decision.html | 1920 | PASS | 2 | 0 | 0 | 0 |
+| v2/drafts/rawmid-decision.html | 1440 | PASS | 2 | 0 | 0 | 0 |
+| v2/drafts/rawmid-decision.html | 800 | PASS | 2 | 0 | 0 | 0 |
+| v2/drafts/rawmid-decision.html | 375 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/404.html | 1920 | PASS | 0 | 0 | 0 | 0 |
+| v2/en/404.html | 1440 | PASS | 0 | 0 | 0 | 0 |
+| v2/en/404.html | 800 | PASS | 0 | 0 | 0 | 0 |
+| v2/en/404.html | 375 | PASS | 0 | 0 | 0 | 0 |
+| v2/en/case-rawmid-style.html | 1920 | PASS | 8 | 0 | 0 | 0 |
+| v2/en/case-rawmid-style.html | 1440 | PASS | 8 | 0 | 0 | 0 |
+| v2/en/case-rawmid-style.html | 800 | PASS | 8 | 0 | 0 | 0 |
+| v2/en/case-rawmid-style.html | 375 | PASS | 8 | 0 | 0 | 0 |
+| v2/en/drafts/rawmid-decision.html | 1920 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/drafts/rawmid-decision.html | 1440 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/drafts/rawmid-decision.html | 800 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/drafts/rawmid-decision.html | 375 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/index.html | 1920 | PASS | 22 | 2 | 2 | 0 |
+| v2/en/index.html | 1440 | PASS | 22 | 2 | 2 | 0 |
+| v2/en/index.html | 800 | PASS | 22 | 2 | 2 | 0 |
+| v2/en/index.html | 375 | PASS | 22 | 2 | 2 | 0 |
+| v2/en/info.html | 1920 | PASS | 1 | 0 | 0 | 0 |
+| v2/en/info.html | 1440 | PASS | 1 | 0 | 0 | 0 |
+| v2/en/info.html | 800 | PASS | 1 | 0 | 0 | 0 |
+| v2/en/info.html | 375 | PASS | 1 | 0 | 0 | 0 |
+| v2/en/method.html | 1920 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/method.html | 1440 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/method.html | 800 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/method.html | 375 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/work/ai-pipeline.html | 1920 | PASS | 0 | 0 | 0 | 0 |
+| v2/en/work/ai-pipeline.html | 1440 | PASS | 0 | 0 | 0 | 0 |
+| v2/en/work/ai-pipeline.html | 800 | PASS | 0 | 0 | 0 | 0 |
+| v2/en/work/ai-pipeline.html | 375 | PASS | 0 | 0 | 0 | 0 |
+| v2/en/work/dyson-v15.html | 1920 | PASS | 7 | 0 | 0 | 0 |
+| v2/en/work/dyson-v15.html | 1440 | PASS | 7 | 0 | 0 | 0 |
+| v2/en/work/dyson-v15.html | 800 | PASS | 7 | 0 | 0 | 0 |
+| v2/en/work/dyson-v15.html | 375 | PASS | 7 | 0 | 0 | 0 |
+| v2/en/work/early-identities.html | 1920 | PASS | 4 | 0 | 0 | 0 |
+| v2/en/work/early-identities.html | 1440 | PASS | 4 | 0 | 0 | 0 |
+| v2/en/work/early-identities.html | 800 | PASS | 4 | 0 | 0 | 0 |
+| v2/en/work/early-identities.html | 375 | PASS | 4 | 0 | 0 | 0 |
+| v2/en/work/imya.html | 1920 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/work/imya.html | 1440 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/work/imya.html | 800 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/work/imya.html | 375 | PASS | 2 | 0 | 0 | 0 |
+| v2/en/work/karuna.html | 1920 | PASS | 3 | 0 | 0 | 0 |
+| v2/en/work/karuna.html | 1440 | PASS | 3 | 0 | 0 | 0 |
+| v2/en/work/karuna.html | 800 | PASS | 3 | 0 | 0 | 0 |
+| v2/en/work/karuna.html | 375 | PASS | 3 | 0 | 0 | 0 |
+| v2/en/work/kreslo-chitalka.html | 1920 | PASS | 9 | 0 | 0 | 0 |
+| v2/en/work/kreslo-chitalka.html | 1440 | PASS | 9 | 0 | 0 | 0 |
+| v2/en/work/kreslo-chitalka.html | 800 | PASS | 9 | 0 | 0 | 0 |
+| v2/en/work/kreslo-chitalka.html | 375 | PASS | 9 | 0 | 0 | 0 |
+| v2/en/work/notion-system.html | 1920 | PASS | 13 | 3 | 3 | 0 |
+| v2/en/work/notion-system.html | 1440 | PASS | 13 | 3 | 3 | 0 |
+| v2/en/work/notion-system.html | 800 | PASS | 13 | 3 | 3 | 0 |
+| v2/en/work/notion-system.html | 375 | PASS | 13 | 3 | 3 | 0 |
+| v2/en/work/rawmid-app.html | 1920 | PASS | 4 | 0 | 0 | 0 |
+| v2/en/work/rawmid-app.html | 1440 | PASS | 4 | 0 | 0 | 0 |
+| v2/en/work/rawmid-app.html | 800 | PASS | 4 | 0 | 0 | 0 |
+| v2/en/work/rawmid-app.html | 375 | PASS | 4 | 0 | 0 | 0 |
+| v2/en/work/rawmid-packaging.html | 1920 | PASS | 8 | 0 | 0 | 0 |
+| v2/en/work/rawmid-packaging.html | 1440 | PASS | 8 | 0 | 0 | 0 |
+| v2/en/work/rawmid-packaging.html | 800 | PASS | 8 | 0 | 0 | 0 |
+| v2/en/work/rawmid-packaging.html | 375 | PASS | 8 | 0 | 0 | 0 |
+| v2/en/work/rawmid-style.html | 1920 | PASS | 8 | 0 | 0 | 0 |
+| v2/en/work/rawmid-style.html | 1440 | PASS | 8 | 0 | 0 | 0 |
+| v2/en/work/rawmid-style.html | 800 | PASS | 8 | 0 | 0 | 0 |
+| v2/en/work/rawmid-style.html | 375 | PASS | 8 | 0 | 0 | 0 |
+| v2/en/work/rawmid-video.html | 1920 | PASS | 0 | 3 | 3 | 0 |
+| v2/en/work/rawmid-video.html | 1440 | PASS | 0 | 3 | 3 | 0 |
+| v2/en/work/rawmid-video.html | 800 | PASS | 0 | 3 | 3 | 0 |
+| v2/en/work/rawmid-video.html | 375 | PASS | 0 | 3 | 3 | 0 |
+| v2/en/work/rebranding.html | 1920 | PASS | 0 | 0 | 0 | 0 |
+| v2/en/work/rebranding.html | 1440 | PASS | 0 | 0 | 0 | 0 |
+| v2/en/work/rebranding.html | 800 | PASS | 0 | 0 | 0 | 0 |
+| v2/en/work/rebranding.html | 375 | PASS | 0 | 0 | 0 | 0 |
+| v2/en/work/scandic.html | 1920 | PASS | 7 | 0 | 0 | 0 |
+| v2/en/work/scandic.html | 1440 | PASS | 7 | 0 | 0 | 0 |
+| v2/en/work/scandic.html | 800 | PASS | 7 | 0 | 0 | 0 |
+| v2/en/work/scandic.html | 375 | PASS | 7 | 0 | 0 | 0 |
+| v2/index.html | 1920 | PASS | 22 | 2 | 2 | 0 |
+| v2/index.html | 1440 | PASS | 22 | 2 | 2 | 0 |
+| v2/index.html | 800 | PASS | 22 | 2 | 2 | 0 |
+| v2/index.html | 375 | PASS | 22 | 2 | 2 | 0 |
+| v2/info.html | 1920 | PASS | 1 | 0 | 0 | 0 |
+| v2/info.html | 1440 | PASS | 1 | 0 | 0 | 0 |
+| v2/info.html | 800 | PASS | 1 | 0 | 0 | 0 |
+| v2/info.html | 375 | PASS | 1 | 0 | 0 | 0 |
+| v2/method.html | 1920 | PASS | 2 | 0 | 0 | 0 |
+| v2/method.html | 1440 | PASS | 2 | 0 | 0 | 0 |
+| v2/method.html | 800 | PASS | 2 | 0 | 0 | 0 |
+| v2/method.html | 375 | PASS | 2 | 0 | 0 | 0 |
+| v2/work/ai-pipeline.html | 1920 | PASS | 0 | 0 | 0 | 0 |
+| v2/work/ai-pipeline.html | 1440 | PASS | 0 | 0 | 0 | 0 |
+| v2/work/ai-pipeline.html | 800 | PASS | 0 | 0 | 0 | 0 |
+| v2/work/ai-pipeline.html | 375 | PASS | 0 | 0 | 0 | 0 |
+| v2/work/dyson-v15.html | 1920 | PASS | 7 | 0 | 0 | 0 |
+| v2/work/dyson-v15.html | 1440 | PASS | 7 | 0 | 0 | 0 |
+| v2/work/dyson-v15.html | 800 | PASS | 7 | 0 | 0 | 0 |
+| v2/work/dyson-v15.html | 375 | PASS | 7 | 0 | 0 | 0 |
+| v2/work/early-identities.html | 1920 | PASS | 4 | 0 | 0 | 0 |
+| v2/work/early-identities.html | 1440 | PASS | 4 | 0 | 0 | 0 |
+| v2/work/early-identities.html | 800 | PASS | 4 | 0 | 0 | 0 |
+| v2/work/early-identities.html | 375 | PASS | 4 | 0 | 0 | 0 |
+| v2/work/imya.html | 1920 | PASS | 2 | 0 | 0 | 0 |
+| v2/work/imya.html | 1440 | PASS | 2 | 0 | 0 | 0 |
+| v2/work/imya.html | 800 | PASS | 2 | 0 | 0 | 0 |
+| v2/work/imya.html | 375 | PASS | 2 | 0 | 0 | 0 |
+| v2/work/karuna.html | 1920 | PASS | 3 | 0 | 0 | 0 |
+| v2/work/karuna.html | 1440 | PASS | 3 | 0 | 0 | 0 |
+| v2/work/karuna.html | 800 | PASS | 3 | 0 | 0 | 0 |
+| v2/work/karuna.html | 375 | PASS | 3 | 0 | 0 | 0 |
+| v2/work/kreslo-chitalka.html | 1920 | PASS | 9 | 0 | 0 | 0 |
+| v2/work/kreslo-chitalka.html | 1440 | PASS | 9 | 0 | 0 | 0 |
+| v2/work/kreslo-chitalka.html | 800 | PASS | 9 | 0 | 0 | 0 |
+| v2/work/kreslo-chitalka.html | 375 | PASS | 9 | 0 | 0 | 0 |
+| v2/work/notion-system.html | 1920 | PASS | 13 | 3 | 3 | 0 |
+| v2/work/notion-system.html | 1440 | PASS | 13 | 3 | 3 | 0 |
+| v2/work/notion-system.html | 800 | PASS | 13 | 3 | 3 | 0 |
+| v2/work/notion-system.html | 375 | PASS | 13 | 3 | 3 | 0 |
+| v2/work/rawmid-app.html | 1920 | PASS | 4 | 0 | 0 | 0 |
+| v2/work/rawmid-app.html | 1440 | PASS | 4 | 0 | 0 | 0 |
+| v2/work/rawmid-app.html | 800 | PASS | 4 | 0 | 0 | 0 |
+| v2/work/rawmid-app.html | 375 | PASS | 4 | 0 | 0 | 0 |
+| v2/work/rawmid-packaging.html | 1920 | PASS | 8 | 0 | 0 | 0 |
+| v2/work/rawmid-packaging.html | 1440 | PASS | 8 | 0 | 0 | 0 |
+| v2/work/rawmid-packaging.html | 800 | PASS | 8 | 0 | 0 | 0 |
+| v2/work/rawmid-packaging.html | 375 | PASS | 8 | 0 | 0 | 0 |
+| v2/work/rawmid-style.html | 1920 | PASS | 8 | 0 | 0 | 0 |
+| v2/work/rawmid-style.html | 1440 | PASS | 8 | 0 | 0 | 0 |
+| v2/work/rawmid-style.html | 800 | PASS | 8 | 0 | 0 | 0 |
+| v2/work/rawmid-style.html | 375 | PASS | 8 | 0 | 0 | 0 |
+| v2/work/rawmid-video.html | 1920 | PASS | 0 | 3 | 3 | 0 |
+| v2/work/rawmid-video.html | 1440 | PASS | 0 | 3 | 3 | 0 |
+| v2/work/rawmid-video.html | 800 | PASS | 0 | 3 | 3 | 0 |
+| v2/work/rawmid-video.html | 375 | PASS | 0 | 3 | 3 | 0 |
+| v2/work/rebranding.html | 1920 | PASS | 0 | 0 | 0 | 0 |
+| v2/work/rebranding.html | 1440 | PASS | 0 | 0 | 0 | 0 |
+| v2/work/rebranding.html | 800 | PASS | 0 | 0 | 0 | 0 |
+| v2/work/rebranding.html | 375 | PASS | 0 | 0 | 0 | 0 |
+| v2/work/scandic.html | 1920 | PASS | 7 | 0 | 0 | 0 |
+| v2/work/scandic.html | 1440 | PASS | 7 | 0 | 0 | 0 |
+| v2/work/scandic.html | 800 | PASS | 7 | 0 | 0 | 0 |
+| v2/work/scandic.html | 375 | PASS | 7 | 0 | 0 | 0 |
 
-## Измерения
+| Проверка | Итог |
+| --- | --- |
+| Изображения / видео / постеры | 800 / 64 / 64, ошибок 0 |
+| Внутренние ссылки и якоря | 284 на ширину, 1136/1136 HTTP 200 и существующие якоря |
+| Фильтры RU/EN | 40/40: identity 5, packaging 2, web 2, ai 4, all 12; точное совпадение набора плиток |
+| Счётчик | 12/12 на обеих главных; live-status соответствует фильтру, aria-pressed=true |
+| Цепочки RU/EN | По 12 уникальных работ, возврат к первой; нет пропусков и тупиков |
+| Небезопасные внешние ссылки | 0 без rel=noopener |
 
-- 68/68 состояний PASS. На каждой ширине: 98 декодирований изображений, 8 воспроизведений видео, 8 декодирований постеров; учитываются повторные элементы и назначения редиректов.
-- 112 внутренних ссылок на каждой ширине: HTTP 200 у всех; все якоря найдены. Резюме PDF также HTTP 200.
-- 20/20 переключений фильтров: Айдентика 5, Упаковка 2, Веб 2, AI pipeline 4, Все 12. aria-pressed и live-status верны; счётчик 12 = число плиток.
-- После исправления цепочка совпадает с порядком главной: rawmid-style → dyson-v15 → rawmid-video → notion-system → scandic → karuna → rawmid-app → ai-pipeline → imya → kreslo-chitalka → early-identities → rebranding → rawmid-style. До замыкания каждая из 12 работ встречается один раз; тупиков нет. rawmid-packaging — алиас RAWMID.
-- Визуально просмотрены полные скриншоты главной на 1920 и 375. Все четыре скриншота: qa/04-index-<ширина>.png.
-- Исходные результаты: qa/04-results-{1920,1440,800,375}.json и .log. Проверочный скрипт: qa/04-qa-check.js. Запуск: node .codex-context/night-1030/qa/04-qa-run.cjs <ширина>; сервер: python -m http.server 8765 --bind 127.0.0.1.
+Порядок RU: `work/rawmid-style.html` → `work/dyson-v15.html` → `work/rawmid-video.html` → `work/notion-system.html` → `work/scandic.html` → `work/karuna.html` → `work/rawmid-app.html` → `work/ai-pipeline.html` → `work/imya.html` → `work/kreslo-chitalka.html` → `work/early-identities.html` → `work/rebranding.html` → первая работа. EN повторяет его под `en/work/`. 404 и неопубликованные черновики не являются работами сетки; оба прежних адреса перенаправления проверены отдельно.
 
-## Ограничения
+Визуально просмотрены `qa/10-ru-index-375.png` и `qa/10-en-index-1920.png`: существующая композиция сохранена, заглушки видимы. Снимки обеих главных сохранены на всех четырёх ширинах. Технический PASS не означает контентную готовность: открытые вопросы — в верхнем порядке и финальном обновлении `plan-2026-10-30.md`.
 
-Проверен локальный Chromium. Боевой домен, доступность внешних сайтов и мобильный Safari не проверялись: вне пакета. Метрика исключает автоматизированные визиты через navigator.webdriver. Контентная готовность не принята: остаются 127 заглушек из плана владельца; см. его раздел «Что сломано и не исправлено».
+Доказательства и воспроизведение: `qa/10-run.cjs` расширяет проверки 04 на полный список HTML; `qa/10-browser.js` — выполненный сценарий, `qa/10-results-{1920,1440,800,375}.{json,log}` — результаты, `qa/10-server.cjs` — локальная раздача с Range для MP4. В JSON финальные циклы проверяются раздельно по `links.cycles[].exactCycle`; унаследованное поле `links.exactCycle` сравнивает один RU-цикл со всеми 24 плитками двух языков и не используется как критерий PASS.
 
-Проверено: 68/68 состояний, 112 внутренних ссылок × 4, 20/20 фильтров, цикл 12/12; ошибок медиа, консоли, HTTP и горизонтального выхода — 0.
+Проверено: 152/152 состояний; битые изображения, видео и постеры — 0; console/pageerror, HTTP-ошибки и горизонтальный выход — 0; ссылки 1136/1136, фильтры 40/40, RU/EN-цепочки 12/12.
