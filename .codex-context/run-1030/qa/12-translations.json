@@ -1,0 +1,2861 @@
+{
+  "translated": [
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Схема цикла AI и база опыта: от брифа до сохранения опыта",
+      "en": "AI cycle diagram and experience base: from brief to retaining experience"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Схема шести этапов видеофона и кадр сцены «Синяя птица»",
+      "en": "Diagram of six video backdrop stages and a frame of the “Blue Bird” stage"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Серый автомобиль с жёлтыми панелями: профиль, два ракурса и приборная панель",
+      "en": "Grey car with yellow panels: profile, two angles and dashboard"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Вариант автомобиля B: кузов и салон в четырёх видах",
+      "en": "Car variant B: exterior and interior in four views"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Вариант автомобиля C: кузов и салон в четырёх видах",
+      "en": "Car variant C: exterior and interior in four views"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Вариант автомобиля D: кузов и салон в четырёх видах",
+      "en": "Car variant D: exterior and interior in four views"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Нормы часов RAWMID по типам задач и гайд обложки YouTube",
+      "en": "RAWMID standard hours by task type and a YouTube thumbnail guide"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Таблица типовых задач RAWMID и блок «Опыт внутри задачи»",
+      "en": "RAWMID standard tasks table and an “Experience within the task” section"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Другие работы",
+      "en": "Other work"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "[…] · [дисциплина] · [роль] · [команда]",
+      "en": "[…] · [discipline] · [role] · [team]"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "01 / бриф",
+      "en": "01 / brief"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "AI в каждом цикле",
+      "en": "AI in every cycle"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "типовые процессы × AI × база знаний",
+      "en": "standard processes × AI × knowledge base"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "02 / промт и статика",
+      "en": "02 / prompt and still images"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "чистка артефактов",
+      "en": "artifact cleanup"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "04 / согласование",
+      "en": "04 / approval"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "05 / сохранение опыта",
+      "en": "05 / retaining experience"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "рабочий прототип",
+      "en": "working prototype"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Опыт внутри задачи",
+      "en": "Experience within the task"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Шаги, правила и примеры хранятся в типовой задаче и достаются каждому, кто её берёт.",
+      "en": "Steps, rules and examples are stored in the standard task and are available to everyone who takes it on."
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "следующая работа →",
+      "en": "next work →"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Имя, Айдентика",
+      "en": "Imya, Identity"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Схема цикла AI и база опыта",
+      "en": "AI cycle diagram and experience base"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "продакшн и AI-пайплайны",
+      "en": "production and AI pipelines"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "404 — Арсений Охотин",
+      "en": "404 — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "404 — Арсений Охотин",
+      "en": "404 — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "[Страница не найдена]",
+      "en": "[Page not found]"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "Работы ↗",
+      "en": "Work ↗"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "Ищу роль",
+      "en": "Looking for a"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "креативного",
+      "en": "creative director"
+    },
+    {
+      "file": "v2/en/404.html",
+      "ru": "директора ↗",
+      "en": "role ↗"
+    },
+    {
+      "file": "v2/en/case-rawmid-style.html",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "RAWMID — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/case-rawmid-style.html",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "RAWMID — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "RAWMID — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "RAWMID — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "[…] · фирменный стиль · [роль] · [команда]",
+      "en": "[…] · brand identity · [role] · [team]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "Варианты",
+      "en": "Variants"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "[до и после; отвергнутые варианты — позже]",
+      "en": "[before and after; rejected variants to follow]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "Коробки техники RAWMID с разными макетами упаковки",
+      "en": "RAWMID appliance boxes with different packaging layouts"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "Ряд коробок техники RAWMID с общим оформлением",
+      "en": "Row of RAWMID appliance boxes with a shared design"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "Критерий выбора",
+      "en": "Selection criterion"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "[критерий выбора, текст позже]",
+      "en": "[selection criterion, text to follow]"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "Почему этот",
+      "en": "Why this one"
+    },
+    {
+      "file": "v2/en/drafts/rawmid-decision.html",
+      "ru": "[почему этот, текст позже]",
+      "en": "[why this one, text to follow]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Работы — Арсений Охотин",
+      "en": "Work — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Работы — Арсений Охотин",
+      "en": "Work — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "/ Креативный директор",
+      "en": "/ Creative director"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Заявление",
+      "en": "Statement"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Фильтр по дисциплинам",
+      "en": "Filter by discipline"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Все",
+      "en": "All"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Айдентика",
+      "en": "Identity"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Упаковка",
+      "en": "Packaging"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Веб",
+      "en": "Web"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Работ",
+      "en": "Works"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Работ: 12",
+      "en": "Works: 12"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "RAWMID, фирменный стиль",
+      "en": "RAWMID, brand identity"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Коллаж фотографий техники, блюд и раскадровок RAWMID",
+      "en": "Collage of RAWMID appliance photos, dishes and storyboards"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Коробки техники RAWMID с разными макетами упаковки",
+      "en": "RAWMID appliance boxes with different packaging layouts"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Ряд коробок техники RAWMID с общим оформлением",
+      "en": "Row of RAWMID appliance boxes with a shared design"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Макеты постов RAWMID с фотографиями продуктов и рецептов",
+      "en": "RAWMID post layouts with product photos and recipes"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Dyson V15, рекламный концепт · не заказ",
+      "en": "Dyson V15, advertising concept · not commissioned"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Dyson V15: уличный щит",
+      "en": "Dyson V15: outdoor billboard"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Dyson V15: лайтбокс у остановки",
+      "en": "Dyson V15: lightbox at a bus stop"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Dyson V15: пост 4:5",
+      "en": "Dyson V15: 4:5 post"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Dyson V15: сторис 9:16",
+      "en": "Dyson V15: 9:16 story"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Dyson V15: шапка рассылки",
+      "en": "Dyson V15: newsletter header"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Dyson V15: баннер 3:1",
+      "en": "Dyson V15: 3:1 banner"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "рекламный концепт · не заказ",
+      "en": "advertising concept · not commissioned"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "RAWMID, видео-визуал",
+      "en": "RAWMID, video visuals"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "RAWMID: видео до и после",
+      "en": "RAWMID: video before and after"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "RAWMID: видеоматериалы",
+      "en": "RAWMID: video materials"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Система Notion",
+      "en": "Notion system"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Таблица Notion с задачами, часами и сроками по сотрудникам",
+      "en": "Notion table with tasks, hours and deadlines by team member"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Система Notion",
+      "en": "Notion system"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "[цитата владельца — выбор позже]",
+      "en": "[owner quote — selection to follow]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Арсений Охотин / [источник], [год]",
+      "en": "Arseniy Okhotin / [source], [year]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Scandic, упаковка · концепт, не заказ",
+      "en": "Scandic, packaging · concept, not commissioned"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Жёлтая жестяная коробка Scandic с рисунками",
+      "en": "Yellow Scandic tin box with illustrations"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "упаковка · концепт, не заказ",
+      "en": "packaging · concept, not commissioned"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Karuna, перформанс-креатив, AI · концепт, не заказ",
+      "en": "Karuna, performance creative, AI · concept, not commissioned"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Плакат Karuna с входящим звонком на экране телефона",
+      "en": "Karuna poster with an incoming call on a phone screen"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Плакат Karuna «Проверь прежде чем отвечать»",
+      "en": "Karuna poster “Check before you answer”"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "перформанс-креатив, AI · концепт",
+      "en": "performance creative, AI · concept"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "RAWMID, приложение",
+      "en": "RAWMID, app"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "RAWMID Клуб: день 3 из 7",
+      "en": "RAWMID Club: day 3 of 7"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "RAWMID Клуб: рецепт зелёного смузи",
+      "en": "RAWMID Club: green smoothie recipe"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "RAWMID Клуб: шаг приготовления в блендере",
+      "en": "RAWMID Club: blender preparation step"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "приложение",
+      "en": "app"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Имя, Айдентика",
+      "en": "Imya, Identity"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Жёлтый контур и белая надпись на тёмном фоне",
+      "en": "Yellow outline and white lettering on a dark background"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Имя",
+      "en": "Imya"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Айдентика",
+      "en": "Identity"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Кресло-читалка, Айдентика",
+      "en": "Kreslo-chitalka, Identity"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Коллаж фотографий детей и бирюзовый логотип «Кресло читалка»",
+      "en": "Collage of children's photos and a turquoise “Kreslo chitalka” logo"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Кресло-читалка",
+      "en": "Kreslo-chitalka"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Айдентика",
+      "en": "Identity"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Фирменные стили, 2017",
+      "en": "Brand identities, 2017"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Фирменный стиль: облака",
+      "en": "Brand identity: clouds"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Фирменный стиль: граффити",
+      "en": "Brand identity: graffiti"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Сиреневый знак и надпись Yajevika на белом фоне",
+      "en": "Lilac symbol and Yajevika lettering on a white background"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Фирменные стили",
+      "en": "Brand identities"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "Фирменные стили",
+      "en": "Brand identities"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "[название], ребрендинг",
+      "en": "[name], rebranding"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "[кадры позже]",
+      "en": "[frames to follow]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "[название]",
+      "en": "[name]"
+    },
+    {
+      "file": "v2/en/index.html",
+      "ru": "ребрендинг",
+      "en": "rebranding"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Инфо — Арсений Охотин",
+      "en": "Info — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Инфо — Арсений Охотин",
+      "en": "Info — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "01 / О себе",
+      "en": "01 / About"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "02 / По дисциплинам",
+      "en": "02 / By discipline"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Айдентика",
+      "en": "Identity"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Упаковка",
+      "en": "Packaging"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Веб",
+      "en": "Web"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Арт-дирекшн",
+      "en": "Art direction"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "ИИ в продакшене",
+      "en": "AI in production"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Гайды и стандарт съёмки",
+      "en": "Guides and shoot standards"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "03 / Метод",
+      "en": "03 / Method"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Метод ↗",
+      "en": "Method ↗"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "04 / Опыт",
+      "en": "04 / Experience"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Арт-дирекшн",
+      "en": "Art direction"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "[опыт и результаты]",
+      "en": "[experience and results]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Команда in-house, работа в Notion",
+      "en": "In-house team, working in Notion"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "[опыт и результаты]",
+      "en": "[experience and results]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "[опыт и результаты]",
+      "en": "[experience and results]"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "05 / Метрики",
+      "en": "05 / Metrics"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "CTR карточек",
+      "en": "Product-card CTR"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Ищу роль",
+      "en": "Looking for a"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "креативного",
+      "en": "creative director"
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "директора ↗",
+      "en": "role ↗"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Метод — Арсений Охотин",
+      "en": "Method — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Метод — Арсений Охотин",
+      "en": "Method — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "[RAWMID · фирменный стиль — пример этапа уточнить] ↗",
+      "en": "[RAWMID · brand identity — stage example to be confirmed] ↗"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "RAWMID · фирменный стиль ↗",
+      "en": "RAWMID · brand identity ↗"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "[RAWMID · приложение — пример этапа уточнить] ↗",
+      "en": "[RAWMID · app — stage example to be confirmed] ↗"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "RAWMID · фирменный стиль ↗",
+      "en": "RAWMID · brand identity ↗"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "RAWMID · упаковка и мерч ↗",
+      "en": "RAWMID · packaging and merch ↗"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "RAWMID · видео-визуал ↗",
+      "en": "RAWMID · video visuals ↗"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "[RAWMID · видео-визуал — пример этапа уточнить] ↗",
+      "en": "[RAWMID · video visuals — stage example to be confirmed] ↗"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "[RAWMID · фирменный стиль — пример этапа уточнить] ↗",
+      "en": "[RAWMID · brand identity — stage example to be confirmed] ↗"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Схема этапов принятия решения с соединяющими стрелками",
+      "en": "Diagram of decision-making stages with connecting arrows"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Путь одного решения",
+      "en": "The path of one decision"
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Четыре карточки Signal, Decision, Production и Proof, соединённые кольцом",
+      "en": "Four cards, Signal, Decision, Production and Proof, connected in a loop"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "AI pipeline — Арсений Охотин",
+      "en": "AI pipeline — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "AI pipeline — Арсений Охотин",
+      "en": "AI pipeline — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/ai-pipeline.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Dyson V15 · рекламный концепт · не заказ — Арсений Охотин",
+      "en": "Dyson V15 · advertising concept · not commissioned — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Dyson V15 · рекламный концепт · не заказ — Арсений Охотин",
+      "en": "Dyson V15 · advertising concept · not commissioned — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Dyson V15: уличный щит вечером, зелёный лазер на полу",
+      "en": "Dyson V15: outdoor billboard in the evening, green laser on the floor"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "[…] · рекламный концепт · [роль] · [команда]",
+      "en": "[…] · advertising concept · [role] · [team]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "концепт, не заказ",
+      "en": "concept, not commissioned"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Все кадры работы",
+      "en": "All project frames"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Dyson V15: уличный щит",
+      "en": "Dyson V15: outdoor billboard"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "DYSON_V15_/_01 · РЕКЛАМНЫЙ КОНЦЕПТ",
+      "en": "DYSON_V15_/_01 · ADVERTISING CONCEPT"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Dyson V15: лайтбокс у остановки",
+      "en": "Dyson V15: lightbox at a bus stop"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "DYSON_V15_/_02 · РЕКЛАМНЫЙ КОНЦЕПТ",
+      "en": "DYSON_V15_/_02 · ADVERTISING CONCEPT"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Dyson V15: пост 4:5",
+      "en": "Dyson V15: 4:5 post"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "DYSON_V15_/_03 · РЕКЛАМНЫЙ КОНЦЕПТ",
+      "en": "DYSON_V15_/_03 · ADVERTISING CONCEPT"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Dyson V15: сторис 9:16",
+      "en": "Dyson V15: 9:16 story"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "DYSON_V15_/_04 · РЕКЛАМНЫЙ КОНЦЕПТ",
+      "en": "DYSON_V15_/_04 · ADVERTISING CONCEPT"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Dyson V15: шапка рассылки",
+      "en": "Dyson V15: newsletter header"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "DYSON_V15_/_05 · РЕКЛАМНЫЙ КОНЦЕПТ",
+      "en": "DYSON_V15_/_05 · ADVERTISING CONCEPT"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Dyson V15: баннер 3:1",
+      "en": "Dyson V15: 3:1 banner"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "DYSON_V15_/_06 · РЕКЛАМНЫЙ КОНЦЕПТ",
+      "en": "DYSON_V15_/_06 · ADVERTISING CONCEPT"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "01 / Инсайт",
+      "en": "01 / Insight"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "[инсайт, текст позже]",
+      "en": "[insight, text to follow]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "02 / Идея",
+      "en": "02 / Idea"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[idea in one sentence, text to follow]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "03 / Исполнение",
+      "en": "03 / Execution"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "[исполнение, текст позже]",
+      "en": "[execution, text to follow]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "04 / Результат",
+      "en": "04 / Result"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "[результат, текст позже]",
+      "en": "[result, text to follow]"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "Другие работы",
+      "en": "Other work"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "следующая работа →",
+      "en": "next work →"
+    },
+    {
+      "file": "v2/en/work/dyson-v15.html",
+      "ru": "RAWMID · видео-визуал",
+      "en": "RAWMID · video visuals"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Фирменные стили · 2017 — Арсений Охотин",
+      "en": "Brand identities · 2017 — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Фирменные стили · 2017 — Арсений Охотин",
+      "en": "Brand identities · 2017 — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Фирменный стиль: облака",
+      "en": "Brand identity: clouds"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Фирменные стили",
+      "en": "Brand identities"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "2017 · [дисциплина] · [роль] · [команда]",
+      "en": "2017 · [discipline] · [role] · [team]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Все кадры работы",
+      "en": "All project frames"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Фирменный стиль: облака",
+      "en": "Brand identity: clouds"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "EARLY_IDENTITIES_/_01 · ФИРМЕННЫЕ СТИЛИ",
+      "en": "EARLY_IDENTITIES_/_01 · BRAND IDENTITIES"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Фирменный стиль: граффити",
+      "en": "Brand identity: graffiti"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "EARLY_IDENTITIES_/_02 · ФИРМЕННЫЕ СТИЛИ · Brand set 1 · 2017 ·",
+      "en": "EARLY_IDENTITIES_/_02 · BRAND IDENTITIES · Brand set 1 · 2017 ·"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Сиреневый знак и надпись Yajevika на белом фоне",
+      "en": "Lilac symbol and Yajevika lettering on a white background"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "EARLY_IDENTITIES_/_03 · ФИРМЕННЫЕ СТИЛИ · Yajevika · 2017 ·",
+      "en": "EARLY_IDENTITIES_/_03 · BRAND IDENTITIES · Yajevika · 2017 ·"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "01 / Инсайт",
+      "en": "01 / Insight"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "[инсайт, текст позже]",
+      "en": "[insight, text to follow]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "02 / Идея",
+      "en": "02 / Idea"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[idea in one sentence, text to follow]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "03 / Исполнение",
+      "en": "03 / Execution"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "[исполнение, текст позже]",
+      "en": "[execution, text to follow]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "04 / Результат",
+      "en": "04 / Result"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "[результат, текст позже]",
+      "en": "[result, text to follow]"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "Другие работы",
+      "en": "Other work"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "следующая работа →",
+      "en": "next work →"
+    },
+    {
+      "file": "v2/en/work/early-identities.html",
+      "ru": "[название] · ребрендинг",
+      "en": "[name] · rebranding"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Имя · 2021 · Айдентика — Арсений Охотин",
+      "en": "Imya · 2021 · Identity — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Имя · 2021 · Айдентика — Арсений Охотин",
+      "en": "Imya · 2021 · Identity — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Жёлтый контур и белая надпись на тёмном фоне",
+      "en": "Yellow outline and white lettering on a dark background"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Имя",
+      "en": "Imya"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "2021 · Айдентика · [роль] · [команда]",
+      "en": "2021 · Identity · [role] · [team]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Все кадры работы",
+      "en": "All project frames"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Жёлтый контур и белая надпись на тёмном фоне",
+      "en": "Yellow outline and white lettering on a dark background"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "ИМЯ_/_01 · АЙДЕНТИКА",
+      "en": "IMYA_/_01 · IDENTITY"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "01 / Инсайт",
+      "en": "01 / Insight"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "[инсайт, текст позже]",
+      "en": "[insight, text to follow]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "02 / Идея",
+      "en": "02 / Idea"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[idea in one sentence, text to follow]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "03 / Исполнение",
+      "en": "03 / Execution"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "[исполнение, текст позже]",
+      "en": "[execution, text to follow]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "04 / Результат",
+      "en": "04 / Result"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "[результат, текст позже]",
+      "en": "[result, text to follow]"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Смотреть на Behance ↗",
+      "en": "View on Behance ↗"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Другие работы",
+      "en": "Other work"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "следующая работа →",
+      "en": "next work →"
+    },
+    {
+      "file": "v2/en/work/imya.html",
+      "ru": "Кресло-читалка · 2020",
+      "en": "Kreslo-chitalka · 2020"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Karuna · перформанс-креатив, AI · концепт — Арсений Охотин",
+      "en": "Karuna · performance creative, AI · concept — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Karuna · перформанс-креатив, AI · концепт — Арсений Охотин",
+      "en": "Karuna · performance creative, AI · concept — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Плакат Karuna с входящим звонком на экране телефона",
+      "en": "Karuna poster with an incoming call on a phone screen"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "[…] · перформанс-креатив, AI · [роль] · [команда]",
+      "en": "[…] · performance creative, AI · [role] · [team]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "концепт, не заказ",
+      "en": "concept, not commissioned"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Все кадры работы",
+      "en": "All project frames"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Плакат Karuna с входящим звонком на экране телефона",
+      "en": "Karuna poster with an incoming call on a phone screen"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "KARUNA_/_01 · ПЕРФОРМАНС-КРЕАТИВ, AI",
+      "en": "KARUNA_/_01 · PERFORMANCE CREATIVE, AI"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Плакат Karuna «Проверь прежде чем отвечать»",
+      "en": "Karuna poster “Check before you answer”"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "KARUNA_/_02 · ПЕРФОРМАНС-КРЕАТИВ, AI",
+      "en": "KARUNA_/_02 · PERFORMANCE CREATIVE, AI"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "01 / Инсайт",
+      "en": "01 / Insight"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "[инсайт, текст позже]",
+      "en": "[insight, text to follow]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "02 / Идея",
+      "en": "02 / Idea"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[idea in one sentence, text to follow]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "03 / Исполнение",
+      "en": "03 / Execution"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "[исполнение, текст позже]",
+      "en": "[execution, text to follow]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "04 / Результат",
+      "en": "04 / Result"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "[результат, текст позже]",
+      "en": "[result, text to follow]"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "Другие работы",
+      "en": "Other work"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "следующая работа →",
+      "en": "next work →"
+    },
+    {
+      "file": "v2/en/work/karuna.html",
+      "ru": "RAWMID · приложение",
+      "en": "RAWMID · app"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Кресло-читалка · 2020 · Айдентика — Арсений Охотин",
+      "en": "Kreslo-chitalka · 2020 · Identity — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Кресло-читалка · 2020 · Айдентика — Арсений Охотин",
+      "en": "Kreslo-chitalka · 2020 · Identity — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Коллаж фотографий детей и бирюзовый логотип «Кресло читалка»",
+      "en": "Collage of children's photos and a turquoise “Kreslo chitalka” logo"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Кресло-читалка",
+      "en": "Kreslo-chitalka"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "2020 · Айдентика · [роль] · [команда]",
+      "en": "2020 · Identity · [role] · [team]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Все кадры работы",
+      "en": "All project frames"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Коллаж фотографий детей и бирюзовый логотип «Кресло читалка»",
+      "en": "Collage of children's photos and a turquoise “Kreslo chitalka” logo"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_01 · АЙДЕНТИКА",
+      "en": "KRESLO-CHITALKA_/_01 · IDENTITY"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Схема миссии, ценностей и аудитории детского проекта",
+      "en": "Diagram of a children's project's mission, values and audience"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_02 · АЙДЕНТИКА",
+      "en": "KRESLO-CHITALKA_/_02 · IDENTITY"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Золотистые пиктограммы и повторяющиеся узоры",
+      "en": "Gold pictograms and repeating patterns"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_03 · АЙДЕНТИКА",
+      "en": "KRESLO-CHITALKA_/_03 · IDENTITY"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Бирюзовый логотип «Кресло читалка» и эмблема с книгой",
+      "en": "Turquoise “Kreslo chitalka” logo and an emblem with a book"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_04 · АЙДЕНТИКА",
+      "en": "KRESLO-CHITALKA_/_04 · IDENTITY"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Золотистая и бирюзовая палитры и образцы шрифтов",
+      "en": "Gold and turquoise palettes and type samples"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_05 · АЙДЕНТИКА",
+      "en": "KRESLO-CHITALKA_/_05 · IDENTITY"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Круглые эмблемы, пиктограммы и цветные паттерны",
+      "en": "Round emblems, pictograms and coloured patterns"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_06 · АЙДЕНТИКА",
+      "en": "KRESLO-CHITALKA_/_06 · IDENTITY"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Блокноты, сумка, значки и канцелярские принадлежности с эмблемами",
+      "en": "Notebooks, a bag, badges and stationery with emblems"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_07 · АЙДЕНТИКА",
+      "en": "KRESLO-CHITALKA_/_07 · IDENTITY"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Бирюзовые и золотистые рекламные баннеры с фотографиями",
+      "en": "Turquoise and gold advertising banners with photos"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "КРЕСЛО-ЧИТАЛКА_/_09 · АЙДЕНТИКА",
+      "en": "KRESLO-CHITALKA_/_09 · IDENTITY"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "01 / Инсайт",
+      "en": "01 / Insight"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "[инсайт, текст позже]",
+      "en": "[insight, text to follow]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "02 / Идея",
+      "en": "02 / Idea"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[idea in one sentence, text to follow]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "03 / Исполнение",
+      "en": "03 / Execution"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "[исполнение, текст позже]",
+      "en": "[execution, text to follow]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "04 / Результат",
+      "en": "04 / Result"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "[результат, текст позже]",
+      "en": "[result, text to follow]"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Смотреть на Behance ↗",
+      "en": "View on Behance ↗"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Другие работы",
+      "en": "Other work"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "следующая работа →",
+      "en": "next work →"
+    },
+    {
+      "file": "v2/en/work/kreslo-chitalka.html",
+      "ru": "Фирменные стили · 2017",
+      "en": "Brand identities · 2017"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Система Notion — Арсений Охотин",
+      "en": "Notion system — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Система Notion — Арсений Охотин",
+      "en": "Notion system — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "[видео: hub.png, снимает владелец]",
+      "en": "[video: hub.png, to be recorded by the owner]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Система Notion",
+      "en": "Notion system"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "[…] · [дисциплина] · [роль] · [команда]",
+      "en": "[…] · [discipline] · [role] · [team]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "[видео: hub.mp4, снимает владелец]",
+      "en": "[video: hub.mp4, to be recorded by the owner]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "01 / Почему горят сроки и кто перегружен?",
+      "en": "01 / Why are deadlines slipping and who is overloaded?"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Таблица продакшна в Notion с исполнителями, статусами и сроками",
+      "en": "Notion production table with owners, statuses and deadlines"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Таблица Notion с задачами, часами и сроками по сотрудникам",
+      "en": "Notion table with tasks, hours and deadlines by team member"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "[видео: q1-deadlines.mp4, снимает владелец]",
+      "en": "[video: q1-deadlines.mp4, to be recorded by the owner]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "02 / Сколько на самом деле стоит единица контента?",
+      "en": "02 / How much does a piece of content actually cost?"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Таблица Notion с типами работ, временем и числом правок",
+      "en": "Notion table with work types, time and revision counts"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Задачи с отклонением часов от нормы, в %",
+      "en": "Tasks with hours deviating from the standard, in %"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Задачи с отклонением часов от нормы, в %",
+      "en": "Tasks with hours deviating from the standard, in %"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "[видео: q2-cost.mp4, снимает владелец]",
+      "en": "[video: q2-cost.mp4, to be recorded by the owner]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "03 / Что выходит на неделе и где опубликовано?",
+      "en": "03 / What is going out this week and where has it been published?"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Контент-календарь на месяц",
+      "en": "Monthly content calendar"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Контент-календарь на месяц",
+      "en": "Monthly content calendar"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Таблица релизов с каналами, датами и метриками",
+      "en": "Release table with channels, dates and metrics"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "[видео: q3-week.mp4, снимает владелец]",
+      "en": "[video: q3-week.mp4, to be recorded by the owner]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "04 / Что сработало и что масштабировать?",
+      "en": "04 / What worked and what should be scaled?"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "[видео: goals.png, снимает владелец]",
+      "en": "[video: goals.png, to be recorded by the owner]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "«Артефакты»: материалы с охватом и метриками",
+      "en": "“Artifacts”: materials with reach and metrics"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "«Артефакты»: материалы с охватом и метриками",
+      "en": "“Artifacts”: materials with reach and metrics"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Таблица метрик со значениями, периодами и источниками",
+      "en": "Metrics table with values, periods and sources"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "05 / На чём основаны идеи?",
+      "en": "05 / What are the ideas based on?"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Таблица аудитории в Notion",
+      "en": "Audience table in Notion"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Аудитория",
+      "en": "Audience"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Таблица конкурентов в Notion",
+      "en": "Competitor table in Notion"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Стратегия конкурентов",
+      "en": "Competitor strategy"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Таблица задач аудитории с контекстом и ожидаемым результатом",
+      "en": "Audience jobs table with context and desired outcome"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Таблица идей с описаниями и статусами",
+      "en": "Ideas table with descriptions and statuses"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Карточка Notion с двумя кадрами и разбором света и тени",
+      "en": "Notion card with two frames and a breakdown of light and shadow"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "06 / До и после",
+      "en": "06 / Before and after"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "[текст позже]",
+      "en": "[text to follow]"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Команда до и после системы",
+      "en": "Team before and after the system"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Команда до и после системы",
+      "en": "Team before and after the system"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Другие работы",
+      "en": "Other work"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "следующая работа →",
+      "en": "next work →"
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Scandic, упаковка · концепт, не заказ",
+      "en": "Scandic, packaging · concept, not commissioned"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "RAWMID · приложение — Арсений Охотин",
+      "en": "RAWMID · app — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "RAWMID · приложение — Арсений Охотин",
+      "en": "RAWMID · app — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "RAWMID Клуб: день 3 из 7",
+      "en": "RAWMID Club: day 3 of 7"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "[…] · приложение · [роль] · [команда]",
+      "en": "[…] · app · [role] · [team]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "Все кадры работы",
+      "en": "All project frames"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "RAWMID Клуб: день 3 из 7",
+      "en": "RAWMID Club: day 3 of 7"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "RAWMID_APP_/_01 · ПРИЛОЖЕНИЕ",
+      "en": "RAWMID_APP_/_01 · APP"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "RAWMID Клуб: рецепт зелёного смузи",
+      "en": "RAWMID Club: green smoothie recipe"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "RAWMID_APP_/_02 · ПРИЛОЖЕНИЕ",
+      "en": "RAWMID_APP_/_02 · APP"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "RAWMID Клуб: шаг приготовления в блендере",
+      "en": "RAWMID Club: blender preparation step"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "RAWMID_APP_/_03 · ПРИЛОЖЕНИЕ",
+      "en": "RAWMID_APP_/_03 · APP"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "01 / Инсайт",
+      "en": "01 / Insight"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "[инсайт, текст позже]",
+      "en": "[insight, text to follow]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "02 / Идея",
+      "en": "02 / Idea"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "03 / Исполнение",
+      "en": "03 / Execution"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "[исполнение, текст позже]",
+      "en": "[execution, text to follow]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "04 / Результат",
+      "en": "04 / Result"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "[результат, текст позже]",
+      "en": "[result, text to follow]"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "Другие работы",
+      "en": "Other work"
+    },
+    {
+      "file": "v2/en/work/rawmid-app.html",
+      "ru": "следующая работа →",
+      "en": "next work →"
+    },
+    {
+      "file": "v2/en/work/rawmid-packaging.html",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "RAWMID — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/rawmid-packaging.html",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "RAWMID — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "RAWMID — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "RAWMID — Арсений Охотин",
+      "en": "RAWMID — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Коллаж фотографий техники, блюд и раскадровок RAWMID",
+      "en": "Collage of RAWMID appliance photos, dishes and storyboards"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "[…] · фирменный стиль · [роль] · [команда]",
+      "en": "[…] · brand identity · [role] · [team]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "01 / Бренд-платформа",
+      "en": "01 / Brand platform"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "[кадры позже]",
+      "en": "[frames to follow]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "02 / Айдентика",
+      "en": "02 / Identity"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "[логотип до и после обновления, шрифты, паттерны — позже]",
+      "en": "[logo before and after the update, typefaces, patterns to follow]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "[кадры позже]",
+      "en": "[frames to follow]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "03 / Рекламные кампании и виды постов",
+      "en": "03 / Ad campaigns and post types"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Макеты постов RAWMID с фотографиями продуктов и рецептов",
+      "en": "RAWMID post layouts with product photos and recipes"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Коллаж фотографий техники, блюд и раскадровок RAWMID",
+      "en": "Collage of RAWMID appliance photos, dishes and storyboards"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "04 / Карточки товаров",
+      "en": "04 / Product cards"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "[текст позже]",
+      "en": "[text to follow]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "[кадры позже]",
+      "en": "[frames to follow]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "05 / Упаковка и мерч",
+      "en": "05 / Packaging and merch"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Ряд коробок техники RAWMID с общим оформлением",
+      "en": "Row of RAWMID appliance boxes with a shared design"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "06 / До и после",
+      "en": "06 / Before and after"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Коробки техники RAWMID с разными макетами упаковки",
+      "en": "RAWMID appliance boxes with different packaging layouts"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Ряд коробок техники RAWMID с общим оформлением",
+      "en": "Row of RAWMID appliance boxes with a shared design"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "01 / Инсайт",
+      "en": "01 / Insight"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "[инсайт, текст позже]",
+      "en": "[insight, text to follow]"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "02 / Идея",
+      "en": "02 / Idea"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "03 / Исполнение",
+      "en": "03 / Execution"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "04 / Результат",
+      "en": "04 / Result"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "ещё по упаковке ↗",
+      "en": "more packaging work ↗"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Смотреть на Behance ↗",
+      "en": "View on Behance ↗"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Другие работы",
+      "en": "Other work"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "следующая работа →",
+      "en": "next work →"
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Dyson V15 · рекламный концепт · не заказ",
+      "en": "Dyson V15 · advertising concept · not commissioned"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "RAWMID · видео-визуал — Арсений Охотин",
+      "en": "RAWMID · video visuals — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "RAWMID · видео-визуал — Арсений Охотин",
+      "en": "RAWMID · video visuals — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "RAWMID: видео до и после",
+      "en": "RAWMID: video before and after"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "[…] · видео-визуал · [роль] · [команда]",
+      "en": "[…] · video visuals · [role] · [team]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "Все кадры работы",
+      "en": "All project frames"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "RAWMID: видео до и после",
+      "en": "RAWMID: video before and after"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "RAWMID_VIDEO_/_01 · ВИДЕО-ВИЗУАЛ",
+      "en": "RAWMID_VIDEO_/_01 · VIDEO VISUALS"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "RAWMID: видеоматериалы",
+      "en": "RAWMID: video materials"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "RAWMID_VIDEO_/_02 · ВИДЕО-ВИЗУАЛ",
+      "en": "RAWMID_VIDEO_/_02 · VIDEO VISUALS"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "01 / Инсайт",
+      "en": "01 / Insight"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "[инсайт, текст позже]",
+      "en": "[insight, text to follow]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "02 / Идея",
+      "en": "02 / Idea"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "03 / Исполнение",
+      "en": "03 / Execution"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "04 / Результат",
+      "en": "04 / Result"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "[результат, текст позже]",
+      "en": "[result, text to follow]"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "Другие работы",
+      "en": "Other work"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "следующая работа →",
+      "en": "next work →"
+    },
+    {
+      "file": "v2/en/work/rawmid-video.html",
+      "ru": "Система Notion",
+      "en": "Notion system"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "[название] · ребрендинг — Арсений Охотин",
+      "en": "[name] · rebranding — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "[название] · ребрендинг — Арсений Охотин",
+      "en": "[name] · rebranding — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "[кадры позже]",
+      "en": "[frames to follow]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "[название]",
+      "en": "[name]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "2020 · ребрендинг · [роль] · [команда]",
+      "en": "2020 · rebranding · [role] · [team]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "[кадры позже]",
+      "en": "[frames to follow]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "01 / Инсайт",
+      "en": "01 / Insight"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "[инсайт, текст позже]",
+      "en": "[insight, text to follow]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "02 / Идея",
+      "en": "02 / Idea"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[idea in one sentence, text to follow]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "03 / Исполнение",
+      "en": "03 / Execution"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "[исполнение, текст позже]",
+      "en": "[execution, text to follow]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "04 / Результат",
+      "en": "04 / Result"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "[результат, текст позже]",
+      "en": "[result, text to follow]"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "Смотреть на Behance ↗",
+      "en": "View on Behance ↗"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "Другие работы",
+      "en": "Other work"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "следующая работа →",
+      "en": "next work →"
+    },
+    {
+      "file": "v2/en/work/rebranding.html",
+      "ru": "RAWMID · фирменный стиль",
+      "en": "RAWMID · brand identity"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Scandic · упаковка · концепт, не заказ — Арсений Охотин",
+      "en": "Scandic · packaging · concept, not commissioned — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Scandic · упаковка · концепт, не заказ — Арсений Охотин",
+      "en": "Scandic · packaging · concept, not commissioned — Arseniy Okhotin"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Основная навигация",
+      "en": "Main navigation"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Работы",
+      "en": "Work"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Метод",
+      "en": "Method"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Инфо",
+      "en": "Info"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Жёлтая жестяная коробка Scandic с рисунками",
+      "en": "Yellow Scandic tin box with illustrations"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "[…] · упаковка · [роль] · [команда]",
+      "en": "[…] · packaging · [role] · [team]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "концепт, не заказ",
+      "en": "concept, not commissioned"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Все кадры работы",
+      "en": "All project frames"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Жёлтая жестяная коробка Scandic с рисунками",
+      "en": "Yellow Scandic tin box with illustrations"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "SCANDIC_/_01 · УПАКОВКА",
+      "en": "SCANDIC_/_01 · PACKAGING"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Голубая жестяная коробка Scandic с рисунками",
+      "en": "Light blue Scandic tin box with illustrations"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "SCANDIC_/_02 · УПАКОВКА",
+      "en": "SCANDIC_/_02 · PACKAGING"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Синяя жестяная коробка Scandic с неоновыми рисунками",
+      "en": "Blue Scandic tin box with neon illustrations"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "SCANDIC_/_03 · УПАКОВКА",
+      "en": "SCANDIC_/_03 · PACKAGING"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Красная коробка Scandic с логотипом МТС",
+      "en": "Red Scandic box with the MTS logo"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "SCANDIC_/_04 · УПАКОВКА",
+      "en": "SCANDIC_/_04 · PACKAGING"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Открытая коробка Scandic с надписью VK Fest 2024",
+      "en": "Open Scandic box with VK Fest 2024 lettering"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "SCANDIC_/_05 · УПАКОВКА",
+      "en": "SCANDIC_/_05 · PACKAGING"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Коробка Scandic на столе рядом с кофейным стаканом и ключами",
+      "en": "Scandic box on a table next to a coffee cup and keys"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "SCANDIC_/_06 · УПАКОВКА",
+      "en": "SCANDIC_/_06 · PACKAGING"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "01 / Инсайт",
+      "en": "01 / Insight"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "[инсайт, текст позже]",
+      "en": "[insight, text to follow]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "02 / Идея",
+      "en": "02 / Idea"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "[идея одной фразой, текст позже]",
+      "en": "[idea in one sentence, text to follow]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "03 / Исполнение",
+      "en": "03 / Execution"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "[исполнение, текст позже]",
+      "en": "[execution, text to follow]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "04 / Результат",
+      "en": "04 / Result"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "[результат, текст позже]",
+      "en": "[result, text to follow]"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Другие работы",
+      "en": "Other work"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "следующая работа →",
+      "en": "next work →"
+    },
+    {
+      "file": "v2/en/work/scandic.html",
+      "ru": "Karuna · перформанс-креатив, AI · концепт, не заказ",
+      "en": "Karuna · performance creative, AI · concept, not commissioned"
+    }
+  ],
+  "reused": [
+    {
+      "file": "v2/en/info.html",
+      "ru": "Быстро осваиваюсь в новой нише, нахожу рабочие форматы и наращиваю показатели бизнеса.",
+      "en": "I get up to speed in a new niche fast, find the formats that work and grow the business numbers."
+    },
+    {
+      "file": "v2/en/info.html",
+      "ru": "Норма по каждому типу работы посчитана по истории. Часы или круги правок выше нормы — сигнал.",
+      "en": "The standard for each type of work is calculated from its own history. Hours or revision rounds above it are a signal."
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Норма по каждому типу работы посчитана по истории. Часы или круги правок выше нормы — сигнал. Так же подсвечиваются формат, потерявший отклик, и точка контакта с провалом по метрике.",
+      "en": "The standard for each type of work is calculated from its own history. Hours or revision rounds above it are a signal. The same check flags a format that lost its response and a touchpoint where a metric dropped."
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Под сигнал поднимаются основания: задачи категории, шаги задачи и ожидаемые результаты, группы аудитории и чем занята категория у конкурентов. Из них видно, где именно просело.",
+      "en": "The signal pulls up the evidence: core jobs, job steps and desired outcomes, audience groups and what competitors hold in the category. Together they show exactly where the drop is."
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли.",
+      "en": "The signal becomes a measurable goal on a specific node, split into key results. Inside the goal sit the research, the hypotheses and the concepts that grew out of them."
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Концепт уходит в задачи: исполнитель, срок, красный флаг по просрочке, план и факт часов. Отсюда же берётся норма для следующего сигнала.",
+      "en": "The concept turns into tasks: owner, deadline, a red flag when overdue, planned and actual hours. The standard for the next signal comes from here too."
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Материал выходит наружу и попадает в базу релизов: канал, дата, версия. Каждый релиз связан со своим материалом и целью, к нему и подтягиваются метрики.",
+      "en": "The asset goes live and lands in the release log: channel, date, version. Each release links to its asset and goal, and the metrics attach to it."
+    },
+    {
+      "file": "v2/en/method.html",
+      "ru": "Статистика приходит в базу фактов с источником и периодом и поднимается в ключевые результаты. Подтвердившееся закрепляется нормой в типовой задаче.",
+      "en": "Stats arrive in the facts database with source and period and roll up into key results. What holds up becomes the standard in the task template."
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Концепт уходит в задачи: исполнитель, срок, красный флаг по просрочке, план и факт часов. Отсюда же берётся норма для следующего сигнала.",
+      "en": "The concept turns into tasks: owner, deadline, a red flag when overdue, planned and actual hours. The standard for the next signal comes from here too."
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Продакшн-трекер: задачи с исполнителем, статусом, красным флагом по срокам и загрузкой по людям.",
+      "en": "Production tracker: tasks with owner, status, a red flag on deadlines and load per person."
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Норма по каждому типу работы посчитана по истории. Часы или круги правок выше нормы — сигнал. Так же подсвечиваются формат, потерявший отклик, и точка контакта с провалом по метрике.",
+      "en": "The standard for each type of work is calculated from its own history. Hours or revision rounds above it are a signal. The same check flags a format that lost its response and a touchpoint where a metric dropped."
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Плейбук: по каждому типу работы число задач, среднее время и среднее число правок — это и есть норма.",
+      "en": "Playbook: for each type of work, the task count, average time and average revision rounds. That is the standard."
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Материал выходит наружу и попадает в базу релизов: канал, дата, версия. Каждый релиз связан со своим материалом и целью, к нему и подтягиваются метрики.",
+      "en": "The asset goes live and lands in the release log: channel, date, version. Each release links to its asset and goal, and the metrics attach to it."
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "База релизов: публикация, канал, дата, связанный материал и снятые метрики.",
+      "en": "Release log: post, channel, date, linked asset and collected metrics."
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Статистика приходит в базу фактов с источником и периодом и поднимается в ключевые результаты. Подтвердившееся закрепляется нормой в типовой задаче.",
+      "en": "Stats arrive in the facts database with source and period and roll up into key results. What holds up becomes the standard in the task template."
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли.",
+      "en": "The signal becomes a measurable goal on a specific node, split into key results. Inside the goal sit the research, the hypotheses and the concepts that grew out of them."
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли.",
+      "en": "The signal becomes a measurable goal on a specific node, split into key results. Inside the goal sit the research, the hypotheses and the concepts that grew out of them."
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "База фактов: метрика, значение, период, источник и ключ дедупликации.",
+      "en": "Facts database: metric, value, period, source and dedup key."
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "Под сигнал поднимаются основания: задачи категории, шаги задачи и ожидаемые результаты, группы аудитории и чем занята категория у конкурентов. Из них видно, где именно просело.",
+      "en": "The signal pulls up the evidence: core jobs, job steps and desired outcomes, audience groups and what competitors hold in the category. Together they show exactly where the drop is."
+    },
+    {
+      "file": "v2/en/work/notion-system.html",
+      "ru": "База задач аудитории: задача категории, шаги задачи, контекст и ожидаемый результат.",
+      "en": "Audience jobs database: core job, job steps, context and desired outcome."
+    },
+    {
+      "file": "v2/en/work/rawmid-style.html",
+      "ru": "Визуальный язык проиллюстрировал и масштабировал на упаковку, мерч и материалы.",
+      "en": "Illustrated the visual language and scaled it across packaging, merch and marketing materials."
+    }
+  ]
+}
