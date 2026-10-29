@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Схема сетки портфолио</title>
+<!-- Схема сетки витрины-портфолио, 28.10.2026. Основание: portfolio-inventory-2026-10-27.md,
+     decisions/DECISIONS.md 27.10 «витрина: новая подача» + «поздний вечер».
+     Серые блоки — места под кадры, подписи — что туда идёт. Тексты-заглушки, не финал. -->
+<style>
+  :root { --bg:#fff; --ink:#111; --mute:#8a8a8a; --box:#e9e9e9; --box2:#d6d6d6; --line:#111; --gap:16px; --side:32px; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.45 system-ui, sans-serif; }
+  .sheet { padding:48px var(--side) 96px; border-bottom:2px dashed var(--box2); }
+  .sheet-label { font:600 12px/1 system-ui; letter-spacing:.08em; text-transform:uppercase; color:var(--mute); margin:0 0 24px; }
+  .note { color:var(--mute); font-size:12px; }
+
+  /* шапка — общая для всех страниц */
+  .top { display:flex; justify-content:space-between; align-items:baseline; padding-bottom:24px; }
+  .top b { font-size:16px; }
+  .top nav { display:flex; gap:24px; }
+
+  /* главная: строка о себе + сетка плиток */
+  .about { font-size:28px; line-height:1.2; max-width:22ch; margin:24px 0 48px; }
+  .grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:40px var(--gap); }
+  .tile .frame { aspect-ratio:4/5; background:var(--box); position:relative; display:flex; align-items:center; justify-content:center; text-align:center; padding:16px; color:#555; }
+  .tile .frame.video { background:var(--box2); }
+  .tile .frame .dots { position:absolute; bottom:10px; left:0; right:0; font-size:11px; letter-spacing:3px; color:#777; }
+  .tile .cap { display:flex; justify-content:space-between; gap:8px; margin-top:8px; }
+  .tile .cap span:last-child { color:var(--mute); }
+  .tile.later .frame { background:repeating-linear-gradient(45deg, #f4f4f4 0 8px, #ebebeb 8px 16px); }
+  .row-note { grid-column:1/-1; margin:-24px 0 0; }
+
+  /* страница кейса */
+  .hero { aspect-ratio:16/9; background:var(--box2); display:flex; align-items:center; justify-content:center; }
+  .case-text { display:grid; grid-template-columns:repeat(12, 1fr); gap:var(--gap); margin:48px 0; }
+  .case-text .meta { grid-column:1/4; color:var(--mute); }
+  .case-text .para { grid-column:4/10; font-size:18px; }
+  .frames { display:grid; grid-template-columns:repeat(2, 1fr); gap:var(--gap); }
+  .frames .f { background:var(--box); aspect-ratio:4/5; display:flex; align-items:center; justify-content:center; }
+  .frames .f.wide { grid-column:1/-1; aspect-ratio:16/9; }
+  .numbers { display:flex; gap:48px; border-top:1px solid var(--line); margin-top:64px; padding-top:16px; }
+  .numbers div b { display:block; font-size:24px; }
+  .next { display:flex; justify-content:space-between; margin-top:64px; }
+
+  /* инфо */
+  .info { display:grid; grid-template-columns:repeat(12, 1fr); gap:var(--gap); }
+  .info .photo { grid-column:1/5; aspect-ratio:4/5; background:var(--box); display:flex; align-items:center; justify-content:center; }
+  .info .body { grid-column:6/12; }
+  .info h3 { margin:32px 0 8px; font-size:14px; text-transform:uppercase; letter-spacing:.06em; color:var(--mute); }
+  .info h3:first-child { margin-top:0; }
+
+  @media (max-width:1023px) { .grid { grid-template-columns:repeat(2, 1fr); } }
+  @media (max-width:640px) {
+    :root { --side:16px; }
+    .grid { grid-template-columns:1fr; }
+    .about { font-size:22px; }
+    .case-text .meta, .case-text .para, .info .photo, .info .body { grid-column:1/-1; }
+    .frames { grid-template-columns:1fr; }
+    .numbers { flex-wrap:wrap; gap:24px; }
+  }
+</style>
+<link rel="canonical" href="https://okhotin.site/old/wireframe-grid-2026-10-28.html">
+</head>
+<body>
+
+<!-- ============ 1. ГЛАВНАЯ ============ -->
+<section class="sheet" id="home">
+  <p class="sheet-label">1 · Главная — строка о себе + сетка работ</p>
+  <header class="top"><b>Арсений Охотин</b><nav><a>Работы</a><a>Инфо</a><a>Контакт</a></nav></header>
+  <p class="about">[строка о себе: роль + что делаю, одна фраза — текст позже]</p>
+
+  <div class="grid">
+    <!-- ряд 1: сильнейшее — свой бренд, концепт, демо -->
+    <div class="tile"><div class="frame">RAWMID<br>фирменный стиль<br><small>case-moodboard, case-pack-before/after, case-social</small><div class="dots">● ○ ○ ○</div></div>
+      <div class="cap"><span>RAWMID</span><span>фирменный стиль</span></div></div>
+    <div class="tile"><div class="frame">Dyson V15<br><small>assets/dyson/: ooh-street, ooh-stop, ig-card, carousel, email, bb01-tall</small><div class="dots">● ○ ○ ○ ○ ○</div></div>
+      <div class="cap"><span>Dyson V15</span><span>рекламный концепт · не заказ</span></div></div>
+    <div class="tile"><div class="frame">Scandic<br>цветовая серия → МТС, VK Fest → сцены<br><small>без развёртки и серой коробки</small><div class="dots">● ○ ○ ○ ○ ○</div></div>
+      <div class="cap"><span>Scandic</span><span>упаковка · концепт, не заказ</span></div></div>
+
+    <!-- ряд 2 -->
+    <div class="tile"><div class="frame video">RAWMID<br>видео-визуал<br><small>▶ team-before-after-v2.mp4 / case-materials.mp4 — немой цикл при наведении</small></div>
+      <div class="cap"><span>RAWMID</span><span>видео-визуал</span></div></div>
+    <div class="tile"><div class="frame">Karuna<br>кадры 1–2 (объявления)<br><small>3–8 — только в кейс</small><div class="dots">● ○</div></div>
+      <div class="cap"><span>Karuna</span><span>перформанс-креатив, AI · концепт</span></div></div>
+    <div class="tile"><div class="frame">RAWMID<br>приложение<br><small>кадры из rawmid-app/ — снять экраны</small><div class="dots">● ○ ○</div></div>
+      <div class="cap"><span>RAWMID</span><span>приложение</span></div></div>
+
+    <!-- ряд 3 -->
+    <div class="tile"><div class="frame">RAWMID<br>упаковка и мерч<br><small>case-pack-after, case-lifestyle, raw-club-set</small><div class="dots">● ○ ○</div></div>
+      <div class="cap"><span>RAWMID</span><span>упаковка и мерч</span></div></div>
+    <div class="tile"><div class="frame">Ранние стили<br><small>style-clouds, graffiti-bird, kan-dark, kids-collage, yajevika</small><div class="dots">● ○ ○ ○ ○</div></div>
+      <div class="cap"><span>Фирменные стили</span><span>2017–2021</span></div></div>
+    <div class="tile"><div class="frame">Rebranding (Behance, 16)<br><small>кадры скачать, без ссылки на Behance</small><div class="dots">● ○ ○ ○</div></div>
+      <div class="cap"><span>[название]</span><span>ребрендинг</span></div></div>
+
+    <!-- ряд 4: по готовности, сейчас скрыт -->
+    <p class="row-note note">Ряд 4 — скрыт до готовности:</p>
+    <div class="tile later"><div class="frame">Arc'teryx<br><small>баннер flat-z1 принят, ждёт мокап</small></div>
+      <div class="cap"><span>Arc'teryx</span><span>рекламный концепт</span></div></div>
+    <div class="tile later"><div class="frame">Airbnb</div>
+      <div class="cap"><span>Airbnb</span><span>рекламный концепт</span></div></div>
+    <div class="tile later"><div class="frame">imya (Behance, 13)<br><small>или Brand identity, 10</small></div>
+      <div class="cap"><span>imya</span><span>фирменный стиль</span></div></div>
+  </div>
+  <p class="note" style="margin-top:32px">Вне первой сборки: Neverend и Евро фуд — нет главного кадра, нужна доработка.</p>
+</section>
+
+<!-- ============ 2. СТРАНИЦА КЕЙСА ============ -->
+<section class="sheet" id="case">
+  <p class="sheet-label">2 · Страница кейса — крупный кадр → абзац → кадры → цифры строкой</p>
+  <header class="top"><b>← Работы</b><nav><a>Инфо</a><a>Контакт</a></nav></header>
+  <div class="hero">видео или главный кадр, 16:9, во всю ширину</div>
+  <div class="case-text">
+    <div class="meta">RAWMID<br>фирменный стиль<br>2023–2025<br>роль: креативный директор<br><i>(у демо: «концепт, не заказ»)</i></div>
+    <div class="para">[абзац: задача → моя роль → что поменялось. 3–5 строк, без метода]</div>
+  </div>
+  <div class="frames">
+    <div class="f wide">кадр 16:9</div>
+    <div class="f">кадр 4:5</div><div class="f">кадр 4:5</div>
+    <div class="f wide">кадр или видео 16:9</div>
+  </div>
+  <div class="numbers">
+    <div><b>[число]</b>подпись</div><div><b>[число]</b>подпись</div><div><b>[число]</b>подпись</div>
+  </div>
+  <div class="next"><span>← предыдущая работа</span><span>следующая работа →</span></div>
+</section>
+
+<!-- ============ 3. ИНФО ============ -->
+<section class="sheet" id="info">
+  <p class="sheet-label">3 · Инфо — всё, что ушло с главной</p>
+  <header class="top"><b>Арсений Охотин</b><nav><a>Работы</a><a>Инфо</a><a>Контакт</a></nav></header>
+  <div class="info">
+    <div class="photo">owner-photo-a / -b</div>
+    <div class="body">
+      <h3>О себе</h3><p>[биография, 1 абзац]</p>
+      <h3>Что принесу в компанию</h3><p>[одна фраза — сильное из функционала AI-пайплайна, как первая строка письма]</p>
+      <h3>Цифры</h3><p>[факты масштаба: команда, выпуски, рост — то, что было на первом экране]</p>
+      <h3>Опыт</h3><p>[места, роли, годы]</p>
+      <h3>Контакт</h3><p>почта · Telegram · резюме PDF</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
