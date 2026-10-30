@@ -68,7 +68,12 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
   var targets = {"hero":"/","case":"/work/rawmid-style.html","system":"/work/notion-system.html","flow":"/method.html","team":"/work/notion-system.html","capacity":"/method.html","niche":"/work/dyson-v15.html","next":"/info.html#contact"};
   function followLegacyAnchor() {
     var target = targets[location.hash.slice(1)];
-    if (target) location.replace(target.split('#')[0] + location.search + (target.indexOf('#') < 0 ? '' : '#' + target.split('#')[1]));
+    if (!target) return;
+    var path = target.split('#')[0];
+    // Keep attribution and the original fragment, including legacy section IDs.
+    if (location.pathname !== path && location.pathname !== path + 'index.html') {
+      location.replace(path + location.search + location.hash);
+    }
   }
   followLegacyAnchor();
   window.addEventListener('hashchange', followLegacyAnchor);
@@ -88,7 +93,7 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
 <a class="language-switch" href="en/index.html" hreflang="en" lang="en">EN</a>
 </nav>
 </header>
-<main>
+<main id="hero">
 <section class="statement" aria-label="Заявление">
 <h1>Из новой ниши<br> в поток продаж.</h1>
 <p class="brand-signature">Легко.</p>

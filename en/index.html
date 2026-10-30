@@ -67,7 +67,12 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
   var targets = {"hero":"/en/","case":"/en/work/rawmid-style.html","system":"/en/work/notion-system.html","flow":"/en/method.html","team":"/en/work/notion-system.html","capacity":"/en/method.html","niche":"/en/work/dyson-v15.html","next":"/en/info.html#contact"};
   function followLegacyAnchor() {
     var target = targets[location.hash.slice(1)];
-    if (target) location.replace(target.split('#')[0] + location.search + (target.indexOf('#') < 0 ? '' : '#' + target.split('#')[1]));
+    if (!target) return;
+    var path = target.split('#')[0];
+    // Keep attribution and the original fragment, including legacy section IDs.
+    if (location.pathname !== path && location.pathname !== path + 'index.html') {
+      location.replace(path + location.search + location.hash);
+    }
   }
   followLegacyAnchor();
   window.addEventListener('hashchange', followLegacyAnchor);
@@ -87,7 +92,7 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
 
 <a class="language-switch" hreflang="ru" lang="ru" href="../index.html">RU</a></nav>
 </header>
-<main>
+<main id="hero">
 <section class="statement" aria-label="Statement">
 <h1>From a new niche<br> to steady sales.</h1>
 <p class="brand-signature">Easy.</p>
