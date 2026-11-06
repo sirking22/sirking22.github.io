@@ -61,7 +61,8 @@ h1, h2, p, figure, blockquote { margin: 0; }
 .hero img, .hero video { width: 100%; height: auto; max-height: 78vh; object-fit: contain; }
 .hero.empty { min-height: 56vh; }
 .capture-placeholder { min-height: clamp(180px, 32vw, 560px); padding: 24px; text-align: center; overflow-wrap: anywhere; }
-.case-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin: 40px 0 64px; }
+.case-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin: 24px 0 64px; }
+.case-heading p { max-width: 42ch; text-align: right; font-size: 14px; }
 .case-heading h1 { font-size: clamp(28px, 4vw, 64px); font-weight: 400; line-height: 1.1; }
 .case-heading p { color: var(--mute); }
 .frames { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px var(--gap); align-items: start; }
@@ -159,6 +160,7 @@ h1, h2, p, figure, blockquote { margin: 0; }
   .cap { gap: 4px; }
   .owner-quote { padding: 16px 0; }
   .case-heading { flex-direction: column; gap: 12px; margin: 24px 0 40px; }
+  .case-heading p { text-align: left; }
   .frames { grid-template-columns: minmax(0, 1fr); }
   .f, .f.wide, .f.phone, .f.portrait { grid-column: 1 / -1; }
   .case-notes section { grid-template-columns: minmax(0, 1fr); gap: 12px; }

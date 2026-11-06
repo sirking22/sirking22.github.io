@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en"><head>
+<html lang="en">
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RAWMID — Arseniy Okhotin</title>
@@ -13,7 +14,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../../assets/icon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icon-180.png">
   <link rel="stylesheet" href="../../assets/fonts/_faces.css">
-  <link rel="stylesheet" href="../../v2.css">
+  <link rel="stylesheet" href="../../case-v3.css?v=5">
 
 <script>
 window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
@@ -21,12 +22,7 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
 (function () {
   var id = window.METRIKA_ID;
   if (!id) return;
-
-  /* Свои и машинные заходы в счёт не идут — 07.09.2026. За две недели из 13
-     визитов живыми были два: остальное дали headless-браузеры (превью-ссылки,
-     краулеры, автоматика) и собственные проверки деплоя.
-     ?dev=1 — свой заход; флаг запоминается в браузере, дальше метка не нужна,
-     снимается через ?dev=0. navigator.webdriver стоит у любого headless. */
+  /* Свои и машинные заходы в счёт не идут — 07.09.2026: ?dev=1 / ?dev=0, navigator.webdriver. */
   try {
     if (location.search.indexOf('dev=0') > -1) localStorage.removeItem('ez_dev');
     else if (location.search.indexOf('dev=1') > -1) localStorage.setItem('ez_dev', '1');
@@ -43,8 +39,6 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
 
   ym(id, 'init', { ssr: true, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true, referrer: document.referrer, url: location.href });
 
-  /* Цели. Сам заход почти ничего не говорит: важно, ушёл ли человек в кейс
-     или написал. */
   document.addEventListener('click', function (ev) {
     var a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
     if (!a) return;
@@ -56,104 +50,220 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
 })();
 </script>
   <link rel="canonical" href="https://okhotin.site/en/work/rawmid-style.html">
-  <script src="../../v2.js" defer=""></script>
   <link rel="alternate" hreflang="ru" href="https://okhotin.site/work/rawmid-style.html">
   <link rel="alternate" hreflang="en" href="https://okhotin.site/en/work/rawmid-style.html">
   <link rel="alternate" hreflang="x-default" href="https://okhotin.site/work/rawmid-style.html">
 </head>
 <body>
 <noscript><div><img src="https://mc.yandex.ru/watch/111837200" style="position:absolute; left:-9999px;" alt="" width="1" height="1" loading="lazy" decoding="async"></div></noscript>
-<div class="sheet">
-<header class="top">
-<a class="brand" href="../index.html">Arseniy Okhotin</a>
-<nav aria-label="Main navigation">
-<a href="../index.html" aria-label="Work" aria-current="page">Work</a>
-<a href="../method.html" aria-label="Method">Method</a>
-<a href="../info.html" aria-label="Info">Info</a>
-<a href="../info.html#contact" aria-label="Contact">Contact</a>
-
-<a class="language-switch" hreflang="ru" lang="ru" href="../../work/rawmid-style.html">RU</a></nav>
+<!-- Шаблон v3, 04.11.2026, зеркало work/rawmid-style.html. Новые строки сценария переведены в этом чате, владелец EN не смотрел. -->
+<header class="v3-bar">
+  <a href="../index.html">←_ALL_WORK</a>
+  <span class="crumbs"><span class="path">OKHOTIN_/_WORK_/_</span><b>RAWMID</b><span class="count" data-count>01_/_08</span></span>
+  <nav class="steps" aria-label="Adjacent work">
+    <a href="early-identities.html">←_PREVIOUS</a>
+    <a href="dyson-v15.html">NEXT_→</a>
+    <a class="lang" href="../../work/rawmid-style.html" hreflang="ru" lang="ru">RU</a>
+  </nav>
 </header>
-<main id="case">
-<div class="hero"><img src="../../assets/optimized-case-moodboard.webp" width="1600" height="1135" alt="Collage of RAWMID appliance photos, dishes and storyboards" loading="eager" decoding="async"></div>
-<header class="case-heading"><h1>RAWMID</h1>
-<p>2022–2025 · brand identity · Art Director → Creative Director, Made In Dream (RAWMID) · [team]</p></header>
-<div class="case-chapters"><section class="case-chapter" id="brand-platform" aria-labelledby="brand-platform-title">
-<header class="chapter-heading"><h2 id="brand-platform-title">01 / Brand platform</h2><p>Built the brand platform: idea, mission, values, audience research. Tied it to the product logic, the brand language and buyer groups, and to how content speaks to each group. Illustrated the visual language and scaled it across packaging, merch and marketing materials.</p></header>
-<div class="empty chapter-empty">[frames to follow]</div>
-</section>
-<section class="case-chapter" id="identity" aria-labelledby="identity-title">
-<header class="chapter-heading"><h2 id="identity-title">02 / Identity</h2><p>[logo before and after the update, typefaces, patterns to follow]</p></header>
-<div class="empty chapter-empty">[frames to follow]</div>
-</section>
-<section class="case-chapter" id="campaigns" aria-labelledby="campaigns-title">
-<header class="chapter-heading"><h2 id="campaigns-title">03 / Ad campaigns and post types</h2><p>Social layouts: recipes and products in one visual language.</p></header>
-<div class="frames"><figure class="f wide">
-<img src="../../assets/optimized-case-social.webp" width="1600" height="941" alt="RAWMID post layouts with product photos and recipes" loading="lazy" decoding="async">
-<figcaption>Social layouts: recipes and products in one visual language.</figcaption>
-</figure><figure class="f wide">
-<img src="../../assets/optimized-case-moodboard.webp" width="1600" height="1135" alt="Collage of RAWMID appliance photos, dishes and storyboards" loading="lazy" decoding="async">
-<figcaption>Shot references and storyboards for brand shoots.</figcaption>
-</figure></div>
-</section>
-<section class="case-chapter" id="product-cards" aria-labelledby="product-cards-title">
-<header class="chapter-heading"><h2 id="product-cards-title">04 / Product cards</h2><p>[text to follow]</p></header>
-<div class="empty chapter-empty">[frames to follow]</div>
-</section>
-<section class="case-chapter" id="packaging" aria-labelledby="packaging-title">
-<header class="chapter-heading"><h2 id="packaging-title">05 / Packaging and merch</h2><p>Illustrated the visual language and scaled it across packaging, merch and marketing materials.</p></header>
-<div class="frames"><figure class="f wide">
-<img src="../../assets/raw-club-set.webp" width="1254" height="1254" alt="RAW club kit: blender, bottles, mug, apron, bag and RAWMID appliance packaging" loading="lazy" decoding="async">
-<figcaption>RAW club kit: blender, bottles, mug, apron, bag and RAWMID appliance packaging</figcaption>
-</figure><figure class="f wide">
-<img src="../../assets/case-pack-after.webp" width="1079" height="899" alt="Row of RAWMID appliance boxes with a shared design" loading="lazy" decoding="async">
-<figcaption>Packaging after the rebuild: one visual language across the line.</figcaption>
-</figure><figure class="f wide">
-<img src="../../assets/case-lifestyle.webp" width="1672" height="1115" alt="Brand products in an everyday scene: a bottle and a lunch box in hand." loading="lazy" decoding="async">
-<figcaption>Brand products in an everyday scene: a bottle and a lunch box in hand.</figcaption>
-</figure></div>
-</section>
-<section class="case-chapter" id="before-after" aria-labelledby="before-after-title">
-<header class="chapter-heading"><h2 id="before-after-title">06 / Before and after</h2><p>Packaging after the rebuild: one visual language across the line.</p></header>
-<div class="frames"><figure class="f wide">
-<img src="../../assets/case-pack-before.webp" width="1074" height="899" alt="RAWMID appliance boxes with different packaging layouts" loading="lazy" decoding="async">
-<figcaption>Line packaging before the rebuild: mismatched boxes with no shared language.</figcaption>
-</figure><figure class="f wide">
-<img src="../../assets/case-pack-after.webp" width="1079" height="899" alt="Row of RAWMID appliance boxes with a shared design" loading="lazy" decoding="async">
-<figcaption>Packaging after the rebuild: one visual language across the line.</figcaption>
-</figure></div>
-</section></div>
-<div class="case-notes">
-<!-- Готовые тексты дословно из index.html#case; отсутствующие — в скобках. -->
-<section>
-<h2>01 / Insight</h2>
-<p>[insight, text to follow]</p>
-</section>
-<section>
-<h2>02 / Idea</h2>
-<p>Brand: from idea to clubs</p>
-</section>
-<section>
-<h2>03 / Execution</h2>
-<p>Built the brand platform: idea, mission, values, audience research. Tied it to the product logic, the brand language and buyer groups, and to how content speaks to each group. Illustrated the visual language and scaled it across packaging, merch and marketing materials.</p>
-</section>
-<section>
-<h2>04 / Result</h2>
-<p>Home-appliance brand, 35+ SKUs, 7 channels, 10+ products and 10 campaigns a year. Product-card CTR 1.7% → 3.4%, engagement on AI visuals ×1.5–2.</p>
-</section>
-</div>
-<div class="related-work"><a href="scandic.html">more packaging work ↗</a></div>
-<div class="related-work"><a href="https://www.behance.net/gallery/253452251/Rawmid" rel="noopener" target="_blank">View on Behance ↗</a></div>
-<nav class="next" aria-label="Other work"><a href="dyson-v15.html"><span>next work →</span><span>Dyson V15 · advertising concept · not commissioned</span></a></nav>
+
+<main class="v3" id="case">
+  <header class="v3-head">
+    <h1>RAWMID</h1>
+    <p class="v3-meta">
+      <span>2022–2025</span>
+      BRAND_IDENTITY
+      <span>ART DIRECTOR → CREATIVE DIRECTOR</span>
+      MADE_IN_DREAM_(RAWMID)
+    </p>
+  </header>
+
+  <section class="v3-chapter" id="dream" data-chapter>
+    <p class="v3-label"><span>RAWMID_/_01</span><span></span></p>
+    <div class="m1">
+      <h2>The dream lifestyle</h2>
+      <div class="copy"><p>A brand comes alive when its idea resonates with both the audience and the team. That idea became a dream way of life.</p></div>
+    </div>
+    <figure class="m4">
+      <img src="../../assets/rawmid-style-insight.webp" width="1536" height="1024" alt="Three generations on a country house terrace: a grandmother spooning apricot jam into jars, a father holding a smoothie blender, a girl peeling fruit leather off a dehydrator" loading="lazy" decoding="async">
+      <figcaption><b>RAWMID_/_01.1</b>A dream way of life: health, pride in yourself, your own community. Illustration.</figcaption>
+    </figure>
+  </section>
+
+  <section class="v3-chapter" id="packaging" data-chapter>
+    <p class="v3-label"><span>RAWMID_/_02</span><span></span></p>
+    <div class="m1">
+      <h2>Packaging: before → after</h2>
+      <div class="copy"><p>Communication spoke in power and warranty. Buyers said <em>“dream blender”</em>. <strong>That word became the brand.</strong></p></div>
+    </div>
+    <div class="m3" data-n="2" style="--cell: 1 / 1">
+      <figure><div class="cell"><img src="../../assets/rawmid-style-before.webp" width="1074" height="899" alt="RAWMID appliance boxes with different packaging layouts" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_02.1</b>Before: mismatched boxes with no shared language.</figcaption></figure>
+      <figure><div class="cell"><img src="../../assets/raw-dream-pack.webp" width="420" height="820" alt="RAWMID box and user manual with the Russian lines “Dream dispenser” and “The life of your dreams”" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_02.2</b>After: buyers’ words on the packaging — <em>“The life of your dreams”</em>, <em>“Dream dispenser”</em>.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="v3-chapter" id="identity" data-chapter>
+    <p class="v3-label"><span>RAWMID_/_03</span><span></span></p>
+    <div class="m1">
+      <h2>Logo and icons</h2>
+      <div class="copy"><p>I rebuilt the logo myself from the old one: wordmark, sign, icons. Packaging, posts, product cards and clubs are built on this base.</p></div>
+    </div>
+    <figure class="m4">
+      <img src="../../assets/rawmid-style-logo.webp" width="1600" height="1080" alt="RAWMID logo sheet: wordmark with dot, R sign, icons, palette and the handwritten Super Club mark" loading="lazy" decoding="async">
+      <figcaption><b>RAWMID_/_03.1</b>Logo, sign, icons, palette and the handwritten “Super Club” mark.</figcaption>
+    </figure>
+  </section>
+
+  <section class="v3-chapter" id="product-logic" data-chapter>
+    <p class="v3-label"><span>RAWMID_/_04</span><span>CONCEPT</span></p>
+    <div class="m1">
+      <h2>Product logic</h2>
+      <div class="copy"><p>A set is built not by category but around what a person cooks. A recipe rarely takes one appliance: fruit leather is a blender plus a dehydrator.</p></div>
+    </div>
+    <figure class="m4">
+      <img src="../../assets/rawmid-style-clubs.webp" width="1585" height="540" alt="Three RAWMID club cards: RAW, Healthy living and Garden, with appliances and food" loading="lazy" decoding="async">
+      <figcaption><b>RAWMID_/_04.1</b>Appliances matched to each club: RAW, Healthy living, Garden.</figcaption>
+    </figure>
+    <figure class="m4">
+      <img src="../../assets/rawmid-style-bundle.webp" width="745" height="771" alt="Blender, dehydrator, fruit leather and RAW club items on a kitchen table" loading="lazy" decoding="async">
+      <figcaption><b>RAWMID_/_04.2</b>RAW club set for fruit leather: blender and dehydrator.</figcaption>
+    </figure>
+  </section>
+
+  <section class="v3-chapter" id="clubs" data-chapter>
+    <p class="v3-label"><span>RAWMID_/_05</span><span>CONCEPT</span></p>
+    <div class="m1">
+      <h2>Clubs by diet</h2>
+      <div class="copy"><p>Clubs are about an ideal and pride: if you follow your diet, you have something to be proud of. Three clubs: RAW, Healthy living and Garden.</p></div>
+    </div>
+    <div class="m3" data-n="3" style="--cell: 3 / 2">
+      <figure><div class="cell"><img src="../../assets/rawmid-style-club-raw.webp" width="1536" height="1024" alt="RAW: friends at a raw cake master class — the cook shows the cream, one friend tastes it, another photographs the cake" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_05.1</b>RAW: a raw cake master class among friends.</figcaption></figure>
+      <figure><div class="cell"><img src="../../assets/rawmid-style-club-zozh.webp" width="1536" height="1024" alt="Healthy living: a family in the kitchen after the morning run — the mother pours smoothies, the daughter shows her father the result on her watch" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_05.2</b>Healthy living: a family after their morning run together.</figcaption></figure>
+      <figure><div class="cell"><img src="../../assets/rawmid-style-club-dacha.webp" width="1536" height="1024" alt="Garden: a neighbours’ pumpkin contest on the veranda — the pumpkin goes on old scales, the grandmother who grew it watches the needle" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_05.3</b>Garden: a neighbours’ contest for the biggest pumpkin.</figcaption></figure>
+    </div>
+    <div class="m3" data-n="2" style="--cell: 1 / 1">
+      <figure><div class="cell"><img src="../../assets/rawmid-style-club-badge.webp" width="800" height="1200" alt="At a club meeting an older man gets a felt rosette with the RAWMID sign pinned on, fruit leather and preserves on the table" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_05.4</b>Contests and recognition inside the club.</figcaption></figure>
+      <figure><div class="cell"><img src="../../assets/raw-club-set.webp" width="1254" height="1254" alt="RAW club concept: blender, bottles, mug, apron, bag and RAWMID appliance packaging" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_05.5</b>RAW club: one interest, its own language and its own objects.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="v3-chapter" id="cooking" data-chapter>
+    <p class="v3-label"><span>RAWMID_/_06</span><span></span></p>
+    <div class="m1">
+      <h2>Cooking</h2>
+      <div class="copy"><p>An appliance lives as long as people cook with it. First days, recipes and tips are different for each club.</p></div>
+    </div>
+    <div class="m3" data-n="2" style="--cell: 1 / 1">
+      <figure><div class="cell"><img src="../../assets/rawmid-style-onboarding.webp" width="800" height="1200" alt="A woman adds berries and spinach to a RAWMID blender next to an opened box and a seven-day sheet with three ticks" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_06.1</b>Onboarding: the first days with the appliance, the sign on its panel.</figcaption></figure>
+      <figure><div class="cell"><img src="../../assets/rawmid-style-content.webp" width="800" height="1200" alt="One table from above: careful raw-food slicing and sprouted seeds on the left, a country harvest with jars and a pot on the right" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_06.2</b>Content split: raw foodists and gardeners cook differently.</figcaption></figure>
+    </div>
+    <figure class="m4">
+      <img src="../../assets/optimized-case-social.webp" width="1600" height="941" alt="RAWMID post layouts with product photos and recipes" loading="lazy" decoding="async">
+      <figcaption><b>RAWMID_/_06.3</b>Recipe posts: products and dishes in one visual language.</figcaption>
+    </figure>
+  </section>
+
+  <section class="v3-chapter" id="communication" data-chapter>
+    <p class="v3-label"><span>RAWMID_/_07</span><span></span></p>
+    <div class="m1">
+      <h2>Platform in communication</h2>
+      <div class="copy"><p>Built the brand platform: idea, mission, values, audience research. Engagement on AI visuals <strong>×1.5–2</strong> vs. regular posts.</p></div>
+    </div>
+    <div class="m2" data-carousel>
+      <div class="m2-stage">
+        <img class="is-active" src="../../assets/rawmid-style-platform-1.webp" width="1200" height="600" alt="RAWMID banner “A brand for people” with appliances" data-cap="Banner “A brand for people”.">
+        <img src="../../assets/rawmid-style-platform-3.webp" width="1200" height="701" alt="RAWMID post “Dreaming is good for you” with a megaphone" data-cap="Post “Dreaming is good for you”.">
+        <img src="../../assets/rawmid-style-platform-4.webp" width="1200" height="429" alt="RAWMID banner “Dream” with a contest" data-cap="Banner “Dream” with a contest.">
+        <img src="../../assets/rawmid-style-platform-2.webp" width="1200" height="1200" alt="RAWMID post “A dream of healthy living”" data-cap="Post “A dream of healthy living”.">
+      </div>
+      <div class="m2-ctrl">
+        <p class="m2-cap"><b>RAWMID_/_07.<span data-i>1</span></b> <span data-captext>Banner “A brand for people”.</span></p>
+        <div class="m2-nav"><button type="button" data-prev aria-label="Previous frame">←</button><span data-counter>01_/_04</span><button type="button" data-next aria-label="Next frame">→</button></div>
+      </div>
+      <div class="m2-thumbs" data-thumbs></div>
+    </div>
+  </section>
+
+  <section class="v3-chapter" id="scale" data-chapter>
+    <p class="v3-label"><span>RAWMID_/_08</span><span></span></p>
+    <div class="m1">
+      <h2>Scale</h2>
+      <div class="copy"><p>Product cards on one master layout for a 35+ SKU line, 7 channels, a team of 10+. Product-card CTR <strong>1.7% → 3.4%</strong> at equal impressions, on three products.</p></div>
+    </div>
+    <div class="m3" data-n="4" style="--cell: 3 / 4">
+      <figure><div class="cell"><img src="../../assets/rawmid-style-cards-1.webp" width="900" height="1200" alt="RAWMID air grill card “Healthy fast food in 15 minutes”" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_08.1</b>Air grill.</figcaption></figure>
+      <figure><div class="cell"><img src="../../assets/rawmid-style-cards-2.webp" width="1200" height="1200" alt="Card with a fold-out stand “For any container”" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_08.2</b>Fold-out stand.</figcaption></figure>
+      <figure><div class="cell"><img src="../../assets/rawmid-style-cards-3.webp" width="1000" height="1000" alt="RAWMID air fryer card with dimensions" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_08.3</b>Air fryer.</figcaption></figure>
+      <figure><div class="cell"><img src="../../assets/rawmid-style-cards-4.webp" width="1000" height="1000" alt="RAWMID immersion blender card with dimensions" loading="lazy" decoding="async"></div><figcaption><b>RAWMID_/_08.4</b>Immersion blender.</figcaption></figure>
+    </div>
+    <figure class="m4">
+      <img src="../../assets/case-pack-after.webp" width="1079" height="899" alt="Row of RAWMID appliance boxes with a shared design" loading="lazy" decoding="async">
+      <figcaption><b>RAWMID_/_08.5</b>Packaging after the rebuild: one visual language across the line.</figcaption>
+    </figure>
+    <figure class="m5">
+      <video src="../../assets/team-before-after-v2.mp4" poster="../../assets/rawmid-video-01.webp" muted playsinline controls preload="none"></video>
+      <figcaption><b>RAWMID_/_08.6</b>Before and after: a team video.</figcaption>
+    </figure>
+  </section>
+
+  <nav class="v3-links" aria-label="Related">
+    <a href="rawmid-app.html">Club onboarding and app ↗</a>
+    <a href="scandic.html">More packaging work ↗</a>
+    <a href="https://www.behance.net/gallery/253452251/Rawmid" rel="noopener" target="_blank">View on Behance ↗</a>
+  </nav>
+  <nav class="v3-next" aria-label="Adjacent work">
+    <a href="early-identities.html">←_PREVIOUS<strong>Early identities</strong></a>
+    <a href="dyson-v15.html">NEXT_→<strong>Dyson V15</strong></a>
+  </nav>
 </main>
-<footer class="contact" id="contact">
-<p class="contact-prompt">Does your brand need a creative director? Write to me — I'll send a breakdown of your task.</p>
-<div class="contact-links">
-<a class="contact-button" href="mailto:ezmail2222@gmail.com">ezmail2222@gmail.com</a>
-<a href="https://t.me/ezd22" rel="noopener">Telegram ↗</a>
-</div>
+
+<footer class="v3-foot" id="contact">
+  <p>Does your brand need a creative director? Write to me — I'll send a breakdown of your task.</p>
+  <p class="links"><a href="mailto:ezmail2222@gmail.com">ezmail2222@gmail.com</a><a href="https://t.me/ezd22" rel="noopener">Telegram ↗</a></p>
 </footer>
-</div>
 
+<script>
+(function () {
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  var chapters = [].slice.call(document.querySelectorAll('[data-chapter]'));
+  var count = document.querySelector('[data-count]');
+  function onScroll() {
+    var y = window.innerHeight * 0.35, idx = 0;
+    chapters.forEach(function (c, i) { if (c.getBoundingClientRect().top <= y) idx = i; });
+    count.textContent = pad(idx + 1) + '_/_' + pad(chapters.length);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-</body></html>
+  document.querySelectorAll('[data-carousel]').forEach(function (car) {
+    var slides = [].slice.call(car.querySelectorAll('.m2-stage img'));
+    var thumbs = car.querySelector('[data-thumbs]');
+    var cur = 0;
+    slides.forEach(function (s, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Frame ' + (i + 1));
+      b.innerHTML = '<img src="' + s.getAttribute('src') + '" alt="" loading="lazy" decoding="async">';
+      b.addEventListener('click', function () { go(i); });
+      thumbs.appendChild(b);
+    });
+    function go(i) {
+      cur = (i + slides.length) % slides.length;
+      slides.forEach(function (s, j) { s.classList.toggle('is-active', j === cur); });
+      [].forEach.call(thumbs.children, function (t, j) { t.setAttribute('aria-current', String(j === cur)); });
+      car.querySelector('[data-counter]').textContent = pad(cur + 1) + '_/_' + pad(slides.length);
+      car.querySelector('[data-i]').textContent = cur + 1;
+      car.querySelector('[data-captext]').textContent = slides[cur].dataset.cap;
+    }
+    car.querySelector('[data-prev]').addEventListener('click', function () { go(cur - 1); });
+    car.querySelector('[data-next]').addEventListener('click', function () { go(cur + 1); });
+    car.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') go(cur - 1);
+      if (e.key === 'ArrowRight') go(cur + 1);
+    });
+    go(0);
+  });
+})();
+</script>
+</body>
+</html>
