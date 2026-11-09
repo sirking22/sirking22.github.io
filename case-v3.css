@@ -79,6 +79,10 @@ h1, h2, p, figure { margin: 0; }
 /* M4 — кадр на всю ширину */
 .m4 img { width: 100%; height: auto; max-height: calc(100vh - var(--bar) - 96px); object-fit: contain; background: var(--well); }
 
+/* MP — пара 3:2 + 1:1 в одну высоту: колонки 3fr/2fr дают равную высоту без подгонки */
+.mp { display: grid; grid-template-columns: 3fr 2fr; gap: 24px var(--gap); }
+.mp img { width: 100%; height: auto; background: var(--well); }
+
 /* M3 — сетка 2–6 кадров одного размера; кадр вписан целиком, не обрезан */
 .m3 { display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: 24px var(--gap); }
 .m3[data-n="2"] { --cols: 2; }
@@ -130,6 +134,7 @@ h1, h2, p, figure { margin: 0; }
   .m3[data-n="4"], .m3[data-n="6"] { --cols: 2; }
 }
 @media (max-width: 640px) {
+  .mp { grid-template-columns: 1fr; }
   :root { --side: 16px; --section: 80px; }
   .v3-bar { grid-template-columns: auto auto 1fr; gap: 12px; font-size: 11px; }
   .v3-bar .crumbs b { display: none; }
