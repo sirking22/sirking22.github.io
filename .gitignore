@@ -18,3 +18,7 @@ assets/fonts/TTBluescreens-*.ttf
 
 # Английский исходник картинки ссылки: рендерится в assets/og-preview-en-v1.jpg
 og-source-en.html
+
+# Локальные задания, отчёты и браузерные профили не публикуются.
+.codex-context/
+.playwright-cli/

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /.codex-context/
+Disallow: /.playwright-cli/
+
+Sitemap: https://okhotin.site/sitemap.xml
