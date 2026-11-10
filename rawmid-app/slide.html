@@ -44,7 +44,7 @@ body{background:#1c1f24;min-height:100vh;display:flex;flex-direction:column;alig
 .pick a{font:600 14px Onest;padding:8px 14px;border-radius:999px;border:1px solid #3a404a;background:#262a31;color:#dfe3ea;text-decoration:none}
 .pick a.on{background:#fff;color:#111}
 /* ?embed=1 — слайд витрины: без подложки и переключателя, во всю рамку */
-.embed body{background:none;padding:0;display:block;min-height:0;overflow:hidden}.embed .wrap{width:100%}.embed .pick{display:none}
+.embed body{background:none;padding:0;display:block;min-height:0;overflow:hidden}.embed .wrap{width:100%}.embed .pick{display:none}.nobg .stage{background:none}
 </style><script>
 window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
 
@@ -107,7 +107,7 @@ if(EMBED)document.documentElement.classList.add('embed');
 // фоны: a–d — candidates/bg2 (без техники, блендер вставляется настоящий), old — первый фон с нарисованным блендером
 // bg3 (05.10, выбор владельца): блендер в сцене генерирует GPT по двум предметным фото, вставка не нужна
 const BG3F={spread:'spread-out-b',spreadA:'spread-out-a',corner:'corner-2',hero:'hero',podium:'podium-2'},BG3=Object.keys(BG3F);
-if(BG){stage.classList.add('photo');stage.style.backgroundImage=BG==='old'?'url(candidates/bg/bg-a.png)':BG3.includes(BG)?`url(candidates/bg3/${BG3F[BG]}.webp)`:`url(candidates/bg2/bg-${BG}.png)`;}
+if(BG==='none')document.documentElement.classList.add('nobg');else if(BG){stage.classList.add('photo');stage.style.backgroundImage=BG==='old'?'url(candidates/bg/bg-a.png)':BG3.includes(BG)?`url(candidates/bg3/${BG3F[BG]}.webp)`:`url(candidates/bg2/bg-${BG}.png)`;}
 [['spread','Ингредиенты'],['spreadA','Ингредиенты 2']].forEach(([k,l])=>{const a=document.createElement('a');a.href='?bg='+k;a.textContent=l;if((BG||'')===k)a.className='on';document.getElementById('pick').appendChild(a)});
 
 const BEATS_RU=[
