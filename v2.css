@@ -333,3 +333,7 @@ h1, h2, p, figure, blockquote { margin: 0; }
   .grid:not([data-filter]) .row-b .tile[data-case="rawmid-app"] .frame, .grid[data-filter="all"] .row-b .tile[data-case="rawmid-app"] .frame { aspect-ratio: auto; min-height: 0; align-self: stretch; }
   .grid:not([data-filter]) .row-b .tile[data-case="rawmid-app"] .slide, .grid[data-filter="all"] .row-b .tile[data-case="rawmid-app"] .slide { object-fit: cover; object-position: top center; }
 }
+
+/* Превью кейсов: кадр заполняет плитку, вертикали и полосы 3:1 в превью не идут; RAWMID-сайты сняты с экрана ~1000 px — плитку не растягивать шире исходника (11.11). */
+.home .tile[data-case="dyson-v15"] .slide, .home .tile[data-case="rawmid-web"] .slide { object-fit: cover; object-position: left center; }
+.home .tile[data-case="rawmid-web"] { max-width: 1040px; }
