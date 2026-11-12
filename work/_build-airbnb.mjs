@@ -28,8 +28,8 @@ const main = `<main class="v3" id="niche">
     </div>
     <style>.ax-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:48px 0 56px}.ax-facts b{display:block;font:600 clamp(40px,6vw,72px)/1 var(--display,inherit)}.ax-facts span{display:block;margin-top:8px;font-size:14px;line-height:1.35}@media(max-width:700px){.ax-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}}</style>
     <div class="ax-facts">
-      <p><b>18%</b><span>ночей на Airbnb — брони от 28 ночей, I квартал 2023. В конце 2021 года доля была выше</span></p>
-      <p><b>28+</b><span>ночей — бронирование, на которое работает кампания</span></p>
+      <p><b>+20%</b><span>к доле броней от 28 ночей среди переходов из кампании против обычной рекламы — порог теста. Гипотеза, тест не запускался</span></p>
+      <p><b>18%</b><span>ночей на Airbnb — проживания от 28 дней, III квартал 2023, письмо компании акционерам</span></p>
       <p><b>3</b><span>сюжета: офис, угол, ключ</span></p>
       <p><b>4</b><span>города в серии офисов: Кейптаун, Мехико, Копенгаген, Лиссабон</span></p>
     </div>
@@ -94,7 +94,7 @@ const main = `<main class="v3" id="niche">
     <p class="v3-label"><span>AIRBNB_/_04</span><span></span></p>
     <div class="m1">
       <h2>Как проверить</h2>
-      <div class="copy"><p>Гипотеза: если показать месяц как обжитую базу, больше людей из кампании перейдут к жилью на месяц и забронируют от 28 ночей. Метрика — доля таких бронирований среди переходов из кампании. Тест не запускался, это концепт.</p><p>Speculative concept. Not affiliated with or endorsed by Airbnb.</p></div>
+      <div class="copy"><p>Гипотеза: если показать месяц как обжитую базу, больше людей из кампании перейдут к жилью на месяц и забронируют от 28 ночей. Метрика — доля таких бронирований среди переходов из кампании. Порог успеха — +20% к этой доле против обычной рекламы при базе 18% ночей; по моему расчёту для этого нужно около 1 900 броней из кампании в каждой группе. Тест не запускался, это концепт.</p><p>Speculative concept. Not affiliated with or endorsed by Airbnb.</p></div>
     </div>
   </section>
 

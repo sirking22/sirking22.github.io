@@ -14,7 +14,8 @@ const T = [
    'An advertising concept for Airbnb. Airbnb has stays of a month or longer, but people know it for holidays. A month in someone else’s flat feels risky: will there be a place to work, will it ever feel like yours? The campaign shows a month as a base: an office with a view of the city, a corner that fills up over four weeks, and a spare key.'],
   ['Первый сюжет — офис на месяц. Один баннер на город: стол, кресло и монитор стоят у окна с видом, который есть только здесь. Людей в кадре нет, место ждёт того, кто приедет.',
    'The first story is an office for a month. One banner per city: a desk, a chair and a monitor by a window with a view you only get there. There are no people in the frame; the place is waiting for whoever arrives.'],
-  ['ночей на Airbnb — брони от 28 ночей, I квартал 2023. В конце 2021 года доля была выше', 'of nights on Airbnb were stays of 28+ nights in Q1 2023. At the end of 2021 the share was higher'],
+  ['к доле броней от 28 ночей среди переходов из кампании против обычной рекламы — порог теста. Гипотеза, тест не запускался', 'share of 28+ night bookings among campaign clicks vs regular ads: the test threshold. A hypothesis, not tested yet'],
+  ['ночей на Airbnb — проживания от 28 дней, III квартал 2023, письмо компании акционерам', 'of nights on Airbnb were stays of 28+ days in Q3 2023, per the company’s shareholder letter'],
   ['ночей — бронирование, на которое работает кампания', 'nights: the booking the campaign is built for'],
   ['сюжета: офис, угол, ключ', 'stories: office, corner, key'],
   ['города в серии офисов: Кейптаун, Мехико, Копенгаген, Лиссабон', 'cities in the office series: Cape Town, Mexico City, Copenhagen, Lisbon'],
@@ -42,8 +43,8 @@ const T = [
   ['связка ключей с местными брелоками', 'a bunch of keys with local keyrings'], ['четыре связки, по неделе на каждую', 'four bunches, one for each week'], ['брелоки месяца', 'keyrings of the month'],
   ['Кадры сгенерированы, текст и знак поставлены отдельным слоем.', 'The frames were generated; the text and logo were set as a separate layer.'],
   ['Как проверить', 'How to test it'],
-  ['Гипотеза: если показать месяц как обжитую базу, больше людей из кампании перейдут к жилью на месяц и забронируют от 28 ночей. Метрика — доля таких бронирований среди переходов из кампании. Тест не запускался, это концепт.',
-   'Hypothesis: if a month is shown as a lived-in base, more people from the campaign will move on to monthly stays and book 28 nights or more. The metric is the share of such bookings among visits from the campaign. The test has not been run; this is a concept.'],
+  ['Гипотеза: если показать месяц как обжитую базу, больше людей из кампании перейдут к жилью на месяц и забронируют от 28 ночей. Метрика — доля таких бронирований среди переходов из кампании. Порог успеха — +20% к этой доле против обычной рекламы при базе 18% ночей; по моему расчёту для этого нужно около 1 900 броней из кампании в каждой группе. Тест не запускался, это концепт.',
+   'Hypothesis: if a month is shown as a lived-in base, more people from the campaign will move on to monthly stays and book 28 nights or more. The metric is the share of such bookings among visits from the campaign. Success threshold: +20% to that share against regular ads, from a base of 18% of nights; by my estimate this needs about 1,900 campaign bookings per group. The test has not been run; this is a concept.'],
   ['Строка:', 'Line:'],
 ];
 T.sort((x, y) => y[0].length - x[0].length); // длинные фразы раньше коротких: «Запасной ключ» входит в абзац

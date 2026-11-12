@@ -24,9 +24,9 @@ const main = `<main class="v3" id="niche">
     </div>
     <style>.ax-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:48px 0 56px}.ax-facts b{display:block;font:600 clamp(40px,6vw,72px)/1 var(--display,inherit)}.ax-facts span{display:block;margin-top:8px;font-size:14px;line-height:1.35}@media(max-width:700px){.ax-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}}</style>
     <div class="ax-facts">
+      <p><b>+3%</b><span>цель по доле добавлений в корзину. Ориентир по кейсам New Look и CAMILLA (Contentsquare), не обещание</span></p>
       <p><b>45</b><span>высказываний покупателей с Reddit</span></p>
       <p><b>6</b><span>ситуаций выбора куртки</span></p>
-      <p><b>+3%</b><span>цель по доле добавлений в корзину. Ориентир по кейсам New Look и CAMILLA (Contentsquare), не обещание</span></p>
       <p><b>6</b><span>носителей: щит, постер, ситилайт, сторис, сайт, рассылка</span></p>
     </div>
     <div class="mp">
