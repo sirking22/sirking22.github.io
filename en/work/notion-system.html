@@ -84,102 +84,140 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
     </p>
   </header>
 
+  <!--std-lead--><style>
+.std-lead{margin:0 0 clamp(48px,6vw,96px)}
+.std-scope{margin:0 0 12px;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.std-lead>p:first-child{max-width:34em;margin:0 0 32px;font-size:clamp(20px,1.6vw,28px);line-height:1.3;text-wrap:pretty}
+.std-nums{list-style:none;margin:0;padding:20px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:1px solid var(--line)}
+.std-nums b{display:block;margin-bottom:8px;font-size:clamp(28px,2.6vw,44px);font-weight:400;line-height:1.1}
+.std-nums span{display:block;font-size:16px;line-height:1.4;text-wrap:pretty}
+.std-loop{list-style:none;display:flex;flex-wrap:wrap;gap:8px 12px;margin:32px 0 0;padding:0;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.std-loop li:not(:last-child)::after{content:"→";margin-left:12px}
+.std-loop a{color:var(--ink);text-underline-offset:3px}
+@media (max-width:700px){.std-nums{grid-template-columns:minmax(0,1fr)}}
+</style>
+  <section class="std-lead" aria-label="STANDARDS">
+    <p>A Notion system the RAWMID team of 10+ uses to run content from a signal in the metrics to release. A decision that worked becomes the norm for the next task.</p>
+    <p class="std-scope">Design department figures. Photo, production and web designers are not included.</p>
+    <ul class="std-nums"><li><b>0.7 revisions</b><span>per typical task after norms and checklists, down from 2.4</span></li><li><b>1,171 → 33</b><span>tasks reduced to typical ones, each with its own hour norm</span></li><li><b>1,098 / 1,001 h</b><span>planned vs actual across 82 tasks</span></li></ul>
+    <ol class="std-loop"><li><a href="#s1">Signal</a></li><li><a href="#s2">Research</a></li><li><a href="#s3">Hypothesis</a></li><li><a href="#s4">Production to norms</a></li><li><a href="#s5">Release</a></li><li><a href="#s6">Metrics</a></li><li><a href="#s7">New norm</a></li></ol>
+  </section><!--/std-lead-->
 
-  <section class="v3-chapter" data-chapter>
+  <section class="v3-chapter" id="s1" data-chapter>
     <p class="v3-label"><span>STANDARDS_/_01</span><span></span></p>
     <div class="m1">
-      <h2>Cost per content piece</h2>
-      <div class="copy"><p>The standard for each type of work is calculated from its own history. Hours or revision rounds above it are a signal. The same check flags a format that lost its response and a touchpoint where a metric dropped.</p></div>
+      <h2>Signal</h2>
+      <div class="copy"><p>The system flags tasks where hours or revision rounds went over the norm, formats that lost response, and touchpoints that dropped in the metrics.</p></div>
+    </div>
+    <figure class="m4" style="--r:1497/601">
+      <img src="../../assets/shot-tasks.webp" width="1497" height="601" alt="Tasks with hours deviating from the standard, in %" loading="lazy" decoding="async">
+      <figcaption><b>STANDARDS_/_01.1</b>Tasks with hours deviating from the standard, in %</figcaption>
+    </figure>
+  </section>
+
+  <section class="v3-chapter" id="s2" data-chapter>
+    <p class="v3-label"><span>STANDARDS_/_02</span><span></span></p>
+    <div class="m1">
+      <h2>Research</h2>
+      <div class="copy"><p>Under a signal sit the grounds: audience groups, category jobs with expected outcomes, what competitors do. They show where exactly it dropped.</p></div>
     </div>
     <div class="m2" data-carousel>
       <div class="m2-stage">
-        <img class="is-active" src="../../assets/shot-norms.webp" width="2744" height="1420" alt="Notion table with work types, time and revision counts" loading="lazy" decoding="async" data-cap="Playbook: for each type of work, the task count, average time and average revision rounds. That is the standard.">
-        <img src="../../assets/shot-typical-tasks.webp" width="1383" height="709" alt="Standard tasks: average time and revision rounds by type of work." loading="lazy" decoding="async" data-cap="Standard tasks: average time and revision rounds by type of work.">
-        <img src="../../assets/shot-tasks.webp" width="1497" height="601" alt="Tasks with hours deviating from the standard, in %" loading="lazy" decoding="async" data-cap="Tasks with hours deviating from the standard, in %">
+        <img class="is-active" src="../../assets/shot-audience.webp" width="2763" height="1422" alt="Audience table in Notion" loading="lazy" decoding="async" data-cap="Audience">
+        <img src="../../assets/shot-jobs.webp" width="2740" height="1422" alt="Audience jobs table with context and desired outcome" loading="lazy" decoding="async" data-cap="Audience jobs database: core job, job steps, context and desired outcome.">
+        <img src="../../assets/shot-competitors.webp" width="2765" height="1427" alt="Competitor table in Notion" loading="lazy" decoding="async" data-cap="Competitor strategy">
+        <img src="../../assets/shot-light.webp" width="2763" height="1425" alt="Notion card with two frames and a breakdown of light and shadow" loading="lazy" decoding="async" data-cap="Knowledge-base card “Lighting wide shots”: light and shadow broken down on two frames.">
       </div>
       <div class="m2-ctrl">
-        <p class="m2-cap"><b>STANDARDS_/_01.<span data-i>1</span></b> <span data-captext>Playbook: for each type of work, the task count, average time and average revision rounds. That is the standard.</span></p>
+        <p class="m2-cap"><b>STANDARDS_/_02.<span data-i>1</span></b> <span data-captext>Audience</span></p>
+        <div class="m2-nav"><button type="button" data-prev aria-label="Previous frame">←</button><span data-counter>01_/_04</span><button type="button" data-next aria-label="Next frame">→</button></div>
+      </div>
+      <div class="m2-thumbs" data-thumbs></div>
+    </div>
+  </section>
+
+  <section class="v3-chapter" id="s3" data-chapter>
+    <p class="v3-label"><span>STANDARDS_/_03</span><span></span></p>
+    <div class="m1">
+      <h2>Hypothesis</h2>
+      <div class="copy"><p>A signal becomes a goal with key results. Hypotheses and concepts are written under it.</p></div>
+    </div>
+    <figure class="m5" style="--r:2108/1080">
+      <video loop autoplay muted src="../../assets/chain-walkthrough.mp4" poster="../../assets/poster-chain.webp" width="2108" height="1080" playsinline="" preload="none" aria-label="The signal becomes a measurable goal on a specific node, split into key results. Inside the goal sit the research, the hypotheses and the concepts that grew out of them."></video>
+      <figcaption><b>STANDARDS_/_03.1</b>The signal becomes a measurable goal on a specific node, split into key results. Inside the goal sit the research, the hypotheses and the concepts that grew out of them.</figcaption>
+    </figure>
+    <figure class="m4" style="--r:2763/1422">
+      <img src="../../assets/shot-ideas.webp" width="2763" height="1422" alt="Ideas table with descriptions and statuses" loading="lazy" decoding="async">
+      <figcaption><b>STANDARDS_/_03.2</b>Idea base: ideas with description, status and links.</figcaption>
+    </figure>
+  </section>
+
+  <section class="v3-chapter" id="s4" data-chapter>
+    <p class="v3-label"><span>STANDARDS_/_04</span><span></span></p>
+    <div class="m1">
+      <h2>Production to norms</h2>
+      <div class="copy"><p>A concept turns into tasks built on typical ones: owner, deadline, hour norm, plan and actual. Overdue tasks get a red flag.</p></div>
+    </div>
+    <div class="m2" data-carousel>
+      <div class="m2-stage">
+        <img class="is-active" src="../../assets/shot-typical-tasks.webp" width="1383" height="709" alt="Standard tasks: average time and revision rounds by type of work." loading="lazy" decoding="async" data-cap="Standard tasks: average time and revision rounds by type of work.">
+        <img src="../../assets/shot-production.webp" width="2764" height="1425" alt="Notion production table with owners, statuses and deadlines" loading="lazy" decoding="async" data-cap="Production tracker: tasks with owner, status, a red flag on deadlines and load per person.">
+        <img src="../../assets/shot-load.webp" width="2764" height="1420" alt="Notion table with tasks, hours and deadlines by team member" loading="lazy" decoding="async" data-cap="Team load: tasks, hours and deadlines for each person.">
+      </div>
+      <div class="m2-ctrl">
+        <p class="m2-cap"><b>STANDARDS_/_04.<span data-i>1</span></b> <span data-captext>Standard tasks: average time and revision rounds by type of work.</span></p>
         <div class="m2-nav"><button type="button" data-prev aria-label="Previous frame">←</button><span data-counter>01_/_03</span><button type="button" data-next aria-label="Next frame">→</button></div>
       </div>
       <div class="m2-thumbs" data-thumbs></div>
     </div>
   </section>
-  <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>STANDARDS_/_02</span><span></span></p>
+
+  <section class="v3-chapter" id="s5" data-chapter>
+    <p class="v3-label"><span>STANDARDS_/_05</span><span></span></p>
     <div class="m1">
-      <h2>What worked</h2>
-      <div class="copy"><p>Stats arrive in the facts database with source and period and roll up into key results. <strong>What holds up becomes the standard in the task template.</strong></p></div>
+      <h2>Release</h2>
+      <div class="copy"><p>The piece goes out to a channel and lands in the releases base with date and version. Each release links to its material and goal.</p></div>
     </div>
-    <figure class="m5" style="--r:2108/1080">
-      <video loop autoplay muted src="../../assets/chain-walkthrough.mp4" poster="../../assets/poster-chain.webp" width="2108" height="1080" playsinline="" preload="none" aria-label="The signal becomes a measurable goal on a specific node, split into key results. Inside the goal sit the research, the hypotheses and the concepts that grew out of them."></video>
-      <figcaption><b>STANDARDS_/_02.1</b>The signal becomes a measurable goal on a specific node, split into key results. Inside the goal sit the research, the hypotheses and the concepts that grew out of them.</figcaption>
+    <div class="m2" data-carousel>
+      <div class="m2-stage">
+        <img class="is-active" src="../../assets/shot-releases.webp" width="2766" height="1426" alt="Release table with channels, dates and metrics" loading="lazy" decoding="async" data-cap="Release log: post, channel, date, linked asset and collected metrics.">
+        <img src="../../assets/shot-content.webp" width="1800" height="839" alt="Monthly content calendar" loading="lazy" decoding="async" data-cap="Monthly content calendar">
+      </div>
+      <div class="m2-ctrl">
+        <p class="m2-cap"><b>STANDARDS_/_05.<span data-i>1</span></b> <span data-captext>Release log: post, channel, date, linked asset and collected metrics.</span></p>
+        <div class="m2-nav"><button type="button" data-prev aria-label="Previous frame">←</button><span data-counter>01_/_02</span><button type="button" data-next aria-label="Next frame">→</button></div>
+      </div>
+      <div class="m2-thumbs" data-thumbs></div>
+    </div>
+  </section>
+
+  <section class="v3-chapter" id="s6" data-chapter>
+    <p class="v3-label"><span>STANDARDS_/_06</span><span></span></p>
+    <div class="m1">
+      <h2>Metrics</h2>
+      <div class="copy"><p>Stats arrive in the facts base with source and period and roll up into the goal’s key results.</p></div>
+    </div>
+    <figure class="m4" style="--r:2765/1425">
+      <img src="../../assets/shot-facts-2026-09.webp" width="2765" height="1425" alt="Metrics table with values, periods and sources" loading="lazy" decoding="async">
+      <figcaption><b>STANDARDS_/_06.1</b>Facts database: metric, value, period, source and dedup key.</figcaption>
     </figure>
     <figure class="m5" style="--r:1920/988">
       <video loop autoplay muted src="../../assets/case-materials.mp4" poster="../../assets/poster-materials.webp" width="1920" height="988" playsinline="" preload="none" aria-label="“Artifacts”: materials with reach and metrics"></video>
-      <figcaption><b>STANDARDS_/_02.2</b>“Artifacts”: materials with reach and metrics</figcaption>
-    </figure>
-    <figure class="m4" style="--r:2765/1425">
-      <img src="../../assets/shot-facts-2026-09.webp" width="2765" height="1425" alt="Metrics table with values, periods and sources" loading="lazy" decoding="async">
-      <figcaption><b>STANDARDS_/_02.3</b>Facts database: metric, value, period, source and dedup key.</figcaption>
+      <figcaption><b>STANDARDS_/_06.2</b>“Artifacts”: materials with reach and metrics</figcaption>
     </figure>
   </section>
-  <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>STANDARDS_/_03</span><span></span></p>
+
+  <section class="v3-chapter" id="s7" data-chapter>
+    <p class="v3-label"><span>STANDARDS_/_07</span><span></span></p>
     <div class="m1">
-      <h2>Deadlines and workload</h2>
-      <div class="copy"><p>The concept turns into tasks: owner, deadline, a <strong>red flag when overdue</strong>, planned and actual hours. The standard for the next signal comes from here too.</p></div>
+      <h2>New norm</h2>
+      <div class="copy"><p>What proved itself is fixed in the typical task: steps, rules, good examples and a recalculated hour norm. The next signal is checked against it.</p></div>
     </div>
-    <div class="m2" data-carousel>
-      <div class="m2-stage">
-        <img class="is-active" src="../../assets/shot-production.webp" width="2764" height="1425" alt="Notion production table with owners, statuses and deadlines" loading="lazy" decoding="async" data-cap="Production tracker: tasks with owner, status, a red flag on deadlines and load per person.">
-        <img src="../../assets/shot-load.webp" width="2764" height="1420" alt="Notion table with tasks, hours and deadlines by team member" loading="lazy" decoding="async" data-cap="Team load: tasks, hours and deadlines for each person.">
-      </div>
-      <div class="m2-ctrl">
-        <p class="m2-cap"><b>STANDARDS_/_03.<span data-i>1</span></b> <span data-captext>Production tracker: tasks with owner, status, a red flag on deadlines and load per person.</span></p>
-        <div class="m2-nav"><button type="button" data-prev aria-label="Previous frame">←</button><span data-counter>01_/_02</span><button type="button" data-next aria-label="Next frame">→</button></div>
-      </div>
-      <div class="m2-thumbs" data-thumbs></div>
-    </div>
+    <figure class="m4" style="--r:2744/1420">
+      <img src="../../assets/shot-norms.webp" width="2744" height="1420" alt="Notion table with work types, time and revision counts" loading="lazy" decoding="async">
+      <figcaption><b>STANDARDS_/_07.1</b>Playbook: for each type of work, the task count, average time and average revision rounds. That is the standard.</figcaption>
+    </figure>
   </section>
-  <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>STANDARDS_/_04</span><span></span></p>
-    <div class="m1">
-      <h2>This week’s releases</h2>
-      <div class="copy"><p>The asset goes live and lands in the release log: channel, date, version. Each release links to its asset and goal, and the metrics attach to it.</p></div>
-    </div>
-    <div class="m2" data-carousel>
-      <div class="m2-stage">
-        <img class="is-active" src="../../assets/shot-content.webp" width="1800" height="839" alt="Monthly content calendar" loading="lazy" decoding="async" data-cap="Monthly content calendar">
-        <img src="../../assets/shot-releases.webp" width="2766" height="1426" alt="Release table with channels, dates and metrics" loading="lazy" decoding="async" data-cap="Release log: post, channel, date, linked asset and collected metrics.">
-      </div>
-      <div class="m2-ctrl">
-        <p class="m2-cap"><b>STANDARDS_/_04.<span data-i>1</span></b> <span data-captext>Monthly content calendar</span></p>
-        <div class="m2-nav"><button type="button" data-prev aria-label="Previous frame">←</button><span data-counter>01_/_02</span><button type="button" data-next aria-label="Next frame">→</button></div>
-      </div>
-      <div class="m2-thumbs" data-thumbs></div>
-    </div>
-  </section>
-  <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>STANDARDS_/_05</span><span></span></p>
-    <div class="m1">
-      <h2>What ideas rest on</h2>
-      <div class="copy"><p>The signal pulls up the evidence: core jobs, job steps and desired outcomes, audience groups and what competitors hold in the category. Together they show exactly where the drop is.</p></div>
-    </div>
-    <div class="m2" data-carousel>
-      <div class="m2-stage">
-        <img class="is-active" src="../../assets/shot-audience.webp" width="2763" height="1422" alt="Audience table in Notion" loading="lazy" decoding="async" data-cap="Audience">
-        <img src="../../assets/shot-competitors.webp" width="2765" height="1427" alt="Competitor table in Notion" loading="lazy" decoding="async" data-cap="Competitor strategy">
-        <img src="../../assets/shot-jobs.webp" width="2740" height="1422" alt="Audience jobs table with context and desired outcome" loading="lazy" decoding="async" data-cap="Audience jobs database: core job, job steps, context and desired outcome.">
-        <img src="../../assets/shot-ideas.webp" width="2763" height="1422" alt="Ideas table with descriptions and statuses" loading="lazy" decoding="async" data-cap="Idea base: ideas with description, status and links.">
-        <img src="../../assets/shot-light.webp" width="2763" height="1425" alt="Notion card with two frames and a breakdown of light and shadow" loading="lazy" decoding="async" data-cap="Knowledge-base card “Lighting wide shots”: light and shadow broken down on two frames.">
-      </div>
-      <div class="m2-ctrl">
-        <p class="m2-cap"><b>STANDARDS_/_05.<span data-i>1</span></b> <span data-captext>Audience</span></p>
-        <div class="m2-nav"><button type="button" data-prev aria-label="Previous frame">←</button><span data-counter>01_/_05</span><button type="button" data-next aria-label="Next frame">→</button></div>
-      </div>
-      <div class="m2-thumbs" data-thumbs></div>
-    </div>
-    </section>
 
   <nav class="v3-next" aria-label="Adjacent work">
     <a href="rawmid-video.html">←_PREVIOUS<strong>RAWMID · video visuals</strong></a>
