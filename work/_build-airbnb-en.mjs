@@ -61,3 +61,5 @@ t = t.replace(/<main class="v3" id="niche">[\s\S]*?<\/main>/, main)
 fs.writeFileSync(new URL('airbnb-month.html', en), t);
 console.log('ok', t.length, (t.match(/arc.?teryx/gi) || []).length + ' arcteryx mentions left');
 await import('./_fit-figures.mjs?' + Date.now());
+
+await import('./_ai-mark.mjs?' + Date.now()); // 12.11: полоса AI-first под шапкой
