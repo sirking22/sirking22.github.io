@@ -77,25 +77,26 @@ h1, h2, p, figure { margin: 0; }
 .v3 figcaption b { font-weight: 400; color: var(--ink); margin-right: 8px; }
 
 /* M4 — кадр на всю ширину */
-.m4 img { width: 100%; height: auto; max-height: calc(100vh - var(--bar) - 96px); object-fit: contain; background: var(--well); }
+.m4, .m5 { width: min(100%, calc((100vh - var(--bar) - 96px) * var(--r, 99))); margin-inline: auto; }
+.m4 img, .m5 video { width: 100%; height: auto; }
 
 /* MP — пара 3:2 + 1:1 в одну высоту: колонки 3fr/2fr дают равную высоту без подгонки */
 .mp { display: grid; grid-template-columns: 3fr 2fr; gap: 24px var(--gap); }
-.mp img { width: 100%; height: auto; background: var(--well); }
+.mp img { width: 100%; height: auto; }
 
 /* M3 — сетка 2–6 кадров одного размера; кадр вписан целиком, не обрезан */
 .m3 { display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: 24px var(--gap); }
 .m3[data-n="2"] { --cols: 2; }
 .m3[data-n="4"] { --cols: 4; }
 .m3[data-n="6"] { --cols: 3; }
-.m3 .cell { aspect-ratio: var(--cell, 4 / 5); background: var(--well); }
+.m3 .cell { aspect-ratio: var(--cell, 4 / 5); }
 .m3 .cell img { width: 100%; height: 100%; object-fit: contain; }
 
 /* Заглушка кадра, который ещё снимается */
-.v3 .ph { display: grid; place-items: center; aspect-ratio: 16 / 9; max-height: calc(100vh - var(--bar) - 96px); background: var(--well); font: 400 12px/1.4 var(--mono); color: var(--mute); text-align: center; padding: 16px; }
+.v3 .ph { display: grid; place-items: center; aspect-ratio: 16 / 9; max-height: calc(100vh - var(--bar) - 96px); border: 1px dashed var(--line); font: 400 12px/1.4 var(--mono); color: var(--mute); text-align: center; padding: 16px; }
 
 /* M2 — карусель с лентой миниатюр и счётчиком 01_/_06 */
-.m2-stage { position: relative; aspect-ratio: 16 / 9; max-height: calc(100vh - var(--bar) - 200px); width: 100%; background: #fff; }
+.m2-stage { position: relative; aspect-ratio: 16 / 9; max-height: calc(100vh - var(--bar) - 200px); width: 100%; }
 .m2-stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; visibility: hidden; }
 .m2-stage img.is-active { visibility: visible; }
 .m2-ctrl { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 12px; font: 400 12px/1.4 var(--mono); text-transform: uppercase; }
@@ -104,12 +105,11 @@ h1, h2, p, figure { margin: 0; }
 .m2-ctrl button { font: inherit; color: var(--ink); background: none; border: 1px solid var(--line); padding: 6px 10px; cursor: pointer; }
 .m2-ctrl button:hover { border-color: var(--ink); }
 .m2-thumbs { display: flex; gap: 8px; margin-top: 12px; overflow-x: auto; scrollbar-width: thin; }
-.m2-thumbs button { flex: none; width: 96px; aspect-ratio: 4 / 3; padding: 0; border: 1px solid transparent; background: #fff; cursor: pointer; opacity: .55; }
+.m2-thumbs button { flex: none; width: 96px; aspect-ratio: 4 / 3; padding: 0; border: 1px solid transparent; cursor: pointer; opacity: .55; }
 .m2-thumbs button img { width: 100%; height: 100%; object-fit: contain; }
 .m2-thumbs button[aria-current="true"] { opacity: 1; border-color: var(--ink); }
 
-/* M5 — видео на всю ширину */
-.m5 video { width: 100%; height: auto; max-height: calc(100vh - var(--bar) - 96px); background: var(--well); }
+/* M5 — видео на всю ширину */
 
 /* Низ кейса */
 .v3-next { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: var(--section); padding-top: 12px; border-top: 1px solid var(--ink); font: 400 12px/1.4 var(--mono); text-transform: uppercase; }
@@ -186,3 +186,11 @@ dialog.zoom img { width: 100%; height: 100%; object-fit: contain; }
 .v3 figcaption:has(> b) { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 8px; }
 .v3 figcaption b { margin-right: 0; }
 .ap-intro .ap-values { margin-top: 32px; }
+
+/* 12.11.2026, слово владельца: у слайдов кейсов нет серого фона; подпись стоит на самом слайде и появляется при наведении, как на плитках главной. На касании подпись остаётся под кадром. */
+@media (hover: hover) {
+  .v3 figure:has(> figcaption) { position: relative; }
+  .v3 figure > figcaption { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 32px 14px 12px; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.72)); opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .v3 figure > figcaption b { color: #fff; }
+  .v3 figure:hover > figcaption { opacity: 1; }
+}
