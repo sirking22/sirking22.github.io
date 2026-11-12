@@ -8,7 +8,8 @@ const root = new URL('../', import.meta.url);
 
 const style = `<style>
 .std-lead{margin:0 0 clamp(48px,6vw,96px)}
-.std-lead>p{max-width:34em;margin:0 0 32px;font-size:clamp(20px,1.6vw,28px);line-height:1.3;text-wrap:pretty}
+.std-scope{margin:0 0 12px;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.std-lead>p:first-child{max-width:34em;margin:0 0 32px;font-size:clamp(20px,1.6vw,28px);line-height:1.3;text-wrap:pretty}
 .std-nums{list-style:none;margin:0;padding:20px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:1px solid var(--line)}
 .std-nums b{display:block;margin-bottom:8px;font-size:clamp(28px,2.6vw,44px);font-weight:400;line-height:1.1}
 .std-nums span{display:block;font-size:16px;line-height:1.4;text-wrap:pretty}
@@ -22,6 +23,8 @@ const L = {
   ru: {
     file: 'work/notion-system.html', label: 'СТАНДАРТЫ', prev: 'Предыдущий кадр', next: 'Следующий кадр',
     lead: 'Система в Notion, по которой команда RAWMID из 10+ человек ведёт контент от сигнала в метриках до выпуска. Решение, которое сработало, становится нормой для следующей задачи.',
+    // 13.11, слово владельца: «33 задачи это только для дизайнера… или можно сказать, что это только для дизайн отдела»
+    scope: 'Цифры дизайн-отдела. Фотограф, продакшн и веб-дизайнеры в них не входят.',
     nums: [['0,7 правки', 'на типовую задачу вместо 2,4 после норм и чек-листов'], ['1 171 → 33', 'задачи сведены к типовым, у каждой своя норма часов'], ['1 098 / 1 001 ч', 'план и факт по 82 задачам']],
     steps: [
       ['Сигнал', 'Система сама подсвечивает задачи, где часы или круги правок вышли за норму, форматы, потерявшие отклик, и точки контакта с провалом по метрике.'],
@@ -36,6 +39,7 @@ const L = {
   en: {
     file: 'en/work/notion-system.html', label: 'STANDARDS', prev: 'Previous frame', next: 'Next frame',
     lead: 'A Notion system the RAWMID team of 10+ uses to run content from a signal in the metrics to release. A decision that worked becomes the norm for the next task.',
+    scope: 'Design department figures. Photo, production and web designers are not included.',
     nums: [['0.7 revisions', 'per typical task after norms and checklists, down from 2.4'], ['1,171 → 33', 'tasks reduced to typical ones, each with its own hour norm'], ['1,098 / 1,001 h', 'planned vs actual across 82 tasks']],
     steps: [
       ['Signal', 'The system flags tasks where hours or revision rounds went over the norm, formats that lost response, and touchpoints that dropped in the metrics.'],
@@ -112,6 +116,7 @@ ${body}
   const lead = `  <!--std-lead-->${style}
   <section class="std-lead" aria-label="${c.label}">
     <p>${c.lead}</p>
+    <p class="std-scope">${c.scope}</p>
     <ul class="std-nums">${c.nums.map(([b, s]) => `<li><b>${b}</b><span>${s}</span></li>`).join('')}</ul>
     <ol class="std-loop">${c.steps.map(([h], i) => `<li><a href="#s${i + 1}">${h}</a></li>`).join('')}</ol>
   </section><!--/std-lead-->`;
