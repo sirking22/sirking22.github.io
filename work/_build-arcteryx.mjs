@@ -77,3 +77,5 @@ t = t.replace(/<main class="v3" id="niche">[\s\S]*?<\/main>/, main)
      .replace('href="../en/work/dyson-v15.html"', 'href="../en/work/arcteryx-winter.html"');
 fs.writeFileSync(new URL('arcteryx-winter.html', dir), t);
 console.log('ok', t.length, (t.match(/dyson/gi)||[]).length + ' dyson mentions left');
+
+await import('./_ai-mark.mjs?' + Date.now()); // 12.11: полоса AI-first под шапкой

@@ -111,3 +111,5 @@ fs.writeFileSync(new URL('airbnb-month.html', dir), t);
 console.log('ok', t.length, (t.match(/arc.?teryx/gi) || []).length + " arcteryx mentions left");
 
 await import('./_fit-figures.mjs?' + Date.now()); // 12.11: рамки m4/m5 под кадр
+
+await import('./_ai-mark.mjs?' + Date.now()); // 12.11: полоса AI-first под шапкой
