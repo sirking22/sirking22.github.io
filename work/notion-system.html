@@ -85,106 +85,138 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
     </p>
   </header>
 
+  <!--std-lead--><style>
+.std-lead{margin:0 0 clamp(48px,6vw,96px)}
+.std-lead>p{max-width:34em;margin:0 0 32px;font-size:clamp(20px,1.6vw,28px);line-height:1.3;text-wrap:pretty}
+.std-nums{list-style:none;margin:0;padding:20px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:1px solid var(--line)}
+.std-nums b{display:block;margin-bottom:8px;font-size:clamp(28px,2.6vw,44px);font-weight:400;line-height:1.1}
+.std-nums span{display:block;font-size:16px;line-height:1.4;text-wrap:pretty}
+.std-loop{list-style:none;display:flex;flex-wrap:wrap;gap:8px 12px;margin:32px 0 0;padding:0;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.std-loop li:not(:last-child)::after{content:"→";margin-left:12px}
+.std-loop a{color:var(--ink);text-underline-offset:3px}
+@media (max-width:700px){.std-nums{grid-template-columns:minmax(0,1fr)}}
+</style>
+  <section class="std-lead" aria-label="СТАНДАРТЫ">
+    <p>Система в Notion, по которой команда RAWMID из 10+ человек ведёт контент от сигнала в метриках до выпуска. Решение, которое сработало, становится нормой для следующей задачи.</p>
+    <ul class="std-nums"><li><b>0,7 правки</b><span>на типовую задачу вместо 2,4 после норм и чек-листов</span></li><li><b>1 171 → 33</b><span>задачи сведены к типовым, у каждой своя норма часов</span></li><li><b>1 098 / 1 001 ч</b><span>план и факт по 82 задачам</span></li></ul>
+    <ol class="std-loop"><li><a href="#s1">Сигнал</a></li><li><a href="#s2">Исследование</a></li><li><a href="#s3">Гипотеза</a></li><li><a href="#s4">Производство по нормам</a></li><li><a href="#s5">Выпуск</a></li><li><a href="#s6">Метрики</a></li><li><a href="#s7">Новая норма</a></li></ol>
+  </section><!--/std-lead-->
 
-  <section class="v3-chapter" data-chapter>
+  <section class="v3-chapter" id="s1" data-chapter>
     <p class="v3-label"><span>СТАНДАРТЫ_/_01</span><span></span></p>
     <div class="m1">
-      <h2>Цена единицы контента</h2>
-      <div class="copy"><p>Норма по каждому типу работы посчитана по истории. Часы или круги правок выше нормы — сигнал. Так же подсвечиваются формат, потерявший отклик, и точка контакта с провалом по метрике.</p></div>
+      <h2>Сигнал</h2>
+      <div class="copy"><p>Система сама подсвечивает задачи, где часы или круги правок вышли за норму, форматы, потерявшие отклик, и точки контакта с провалом по метрике.</p></div>
+    </div>
+    <figure class="m4" style="--r:1497/601">
+      <img src="../assets/shot-tasks.webp" width="1497" height="601" alt="Задачи с отклонением часов от нормы, в %" loading="lazy" decoding="async">
+      <figcaption><b>СТАНДАРТЫ_/_01.1</b>Задачи с отклонением часов от нормы, в %</figcaption>
+    </figure>
+  </section>
+
+  <section class="v3-chapter" id="s2" data-chapter>
+    <p class="v3-label"><span>СТАНДАРТЫ_/_02</span><span></span></p>
+    <div class="m1">
+      <h2>Исследование</h2>
+      <div class="copy"><p>Под сигнал поднимаются основания: группы аудитории, задачи категории с ожидаемым результатом, что делают конкуренты. Из них видно, где именно просело.</p></div>
     </div>
     <div class="m2" data-carousel>
       <div class="m2-stage">
-        <img class="is-active" src="../assets/shot-norms.webp" width="2744" height="1420" alt="Таблица Notion с типами работ, временем и числом правок" loading="lazy" decoding="async" data-cap="Плейбук: по каждому типу работы число задач, среднее время и среднее число правок — это и есть норма.">
-        <img src="../assets/shot-typical-tasks.webp" width="1383" height="709" alt="Типовые задачи: среднее время и число правок по типу работы." loading="lazy" decoding="async" data-cap="Типовые задачи: среднее время и число правок по типу работы.">
-        <img src="../assets/shot-tasks.webp" width="1497" height="601" alt="Задачи с отклонением часов от нормы, в %" loading="lazy" decoding="async" data-cap="Задачи с отклонением часов от нормы, в %">
+        <img class="is-active" src="../assets/shot-audience.webp" width="2763" height="1422" alt="Таблица аудитории в Notion" loading="lazy" decoding="async" data-cap="Аудитория">
+        <img src="../assets/shot-jobs.webp" width="2740" height="1422" alt="Таблица задач аудитории с контекстом и ожидаемым результатом" loading="lazy" decoding="async" data-cap="База задач аудитории: задача категории, шаги задачи, контекст и ожидаемый результат.">
+        <img src="../assets/shot-competitors.webp" width="2765" height="1427" alt="Таблица конкурентов в Notion" loading="lazy" decoding="async" data-cap="Стратегия конкурентов">
+        <img src="../assets/shot-light.webp" width="2763" height="1425" alt="Карточка Notion с двумя кадрами и разбором света и тени" loading="lazy" decoding="async" data-cap="Карточка базы знаний «Свет общих планов»: разбор света и тени на двух кадрах.">
       </div>
       <div class="m2-ctrl">
-        <p class="m2-cap"><b>СТАНДАРТЫ_/_01.<span data-i>1</span></b> <span data-captext>Плейбук: по каждому типу работы число задач, среднее время и среднее число правок — это и есть норма.</span></p>
+        <p class="m2-cap"><b>СТАНДАРТЫ_/_02.<span data-i>1</span></b> <span data-captext>Аудитория</span></p>
+        <div class="m2-nav"><button type="button" data-prev aria-label="Предыдущий кадр">←</button><span data-counter>01_/_04</span><button type="button" data-next aria-label="Следующий кадр">→</button></div>
+      </div>
+      <div class="m2-thumbs" data-thumbs></div>
+    </div>
+  </section>
+
+  <section class="v3-chapter" id="s3" data-chapter>
+    <p class="v3-label"><span>СТАНДАРТЫ_/_03</span><span></span></p>
+    <div class="m1">
+      <h2>Гипотеза</h2>
+      <div class="copy"><p>Сигнал становится целью с ключевыми результатами. Под неё пишутся гипотезы и концепты.</p></div>
+    </div>
+    <figure class="m5" style="--r:2108/1080">
+      <video loop autoplay muted src="../assets/chain-walkthrough.mp4" poster="../assets/poster-chain.webp" width="2108" height="1080" playsinline="" preload="none" aria-label="Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли."></video>
+      <figcaption><b>СТАНДАРТЫ_/_03.1</b>Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли.</figcaption>
+    </figure>
+    <figure class="m4" style="--r:2763/1422">
+      <img src="../assets/shot-ideas.webp" width="2763" height="1422" alt="Таблица идей с описаниями и статусами" loading="lazy" decoding="async">
+      <figcaption><b>СТАНДАРТЫ_/_03.2</b>База идей: список идей с описанием, статусом и связями.</figcaption>
+    </figure>
+  </section>
+
+  <section class="v3-chapter" id="s4" data-chapter>
+    <p class="v3-label"><span>СТАНДАРТЫ_/_04</span><span></span></p>
+    <div class="m1">
+      <h2>Производство по нормам</h2>
+      <div class="copy"><p>Концепт уходит в задачи по типовым: исполнитель, срок, норма часов, план и факт. Просрочка горит красным флагом.</p></div>
+    </div>
+    <div class="m2" data-carousel>
+      <div class="m2-stage">
+        <img class="is-active" src="../assets/shot-typical-tasks.webp" width="1383" height="709" alt="Типовые задачи: среднее время и число правок по типу работы." loading="lazy" decoding="async" data-cap="Типовые задачи: среднее время и число правок по типу работы.">
+        <img src="../assets/shot-production.webp" width="2764" height="1425" alt="Таблица продакшна в Notion с исполнителями, статусами и сроками" loading="lazy" decoding="async" data-cap="Продакшн-трекер: задачи с исполнителем, статусом, красным флагом по срокам и загрузкой по людям.">
+        <img src="../assets/shot-load.webp" width="2764" height="1420" alt="Таблица Notion с задачами, часами и сроками по сотрудникам" loading="lazy" decoding="async" data-cap="Загрузка команды: по каждому человеку задачи, часы и сроки.">
+      </div>
+      <div class="m2-ctrl">
+        <p class="m2-cap"><b>СТАНДАРТЫ_/_04.<span data-i>1</span></b> <span data-captext>Типовые задачи: среднее время и число правок по типу работы.</span></p>
         <div class="m2-nav"><button type="button" data-prev aria-label="Предыдущий кадр">←</button><span data-counter>01_/_03</span><button type="button" data-next aria-label="Следующий кадр">→</button></div>
       </div>
       <div class="m2-thumbs" data-thumbs></div>
     </div>
   </section>
 
-  <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>СТАНДАРТЫ_/_02</span><span></span></p>
+  <section class="v3-chapter" id="s5" data-chapter>
+    <p class="v3-label"><span>СТАНДАРТЫ_/_05</span><span></span></p>
     <div class="m1">
-      <h2>Что сработало</h2>
-      <div class="copy"><p>Статистика приходит в базу фактов с источником и периодом и поднимается в ключевые результаты. <strong>Подтвердившееся закрепляется нормой в типовой задаче.</strong></p></div>
+      <h2>Выпуск</h2>
+      <div class="copy"><p>Материал выходит в канал и попадает в базу релизов с датой и версией. Релиз связан со своим материалом и целью.</p></div>
     </div>
-    <figure class="m5" style="--r:2108/1080">
-      <video loop autoplay muted src="../assets/chain-walkthrough.mp4" poster="../assets/poster-chain.webp" width="2108" height="1080" playsinline="" preload="none" aria-label="Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли."></video>
-      <figcaption><b>СТАНДАРТЫ_/_02.1</b>Из сигнала ставится измеримая цель на конкретном узле и раскладывается на ключевые результаты. Внутри цели — исследование, гипотезы и концепты, которые из них выросли.</figcaption>
+    <div class="m2" data-carousel>
+      <div class="m2-stage">
+        <img class="is-active" src="../assets/shot-releases.webp" width="2766" height="1426" alt="Таблица релизов с каналами, датами и метриками" loading="lazy" decoding="async" data-cap="База релизов: публикация, канал, дата, связанный материал и снятые метрики.">
+        <img src="../assets/shot-content.webp" width="1800" height="839" alt="Контент-календарь на месяц" loading="lazy" decoding="async" data-cap="Контент-календарь на месяц">
+      </div>
+      <div class="m2-ctrl">
+        <p class="m2-cap"><b>СТАНДАРТЫ_/_05.<span data-i>1</span></b> <span data-captext>База релизов: публикация, канал, дата, связанный материал и снятые метрики.</span></p>
+        <div class="m2-nav"><button type="button" data-prev aria-label="Предыдущий кадр">←</button><span data-counter>01_/_02</span><button type="button" data-next aria-label="Следующий кадр">→</button></div>
+      </div>
+      <div class="m2-thumbs" data-thumbs></div>
+    </div>
+  </section>
+
+  <section class="v3-chapter" id="s6" data-chapter>
+    <p class="v3-label"><span>СТАНДАРТЫ_/_06</span><span></span></p>
+    <div class="m1">
+      <h2>Метрики</h2>
+      <div class="copy"><p>Статистика приходит в базу фактов с источником и периодом и поднимается в ключевые результаты цели.</p></div>
+    </div>
+    <figure class="m4" style="--r:2765/1425">
+      <img src="../assets/shot-facts-2026-09.webp" width="2765" height="1425" alt="Таблица метрик со значениями, периодами и источниками" loading="lazy" decoding="async">
+      <figcaption><b>СТАНДАРТЫ_/_06.1</b>База фактов: метрика, значение, период, источник и ключ дедупликации.</figcaption>
     </figure>
     <figure class="m5" style="--r:1920/988">
       <video loop autoplay muted src="../assets/case-materials.mp4" poster="../assets/poster-materials.webp" width="1920" height="988" playsinline="" preload="none" aria-label="«Артефакты»: материалы с охватом и метриками"></video>
-      <figcaption><b>СТАНДАРТЫ_/_02.2</b>«Артефакты»: материалы с охватом и метриками</figcaption>
-    </figure>
-    <figure class="m4" style="--r:2765/1425">
-      <img src="../assets/shot-facts-2026-09.webp" width="2765" height="1425" alt="Таблица метрик со значениями, периодами и источниками" loading="lazy" decoding="async">
-      <figcaption><b>СТАНДАРТЫ_/_02.3</b>База фактов: метрика, значение, период, источник и ключ дедупликации.</figcaption>
+      <figcaption><b>СТАНДАРТЫ_/_06.2</b>«Артефакты»: материалы с охватом и метриками</figcaption>
     </figure>
   </section>
 
-  <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>СТАНДАРТЫ_/_03</span><span></span></p>
+  <section class="v3-chapter" id="s7" data-chapter>
+    <p class="v3-label"><span>СТАНДАРТЫ_/_07</span><span></span></p>
     <div class="m1">
-      <h2>Сроки и нагрузка</h2>
-      <div class="copy"><p>Концепт уходит в задачи: исполнитель, срок, <strong>красный флаг по просрочке</strong>, план и факт часов. Отсюда же берётся норма для следующего сигнала.</p></div>
+      <h2>Новая норма</h2>
+      <div class="copy"><p>Подтвердившееся закрепляется в типовой задаче: шаги, правила, удачные примеры и пересчитанная норма часов. Следующий сигнал сверяется уже с ней.</p></div>
     </div>
-    <div class="m2" data-carousel>
-      <div class="m2-stage">
-        <img class="is-active" src="../assets/shot-production.webp" width="2764" height="1425" alt="Таблица продакшна в Notion с исполнителями, статусами и сроками" loading="lazy" decoding="async" data-cap="Продакшн-трекер: задачи с исполнителем, статусом, красным флагом по срокам и загрузкой по людям.">
-        <img src="../assets/shot-load.webp" width="2764" height="1420" alt="Таблица Notion с задачами, часами и сроками по сотрудникам" loading="lazy" decoding="async" data-cap="Загрузка команды: по каждому человеку задачи, часы и сроки.">
-      </div>
-      <div class="m2-ctrl">
-        <p class="m2-cap"><b>СТАНДАРТЫ_/_03.<span data-i>1</span></b> <span data-captext>Продакшн-трекер: задачи с исполнителем, статусом, красным флагом по срокам и загрузкой по людям.</span></p>
-        <div class="m2-nav"><button type="button" data-prev aria-label="Предыдущий кадр">←</button><span data-counter>01_/_02</span><button type="button" data-next aria-label="Следующий кадр">→</button></div>
-      </div>
-      <div class="m2-thumbs" data-thumbs></div>
-    </div>
+    <figure class="m4" style="--r:2744/1420">
+      <img src="../assets/shot-norms.webp" width="2744" height="1420" alt="Таблица Notion с типами работ, временем и числом правок" loading="lazy" decoding="async">
+      <figcaption><b>СТАНДАРТЫ_/_07.1</b>Плейбук: по каждому типу работы число задач, среднее время и среднее число правок — это и есть норма.</figcaption>
+    </figure>
   </section>
-
-  <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>СТАНДАРТЫ_/_04</span><span></span></p>
-    <div class="m1">
-      <h2>Выпуски недели</h2>
-      <div class="copy"><p>Материал выходит наружу и попадает в базу релизов: канал, дата, версия. Каждый релиз связан со своим материалом и целью, к нему и подтягиваются метрики.</p></div>
-    </div>
-    <div class="m2" data-carousel>
-      <div class="m2-stage">
-        <img class="is-active" src="../assets/shot-content.webp" width="1800" height="839" alt="Контент-календарь на месяц" loading="lazy" decoding="async" data-cap="Контент-календарь на месяц">
-        <img src="../assets/shot-releases.webp" width="2766" height="1426" alt="Таблица релизов с каналами, датами и метриками" loading="lazy" decoding="async" data-cap="База релизов: публикация, канал, дата, связанный материал и снятые метрики.">
-      </div>
-      <div class="m2-ctrl">
-        <p class="m2-cap"><b>СТАНДАРТЫ_/_04.<span data-i>1</span></b> <span data-captext>Контент-календарь на месяц</span></p>
-        <div class="m2-nav"><button type="button" data-prev aria-label="Предыдущий кадр">←</button><span data-counter>01_/_02</span><button type="button" data-next aria-label="Следующий кадр">→</button></div>
-      </div>
-      <div class="m2-thumbs" data-thumbs></div>
-    </div>
-  </section>
-
-  <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>СТАНДАРТЫ_/_05</span><span></span></p>
-    <div class="m1">
-      <h2>На чём основаны идеи?</h2>
-      <div class="copy"><p>Под сигнал поднимаются основания: задачи категории, шаги задачи и ожидаемые результаты, группы аудитории и чем занята категория у конкурентов. Из них видно, где именно просело.</p></div>
-    </div>
-    <div class="m2" data-carousel>
-      <div class="m2-stage">
-        <img class="is-active" src="../assets/shot-audience.webp" width="2763" height="1422" alt="Таблица аудитории в Notion" loading="lazy" decoding="async" data-cap="Аудитория">
-        <img src="../assets/shot-competitors.webp" width="2765" height="1427" alt="Таблица конкурентов в Notion" loading="lazy" decoding="async" data-cap="Стратегия конкурентов">
-        <img src="../assets/shot-jobs.webp" width="2740" height="1422" alt="Таблица задач аудитории с контекстом и ожидаемым результатом" loading="lazy" decoding="async" data-cap="База задач аудитории: задача категории, шаги задачи, контекст и ожидаемый результат.">
-        <img src="../assets/shot-ideas.webp" width="2763" height="1422" alt="Таблица идей с описаниями и статусами" loading="lazy" decoding="async" data-cap="База идей: список идей с описанием, статусом и связями.">
-        <img src="../assets/shot-light.webp" width="2763" height="1425" alt="Карточка Notion с двумя кадрами и разбором света и тени" loading="lazy" decoding="async" data-cap="Карточка базы знаний «Свет общих планов»: разбор света и тени на двух кадрах.">
-      </div>
-      <div class="m2-ctrl">
-        <p class="m2-cap"><b>СТАНДАРТЫ_/_05.<span data-i>1</span></b> <span data-captext>Аудитория</span></p>
-        <div class="m2-nav"><button type="button" data-prev aria-label="Предыдущий кадр">←</button><span data-counter>01_/_05</span><button type="button" data-next aria-label="Следующий кадр">→</button></div>
-      </div>
-      <div class="m2-thumbs" data-thumbs></div>
-    </div>
-    </section>
 
   <nav class="v3-next" aria-label="Соседние работы">
     <a href="rawmid-video.html">←_PREVIOUS<strong>RAWMID · видео-визуал</strong></a>
