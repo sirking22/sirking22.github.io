@@ -194,3 +194,6 @@ dialog.zoom img { width: 100%; height: 100%; object-fit: contain; }
   .v3 figure > figcaption b { color: #fff; }
   .v3 figure:hover > figcaption { opacity: 1; }
 }
+
+/* 12.11.2026: миниатюры без серого фона браузера, фон белый как у слайдов */
+.m2-thumbs button { background-color: var(--bg); }
