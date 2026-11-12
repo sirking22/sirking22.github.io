@@ -337,3 +337,6 @@ h1, h2, p, figure, blockquote { margin: 0; }
 /* Превью кейсов: кадр заполняет плитку, вертикали и полосы 3:1 в превью не идут; RAWMID-сайты сняты с экрана ~1000 px — плитку не растягивать шире исходника (11.11). */
 .home .tile[data-case="dyson-v15"] .slide, .home .tile[data-case="rawmid-web"] .slide { object-fit: cover; object-position: left center; }
 .home .tile[data-case="rawmid-web"] { max-width: 1040px; }
+
+/* 13.11.2026: строка «что делаю» под заголовком главной, внутри p.hero-sub, чтобы не трогать сетку шапки */
+.hero-what { display: block; margin-top: 16px; max-width: 36em; font-size: clamp(15px, 1.05vw, 19px); line-height: 1.4; letter-spacing: 0; }
