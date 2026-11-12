@@ -106,9 +106,7 @@ const main = `<main class="v3" id="niche">
 t = t.replace(/<main class="v3" id="niche">[\s\S]*?<\/main>/, main)
      .replaceAll(oldTitle, title)
      .replaceAll('work/arcteryx-winter.html', 'work/airbnb-month.html')
-     .replace("<b>ARC'TERYX</b>", '<b>AIRBNB</b>')
-     .replace(/<link rel="alternate" hreflang="en"[^>]*>\n?/, '')
-     .replace('href="../en/work/airbnb-month.html"', 'href="../en/"');
+     .replace("<b>ARC'TERYX</b>", '<b>AIRBNB</b>');  // 12.11: английская страница есть (_build-airbnb-en.mjs), hreflang и переключатель языка оставлены
 fs.writeFileSync(new URL('airbnb-month.html', dir), t);
 console.log('ok', t.length, (t.match(/arc.?teryx/gi) || []).length + " arcteryx mentions left");
 
