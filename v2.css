@@ -348,5 +348,7 @@ h1, h2, p, figure, blockquote { margin: 0; }
 /* 13.11.2026: строка «что делаю» под заголовком главной, внутри p.hero-sub, чтобы не трогать сетку шапки */
 .hero-what { display: block; margin-top: 16px; max-width: 36em; font-size: clamp(15px, 1.05vw, 19px); line-height: 1.4; letter-spacing: 0; }
 
-/* 13.11.2026, слово владельца: строку «Из новой ниши… Легко.» убрали; под заголовком сразу «что делаю» — крупнее, на её месте. */
-.home .statement p.hero-sub { margin-top: clamp(20px, 2vw, 36px); max-width: 30em; font-size: clamp(18px, 1.5vw, 27px); line-height: 1.3; letter-spacing: -.02em; }
+/* 13.11.2026, слово владельца: строку «Из новой ниши… Легко.» убрали; «что делаю» — терминальным шрифтом, как меню, размером прежней строки. */
+.home .statement p.hero-sub { margin-top: clamp(20px, 2vw, 36px); max-width: 36em; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: clamp(15px, 1.05vw, 19px); line-height: 1.4; letter-spacing: 0; }
+/* Сайты RAWMID: кадр целиком, без обрезки — вписан в плитку, поля сливаются с белым фоном. */
+.home .tile[data-case="rawmid-web"] .slide { object-fit: contain; object-position: left center; }
