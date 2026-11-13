@@ -324,15 +324,22 @@ h1, h2, p, figure, blockquote { margin: 0; }
 .experience-entry:last-child { border-bottom-color: var(--line); }
 .contact-prompt a { color: inherit; text-decoration: none; }
 
-/* Ряды 2–4 (слово владельца 09.11): Arc'teryx, Scandic, AI pipeline; ниже айдентики «Кальянный чат», «Кресло-читалка», «Фирменные стили»,
-   под ними «Сайты и CRM» на три колонки, приложение справа на две строки до низа «Сайтов». */
+/* Ряды 2–4 (слово владельца 09.11, правка 13.11): под Arc'teryx, Scandic, AI pipeline две строки — «Кальянный чат» и «Кресло-читалка»,
+   под ними «Фирменные стили» и «Сайты и CRM» в колонке «Кресла»; приложение справа на обе строки. Сайты не крупнее соседей: исходник ~1000 px мылится. */
 @media (min-width: 1024px) {
-  .grid:not([data-filter]) .mosaic-row.row-b, .grid[data-filter="all"] .mosaic-row.row-b { grid-template-rows: auto auto; }
-  .grid:not([data-filter]) .row-b .tile[data-case="rawmid-web"], .grid[data-filter="all"] .row-b .tile[data-case="rawmid-web"] { grid-column: 1 / 4; grid-row: 2; }
-  .grid:not([data-filter]) .row-b .tile[data-case="rawmid-app"], .grid[data-filter="all"] .row-b .tile[data-case="rawmid-app"] { grid-column: 4; grid-row: 1 / 3; align-self: stretch; align-content: stretch; grid-template-rows: minmax(0, 1fr); }
+  .grid:not([data-filter]) .mosaic-row.row-b, .grid[data-filter="all"] .mosaic-row.row-b { grid-template-columns: 1.33fr 1.78fr .92fr; grid-template-rows: auto auto; }
+  .grid:not([data-filter]) .row-b .tile[data-case="imya"], .grid[data-filter="all"] .row-b .tile[data-case="imya"] { grid-column: 1; grid-row: 1; }
+  .grid:not([data-filter]) .row-b .tile[data-case="kreslo-chitalka"], .grid[data-filter="all"] .row-b .tile[data-case="kreslo-chitalka"] { grid-column: 2; grid-row: 1; }
+  .grid:not([data-filter]) .row-b .tile[data-case="early-identities"], .grid[data-filter="all"] .row-b .tile[data-case="early-identities"] { grid-column: 1; grid-row: 2; }
+  .grid:not([data-filter]) .row-b .tile[data-case="rawmid-web"], .grid[data-filter="all"] .row-b .tile[data-case="rawmid-web"] { grid-column: 2; grid-row: 2; }
+  .grid:not([data-filter]) .row-b .tile[data-case="rawmid-web"] .frame, .grid[data-filter="all"] .row-b .tile[data-case="rawmid-web"] .frame { aspect-ratio: 1.84 / 1; }
+  .grid:not([data-filter]) .row-b .tile[data-case="rawmid-app"], .grid[data-filter="all"] .row-b .tile[data-case="rawmid-app"] { grid-column: 3; grid-row: 1 / 3; align-self: stretch; align-content: stretch; grid-template-rows: minmax(0, 1fr); }
   .grid:not([data-filter]) .row-b .tile[data-case="rawmid-app"] .frame, .grid[data-filter="all"] .row-b .tile[data-case="rawmid-app"] .frame { aspect-ratio: auto; min-height: 0; align-self: stretch; }
   .grid:not([data-filter]) .row-b .tile[data-case="rawmid-app"] .slide, .grid[data-filter="all"] .row-b .tile[data-case="rawmid-app"] .slide { object-fit: cover; object-position: top center; }
 }
+
+/* AI pipeline: белая схема на белом фоне висела в воздухе — тонкий контур поверх кадров (13.11; outline рамки слайды перекрывали). */
+.home .tile[data-case="ai-pipeline"] .frame::after { content: ""; position: absolute; inset: 0; z-index: 3; border: 1px solid #c9c9c9; background: none; opacity: 1; pointer-events: none; }
 
 /* Превью кейсов: кадр заполняет плитку, вертикали и полосы 3:1 в превью не идут; RAWMID-сайты сняты с экрана ~1000 px — плитку не растягивать шире исходника (11.11). */
 .home .tile[data-case="dyson-v15"] .slide, .home .tile[data-case="rawmid-web"] .slide { object-fit: cover; object-position: left center; }
@@ -340,3 +347,8 @@ h1, h2, p, figure, blockquote { margin: 0; }
 
 /* 13.11.2026: строка «что делаю» под заголовком главной, внутри p.hero-sub, чтобы не трогать сетку шапки */
 .hero-what { display: block; margin-top: 16px; max-width: 36em; font-size: clamp(15px, 1.05vw, 19px); line-height: 1.4; letter-spacing: 0; }
+
+/* 13.11.2026, слово владельца: строку «Из новой ниши… Легко.» убрали; «что делаю» — терминальным шрифтом, как меню, размером прежней строки. */
+.home .statement p.hero-sub { margin-top: clamp(20px, 2vw, 36px); max-width: 36em; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: clamp(15px, 1.05vw, 19px); line-height: 1.4; letter-spacing: 0; }
+/* Сайты RAWMID: кадр целиком, без обрезки — вписан в плитку, поля сливаются с белым фоном. */
+.home .tile[data-case="rawmid-web"] .slide { object-fit: contain; object-position: left center; }
