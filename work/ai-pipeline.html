@@ -90,6 +90,8 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
 .m1 .lead-fig,.m1 .side-fig{margin-top:40px}
 .m1 .side-fig img{display:block;width:100%;height:auto}
 .m1 .lead-fig img{display:block;width:auto;max-width:100%;height:auto;max-height:min(600px,calc(100vh - var(--bar) - 96px))}
+@media (min-width:1024px){.ap-values.ap-src{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.ap-src{margin-top:32px}
 </style>
 <style id="ap-style2">
 .ap-intro .ap-claim{max-width:22ch;font:var(--display-weight) clamp(40px,5vw,80px)/.95 var(--display);text-transform:uppercase;text-wrap:balance}
@@ -172,24 +174,32 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
   <section class="v3-chapter" data-chapter>
     <p class="v3-label"><span>AI_PIPELINE_/_03</span><span></span></p>
     <div class="m1">
-      <h2>Dyson: сложная ретушь</h2>
-      <div class="copy"><p>Самая трудоёмкая работа в пайплайне — рекламный концепт Dyson V15: зелёный лазер на полу, рука и пропорции пылесоса, чистка кадра. До принятого широкого кадра — около шестидесяти кругов.</p><p>Генерация — ChatGPT Images 2.6, ретушь — Claude. За этот концепт у Claude появились свои инструменты правки: свет лазера, пылинки, поворот и масштаб корпуса, маска предмета SAM 2.</p><p>Образцом стал кадр второго ракурса. Каждое замечание мы сначала переводили в число на образце, потом правили и мерили снова.</p></div>
+      <h2>Сначала данные, потом картинка</h2>
+      <div class="copy"><p>Концепт начинается с данных. Нейросеть собирает их из трёх источников: что пишут покупатели, что бренд уже крутит в рекламе и что компания говорит акционерам. Выводы и гипотезу с порогом теста делаю я.</p></div>
     </div>
-    <div class="m3" data-n="2" style="--cell: 3.000">
-      <figure><div class="cell"><img src="../assets/ai-pipeline/dy-before.webp" width="1920" height="640" alt="Ранняя версия широкого кадра Dyson" loading="lazy" decoding="async"></div><figcaption><b>AI_PIPELINE_/_03.1</b>Ранняя версия, v10.</figcaption></figure>
-      <figure><div class="cell"><img src="../assets/ai-pipeline/dy-after.webp" width="1920" height="640" alt="Принятый широкий кадр Dyson" loading="lazy" decoding="async"></div><figcaption><b>AI_PIPELINE_/_03.2</b>Принятый широкий кадр, 08.11.</figcaption></figure>
-    </div>
+    <ul class="ap-values ap-src" aria-label="Источники исследования"><li><b>Отзывы на Reddit</b><span>45 высказываний покупателей Arc'teryx и тех, кто выбирает куртку. У Dyson четыре покупателя описали шок от грязи на «чистом» полу, из этого выросла идея концепта.</span></li><li><b>Библиотека рекламы Meta</b><span>У Dyson на 5 ноября 63 активных объявления по США, 12 из них продают скидкой, лазер V15 не показывает ни одно. Концепт показывает лазером невидимую пыль — этого в их рекламе нет.</span></li><li><b>Письма акционерам</b><span>18% ночей на Airbnb — проживания от 28 дней, III квартал 2023. От этой базы считается порог теста концепта: +20% к доле таких броней.</span></li></ul>
   </section>
   <section class="v3-chapter" data-chapter>
     <p class="v3-label"><span>AI_PIPELINE_/_04</span><span></span></p>
     <div class="m1">
-      <h2>Лазер, рука и пропорции</h2>
-      <div class="copy"><p>Лазер прошёл двадцать версий за два дня: одна правка ломала уже принятое. С тех пор принятое — проверка, которую проходит каждая новая версия. Свет идёт веером от луча и гаснет к другому краю, пылинки бледнеют вдаль: на образце 700–800 мелких и 35–70 крупных на 10 тысяч пикселей луча.</p><p>Корпус в разных форматах вышел разного размера, рука согнулась в локте, труба надломилась у стыка. Пропорции сверены с фото продукта, ось трубы проверяется прямой. Предмет выделяю маской SAM 2: стена за ним заливается заново, кромки рукоятки и колбы не срезаются.</p></div>
+      <h2>Dyson: сложная ретушь</h2>
+      <div class="copy"><p>Самая трудоёмкая работа в пайплайне — рекламный концепт Dyson V15: зелёный лазер на полу, рука и пропорции пылесоса, чистка кадра. До принятого широкого кадра — около шестидесяти кругов.</p><p>Генерация — ChatGPT Images 2.6, ретушь — Claude. За этот концепт у Claude появились свои инструменты правки: свет лазера, пылинки, поворот и масштаб корпуса, маска предмета SAM 2.</p><p>Образцом стал кадр второго ракурса. Каждое замечание мы сначала переводили в число на образце, потом правили и мерили снова.</p></div>
     </div>
-    <div class="ap-duo"><figure><img src="../assets/ai-pipeline/dy-laser-crop.webp" width="1200" height="606" alt="Лазер на принятом широком кадре крупно" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_04.1</b>Лазер на принятом кадре крупно.</figcaption></figure><figure><img src="../assets/ai-pipeline/dy-closeups.webp" width="1600" height="1015" alt="Рукоятка и рука крупно в трёх кругах правки" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_04.2</b>Рукоятка и рука крупно: v53 → v53j → v53k.</figcaption></figure></div>
+    <div class="m3" data-n="2" style="--cell: 3.000">
+      <figure><div class="cell"><img src="../assets/ai-pipeline/dy-before.webp" width="1920" height="640" alt="Ранняя версия широкого кадра Dyson" loading="lazy" decoding="async"></div><figcaption><b>AI_PIPELINE_/_04.1</b>Ранняя версия, v10.</figcaption></figure>
+      <figure><div class="cell"><img src="../assets/ai-pipeline/dy-after.webp" width="1920" height="640" alt="Принятый широкий кадр Dyson" loading="lazy" decoding="async"></div><figcaption><b>AI_PIPELINE_/_04.2</b>Принятый широкий кадр, 08.11.</figcaption></figure>
+    </div>
   </section>
   <section class="v3-chapter" data-chapter>
     <p class="v3-label"><span>AI_PIPELINE_/_05</span><span></span></p>
+    <div class="m1">
+      <h2>Лазер, рука и пропорции</h2>
+      <div class="copy"><p>Лазер прошёл двадцать версий за два дня: одна правка ломала уже принятое. С тех пор принятое — проверка, которую проходит каждая новая версия. Свет идёт веером от луча и гаснет к другому краю, пылинки бледнеют вдаль: на образце 700–800 мелких и 35–70 крупных на 10 тысяч пикселей луча.</p><p>Корпус в разных форматах вышел разного размера, рука согнулась в локте, труба надломилась у стыка. Пропорции сверены с фото продукта, ось трубы проверяется прямой. Предмет выделяю маской SAM 2: стена за ним заливается заново, кромки рукоятки и колбы не срезаются.</p></div>
+    </div>
+    <div class="ap-duo"><figure><img src="../assets/ai-pipeline/dy-laser-crop.webp" width="1200" height="606" alt="Лазер на принятом широком кадре крупно" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_05.1</b>Лазер на принятом кадре крупно.</figcaption></figure><figure><img src="../assets/ai-pipeline/dy-closeups.webp" width="1600" height="1015" alt="Рукоятка и рука крупно в трёх кругах правки" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_05.2</b>Рукоятка и рука крупно: v53 → v53j → v53k.</figcaption></figure></div>
+  </section>
+  <section class="v3-chapter" data-chapter>
+    <p class="v3-label"><span>AI_PIPELINE_/_06</span><span></span></p>
     <div class="m1">
       <h2>Как знание переходит дальше</h2>
       <div class="copy"><p>Каждая правка записывается в журнал опыта со статусом: сказано один раз, подтвердилось, снято. Подтверждённое становится правилом скилла, и следующий кадр начинается с него.</p><p>Знание продукта, собранное на лазере и пропорциях, работает в других сюжетах и форматах: широкий баннер, вертикаль, пост, сторис, письмо.</p><p>Журнал лежит рядом с работой. Кто берёт типовую задачу, начинает с него.</p><p>Новичок берёт типовую задачу и сразу получает журнал и примеры. Опыт не уходит вместе с людьми.</p></div>
@@ -197,22 +207,22 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
     <ol class="kflow" aria-label="Путь правки до правила"><li>Сказано один раз</li><li>Подтвердилось</li><li>Правило скилла</li><li>Следующая задача начинается с него</li></ol>
   </section>
   <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>AI_PIPELINE_/_06</span><span></span></p>
+    <p class="v3-label"><span>AI_PIPELINE_/_07</span><span></span></p>
     <div class="m1">
       <h2>Arc'teryx: качество фото и масштаб</h2>
       <div class="copy"><p>Второй пример — рекламный концепт Arc'teryx. Здесь задача другая: качество фотографии и масштаб. Из каждого из трёх сюжетов скрипт собирает шесть форматов, мокапы вписываются по замеренным углам носителя.</p><p>За цикл вышло 18 макетов и пять мокапов. Тест не запускался.</p><p>Правки по свету и снегу записаны приёмами: графика на светлом месте кадра тёмно-синяя, место под текст закладывается до генерации, у объектива два-четыре крупных хлопья.</p></div>
     </div>
     <figure class="m4" style="--r:1920/1619">
       <img src="../assets/ai-pipeline/arc-light.webp" width="1920" height="1619" alt="Мокапы щита и ситилайта до и после правки света" loading="lazy" decoding="async">
-      <figcaption><b>AI_PIPELINE_/_06.1</b>Щит и ситилайт до и после правки «очень мрачно».</figcaption>
+      <figcaption><b>AI_PIPELINE_/_07.1</b>Щит и ситилайт до и после правки «очень мрачно».</figcaption>
     </figure>
     <figure class="m4" style="--r:1600/2889">
       <img src="../assets/ai-pipeline/arc-matrix.webp" width="1600" height="2889" alt="Сетка: три сюжета Arc'teryx в шести форматах" loading="lazy" decoding="async">
-      <figcaption><b>AI_PIPELINE_/_06.2</b>Три сюжета × шесть форматов.</figcaption>
+      <figcaption><b>AI_PIPELINE_/_07.2</b>Три сюжета × шесть форматов.</figcaption>
     </figure>
     <figure class="m4" style="--r:1920/1618">
       <img src="../assets/ai-pipeline/arc-mockups.webp" width="1920" height="1618" alt="Пять мокапов кампании: щит, ситилайт, сторис, сайт на ноутбуке, письмо на телефоне" loading="lazy" decoding="async">
-      <figcaption><b>AI_PIPELINE_/_06.3</b>Пять мокапов: щит, ситилайт, сторис, сайт, письмо.</figcaption>
+      <figcaption><b>AI_PIPELINE_/_07.3</b>Пять мокапов: щит, ситилайт, сторис, сайт, письмо.</figcaption>
     </figure>
   </section>
 
