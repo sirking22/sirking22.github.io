@@ -9,6 +9,17 @@ const oldTitle = "Arc'teryx · рекламный концепт · не зак�
 const title = 'Airbnb · рекламный концепт · не заказ — Арсений Охотин';
 const img = (n, w, h, alt) => `<img src="../assets/airbnb/airbnb-${n}.webp" width="${w}" height="${h}" loading="lazy" alt="Airbnb: ${alt}" decoding="async">`;
 const cell = (n, w, h, alt, num, cap) => `<figure><div class="cell">${img(n, w, h, alt)}</div><figcaption><b>AIRBNB_/_${num}</b>${cap}</figcaption></figure>`;
+const RZ = [['3x1', 3], ['4x1', 4], ['16x9', 16 / 9], ['1x1', 1], ['4x5', .8], ['2x3', 2 / 3], ['9x16', 9 / 16]];
+const rzRow = (k, name) => `<div class="ax-rz-row"><b>${name}</b><div class="ax-rz-strip">${RZ.map(([f, r]) => `<img src="../assets/airbnb/airbnb-rz-${k}-${f}.webp" width="${Math.round(360 * r)}" height="360" loading="lazy" alt="Airbnb: ${name.toLowerCase()}, формат ${f.replace('x', ':')}" decoding="async" style="--r:${r.toFixed(3)}">`).join('')}</div></div>`;
+// 14.11: карта ресайзов — три сюжета по семь форматов, самые готовые баннеры (владелец: «какие самые готовые, и больше не нужно»)
+const rzMap = `<style>.ax-rz{margin:64px 0 0}.ax-rz-h,.ax-rz-row b{display:block;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}.ax-rz-row{margin-top:20px}.ax-rz-row b{margin-bottom:8px}.ax-rz-strip{display:flex;gap:6px;align-items:flex-start}.ax-rz-strip img{flex:var(--r) 1 0;min-width:0;width:0;height:auto}.ax-rz-f{margin-top:16px;font-size:14px;line-height:1.4}@media(max-width:700px){.ax-rz-strip{overflow-x:auto;scrollbar-width:none}.ax-rz-strip img{flex:none;width:auto;height:140px}}</style>
+    <div class="ax-rz" role="group" aria-label="Карта ресайзов">
+      <p class="ax-rz-h">Карта ресайзов · 7 форматов на сюжет</p>
+      ${rzRow('office', 'Офис')}
+      ${rzRow('room', 'Комната')}
+      ${rzRow('key', 'Ключ')}
+      <p class="ax-rz-f">3:1 · 4:1 · 16:9 · 1:1 · 4:5 · 2:3 · 9:16 — от билборда до сторис. Заголовок, подпись и знак в каждом формате ставит один скрипт, по одним правилам отступов.</p>
+    </div>`;
 const main = `<main class="v3" id="niche">
   <header class="v3-head">
     <h1>Airbnb</h1>
@@ -23,8 +34,8 @@ const main = `<main class="v3" id="niche">
   <section class="v3-chapter" data-chapter>
     <p class="v3-label"><span>AIRBNB_/_01</span><span></span></p>
     <div class="m1">
-      <h2>Give it a month.</h2>
-      <div class="copy"><p>Рекламный концепт для Airbnb. У Airbnb есть жильё на месяц и дольше, но его знают как жильё на отпуск. Месяц в чужой квартире пугает: будет ли где работать, станет ли место своим. Кампания показывает месяц как базу: офис с видом на город, комната, которая за месяц становится своей, и запасной ключ.</p><p>Первый сюжет — офис на месяц. Один баннер на город: стол, кресло и монитор стоят у окна с видом, который есть только здесь. Людей в кадре нет, место ждёт того, кто приедет.</p></div>
+      <h2>Месяц как база, а не отпуск</h2>
+      <div class="copy"><p>Рекламный концепт для Airbnb. Гипотеза: если показать месяц в чужом городе как обжитую базу, больше людей забронируют жильё от 28 ночей. Сейчас Airbnb знают как жильё на отпуск, а месяц в чужой квартире пугает: будет ли где работать, станет ли место своим.</p><p>Кампания отвечает тремя сюжетами: офис с видом на город, комната, которая за месяц становится своей, и запасной ключ. Ниже — мокапы на носителях и карта ресайзов: каждый сюжет разложен на семь стандартных форматов.</p></div>
     </div>
     <style>.ax-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:48px 0 56px}.ax-facts b{display:block;font:600 clamp(40px,6vw,72px)/1 var(--display,inherit)}.ax-facts span{display:block;margin-top:8px;font-size:14px;line-height:1.35}@media(max-width:700px){.ax-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}}</style>
     <div class="ax-facts">
@@ -52,12 +63,7 @@ const main = `<main class="v3" id="niche">
       <figure><div class="cell"><img src="../assets/airbnb/mockup-n9.webp" width="1536" height="1024" loading="lazy" alt="Airbnb: письмо в почте на ноутбуке" decoding="async"></div><figcaption><b>AIRBNB_/_01.9</b>Письмо в почте на ноутбуке. Строка: «Your office this month.»</figcaption></figure>
       <figure><div class="cell"><img src="../assets/airbnb/mockup-n10.webp" width="1536" height="1024" loading="lazy" alt="Airbnb: главная страница Airbnb на мониторе" decoding="async"></div><figcaption><b>AIRBNB_/_01.10</b>Главная страница Airbnb на мониторе. Строка: «Give it a month.» Сцены мокапов сгенерированы по готовым баннерам.</figcaption></figure>
     </div>
-    <div class="m3" data-n="4" style="--cell: 4 / 5">
-      ${cell('o-k4', 880, 1100, 'рабочее место с видом на Кейптаун', '01.11', 'Кейптаун. Стол у окна, за ним гора.')}
-      ${cell('o-k2', 880, 1100, 'рабочее место с видом на Мехико', '01.12', 'Мехико. Стол у окна над городом.')}
-      ${cell('o-l2', 880, 1100, 'рабочее место с видом на Копенгаген', '01.13', 'Копенгаген. Стол у окна над крышами.')}
-      ${cell('o-k1', 880, 1100, 'рабочее место с видом на Лиссабон', '01.14', 'Лиссабон. Стол у окна, за ним река.')}
-    </div>
+    ${rzMap}
   </section>
 
   <section class="v3-chapter" data-chapter>
@@ -77,41 +83,47 @@ const main = `<main class="v3" id="niche">
   <section class="v3-chapter" data-chapter>
     <p class="v3-label"><span>AIRBNB_/_03</span><span></span></p>
     <div class="m1">
-      <h2>Комната через месяц</h2>
-      <div class="copy"><p>Второй сюжет — съёмная комната через месяц жизни в ней. Четыре города: Лиссабон, Копенгаген, Мехико, Рим. Над столом выросла стена из открыток, билетов и снимков города, в углу стоит чемодан. Комната чужая, но за месяц стала своей. Строка на всех баннерах: «Give it a month.»</p></div>
+      <h2>Офис на месяц</h2>
+      <div class="copy"><p>Первый сюжет — офис на месяц. Один баннер на город: стол, кресло и ноутбук стоят у окна с видом, который есть только здесь. Людей в кадре нет, место ждёт того, кто приедет. Строка: «Your office this month.»</p></div>
     </div>
     <div class="m3" data-n="4" style="--cell: 4 / 5">
-      ${cell('room-lisbon-v', 880, 1100, 'обжитая съёмная комната в Лиссабоне', '03.1', 'Лиссабон, вертикаль 4:5 для ленты.')}
-      ${cell('room-copenhagen-v', 880, 1100, 'обжитая съёмная комната в Копенгагене', '03.2', 'Копенгаген, вертикаль 4:5 для ленты.')}
-      ${cell('room-mexico-v', 880, 1100, 'обжитая съёмная комната в Мехико', '03.3', 'Мехико, вертикаль 4:5 для ленты.')}
-      ${cell('room-rome-v', 880, 1100, 'обжитая съёмная комната в Риме', '03.4', 'Рим, вертикаль 4:5 для ленты.')}
-    </div>
-    <div class="m3" data-n="2" style="--cell: 16 / 9">
-      ${cell('room-lisbon-h', 1600, 900, 'обжитая съёмная комната в Лиссабоне, горизонталь', '03.5', 'Лиссабон, горизонталь 16:9 для экранов.')}
-      ${cell('room-copenhagen-h', 1600, 900, 'обжитая съёмная комната в Копенгагене, горизонталь', '03.6', 'Копенгаген, горизонталь 16:9 для экранов.')}
-      ${cell('room-mexico-h', 1600, 900, 'обжитая съёмная комната в Мехико, горизонталь', '03.7', 'Мехико, горизонталь 16:9 для экранов.')}
-      ${cell('room-rome-h', 1600, 900, 'обжитая съёмная комната в Риме, горизонталь', '03.8', 'Рим, горизонталь 16:9 для экранов. Кадры сгенерированы, текст и знак поставлены отдельным слоем.')}
+      ${cell('office-capetown', 880, 1100, 'офис на месяц в Кейптауне', '03.1', 'Кейптаун, за окном Столовая гора.')}
+      ${cell('office-lisbon', 880, 1100, 'офис на месяц в Лиссабоне', '03.2', 'Лиссабон, за окном мост и река.')}
+      ${cell('office-copenhagen', 880, 1100, 'офис на месяц в Копенгагене', '03.3', 'Копенгаген, за окном Нюхавн.')}
+      ${cell('office-mexico', 880, 1100, 'офис на месяц в Мехико', '03.4', 'Мехико, за балконом цветёт жакаранда.')}
     </div>
   </section>
 
   <section class="v3-chapter" data-chapter>
     <p class="v3-label"><span>AIRBNB_/_04</span><span></span></p>
     <div class="m1">
-      <h2>Запасной ключ</h2>
-      <div class="copy"><p>Третий сюжет — связка ключей. Запасной ключ дают тем, кто живёт, а не гостит. Каждую неделю на связке прибавляется местный брелок.</p></div>
-    </div>
-    <div class="m3" data-n="2" style="--cell: 1 / 1">
-      ${cell('k-g4', 1080, 1080, 'связка ключей с местными брелоками', '04.1', 'Строка: «Stay long enough for a spare key.»')}
-      ${cell('k-h3', 1080, 1080, 'четыре связки, по неделе на каждую', '04.2', 'Строка: «Every week, a little more local.»')}
+      <h2>Комната через месяц</h2>
+      <div class="copy"><p>Второй сюжет — съёмная комната через месяц жизни в ней. Над столом выросла стена из открыток, билетов и снимков города, в углу стоит чемодан. Комната чужая, но за месяц стала своей. Строка: «Give it a month.»</p></div>
     </div>
     <figure class="m4">
-      ${img('k-h1', 1363, 1100, 'брелоки месяца')}
-      <figcaption><b>AIRBNB_/_04.3</b>Строка: «A month adds up.» Кадры сгенерированы, текст и знак поставлены отдельным слоем.</figcaption>
+      ${img('room-lisbon-3x1', 1800, 600, 'обжитая съёмная комната в Лиссабоне, билборд')}
+      <figcaption><b>AIRBNB_/_04.1</b>Лиссабон, билборд 3:1.</figcaption>
+    </figure>
+    <figure class="m4">
+      ${img('room-mexico-wide', 1600, 900, 'обжитая съёмная комната в Мехико, экран')}
+      <figcaption><b>AIRBNB_/_04.2</b>Мехико, экран 16:9. Кадры сгенерированы, текст и знак поставлены отдельным слоем.</figcaption>
     </figure>
   </section>
 
   <section class="v3-chapter" data-chapter>
     <p class="v3-label"><span>AIRBNB_/_05</span><span></span></p>
+    <div class="m1">
+      <h2>Запасной ключ</h2>
+      <div class="copy"><p>Третий сюжет — связка ключей. Запасной ключ дают тем, кто живёт, а не гостит. Каждую неделю на связке прибавляется местный брелок.</p></div>
+    </div>
+    <div class="m3" data-n="2" style="--cell: 1 / 1">
+      ${cell('key-map', 1080, 1080, 'связка ключей на карте города', '05.1', 'Связка ключей с одним брелоком на карте города.')}
+      ${cell('k-h3', 1080, 1080, 'четыре связки, по неделе на каждую', '05.2', 'Строка: «Every week, a little more local.»')}
+    </div>
+  </section>
+
+  <section class="v3-chapter" data-chapter>
+    <p class="v3-label"><span>AIRBNB_/_06</span><span></span></p>
     <div class="m1">
       <h2>Как проверить</h2>
       <div class="copy"><p>Гипотеза: если показать месяц как обжитую базу, больше людей из кампании перейдут к жилью на месяц и забронируют от 28 ночей. Метрика — доля таких бронирований среди переходов из кампании. Порог успеха — +20% к этой доле против обычной рекламы при базе 18% ночей; по моему расчёту для этого нужно около 1 900 броней из кампании в каждой группе. Тест не запускался, это концепт.</p><p>Speculative concept. Not affiliated with or endorsed by Airbnb.</p></div>
