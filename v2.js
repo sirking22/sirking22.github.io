@@ -59,6 +59,28 @@
     });
   }
 
+  // Телефон: слайды крутятся только у одной плитки — той, что ближе к середине экрана
+  const touchSeen = new Set();
+  let touchCurrent = null;
+  function pickTouch() {
+    let best = null, bestD = Infinity;
+    const mid = innerHeight / 2;
+    touchSeen.forEach(t => {
+      if (t.hidden) return;
+      const r = t.getBoundingClientRect();
+      const d = Math.abs(r.top + r.height / 2 - mid);
+      if (d < bestD) { bestD = d; best = t; }
+    });
+    if (best === touchCurrent) return;
+    touchCurrent = best;
+    controllers.forEach(f => f());
+  }
+  let touchFrame = 0;
+  addEventListener('scroll', () => {
+    if (!touch.matches || touchFrame) return;
+    touchFrame = requestAnimationFrame(() => { touchFrame = 0; pickTouch(); });
+  }, { passive: true });
+
   document.querySelectorAll('.tile').forEach(tile => {
     const slides = [...tile.querySelectorAll('.slide')];
     if (!slides.length) return;
@@ -85,14 +107,14 @@
     }
 
     function sync() {
-      const active = tile.isConnected && !tile.hidden && !reduced.matches && !document.hidden && (touch.matches ? visible : hovered);
+      const active = tile.isConnected && !tile.hidden && !reduced.matches && !document.hidden && (touch.matches ? visible && touchCurrent === tile : hovered);
       if (active === running) return;
       running = active;
       clearInterval(timer);
       timer = null;
       show(0);
       if (running && slides.length > 1) {
-        timer = setInterval(() => show((index + 1) % slides.length), 700);
+        timer = setInterval(() => show((index + 1) % slides.length), 1400);
       }
     }
 
@@ -100,6 +122,8 @@
     tile.addEventListener('mouseleave', () => { hovered = false; sync(); });
     const observer = new IntersectionObserver(entries => {
       visible = entries[0].intersectionRatio >= .6;
+      if (visible) touchSeen.add(tile); else touchSeen.delete(tile);
+      pickTouch();
       sync();
     }, { threshold: [0, .6, 1] });
     observer.observe(tile);
@@ -198,5 +222,12 @@
     const open = nav.classList.toggle('open');
     b.setAttribute('aria-expanded', String(open));
   });
-  nav.prepend(b);
+  const panel = document.createElement('div');
+  panel.className = 'menu-panel';
+  [...nav.querySelectorAll('a:not(.language-switch)')].forEach(a => panel.appendChild(a));
+  nav.prepend(b, panel);
+  const close = () => { nav.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); };
+  nav.addEventListener('click', e => { if (e.target.closest('a')) close(); });
+  document.addEventListener('click', e => { if (!nav.contains(e.target)) close(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
 })();
