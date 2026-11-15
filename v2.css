@@ -385,8 +385,8 @@ h1, h2, p, figure, blockquote { margin: 0; }
   .menu-btn[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
 }
 
-/* 15.11.2026, слово владельца: подпись под именем мельче — как фильтры (моно, 11px, прописные) */
-.owner-line span, .home .owner-line span { display: block; margin-top: 6px; color: var(--mute); font: 400 11px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; text-transform: uppercase; letter-spacing: .02em; }
+/* 15.11.2026, слово владельца: подпись под именем мельче — как фильтры (моно, 11px, прописные); 16.11: только на телефоне, на ПК прежний размер */
+@media (max-width: 640px) { .owner-line span, .home .owner-line span { display: block; margin-top: 6px; color: var(--mute); font: 400 11px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; text-transform: uppercase; letter-spacing: .02em; } }
 
 /* 15.11.2026: значок «i» на плитках тише — полупрозрачный, пока подпись закрыта */
 .home .cap-i { opacity: .5; }
