@@ -259,6 +259,7 @@ h1, h2, p, figure, blockquote { margin: 0; }
 .home .tile:not(.later) > .frame { align-self: start; }
 .home .tile:not(.later) > .cap { position: relative; left: auto; right: auto; bottom: auto; align-self: end; justify-self: start; }
 .home .tile[data-case="ai-pipeline"] .slide { object-fit: cover; }
+.home .tile[data-case="airbnb"]:not(.later) .slide { object-fit: cover; object-position: center; }
 @media (hover: hover) {
   .home .tile:not(.later) > .cap { justify-self: stretch; max-width: none; padding: 32px 14px 12px; background: linear-gradient(transparent, rgba(0,0,0,.72)); opacity: 0; transition: opacity .2s; }
   .home .tile:not(.later):hover > .cap, .home .tile:not(.later):focus-visible > .cap { opacity: 1; }
