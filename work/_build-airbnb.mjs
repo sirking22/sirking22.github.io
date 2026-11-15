@@ -45,7 +45,7 @@ const main = `<main class="v3" id="niche">
       <p><b>×3</b><span>меньше картинок в работе, чем у Arc'teryx: около 130 против 380. Маршрут собран по опыту двух прошлых концептов</span></p>
     </div>
     <figure class="m4">
-      <img src="../assets/airbnb/mockup-n1.webp" width="1536" height="1024" loading="lazy" alt="Airbnb: билборд над улицей в Лиссабоне" decoding="async">
+      <img src="../assets/airbnb/mockup-n1.webp" width="2560" height="1024" loading="lazy" alt="Airbnb: билборд над улицей в Лиссабоне" decoding="async">
       <figcaption><b>AIRBNB_/_01.1</b>Билборд над улицей в Лиссабоне. Строка: «Give it a month.»</figcaption>
     </figure>
     <div class="m3" data-n="3" style="--cell: 3 / 2">
