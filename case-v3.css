@@ -222,3 +222,25 @@ dialog.zoom img { width: 100%; height: 100%; object-fit: contain; }
   .v3-bar .steps a:not(.lang) { display: none; }
   .v3-bar .lang { color: var(--ink); padding: 10px 0 10px 16px; }
 }
+
+/* 15.11.2026: увеличенный кадр листается; внизу полоса — счётчик, подпись целиком, стрелки, закрыть */
+dialog.zoom[open] { display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+dialog.zoom .zoom-stage { min-height: 0; padding: 12px; }
+dialog.zoom .zoom-stage img { width: 100%; height: 100%; object-fit: contain; }
+.zoom-bar { display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: start; gap: 8px 16px; padding: 12px 16px 16px; border-top: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.78); font: 400 12px/1.45 var(--mono); cursor: default; }
+.zoom-count { color: #fff; font-variant-numeric: tabular-nums; padding-top: 8px; }
+.zoom-cap { margin: 0; padding-top: 8px; max-height: 30vh; overflow: auto; overflow-wrap: anywhere; }
+.zoom-cap b { display: block; margin-bottom: 2px; color: #fff; font-weight: 400; }
+.zoom-nav { display: flex; gap: 8px; }
+.zoom-bar button { min-width: 40px; height: 34px; padding: 0 10px; border: 1px solid rgba(255,255,255,.35); background: none; color: #fff; font: 400 16px/1 var(--mono); cursor: pointer; }
+.zoom-bar button:hover { border-color: #fff; }
+dialog.zoom.single .zoom-count, dialog.zoom.single .zoom-nav { display: none; }
+@media (max-width: 640px) {
+  .zoom-bar { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "count nav close" "cap cap cap"; }
+  .zoom-count { grid-area: count; } .zoom-nav { grid-area: nav; justify-self: end; } .zoom-close { grid-area: close; } .zoom-cap { grid-area: cap; padding-top: 0; }
+  dialog.zoom .zoom-stage { padding: 0; }
+}
+
+/* 15.11.2026, слово владельца: значок «i» тише везде, как на главной — полупрозрачный, пока подпись закрыта */
+.cap-i { opacity: .5; }
+.cap-open > .cap-i { opacity: 1; }
