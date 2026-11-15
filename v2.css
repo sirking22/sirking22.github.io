@@ -362,3 +362,22 @@ h1, h2, p, figure, blockquote { margin: 0; }
 .home .cap-i { position: absolute; right: 10px; bottom: 10px; z-index: 3; width: 28px; height: 28px; border: 1px solid rgba(255,255,255,.85); border-radius: 50%; background: rgba(0,0,0,.45); color: #fff; font: 400 13px/26px ui-monospace, SFMono-Regular, Consolas, monospace; text-align: center; cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .home .cap-i::before { content: ''; position: absolute; inset: -8px; }
 .home .cap-open > .cap-i { background: #fff; color: #101010; border-color: #fff; }
+
+/* Телефон: меню за кнопкой, язык отдельной кнопкой */
+.menu-btn { display: none; }
+@media (max-width: 640px) {
+  .top nav, .home .top nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0; }
+  .top nav a + a::before { content: none; }
+  .top nav a:not(.language-switch) { display: none; }
+  .top nav.open a:not(.language-switch) { display: block; order: 2; width: 100%; padding: 12px 0; border-top: 1px solid var(--line); }
+  .top nav .language-switch { order: 1; padding: 10px 0 10px 16px; }
+  .menu-btn { display: inline-flex; align-items: center; gap: 10px; order: 0; padding: 10px 0; background: none; border: 0; color: inherit; font: inherit; cursor: pointer; }
+  .menu-btn span, .menu-btn span::before, .menu-btn span::after { display: block; width: 18px; height: 1.5px; background: currentColor; }
+  .menu-btn span { position: relative; }
+  .menu-btn span::before, .menu-btn span::after { content: ''; position: absolute; left: 0; }
+  .menu-btn span::before { top: -6px; }
+  .menu-btn span::after { top: 6px; }
+  .menu-btn[aria-expanded="true"] span { background: transparent; }
+  .menu-btn[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+  .menu-btn[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+}

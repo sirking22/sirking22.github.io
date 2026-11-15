@@ -183,3 +183,20 @@
     tile.appendChild(b);
   });
 })();
+
+// Телефон: меню за кнопкой, язык отдельно
+(() => {
+  const nav = document.querySelector('.top nav');
+  if (!nav) return;
+  const en = document.documentElement.lang === 'en';
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'menu-btn';
+  b.setAttribute('aria-expanded', 'false');
+  b.innerHTML = '<span aria-hidden="true"></span>' + (en ? 'Menu' : 'Меню');
+  b.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    b.setAttribute('aria-expanded', String(open));
+  });
+  nav.prepend(b);
+})();
