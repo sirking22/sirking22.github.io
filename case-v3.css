@@ -214,3 +214,5 @@ dialog.zoom img { width: 100%; height: 100%; object-fit: contain; }
   .v3 figure > figcaption b { display: block; margin-bottom: 4px; }
   .v3 figure.cap-open > figcaption { pointer-events: auto; }
 }
+/* 15.11.2026: на узких кадрах (Dyson) длинное слово подписи не уезжает вбок — переносится. */
+@media (hover: none) { .v3 figure > figcaption { overflow-x: hidden; overflow-wrap: anywhere; } }
