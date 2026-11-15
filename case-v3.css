@@ -216,3 +216,9 @@ dialog.zoom img { width: 100%; height: 100%; object-fit: contain; }
 }
 /* 15.11.2026: на узких кадрах (Dyson) длинное слово подписи не уезжает вбок — переносится. */
 @media (hover: none) { .v3 figure > figcaption { overflow-x: hidden; overflow-wrap: anywhere; } }
+
+/* Телефон: «предыдущий / следующий» только внизу кейса, в шапке — все работы и язык */
+@media (max-width: 640px) {
+  .v3-bar .steps a:not(.lang) { display: none; }
+  .v3-bar .lang { color: var(--ink); padding: 10px 0 10px 16px; }
+}
