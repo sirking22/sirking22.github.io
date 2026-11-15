@@ -353,3 +353,12 @@ h1, h2, p, figure, blockquote { margin: 0; }
 .home .statement p.hero-sub { margin-top: clamp(20px, 2vw, 36px); max-width: 36em; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: clamp(15px, 1.05vw, 19px); line-height: 1.4; letter-spacing: 0; }
 /* Сайты RAWMID: кадр целиком, без обрезки — вписан в плитку, поля сливаются с белым фоном. */
 .home .tile[data-case="rawmid-web"] .slide { object-fit: contain; object-position: left center; }
+
+/* 15.11.2026, слово владельца: на телефоне подпись плитки прячется под значком «i» в кружке на кадре; касание значка показывает её поверх кадра на градиенте во всю ширину, как наведение на компьютере. Касание кадра ведёт в кейс. */
+@media (hover: none) {
+  .home .tile:not(.later) > .cap { justify-self: stretch; max-width: none; padding: 40px 48px 12px 14px; background: linear-gradient(transparent, rgba(0,0,0,.78)); opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; }
+  .home .tile.cap-open > .cap { opacity: 1; visibility: visible; }
+}
+.home .cap-i { position: absolute; right: 10px; bottom: 10px; z-index: 3; width: 28px; height: 28px; border: 1px solid rgba(255,255,255,.85); border-radius: 50%; background: rgba(0,0,0,.45); color: #fff; font: 400 13px/26px ui-monospace, SFMono-Regular, Consolas, monospace; text-align: center; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.home .cap-i::before { content: ''; position: absolute; inset: -8px; }
+.home .cap-open > .cap-i { background: #fff; color: #101010; border-color: #fff; }

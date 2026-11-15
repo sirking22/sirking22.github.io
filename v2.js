@@ -166,3 +166,20 @@
   };
   hideArcs(); run();
 })();
+
+/* 15.11.2026: on touch the tile caption hides under an "i" badge; tapping it shows the caption over the frame on a gradient, like hover on desktop. */
+(() => {
+  if (!window.matchMedia('(hover: none)').matches) return;
+  const en = (document.documentElement.lang || '').startsWith('en');
+  document.querySelectorAll('.home .tile:not(.later)').forEach(tile => {
+    if (!tile.querySelector(':scope > .cap')) return;
+    const b = document.createElement('span');
+    b.className = 'cap-i'; b.textContent = 'i';
+    b.setAttribute('role', 'button'); b.setAttribute('tabindex', '0');
+    b.setAttribute('aria-label', en ? 'About this case' : 'О кейсе'); b.setAttribute('aria-expanded', 'false');
+    const toggle = e => { e.preventDefault(); e.stopPropagation(); const o = tile.classList.toggle('cap-open'); b.setAttribute('aria-expanded', o ? 'true' : 'false'); };
+    b.addEventListener('click', toggle);
+    b.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') toggle(e); });
+    tile.appendChild(b);
+  });
+})();
