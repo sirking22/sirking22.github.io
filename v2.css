@@ -365,11 +365,14 @@ h1, h2, p, figure, blockquote { margin: 0; }
 
 /* Телефон: меню за кнопкой, язык отдельной кнопкой */
 .menu-btn { display: none; }
+.menu-panel { display: contents; }
 @media (max-width: 640px) {
   .top nav, .home .top nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0; }
   .top nav a + a::before { content: none; }
   .top nav a:not(.language-switch) { display: none; }
-  .top nav.open a:not(.language-switch) { display: block; order: 2; width: 100%; padding: 12px 0; border-top: 1px solid var(--line); }
+  .top nav .menu-panel a:not(.language-switch) { display: block; padding: 12px 0; border-top: 1px solid var(--line); }
+  .top nav .menu-panel { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 0 16px 8px; background: var(--bg); border-bottom: 1px solid var(--ink); box-shadow: 0 16px 24px -12px rgba(0,0,0,.25); }
+  .top nav.open .menu-panel { display: block; }
   .top nav .language-switch { order: 1; padding: 10px 0 10px 16px; }
   .menu-btn { display: inline-flex; align-items: center; gap: 10px; order: 0; padding: 10px 0; background: none; border: 0; color: inherit; font: inherit; cursor: pointer; }
   .menu-btn span, .menu-btn span::before, .menu-btn span::after { display: block; width: 18px; height: 1.5px; background: currentColor; }
@@ -380,4 +383,25 @@ h1, h2, p, figure, blockquote { margin: 0; }
   .menu-btn[aria-expanded="true"] span { background: transparent; }
   .menu-btn[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
   .menu-btn[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+}
+
+/* 15.11.2026, слово владельца: подпись под именем мельче — как фильтры (моно, 11px, прописные) */
+.owner-line span, .home .owner-line span { display: block; margin-top: 6px; color: var(--mute); font: 400 11px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; text-transform: uppercase; letter-spacing: .02em; }
+
+/* 15.11.2026: значок «i» на плитках тише — полупрозрачный, пока подпись закрыта */
+.home .cap-i { opacity: .5; }
+.home .cap-open > .cap-i { opacity: 1; }
+
+/* 15.11.2026, слово владельца: меню прилипает к верху при прокрутке — на компьютере и на телефоне */
+.sheet:not(.home) > .top { position: sticky; top: 0; z-index: 40; background: var(--bg); }
+.home .top nav { position: sticky; top: 0; z-index: 40; grid-column: 1 / -1; align-self: start; background: var(--bg); }
+@media (max-width: 640px) {
+  .sheet:not(.home) > .top { display: contents; }
+  .sheet:not(.home) > .top > .brand { display: block; }
+  .top nav, .home .top nav { position: sticky; top: 0; z-index: 40; width: auto; margin-inline: -16px; padding-inline: 16px; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .home .top nav { grid-row: 1; margin-top: 0; }
+  .home .statement h1 { grid-row: 2; margin-top: 24px; }
+  .home .brand-signature { grid-row: 3; }
+  .home .owner-line { grid-row: 4; }
+  .home .statement p:not(.brand-signature) { grid-row: 5; }
 }
