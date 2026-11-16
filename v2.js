@@ -112,7 +112,8 @@
       running = active;
       clearInterval(timer);
       timer = null;
-      show(0);
+      // 16.11.2026, owner: on desktop hover the next slide shows at once, then the usual pace
+      show(running && !touch.matches && slides.length > 1 ? 1 : 0);
       if (running && slides.length > 1) {
         timer = setInterval(() => show((index + 1) % slides.length), 1400);
       }
