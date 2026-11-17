@@ -93,10 +93,11 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
 .ap-src{margin-top:32px}
 </style>
 <style id="ap-style2">
-.ap-intro .ap-claim{max-width:22ch;font:var(--display-weight) clamp(40px,5vw,80px)/.95 var(--display);text-transform:uppercase;text-wrap:balance}
+/* 17.11: подзаголовок как подпись под заголовком главной (.home p.hero-sub) */.ap-intro .ap-sub{margin:clamp(20px,2vw,36px) 0 0;max-width:36em;font:400 clamp(15px,1.05vw,19px)/1.4 var(--mono);letter-spacing:0;text-wrap:pretty}
+.ap-intro .ap-claim{max-width:none;font:var(--display-weight) clamp(40px,5vw,80px)/.95 var(--display);text-transform:uppercase;text-wrap:balance}
 .ap-values{list-style:none;margin:0;padding:20px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;border-top:1px solid var(--line)}
-.ap-values b{display:block;margin-bottom:8px;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
-.ap-values span{display:block;font-size:16px;line-height:1.4;text-wrap:pretty}
+/* 17.11: подписи как «Гипотеза:» в кейсах (.m1 .copy strong): жирный того же кегля, абзац под ним; внутри пункта 4px, между пунктами 24px */.ap-values b{display:block;margin-bottom:4px;font:700 14px/1.6 var(--copy);letter-spacing:0}
+.ap-values span{display:block;font:400 14px/1.6 var(--copy);text-wrap:pretty}
 .ap-infra{font:400 13px/1.5 var(--mono);color:var(--mute);max-width:70ch}
 .tmap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:stretch}
 .tmap .big{display:grid;align-content:center;gap:4px;border:1px solid var(--line);padding:24px}
@@ -120,6 +121,7 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
 .kflow li+li::before{content:"\2192";position:absolute;left:-21px;top:50%;transform:translateY(-50%);font:400 16px/1 var(--mono);color:var(--ink)}
 @media (max-width:1023px){.ap-values{grid-template-columns:repeat(2,minmax(0,1fr))}.tmap{grid-template-columns:minmax(0,1fr)}.kflow{grid-template-columns:repeat(2,minmax(0,1fr))}.kflow li:nth-child(3)::before{display:none}}
 @media (max-width:600px){.ap-values,.kflow{grid-template-columns:minmax(0,1fr)}.kflow li+li::before{content:"\2193";left:50%;top:-22px;transform:translateX(-50%)}.kflow li:nth-child(3)::before{display:block}}
+.ap-pairs{display:grid;gap:24px}.ap-pairs img{display:block;width:100%;height:auto}
 .ap-duo{display:grid;grid-template-columns:minmax(0,1.98fr) minmax(0,1.576fr);gap:24px;align-items:start}.ap-duo img{display:block;width:100%;height:auto}@media (max-width:1023px){.ap-duo{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
@@ -147,7 +149,8 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
   </header>
 
   <section class="v3-chapter ap-intro">
-    <p class="ap-claim">The team’s experience stays with the company and gets better with every task.</p>
+    <p class="ap-claim">The team’s experience stays with the&nbsp;company</p>
+    <p class="ap-sub">And it works better with every task.</p>
     <ul class="ap-values"><li><b>Experience stays</b><span>Steps, rules and good examples live inside the typical task. Whoever takes it gets them.</span></li><li><b>Fewer revisions</b><span>Norms and checklists live inside the typical task. Revision rounds are measured in the <a href="notion-system.html">Standards</a> case.</span></li><li><b>The cost of work is visible</b><span>Each task type has an hours norm based on closed tasks. Plan vs actual is in the <a href="notion-system.html">Standards</a> case.</span></li><li><b>New people ramp up faster</b><span>They start from the task log and examples, not from asking around.</span></li></ul>
     <p class="ap-infra">I run this in Notion, collected by automation. It carries over to any database where the team already tracks work.</p>
   </section>
@@ -162,6 +165,49 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
   <section class="v3-chapter" data-chapter>
     <p class="v3-label"><span>AI_PIPELINE_/_02</span><span></span></p>
     <div class="m1">
+      <h2>Data first, then the picture</h2>
+      <div class="copy"><p>A concept starts with data. The neural network collects it from three sources: what buyers write, what the brand already runs in its ads, and what the company tells shareholders. I draw the conclusions and set the hypothesis with a test threshold.</p></div>
+    </div>
+    <ul class="ap-values ap-src" aria-label="Research sources"><li><b>Reddit reviews</b><span>For Dyson, four buyers described the shock of dirt on a “clean” floor; the concept grew from that.</span></li><li><b>Meta Ad Library</b><span>On 5 November Dyson had 63 active US ads, 12 of them selling on discount, and none showing the V15 laser. The concept uses the laser to show invisible dust, which their ads never do.</span></li><li><b>Shareholder letters</b><span>18% of Airbnb nights are stays of 28+ days, Q3 2023. The concept’s test threshold starts from that base: +20% to the share of such bookings.</span></li></ul>
+  </section>
+  <section class="v3-chapter" data-chapter>
+    <p class="v3-label"><span>AI_PIPELINE_/_03</span><span></span></p>
+    <div class="m1">
+      <h2>Dyson: hard retouching</h2>
+      <div class="copy"><p>The most demanding work in the pipeline is an ad concept for the Dyson V15: the green laser on the floor, the hand and the proportions of the vacuum, cleaning up the frame. The accepted wide frame took about sixty rounds.</p><p>Generation is ChatGPT Images 2.6, retouching is Claude. Over this concept Claude built its own editing tools: laser light, dust specks, rotating and scaling the body, a SAM 2 object mask.</p><p>A frame from the second angle became the reference. We turned every note into a number on the reference first, then fixed and measured again.</p></div>
+    </div>
+    <div class="m3" data-n="2" style="--cell: 3.000">
+      <figure><div class="cell"><img src="../../assets/ai-pipeline/dy-before.webp" width="1920" height="640" alt="Early version of the wide Dyson frame" loading="lazy" decoding="async"></div><figcaption><b>AI_PIPELINE_/_03.1</b>Early version, v10.</figcaption></figure>
+      <figure><div class="cell"><img src="../../assets/ai-pipeline/dy-after.webp" width="1920" height="640" alt="Accepted wide Dyson frame" loading="lazy" decoding="async"></div><figcaption><b>AI_PIPELINE_/_03.2</b>Accepted wide frame, Nov 8.</figcaption></figure>
+    </div>
+  </section>
+  <section class="v3-chapter" data-chapter>
+    <p class="v3-label"><span>AI_PIPELINE_/_04</span><span></span></p>
+    <div class="m1">
+      <h2>Laser, masking and the hand</h2>
+      <div class="copy"><p>The laser went through twenty versions in two days: one fix kept breaking what had already been accepted. Since then, everything accepted is a check every new version has to pass. Light fans out from the beam and fades towards the other edge; dust fades with distance: the reference has 700–800 small and 35–70 large specks per 10,000 beam pixels.</p><p>To fix the body, it has to be isolated precisely. For that Claude installed SAM 2, a local neural network. The first mask came out patchy; after refinement the whole object is selected: it can be scaled down and moved, and the wall behind it is repainted.</p><p>After the move the arm bent at the elbow; it was straightened. The dark band on the wall under the bin and the clipped corner of the handle went away once the object was cut out along the mask.</p></div>
+    </div>
+    <div class="ap-duo"><figure class="dy-ba"><img src="../../assets/ai-pipeline/dy-ba-laser.webp" width="1400" height="896" alt="Laser: early version and final" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_04.1</b>Laser. Top: an early version — the wood grain is painted green, large specks are spread evenly. Bottom: the light fans out from the beam and fades towards the edge, dust thins with distance.</figcaption></figure><figure><img src="../../assets/ai-pipeline/dy-laser-top.webp" width="1536" height="1024" alt="Laser from a higher camera angle" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_04.2</b>Another angle, camera higher. The light fan and the dust follow the same measures from the roller.</figcaption></figure></div>
+    <div class="ap-duo ap-sam"><figure><img src="../../assets/ai-pipeline/dy-sam.webp" width="1194" height="1458" alt="SAM 2 object mask: first try and refined" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_04.3</b>SAM 2 masking. Top: the first mask — patches along the tube, holes in the handle. Bottom: refined — the whole object, ready to be scaled down and moved.</figcaption></figure><div class="ap-pairs"><figure><img src="../../assets/ai-pipeline/dy-fix-hand.webp" width="1540" height="660" alt="The hand before and after the fix" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_04.4</b>Hand. Left: after the body was moved — bent at the elbow, the sleeve in steps. Right: straight.</figcaption></figure><figure><img src="../../assets/ai-pipeline/dy-fix-wall.webp" width="1180" height="540" alt="Wall under the bin and handle corner, before and after" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_04.5</b>Background and handle. Left: a dark band on the wall under the bin and a clipped handle corner. Right: the wall repainted, the corner back in place.</figcaption></figure></div></div></div>
+  </section>
+  <section class="v3-chapter" data-chapter>
+    <p class="v3-label"><span>AI_PIPELINE_/_05</span><span></span></p>
+    <div class="m1">
+      <h2>Airbnb: seven formats per story</h2>
+      <div class="copy"><p>The second example is the <a href="airbnb-month.html">Airbnb “A month as a base”</a> concept. Three stories: an office, a room and a spare key. Each is laid out in seven formats, from a 3:1 billboard to a 9:16 story.</p><p>Each format gets its own recomposed frame: objects stay whole and the text never runs over them. One script places the headline, caption and logo with one set of spacing rules. My layout fixes become rules for every format: the inner gap is smaller than the outer one, and a long headline in a tall format breaks into two lines when there is room.</p></div>
+    </div>
+    <style>.ax-rz{margin:64px 0 0}.ax-rz-h,.ax-rz-row b{display:block;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}.ax-rz-row{margin-top:20px}.ax-rz-row b{margin-bottom:8px}.ax-rz-strip{display:flex;gap:6px;align-items:flex-start}.ax-rz-strip img{flex:var(--r) 1 0;min-width:0;width:0;height:auto}.ax-rz-f{margin-top:16px;font-size:14px;line-height:1.4}@media(max-width:700px){.ax-rz-strip{flex-wrap:wrap;gap:6px}.ax-rz-strip img{flex:none;width:auto;height:72px}}</style>
+    <div class="ax-rz" role="group" aria-label="Resize map">
+      <p class="ax-rz-h">Resize map · 7 formats per story</p>
+      <div class="ax-rz-row"><b>Office</b><div class="ax-rz-strip"><img src="../../assets/airbnb/airbnb-rz-office-3x1.webp" width="1080" height="360" loading="lazy" alt="Airbnb: office, 3:1 format" decoding="async" style="--r:3.000"><img src="../../assets/airbnb/airbnb-rz-office-4x1.webp" width="1440" height="360" loading="lazy" alt="Airbnb: office, 4:1 format" decoding="async" style="--r:4.000"><img src="../../assets/airbnb/airbnb-rz-office-16x9.webp" width="640" height="360" loading="lazy" alt="Airbnb: office, 16:9 format" decoding="async" style="--r:1.778"><img src="../../assets/airbnb/airbnb-rz-office-1x1.webp" width="360" height="360" loading="lazy" alt="Airbnb: office, 1:1 format" decoding="async" style="--r:1.000"><img src="../../assets/airbnb/airbnb-rz-office-4x5.webp" width="288" height="360" loading="lazy" alt="Airbnb: office, 4:5 format" decoding="async" style="--r:0.800"><img src="../../assets/airbnb/airbnb-rz-office-2x3.webp" width="240" height="360" loading="lazy" alt="Airbnb: office, 2:3 format" decoding="async" style="--r:0.667"><img src="../../assets/airbnb/airbnb-rz-office-9x16.webp" width="203" height="360" loading="lazy" alt="Airbnb: office, 9:16 format" decoding="async" style="--r:0.563"></div></div>
+      <div class="ax-rz-row"><b>Room</b><div class="ax-rz-strip"><img src="../../assets/airbnb/airbnb-rz-room-3x1.webp" width="1080" height="360" loading="lazy" alt="Airbnb: room, 3:1 format" decoding="async" style="--r:3.000"><img src="../../assets/airbnb/airbnb-rz-room-4x1.webp" width="1440" height="360" loading="lazy" alt="Airbnb: room, 4:1 format" decoding="async" style="--r:4.000"><img src="../../assets/airbnb/airbnb-rz-room-16x9.webp" width="640" height="360" loading="lazy" alt="Airbnb: room, 16:9 format" decoding="async" style="--r:1.778"><img src="../../assets/airbnb/airbnb-rz-room-1x1.webp" width="360" height="360" loading="lazy" alt="Airbnb: room, 1:1 format" decoding="async" style="--r:1.000"><img src="../../assets/airbnb/airbnb-rz-room-4x5.webp" width="288" height="360" loading="lazy" alt="Airbnb: room, 4:5 format" decoding="async" style="--r:0.800"><img src="../../assets/airbnb/airbnb-rz-room-2x3.webp" width="240" height="360" loading="lazy" alt="Airbnb: room, 2:3 format" decoding="async" style="--r:0.667"><img src="../../assets/airbnb/airbnb-rz-room-9x16.webp" width="203" height="360" loading="lazy" alt="Airbnb: room, 9:16 format" decoding="async" style="--r:0.563"></div></div>
+      <div class="ax-rz-row"><b>Key</b><div class="ax-rz-strip"><img src="../../assets/airbnb/airbnb-rz-key-3x1.webp" width="1080" height="360" loading="lazy" alt="Airbnb: key, 3:1 format" decoding="async" style="--r:3.000"><img src="../../assets/airbnb/airbnb-rz-key-4x1.webp" width="1440" height="360" loading="lazy" alt="Airbnb: key, 4:1 format" decoding="async" style="--r:4.000"><img src="../../assets/airbnb/airbnb-rz-key-16x9.webp" width="640" height="360" loading="lazy" alt="Airbnb: key, 16:9 format" decoding="async" style="--r:1.778"><img src="../../assets/airbnb/airbnb-rz-key-1x1.webp" width="360" height="360" loading="lazy" alt="Airbnb: key, 1:1 format" decoding="async" style="--r:1.000"><img src="../../assets/airbnb/airbnb-rz-key-4x5.webp" width="288" height="360" loading="lazy" alt="Airbnb: key, 4:5 format" decoding="async" style="--r:0.800"><img src="../../assets/airbnb/airbnb-rz-key-2x3.webp" width="240" height="360" loading="lazy" alt="Airbnb: key, 2:3 format" decoding="async" style="--r:0.667"><img src="../../assets/airbnb/airbnb-rz-key-9x16.webp" width="203" height="360" loading="lazy" alt="Airbnb: key, 9:16 format" decoding="async" style="--r:0.563"></div></div>
+      <p class="ax-rz-f">3:1 · 4:1 · 16:9 · 1:1 · 4:5 · 2:3 · 9:16 — from billboard to story.</p>
+    </div>
+  </section>
+  <section class="v3-chapter" data-chapter>
+    <p class="v3-label"><span>AI_PIPELINE_/_06</span><span></span></p>
+    <div class="m1">
       <h2>Typical tasks and their metrics</h2>
       <div class="copy"><p>The RAWMID design department's task base holds 1,171 tasks. They are grouped into 33 typical tasks, each with its own hours norm.</p><p>A norm is the median of closed tasks and is recalculated with every new one. You can see where revisions repeat and what each type of work costs.</p></div>
     </div>
@@ -171,62 +217,16 @@ window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
     </figure>
   </section>
   <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>AI_PIPELINE_/_03</span><span></span></p>
-    <div class="m1">
-      <h2>Data first, then the picture</h2>
-      <div class="copy"><p>A concept starts with data. The neural network collects it from three sources: what buyers write, what the brand already runs in its ads, and what the company tells shareholders. I draw the conclusions and set the hypothesis with a test threshold.</p></div>
-    </div>
-    <ul class="ap-values ap-src" aria-label="Research sources"><li><b>Reddit reviews</b><span>45 statements from Arc'teryx buyers and people choosing a jacket. For Dyson, four buyers described the shock of dirt on a “clean” floor; the concept grew from that.</span></li><li><b>Meta Ad Library</b><span>On 5 November Dyson had 63 active US ads, 12 of them selling on discount, and none showing the V15 laser. The concept uses the laser to show invisible dust, which their ads never do.</span></li><li><b>Shareholder letters</b><span>18% of Airbnb nights are stays of 28+ days, Q3 2023. The concept’s test threshold starts from that base: +20% to the share of such bookings.</span></li></ul>
-  </section>
-  <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>AI_PIPELINE_/_04</span><span></span></p>
-    <div class="m1">
-      <h2>Dyson: hard retouching</h2>
-      <div class="copy"><p>The most demanding work in the pipeline is an ad concept for the Dyson V15: the green laser on the floor, the hand and the proportions of the vacuum, cleaning up the frame. The accepted wide frame took about sixty rounds.</p><p>Generation is ChatGPT Images 2.6, retouching is Claude. Over this concept Claude built its own editing tools: laser light, dust specks, rotating and scaling the body, a SAM 2 object mask.</p><p>A frame from the second angle became the reference. We turned every note into a number on the reference first, then fixed and measured again.</p></div>
-    </div>
-    <div class="m3" data-n="2" style="--cell: 3.000">
-      <figure><div class="cell"><img src="../../assets/ai-pipeline/dy-before.webp" width="1920" height="640" alt="Early version of the wide Dyson frame" loading="lazy" decoding="async"></div><figcaption><b>AI_PIPELINE_/_04.1</b>Early version, v10.</figcaption></figure>
-      <figure><div class="cell"><img src="../../assets/ai-pipeline/dy-after.webp" width="1920" height="640" alt="Accepted wide Dyson frame" loading="lazy" decoding="async"></div><figcaption><b>AI_PIPELINE_/_04.2</b>Accepted wide frame, Nov 8.</figcaption></figure>
-    </div>
-  </section>
-  <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>AI_PIPELINE_/_05</span><span></span></p>
-    <div class="m1">
-      <h2>Laser, hand and proportions</h2>
-      <div class="copy"><p>The laser went through twenty versions in two days: one fix kept breaking what had already been accepted. Since then, everything accepted is a check every new version has to pass. Light fans out from the beam and fades towards the other edge; dust fades with distance: the reference has 700–800 small and 35–70 large specks per 10,000 beam pixels.</p><p>The body came out at different sizes across formats, the arm bent at the elbow, the tube kinked at the joint. Proportions are checked against the product photo, the tube axis against a straight line. I isolate the object with a SAM 2 mask: the wall behind it is repainted, the edges of the handle and bin stay intact.</p></div>
-    </div>
-    <div class="ap-duo"><figure><img src="../../assets/ai-pipeline/dy-laser-crop.webp" width="1200" height="606" alt="Laser on the accepted wide frame, close up" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_05.1</b>The laser on the accepted frame, close up.</figcaption></figure><figure><img src="../../assets/ai-pipeline/dy-closeups.webp" width="1600" height="1015" alt="Handle and hand close up across three revision rounds" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_05.2</b>Handle and hand close up: v53 → v53j → v53k.</figcaption></figure><figure class="dy-ba"><img src="../../assets/ai-pipeline/dy-ba-laser.webp" width="1400" height="896" alt="Laser: early version and final" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_05.3</b>Laser. Top: an early version — the wood grain is painted green, large specks are spread evenly. Bottom: the light fans out from the beam and fades towards the edge, dust thins with distance.</figcaption></figure><figure class="dy-ba"><img src="../../assets/ai-pipeline/dy-ba-body.webp" width="1400" height="1726" alt="Body and hand: early version and final" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_05.4</b>Proportions. Top: the body is too big for the hand and the tube. Bottom: scaled against the product photo.</figcaption></figure><figure class="dy-ba"><img src="../../assets/ai-pipeline/dy-ba-axis.webp" width="1400" height="1860" alt="Tube axis at the motor: early version and final" loading="lazy" decoding="async"><figcaption><b>AI_PIPELINE_/_05.5</b>Tube axis. Top: the tube bends at the motor. Bottom: the tube and the motor sit on one straight line.</figcaption></figure></div>
-  </section>
-  <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>AI_PIPELINE_/_06</span><span></span></p>
+    <p class="v3-label"><span>AI_PIPELINE_/_07</span><span></span></p>
     <div class="m1">
       <h2>How the knowledge moves on</h2>
       <div class="copy"><p>Every fix goes into an experience log with a status: said once, confirmed, dropped. What is confirmed becomes a skill rule, and the next frame starts from it.</p><p>Product knowledge built on the laser and proportions works in other stories and formats: wide banner, vertical, post, story, email.</p><p>The log sits next to the work. Whoever takes a typical task starts from it.</p><p>A new person takes a typical task and gets the log and examples right away. Experience does not leave with people.</p></div>
     </div>
     <ol class="kflow" aria-label="From a correction to a rule"><li>Said once</li><li>Confirmed</li><li>Skill rule</li><li>The next task starts from it</li></ol>
   </section>
-  <section class="v3-chapter" data-chapter>
-    <p class="v3-label"><span>AI_PIPELINE_/_07</span><span></span></p>
-    <div class="m1">
-      <h2>Arc'teryx: photo quality and scale</h2>
-      <div class="copy"><p>The second example is an ad concept for Arc'teryx. The job here is different: photo quality and scale. A script builds six formats from each of three stories; mockups are fitted to the measured corners of each medium.</p><p>One cycle produced 18 layouts and five mockups. The campaign was not tested.</p><p>Fixes to light and snow are recorded as techniques: graphics on a bright area of the frame are dark blue, space for text is planned before generation, two to four large flakes near the lens.</p></div>
-    </div>
-    <figure class="m4" style="--r:1920/1619">
-      <img src="../../assets/ai-pipeline/arc-light.webp" width="1920" height="1619" alt="Billboard and citylight mockups before and after the light fix" loading="lazy" decoding="async">
-      <figcaption><b>AI_PIPELINE_/_07.1</b>Billboard and citylight before and after the “too gloomy” fix.</figcaption>
-    </figure>
-    <figure class="m4" style="--r:1600/2889">
-      <img src="../../assets/ai-pipeline/arc-matrix.webp" width="1600" height="2889" alt="Grid: three Arc'teryx stories in six formats" loading="lazy" decoding="async">
-      <figcaption><b>AI_PIPELINE_/_07.2</b>Three stories × six formats.</figcaption>
-    </figure>
-    <figure class="m4" style="--r:1920/1618">
-      <img src="../../assets/ai-pipeline/arc-mockups.webp" width="1920" height="1618" alt="Five campaign mockups: billboard, citylight, story, website on a laptop, email on a phone" loading="lazy" decoding="async">
-      <figcaption><b>AI_PIPELINE_/_07.3</b>Five mockups: billboard, citylight, story, website, email.</figcaption>
-    </figure>
-  </section>
 
   <nav class="v3-links" aria-label="Related">
-    <a href="arcteryx-winter.html">Arc'teryx, case ↗</a>
+    <a href="airbnb-month.html">Airbnb, case ↗</a>
     <a href="dyson-v15.html">Dyson V15 ↗</a>
   </nav>
   <nav class="v3-next" aria-label="Adjacent work">
