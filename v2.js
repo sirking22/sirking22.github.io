@@ -115,7 +115,7 @@
       // 16.11.2026, owner: on desktop hover the next slide shows at once, then the usual pace
       show(running && !touch.matches && slides.length > 1 ? 1 : 0);
       if (running && slides.length > 1) {
-        timer = setInterval(() => show((index + 1) % slides.length), 1080); // 18.11.2026, owner: 30% faster (1400 → 1080 ms)
+        timer = setInterval(() => show((index + 1) % slides.length), 880); // 18.11.2026, owner: 30% faster (1400 → 1080 ms), then another ~18% (1080 → 880 ms)
       }
     }
 
