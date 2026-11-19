@@ -212,7 +212,7 @@ const main = `
     <p class="ap-claim">Концепт <span class="ry-arr">→</span> формат <span class="ry-arr">→</span> сотня роликов</p>
     <p class="ap-sub">Когда роликов сотня, видно, какой хук и какой блок держат досмотр, и удачное переносится в следующие сценарии. Ниже сначала ролики по заданию, потом — как это устроено у меня в Notion, по шагам от формата до команды.</p>
     <ul class="ap-values ry-vals"><li><b>14</b><span>форматов: 9 из разобранных роликов, 5 под мои концепты</span></li><li><b>74</b><span>блока из роликов Holo, Ryze, lisaworldverse и моих концептов: хук, боль, демо, отзыв, призыв</span></li><li><b>29</b><span>фраз: дословно от владельцев бизнеса и маркетологов</span></li></ul>
-    <p class="ry-scheme-h">Концепты → форматы → сотни роликов</p>
+    <p class="ry-scheme-h">Типичная структура сценария</p>
     <ol class="ry-scheme"><li class="ry-hk"><span>Хук с промисом</span><em>С эмоциями</em></li><li class="ry-grp"><div><ol><li><span>Боль</span></li><li><span>Пруф</span></li><li><span>Страх</span></li><li><span>Отработка возражений</span></li><li><span>Результат</span></li><li><span>Срочность</span></li><li><span>Призыв к действию</span></li></ol><em>История-отзыв</em></div></li></ol>
   </section>
 
