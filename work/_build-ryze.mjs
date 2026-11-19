@@ -1,0 +1,361 @@
+// Скрытая страница тестового Ryze, части 2–3 (черновик 19.11.2026).
+// Голова и скрипты берутся из work/notion-system.html (шаблон v3), main пишется здесь.
+// Доступ только по прямой ссылке: noindex, нет в sitemap.xml, ни одна страница сайта не ссылается.
+// Текст — черновик Claude по файлам career/ryze/*, владельцем не утверждён.
+// Запуск: node work/_build-ryze.mjs → p/ryze-7q4m.html
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+const src = readFileSync(join(root, 'work/notion-system.html'), 'utf8');
+
+let head = src.slice(0, src.indexOf('</head>'));
+head = head
+  .replace(/<title>[^<]*<\/title>/, '<title>Ryze — тестовое задание — Арсений Охотин</title>')
+  .replace(/<meta name="description"[^>]*>/, '<meta name="robots" content="noindex, nofollow">')
+  .replace(/\s*<meta property="og:[^>]*>/g, '');
+
+const tailStart = src.indexOf('<script', src.indexOf('</main>'));
+const tail = src.slice(tailStart);
+
+const ph = (id, r, text) => `
+    <figure class="m4 ry-ph" style="--r:${r}">
+      <div class="ry-box"><span>СКРИНШОТ_БУДЕТ</span></div>
+      <figcaption><b>RYZE_/_${id}</b>${text}</figcaption>
+    </figure>`;
+
+const fig = (id, file, text, w = 3200, h = 2000) => `
+    <figure class="m4" style="--r:${w}/${h}">
+      <img src="../assets/${file}" width="${w}" height="${h}" alt="${text}" loading="lazy" decoding="async">
+      <figcaption><b>RYZE_/_${id}</b>${text}</figcaption>
+    </figure>`;
+
+const plain = (t) => t.replace(/<[^>]+>/g, '').replace(/"/g, '&quot;');
+const refBtn = (r) => r ? '<button type="button" class="ry-ref' + (r.b ? '' : ' is-only') + '" data-v="../assets/ryze-ref-' + r.v + '.mp4" aria-label="' + r.l + ': открыть ролик"><img src="../assets/ryze-ref-' + r.v + '-thumb.webp" alt="" width="54" height="96" loading="lazy"><span>▶ ' + r.l + '</span></button>' : '';
+const side = (id, file, lead, text, w, h, r) => `
+    <figure class="m4 ry-side${w / h < 1.2 ? ' ry-opt' : ''}${r && r.b ? ' has-b' : ''}" style="${r && r.b ? '--ra:' + w + '/' + h + ';--rb:' + r.bw + '/' + h : '--r:' + w + '/' + h}">
+      <img${r && r.b ? ' class="ry-va"' : ''} src="../assets/${file}" width="${w}" height="${h}" alt="${plain(lead + ' ' + text)}" loading="lazy" decoding="async">${r && r.b ? '<img class="ry-vb" src="../assets/' + r.b + '" width="' + r.bw + '" height="' + h + '" alt="" loading="lazy" decoding="async">' : ''}
+      <figcaption><b>RYZE_/_${id}</b>${lead ? '<strong>' + lead + '</strong>' : ''}${text}${refBtn(r)}</figcaption>
+    </figure>`;
+
+const sidev = (id, file, lead, text, w, h) => `
+    <figure class="m4 ry-side${w / h < 1.2 ? ' ry-opt' : ''}" style="--r:${w}/${h}">
+      <video src="../assets/${file}.mp4?v=1119e" poster="../assets/${file}-poster.webp?v=1119e" width="${w}" height="${h}" controls autoplay muted loop playsinline preload="metadata" aria-label="${plain(lead + ' ' + text)}"></video>
+      <figcaption><b>RYZE_/_${id}</b>${lead ? '<strong>' + lead + '</strong>' : ''}${text}</figcaption>
+    </figure>`;
+
+const vid = (id, file, text, w, h) => `
+    <figure class="m4" style="--r:${w}/${h}">
+      <video src="../assets/${file}.mp4" poster="../assets/${file}.webp" width="${w}" height="${h}" style="display:block;width:100%;height:auto" autoplay muted loop playsinline preload="metadata" aria-label="${text}"></video>
+      <figcaption><b>RYZE_/_${id}</b>${text}</figcaption>
+    </figure>`;
+
+const main = `
+<header class="v3-bar">
+  <a href="../index.html">←_ALL_WORK</a>
+  <span class="crumbs"><span class="path">OKHOTIN_/_WORK_/_</span><b>RYZE</b><span class="count" data-count>01_/_06</span></span>
+  <nav class="steps" aria-label="Язык">
+    <span class="lang ry-lang-off" title="Английская версия — после утверждения текста">EN</span>
+  </nav>
+</header>
+
+<main class="v3" id="ryze">
+  <nav class="ry-nav" aria-label="Разделы"><ol><li><a href="#r0">Ролики</a></li><li><a href="#r1">Формат</a></li><li><a href="#r2">Разбор</a></li><li><a href="#r3">Монтаж</a></li><li><a href="#r4">Скиллы</a></li><li><a href="#r5">Обо мне</a></li></ol></nav>
+  <!-- Черновик 19.11.2026: текст не утверждён владельцем, кадры — места под скриншоты. -->
+  <header class="v3-head">
+    <h1>Ryze Production</h1>
+    <p class="v3-meta">
+      <span>19.11.2026</span>
+      ТЕСТОВОЕ_ЗАДАНИЕ
+      <span>HEAD OF CREATIVE</span>
+      ЧАСТИ_1–3
+    </p>
+  </header>
+
+  <style>
+.ry-lead{margin:0 0 clamp(48px,6vw,96px)}
+.ry-lead>p:first-child{max-width:34em;margin:0 0 32px;font-size:clamp(20px,1.6vw,28px);line-height:1.3;text-wrap:pretty}
+.ry-nums{list-style:none;margin:0;padding:20px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:1px solid var(--line)}
+.ry-nums b{display:block;margin-bottom:8px;font-size:clamp(28px,2.6vw,44px);font-weight:400;line-height:1.1}
+.ry-nums span{display:block;font-size:16px;line-height:1.4;text-wrap:pretty}
+.ry-loop{list-style:none;display:flex;flex-wrap:wrap;gap:8px 12px;margin:32px 0 0;padding:0;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.ry-loop li:not(:last-child)::after{content:"→";margin-left:12px}
+.ry-loop a{color:var(--ink);text-underline-offset:3px}
+#ryze .ry-loop{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 24px;counter-reset:ch -1}
+#ryze .ry-loop li::after{content:none}
+#ryze .ry-loop li::before{counter-increment:ch;content:"0" counter(ch);display:inline-block;width:3.2ch;color:var(--muted,#8a8a8a)}
+@media (max-width:719px){#ryze .ry-loop{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+#ryze .ry-skills{margin-top:32px}
+#ryze .ry-tl-grid{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:24px;align-items:start}
+#ryze .ry-tl-grid video{display:block;width:100%;height:auto}
+#ryze .ry-tl-t{overflow-x:auto}
+#ryze .ry-tl table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.35}
+#ryze .ry-tl th,#ryze .ry-tl td{text-align:left;vertical-align:top;padding:6px 12px 6px 0;border-bottom:1px solid rgba(128,128,128,.25)}
+#ryze .ry-tl th{font-weight:500;color:var(--muted,#8a8a8a)}
+@media (max-width:719px){#ryze .ry-tl-grid{grid-template-columns:minmax(0,1fr)}#ryze .ry-tl-grid video{max-width:320px}}
+.ry-box{aspect-ratio:var(--r);display:grid;place-items:center;border:1px dashed var(--line);font:400 12px/1.4 var(--mono);letter-spacing:.02em}
+.ry-flow{margin:0 0 clamp(32px,4vw,64px);padding:24px 0 0;border-top:1px solid var(--line)}
+.ry-row{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0 0 12px;padding:0}
+.ry-row li{position:relative;padding:14px 14px 16px;border:1px solid var(--line);font-size:16px;line-height:1.35}
+.ry-row li b{display:block;margin-bottom:6px;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.ry-row.is-back li{border-style:dashed}
+.ry-note{margin:12px 0 0;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.ry-skills{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;border-top:1px solid var(--line)}
+.ry-skills li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.35}
+.ry-skills code{font:400 12px/1.6 var(--mono);white-space:nowrap}
+.ry-me{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px}
+.ry-me li{padding-top:16px;border-top:1px solid var(--line);font-size:16px;line-height:1.45;text-wrap:pretty}
+.ry-me b{display:block;margin-bottom:8px;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.ry-me a{color:var(--ink);text-underline-offset:3px}
+@media (max-width:900px){.ry-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media (max-width:700px){.ry-nums,.ry-skills,.ry-me{grid-template-columns:minmax(0,1fr)}.ry-row{grid-template-columns:minmax(0,1fr)}}
+.ry-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:24px;height:var(--bar);margin:0 calc(-1 * var(--side));padding:0 var(--side);background:var(--bg);border-bottom:1px solid var(--line);font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.ry-nav ol{list-style:none;flex:1 1 auto;min-width:0;display:flex;gap:24px;margin:0;padding:0;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 24px),transparent)}
+.ry-nav ol::-webkit-scrollbar{display:none}
+.ry-nav a{color:var(--mute);text-decoration:none}
+.ry-nav a:hover,.ry-nav a[aria-current="true"]{color:var(--ink)}
+.ry-nav [data-count]{flex:none}
+#ryze .v3-head{margin-top:32px}
+#ryze .ry-side{width:100%;display:grid;grid-template-columns:minmax(0,calc((100vh - var(--bar) - 96px) * var(--r))) minmax(240px,320px);gap:32px;justify-content:start;align-items:start}
+#ryze .ry-side>img,#ryze .ry-side>video{width:100%;height:auto}
+#ryze .ry-side>figcaption,#ryze .ry-tl>figcaption{position:static;display:block;max-height:none;overflow:visible;margin:0;padding:0;background:none;opacity:1;visibility:visible;pointer-events:auto;color:var(--mute);font:400 14px/1.5 var(--copy)}
+#ryze .ry-tl>figcaption{margin-top:12px;max-width:60ch}
+#ryze .ry-side>figcaption b,#ryze .ry-tl>figcaption b{display:block;margin:0 0 8px;color:var(--ink);font:400 12px/1.4 var(--mono)}
+#ryze .ry-side>figcaption strong{display:block;margin:0 0 8px;color:var(--ink);font-weight:500}
+#r0>.ry-side+*,#r0>*+.ry-side{margin-top:64px}
+#r0>.ry-side+.ry-tl{margin-top:24px}
+@media (max-width:719px){#ryze .ry-side{grid-template-columns:minmax(0,calc((100vh - var(--bar) - 96px) * var(--r)));gap:12px}#r0>.ry-side+*,#r0>*+.ry-side{margin-top:48px}}
+@media (max-width:640px){.ry-nav [data-count]{display:none}.ry-nav ol{gap:16px}}
+.ry-car{position:relative}
+.ry-track{position:relative;display:flex;gap:32px;align-items:start;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.ry-track::-webkit-scrollbar{display:none}
+#ryze .ry-slide{flex:0 0 100%;min-width:0;margin:0;scroll-snap-align:start;display:grid;grid-template-columns:minmax(0,calc((100vh - var(--bar) - 160px) * var(--r))) minmax(240px,320px);gap:32px;justify-content:start;align-items:start}
+#ryze .ry-slide.is-flow{grid-template-columns:minmax(0,1fr) minmax(240px,320px)}
+#ryze .ry-slide>img,#ryze .ry-slide>video{width:100%;height:auto}
+#ryze .ry-slide .ry-flow{margin:0;padding:0;border:0}
+#ryze .ry-slide>figcaption{position:static;display:block;max-height:none;overflow:visible;margin:0;padding:0;background:none;opacity:1;visibility:visible;pointer-events:auto;color:var(--ink);font:400 14px/1.6 var(--copy)}
+#ryze .ry-slide>figcaption b{display:block;margin:0 0 8px;color:var(--ink);font:400 12px/1.4 var(--mono)}
+#ryze .ry-slide>figcaption p{margin:0 0 12px}
+#ryze .ry-slide .ry-sc{display:block;color:var(--mute);font:400 12px/1.45 var(--mono)}
+.ry-car .m2-ctrl{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
+.ry-car .m2-ctrl button:disabled{opacity:.35;cursor:default}
+@media (max-width:719px){#ryze .ry-slide,#ryze .ry-slide.is-flow{grid-template-columns:minmax(0,1fr);gap:12px}#ryze .ry-slide .ry-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:8px}#ryze .ry-slide .ry-row li{padding:10px 10px 12px;font-size:14px}}
+#ryze .ry-side{justify-content:center}
+#ryze .ry-out{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+#ryze .ry-out>li{padding-top:16px;border-top:1px solid var(--ink);font:400 14px/1.6 var(--copy);text-wrap:pretty}
+#ryze .ry-out>li>p{margin:0 0 8px}
+#ryze .ry-out b{display:block;margin:0 0 8px;font-weight:500;font-size:16px;line-height:1.35}
+#ryze .ry-out ul{margin:0 0 8px;padding-left:1.2em}
+#ryze .ry-out-note{margin-top:32px;font:400 14px/1.6 var(--copy)}
+.ry-car .m2-thumbs span{display:grid;place-items:center;height:100%;padding:4px;border:1px solid var(--line);font:400 10px/1.2 var(--mono);text-transform:uppercase;text-align:center}
+@media (max-width:900px){#ryze .ry-out{grid-template-columns:minmax(0,1fr)}}
+#ryze .ry-side.has-b{--r:var(--ra)}
+#ryze.refs-slides .ry-side.has-b{--r:var(--rb)}
+#ryze .ry-side>.ry-vb,#ryze.refs-slides .ry-side>.ry-va,#ryze.refs-slides .ry-ref:not(.is-only){display:none}
+#ryze.refs-slides .ry-side>.ry-vb{display:block}
+.ry-ref{display:flex;align-items:center;gap:12px;margin-top:16px;padding:0;border:0;background:none;color:var(--ink);font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em;text-align:left;cursor:pointer}
+.ry-ref img{flex:none;width:54px;height:96px;object-fit:cover;border:1px solid var(--line)}
+.ry-ref:hover span,.ry-ref:focus-visible span{text-decoration:underline}
+.ry-pop{padding:0;border:0;background:#000;overflow:visible;max-width:none;max-height:none}
+.ry-pop::backdrop{background:rgba(0,0,0,.82)}
+.ry-pop video{display:block;width:auto;height:auto;max-width:92vw;max-height:88vh}
+.ry-pop-x{position:absolute;top:-44px;right:0;width:40px;height:40px;padding:0;border:0;background:none;color:#fff;font:400 28px/1 var(--mono);cursor:pointer}
+/* 17.11: подзаголовок как подпись под заголовком главной (.home p.hero-sub) */.ap-intro .ap-sub{margin:clamp(20px,2vw,36px) 0 0;max-width:36em;font:400 clamp(15px,1.05vw,19px)/1.4 var(--mono);letter-spacing:0;text-wrap:pretty}
+.ap-intro .ap-claim{max-width:none;font:var(--display-weight) clamp(40px,5vw,80px)/.95 var(--display);text-transform:uppercase;text-wrap:balance}
+.ap-values{list-style:none;margin:0;padding:20px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;border-top:1px solid var(--line)}
+/* 17.11: подписи как «Гипотеза:» в кейсах (.m1 .copy strong): жирный того же кегля, абзац под ним; внутри пункта 4px, между пунктами 24px */.ap-values b{display:block;margin-bottom:4px;font:700 14px/1.6 var(--copy);letter-spacing:0}
+.ap-values span{display:block;font:400 14px/1.6 var(--copy);text-wrap:pretty}
+.ap-infra{font:400 13px/1.5 var(--mono);color:var(--mute);max-width:70ch}
+.ry-lang-off{opacity:.4;cursor:default}
+#ryze .ry-arr{font-family:var(--mono);font-size:.62em;vertical-align:.17em}
+@media (max-width:600px){#ryze .ry-car .m2-thumbs{display:flex;gap:6px}#ryze .ry-car .m2-thumbs button{flex:1 1 0;min-width:0;max-width:72px;width:auto}#ryze .ry-car .m2-thumbs img{width:100%;object-fit:cover}}
+.ry-nav{top:var(--bar)}
+#ryze .v3-chapter{scroll-margin-top:calc(var(--bar) * 2 + 16px)}
+#ryze .ry-vals{grid-template-columns:repeat(3,minmax(0,1fr))}
+#ryze .ry-vals{gap:32px;margin:48px 0 0;padding:0;border-top:0}
+#ryze .ry-vals b{margin:0;font:600 clamp(40px,6vw,72px)/1 var(--display);letter-spacing:0}
+#ryze .ry-vals span{margin-top:8px;font-size:14px;line-height:1.35}
+#ryze .ry-scheme-h{margin:clamp(40px,4vw,64px) 0 16px;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.04em}
+#ryze .ry-scheme{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 0}
+#ryze .ry-scheme li{display:flex;align-items:center}
+#ryze .ry-scheme li:not(:last-child)::after{content:'→';padding:0 8px;font-family:var(--mono)}
+#ryze .ry-scheme span{padding:8px 14px;border:1px solid var(--line);font:400 15px/1.2 var(--copy)}
+#ryze .ry-scheme>li:first-child span{border-color:var(--ink);font-weight:700}
+#ryze .ry-scheme{padding-bottom:28px;row-gap:40px}
+#ryze .ry-grp>div{position:relative;padding:6px;border:1px solid var(--line)}
+#ryze .ry-hk{position:relative}
+#ryze .ry-hk em{position:absolute;left:0;top:calc(100% + 5px);font:400 12px/1.4 var(--mono);font-style:normal;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+#ryze .ry-grp ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;row-gap:8px}
+#ryze .ry-grp em{position:absolute;left:-1px;top:calc(100% + 6px);font:400 12px/1.4 var(--mono);font-style:normal;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+#ryze .ry-out b{font-weight:700}
+#ryze .ap-intro{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:32px;align-items:start}
+#ryze .ap-intro .ap-claim{grid-column:1/3;margin:0}
+#ryze .ap-intro .ap-sub{grid-column:3/5;margin:0;max-width:462px}
+#ryze .ap-intro .ry-vals{grid-column:1/-1;grid-template-columns:repeat(4,minmax(0,1fr))}
+#ryze .ap-intro .ry-scheme-h,#ryze .ap-intro .ry-scheme{grid-column:1/-1}
+#ryze .ap-intro .ry-scheme-h{margin:56px 0 16px}
+@media (max-width:1023px){#ryze .ap-intro{grid-template-columns:minmax(0,1fr)}#ryze .ap-intro>*,#ryze .ap-intro .ap-claim,#ryze .ap-intro .ap-sub,#ryze .ap-intro .ry-vals{grid-column:1/-1}#ryze .ap-intro .ap-sub{margin-top:24px}}
+@media (max-width:700px){#ryze .ap-intro .ry-vals{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}}
+#ryze .ry-out-h{margin-top:clamp(96px,9vw,144px)}
+#ryze .ry-out{margin-top:clamp(32px,3vw,48px)}
+#ryze .ry-me{grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 32px;margin-top:clamp(40px,4vw,64px)}
+#ryze .ry-me li{padding-top:16px;font:400 14px/1.6 var(--copy)}
+#ryze .ry-me b{margin:0 0 8px;font:600 16px/1.35 var(--copy);text-transform:none;letter-spacing:0}
+@media (min-width:1024px){#ryze .ry-side.ry-opt{padding-left:calc((320px + 32px) / 2)}}
+@media (max-width:1023px){#ryze .ry-vals,#ryze .ry-me{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){#ryze .ry-vals,#ryze .ry-me{grid-template-columns:minmax(0,1fr)}}
+  </style>
+
+  <section class="v3-chapter ap-intro" aria-label="RYZE">
+    <p class="ap-claim">Концепт <span class="ry-arr">→</span> формат <span class="ry-arr">→</span> сотня роликов</p>
+    <p class="ap-sub">Когда роликов сотня, видно, какой хук и какой блок держат досмотр, и удачное переносится в следующие сценарии. Ниже сначала ролики по заданию, потом — как это устроено у меня в Notion, по шагам от формата до команды.</p>
+    <ul class="ap-values ry-vals"><li><b>14</b><span>форматов: 9 из разобранных роликов, 5 под мои концепты</span></li><li><b>74</b><span>блока из роликов Holo, Ryze, lisaworldverse и моих концептов: хук, боль, демо, отзыв, призыв</span></li><li><b>29</b><span>фраз: дословно от владельцев бизнеса и маркетологов</span></li></ul>
+    <p class="ry-scheme-h">Концепты → форматы → сотни роликов</p>
+    <ol class="ry-scheme"><li class="ry-hk"><span>Хук с промисом</span><em>С эмоциями</em></li><li class="ry-grp"><div><ol><li><span>Боль</span></li><li><span>Пруф</span></li><li><span>Страх</span></li><li><span>Отработка возражений</span></li><li><span>Результат</span></li><li><span>Срочность</span></li><li><span>Призыв к действию</span></li></ol><em>История-отзыв</em></div></li></ol>
+  </section>
+
+  <section class="v3-chapter" id="r0" data-chapter>
+    <p class="v3-label"><span>RYZE_/_01</span><span></span></p>
+    <div class="m1">
+      <h2>Ролики</h2>
+      <div class="copy"><p><b>Один формат целиком, остальное по убыванию проработки.</b></p><p>Изучил ролики Holo, в том числе победные в библиотеке рекламы Meta, и сделал варианты по их примеру.</p><p><b>Чего здесь нет.</b> Большинство роликов Holo, которые я разобрал, — живые кадры с интерфейсом поверх. Экраны и цифры Ryze кладутся на монтаже, поэтому подробно интерфейс показан в одном формате. В остальных концептах он подразумевается.</p></div>
+    </div>
+    <figure class="m4 ry-side ry-opt" style="--r:9/16">
+      <video src="../assets/ryze-p1-f1-animatic.mp4?v=1119b" poster="../assets/ryze-p1-f1-animatic.webp?v=1119b" width="720" height="1280" controls autoplay muted loop playsinline preload="metadata" aria-label="Аниматик «Ты же должен работать»"></video>
+      <figcaption><b>RYZE_/_01.1</b><strong>«Ты же должен работать» — сценарий по секундам, раскадровка, кадры.</strong>В сценарии видно, как хук переходит в историю и где появляется Ryze. Здесь аниматик: кадры раскадровки с титрами в таймингах сценария. Звука нет: голос и музыка добавляются при сборке ролика.</figcaption>
+    </figure>${side('01.2', 'ryze-p1-episodes.webp', 'Ещё два эпизода этого формата, «Рыбалка» и «Стадион».', 'Меняется только место, монолог и экраны Ryze те же.', 736, 640)}${side('01.3', 'ryze-p1-news.webp', 'Хук с завязкой и переходом в историю.', 'Сценка «Новости», три кадра. Прохожие смотрят в витрине новость «Black day for ad agencies». Владелец агентства в интервью жалуется, что клиент ушёл не к другому агентству. Маркетолог признаётся, что ушла она: рекламу теперь ведёт без агентства. Дальше её история: боль, страх, результат.', 1112, 640, {v: 'agency', l: 'Референс'})}${sidev('01.4', 'ryze-p1-office', '', 'Сценка «Офис»: аниматик из двух кадров, 6 секунд. Он сам снимает через улицу окно офиса конкурентов: босс в ярости, летят бумаги. Потом переключает на фронталку: он на скамейке напротив, пьёт сок через трубочку.', 720, 1280)}${sidev('01.5', 'ryze-p1-sleep', '', 'Сценка «Он спит»: аниматик из четырёх кадров, 12 секунд. Восемь утра, владелец бизнеса ещё спит, хотя раньше в это время уже сидел в рекламных кабинетах. Жена снимает это как событие. Он садится завтракать и рассказывает: рекламу ведёт Ryze, без его одобрения ничего не меняется.', 720, 1280)}${side('01.6', 'ryze-p1-car-a.webp', 'Три формата, где показана только завязка.', '«Занят в неудобном месте». Референс по приёму, Holo: в салоне турбулентность и паника, а пилот спокойно занимается рекламой. Адаптация: пробка, сзади сигналят, а герой у окна машины спокойно рассказывает в камеру.', 360, 640, {v: 'car', l: 'Референс', b: 'ryze-p1-car-b.webp', bw: 648})}${side('01.7', 'ryze-p1-thumb-a.webp', '«Палец вверх», по схеме победителя Holo.', 'Референс: селфи в темноте, подпись в белой плашке, палец вверх. Адаптация: тот же ход, три кадра — удивление, палец, лайк.', 1112, 640, {v: 'thumb', l: 'Референс', b: 'ryze-p1-thumb-b.webp', bw: 1656})}${side('01.8', 'ryze-p1-dance-a.webp?v=1119g', '«Танцуют на фоне», по схеме победителя Holo.', 'Референс: механик танцует в своём автосервисе, история и цифры идут плашками. Адаптация: маркетолог танцует в офисе, сначала история, потом цифры.', 736, 640, {v: 'dance', l: 'Референс', b: 'ryze-p1-dance-b.webp?v=1119g', bw: 1280})}${side('01.9', 'ryze-p1-shoulder.webp?v=1119c', 'Перенос чужого живого формата: «этот парень из 2099 года».', 'Один кадр из-за спины с подзумом на экран. На ноутбуке внутренний интерфейс Ryze: расходы по каналам и что он предлагает исправить. На телефоне три действия ждут подтверждения. Цифры на экранах демонстрационные.', 1112, 1296, {v: '2099', l: 'Оригинал'})}${side('01.10', 'ryze-p1-ded-a.webp?v=1119f', 'Живые ролики, отдельно. Пример — дед «Are you happy?».', 'Оригинал и тот же план с другим человеком, новый текст под жесты оригинала. Кадры для показа техники, в рекламу идёт свой отснятый план той же схемы.', 736, 640, {v: 'ded', l: 'Оригинал', b: 'ryze-p1-ded-b.webp?v=1119f', bw: 1280})}
+    <div class="m1 ry-out-h">
+      <h2>Выводы</h2>
+    </div>
+    <ol class="ry-out"><li><p><b>1. Главное — хук, дальше блоки.</b> После хука идёт обычная блоковая структура: промис, боль, пруф, страх, отработка возражений, результат, срочность, призыв к действию. Из блоков собираются концепты и форматы. Когда роликов много, по блокам копится статистика, и блоки можно ранжировать по тому, как они работают.</p></li><li><p><b>2. В разобранных роликах держат эмоция, звук и картинка вместе.</b> У Holo живой голос звучит с первой секунды, хук длится 3–5 секунд, у человека в кадре живая жестикуляция и мимика. Такая эмоция даёт доверие или интерес.</p></li><li><p><b>3. Ходовой приём — хук и отзыв клиента историей.</b> После хука клиент рассказывает свою историю: боли, страхи, как они закрылись, пруфы. Второй вариант — быстрый промис в первые секунды.</p></li><li><p><b>Про аналоги.</b> Делать аналоги успешных роликов считаю нормальным, в рамках приемлемого копировать сработавшее не зазорно. Но я ими не ограничиваюсь: на аналогах развиваются приёмы, и потом сработавшие можно комбинировать между собой.</p></li><li><p><b>Живые ролики.</b> Их важно пробовать. Чтобы сохранить эмоцию живого ролика, есть три способа:</p><ul><li>переснять по той же схеме;</li><li>снять живьём и потом заменить людей поверх, главное — сохранить эмоции;</li><li>на каналах, где это допустимо, перегенерировать живой ролик.</li></ul><p>Чужой ролик идёт в рекламу только с лицензией автора и согласием человека в кадре.</p></li></ol>
+    <p class="ry-out-note">Как из этого получается сотня роликов и где копится статистика по блокам — ниже, в разделах от «Формата» до «Скиллов».</p>
+  </section>
+
+  <section class="v3-chapter" id="r1" data-chapter>
+    <p class="v3-label"><span>RYZE_/_02</span><span></span></p>
+    <div class="m1">
+      <h2>Формат</h2>
+    </div>
+    <div class="ry-car" aria-roledescription="карусель" aria-label="Формат">
+      <div class="ry-track">
+        <figure class="ry-slide" style="--r:2584/1428" data-t="Формат">
+          <img src="../assets/ryze-shot-formats.webp" width="2584" height="1428" alt="База «Форматы»: 14 форматов, 9 из разобранных роликов и 5 под мои концепты. Подача одной фразой, тип съёмки, ролик-источник, концепты по формату." loading="lazy" decoding="async">
+          <figcaption><b>RYZE_/_02.2</b><p>Формат — подача и точка зрения: тип съёмки и основная завязка. Уличное интервью с микрофоном, разговор двух знакомых, селфи, мокьюментари или их сочетание. Формат задаётся сразу, из него выходит первый концепт. В концепте «Ты же должен работать» герой отдыхает в рабочее время, друг спрашивает, почему он не на работе, и герой отвечает, что рекламу ведёт Ryze. В следующих эпизодах съёмка с одного места, вопрос друга и ответ героя остаются, меняются место и занятие: гриль, рыбалка, стадион.</p><span class="ry-sc">База «Форматы»: 14 форматов, 9 из разобранных роликов и 5 под мои концепты. Подача одной фразой, тип съёмки, ролик-источник, концепты по формату.</span></figcaption>
+        </figure>
+        <figure class="ry-slide" style="--r:2584/1422" data-t="Концепт и блоки">
+          <video src="../assets/ryze-blocks-all.mp4" poster="../assets/ryze-blocks-all.webp" width="2584" height="1422" autoplay muted loop playsinline preload="metadata" aria-label="База «Блоки» целиком: 74 блока по типам — хук, переход, боль, демо продукта, снятие возражения, обещание, отзыв, призыв. У каждого механика, канал и ролик-источник."></video>
+          <figcaption><b>RYZE_/_02.4</b><p>Концепт — конкретный ролик: сценарий, референсы, кадры, материалы. По сути это ТЗ исполнителю. Переход, боль, демо продукта, отзыв и призыв меняются от концепта к концепту и от формата зависят слабо.</p><span class="ry-sc">База «Блоки» целиком: 74 блока по типам — хук, переход, боль, демо продукта, снятие возражения, обещание, отзыв, призыв. У каждого механика, канал и ролик-источник.</span></figcaption>
+        </figure>
+        <figure class="ry-slide" style="--r:2584/1422" data-t="Хуки">
+          <img src="../assets/ryze-shot-hooks.webp" width="2584" height="1422" alt="Хуки: 19 из 74 блоков, у каждого кадр из ролика, реплика и ролик-источник." loading="lazy" decoding="async">
+          <figcaption><b>RYZE_/_02.3</b><span class="ry-sc">Хуки: 19 из 74 блоков, у каждого кадр из ролика, реплика и ролик-источник.</span></figcaption>
+        </figure>
+        <figure class="ry-slide is-flow" style="--r:2/1" data-t="Метрики возвращаются">
+          <div class="ry-flow" aria-label="Как метрики возвращаются в формат">
+      <ol class="ry-row">
+        <li><b>Формат</b>тип съёмки, точка зрения, завязка</li>
+        <li><b>Концепт</b>сценарий, референсы, кадры</li>
+        <li><b>Блоки</b>хук, боль, демо, отзыв, призыв</li>
+        <li><b>Материал</b>смонтированный ролик</li>
+        <li><b>Релиз</b>выход в Instagram, YouTube, TikTok</li>
+      </ol>
+      <ol class="ry-row is-back">
+        <li><b>KPI-факты</b>просмотры, удержание 3 с, досмотр, клики</li>
+        <li><b>KPI-карточки</b>сводка по релизам</li>
+        <li><b>← Блок</b>какой хук держит первые секунды</li>
+        <li><b>← Концепт</b>какой ролик снимать вариантами</li>
+        <li><b>← Формат</b>раскатывать, доработать или закрыть</li>
+      </ol>
+          </div>
+          <figcaption><b>RYZE_/_02.1</b><span class="ry-sc">Метрики релиза возвращаются в блок, концепт и формат. Задачи и проекты — рамка вокруг, на схеме не показаны.</span></figcaption>
+        </figure>
+        <figure class="ry-slide" style="--r:2584/780" data-t="Статистика концептов">
+          <img src="../assets/ryze-shot-concepts.webp" width="2584" height="780" alt="Метрики концептов: удержание 3 с, досмотр, CTR и конверсия, рядом формат концепта. Цифры демонстрационные." loading="lazy" decoding="async">
+          <figcaption><b>RYZE_/_02.5</b><p>Когда роликов сотня, у каждого блока копится статистика. График удержания показывает, на каком блоке зрители уходят, а хук проверяется двумя версиями одного ролика с разным началом. Блок, который выиграл такое сравнение, переходит в новые сценарии. Связи между базами уже есть, цифры ниже пока демонстрационные.</p><span class="ry-sc">Метрики концептов: удержание 3 с, досмотр, CTR и конверсия, рядом формат концепта. Цифры демонстрационные.</span></figcaption>
+        </figure>
+      </div>
+      <div class="m2-ctrl"><p class="m2-cap" data-t></p><div class="m2-nav"><button type="button" data-p aria-label="Предыдущий слайд">←</button><span data-n></span><button type="button" data-x aria-label="Следующий слайд">→</button></div></div>
+      <div class="m2-thumbs"></div>
+    </div>
+  </section>
+
+  <section class="v3-chapter" id="r2" data-chapter>
+    <p class="v3-label"><span>RYZE_/_03</span><span></span></p>
+    <div class="m1">
+      <h2>Разбор референсов</h2>
+    </div>
+    <div class="ry-car" aria-roledescription="карусель" aria-label="Разбор референсов">
+      <div class="ry-track">
+        <figure class="ry-slide" style="--r:2584/1286" data-t="Разбор по блокам">
+          <img src="../assets/ryze-shot-refs.webp" width="2584" height="1286" alt="База «Референсы»: 11 разобранных роликов: девять из задания (шесть Holo, два Ryze, lisaworldverse) и два из моей подборки." loading="lazy" decoding="async">
+          <figcaption><b>RYZE_/_03.1</b><p>Ролик-референс раскладываю по функциям фраз: хук, переход, боль, демо, отзыв, призыв. Блок уходит в базу с репликой, приёмом и тем, чем он держит. Шесть роликов Holo, два ролика Ryze и ролик lisaworldverse из задания дали 60 блоков, мои концепты — ещё 14.</p><span class="ry-sc">База «Референсы»: 11 разобранных роликов: девять из задания (шесть Holo, два Ryze, lisaworldverse) и два из моей подборки.</span></figcaption>
+        </figure>
+        <figure class="ry-slide" style="--r:3200/2000" data-t="Блоки концепта">
+          <img src="../assets/ryze-storyboard.png" width="3200" height="2000" alt="Блоки концепта «Монстры на рынке»: реплика, сцена, чем держит, и кадры референсов из роликов Holo и Ryze к каждому блоку." loading="lazy" decoding="async">
+          <figcaption><b>RYZE_/_03.2</b><span class="ry-sc">Блоки концепта «Монстры на рынке»: реплика, сцена, чем держит, и кадры референсов из роликов Holo и Ryze к каждому блоку.</span></figcaption>
+        </figure>
+        <figure class="ry-slide" style="--r:2768/1420" data-t="Голос аудитории">
+          <video src="../assets/ryze-personas.mp4" poster="../assets/ryze-personas.webp" width="2768" height="1420" autoplay muted loop playsinline preload="metadata" aria-label="Образы аудитории: три образа, в каждом — фразы покупателей дословно. Открыт «Специалист по рекламе», 8 фраз."></video>
+          <figcaption><b>RYZE_/_03.3</b><p>Из повторов складываются устоявшиеся приёмы. Все хуки в разобранных роликах бьют в эмоцию. История идёт через личный опыт героя, как отзыв. Что хук должен вызывать эмоцию или доверие, пока гипотеза, её проверят следующие ролики. Завязки хуков растут из голоса аудитории: 29 фраз о боли, страхе перед ИИ и о том, с чего человек начинает искать сервис. Фразы разложены по трём образам покупателя, один из них — специалист по рекламе.</p><span class="ry-sc">Образы аудитории: три образа, в каждом — фразы покупателей дословно. Открыт «Специалист по рекламе», 8 фраз.</span></figcaption>
+        </figure>
+      </div>
+      <div class="m2-ctrl"><p class="m2-cap" data-t></p><div class="m2-nav"><button type="button" data-p aria-label="Предыдущий слайд">←</button><span data-n></span><button type="button" data-x aria-label="Следующий слайд">→</button></div></div>
+      <div class="m2-thumbs"></div>
+    </div>
+  </section>
+
+  <section class="v3-chapter" id="r3" data-chapter>
+    <p class="v3-label"><span>RYZE_/_04</span><span></span></p>
+    <div class="m1">
+      <h2>Монтажный стол</h2>
+      <div class="copy"><p>Сценарий собирается на таймлайне: блоки по секундам, у каждого плана кадр начала и кадр конца, отдельные дорожки для референсов и для варианта Б. Длина реплик рассчитана по темпу речи в референсах: в среднем 3,4 слова в секунду.</p></div>
+    </div>${fig('04.1', 'ryze-shot-timeline-f1.webp', 'Монтажный стол концепта Ф1 «Ты же должен работать»: 34,9 с, блоки и кадры по секундам, справа реплика и что весомо. Эпизоды «Рыбалка» и «Стадион» собираются в том же формате.', 2767, 1424)}
+  </section>
+
+  <section class="v3-chapter" id="r4" data-chapter>
+    <p class="v3-label"><span>RYZE_/_05</span><span></span></p>
+    <div class="m1">
+      <h2>Скиллы и команда</h2>
+      <div class="copy"><p>Скилл — инструкция для модели, которая связывает базу знаний с конкретной задачей. Когда модель собирает следующий сценарий, скилл подаёт ей блоки и приёмы из базы. Когда появятся живые метрики, первыми пойдут блоки с лучшими цифрами.</p><p>Скиллы команды ведутся через GitHub. Монтажёры, дизайнеры и AI-креаторы правят свои скиллы и собирают эталоны, каждая правка идёт отдельным изменением с причиной, её видит вся команда и можно откатить. Раз в неделю я или руководители читаем правки и решаем, какая правка становится стандартом. Приём проходит три уровня: рабочее, устоялось, правило.</p><p>Постановку задач и приёмку ведут те же скиллы, к ним можно подключить аналитику. В RAWMID после стандартов на типовую задачу приходилось 0,7 правки вместо 2,4 — <a href="../work/notion-system.html">кейс «Стандарты»</a>.</p></div>
+    </div>
+    <ul class="ry-skills">
+      <li>Сбор референсов<code>ref-collect</code></li>
+      <li>Разбор ролика по блокам<code>video-ref</code></li>
+      <li>Концепт от голоса аудитории<code>concept-pipeline</code></li>
+      <li>Кадры планов<code>image-prompt</code></li>
+      <li>Приёмы исполнения<code>craft-techniques</code></li>
+      <li>Монтаж<code>video-edit</code></li>
+      <li>Проверка гипотезы<code>hypothesis-test</code></li>
+      <li>Вывод → правило для всех<code>knowledge-scale</code></li>
+    </ul>
+  </section>
+
+  <section class="v3-chapter" id="r5" data-chapter>
+    <p class="v3-label"><span>RYZE_/_06</span><span></span></p>
+    <div class="m1">
+      <h2>Обо мне</h2>
+      <div class="copy"><p>Креативный директор. Строю систему, на которой команда выпускает много роликов и видит, что из них работает.</p></div>
+    </div>
+    <ul class="ry-me">
+      <li><b>AI pipeline</b><a href="../work/ai-pipeline.html">Кейс</a>: от данных к кадрам и метрикам. На нём собраны <a href="../work/dyson-v15.html">Dyson</a> и <a href="../work/airbnb-month.html">Airbnb</a>.</li>
+      <li><b>Честно об опыте</b>С ИИ работаю четыре года, последние два с лишним — каждый день. Нейросетевых роликов сделал немного. В этом задании пройдены шаги до монтажного стола, генерацию видео и липсинк не делал.</li>
+      <li><b>Продакшен с командой</b>RAWMID: команда 10+ человек, гайд по съёмке, <a href="../work/rawmid-video.html">видео</a> и <a href="https://www.instagram.com/rawmid/reels/" rel="noopener">Reels</a>.</li>
+      <li><b>Разбор референсов</b>Постоянно разбираю чужие подачи. Базу блоков выше собрал так же.</li>
+      <li><b>Знания остаются в компании</b>Правило, найденное на одном ролике, записано в базу и скилл. Его повторяет любой в команде, и оно не уходит вместе с человеком.</li>
+      <li><b>Портфолио</b><a href="../index.html">Все кейсы</a> на этом сайте. Сайт тоже сделал сам.</li>
+    </ul>
+  </section>
+  <script>(function(){var a=[].slice.call(document.querySelectorAll('.ry-nav a')),s=a.map(function(x){return document.querySelector(x.getAttribute('href'))});function f(){var y=innerHeight*.35,i=0;s.forEach(function(e,j){if(e&&e.getBoundingClientRect().top<=y)i=j});a.forEach(function(x,j){x.setAttribute('aria-current',String(j===i))})}addEventListener('scroll',f,{passive:true});f()})();</script>
+  <script>(function(){if(!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting&&v.paused){v.muted=true;var p=v.play();if(p)p.catch(function(){})}})},{threshold:.25});[].forEach.call(document.querySelectorAll('#ryze video[autoplay]'),function(v){io.observe(v)})})();</script>
+  <script>document.querySelectorAll('.ry-car').forEach(function(c){var t=c.querySelector('.ry-track'),s=[].slice.call(t.children),n=c.querySelector('[data-n]'),l=c.querySelector('.m2-cap'),p=c.querySelector('[data-p]'),x=c.querySelector('[data-x]'),cur=0,th=c.querySelector('.m2-thumbs');s.forEach(function(e,j){var m=e.querySelector('img,video'),b=document.createElement('button'),u=m?(m.tagName==='VIDEO'?m.getAttribute('poster'):m.getAttribute('src')):'';b.type='button';b.setAttribute('aria-label','Слайд '+(j+1));b.innerHTML=u?'<img src="'+u+'" alt="" loading="lazy">':'<span>'+e.dataset.t+'</span>';b.addEventListener('click',function(){go(j)});th.appendChild(b)});function d2(v){return(v<10?'0':'')+v}function upd(){var i=0,m=1e9;s.forEach(function(e,j){var k=Math.abs(e.offsetLeft-t.scrollLeft);if(k<m){m=k;i=j}});cur=i;n.textContent=d2(i+1)+'_/_'+d2(s.length);l.textContent=s[i].dataset.t;p.disabled=i===0;x.disabled=i===s.length-1;[].forEach.call(th.children,function(b,j){b.setAttribute('aria-current',String(j===i))})}function go(i){i=Math.max(0,Math.min(s.length-1,i));t.scrollTo({left:s[i].offsetLeft,behavior:'smooth'})}p.addEventListener('click',function(){go(cur-1)});x.addEventListener('click',function(){go(cur+1)});c.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')go(cur-1);if(e.key==='ArrowRight')go(cur+1)});t.addEventListener('scroll',upd,{passive:true});addEventListener('resize',function(){go(cur)});upd()});</script>
+  <script>(function(){var d=document.createElement('dialog');d.className='ry-pop';d.setAttribute('aria-label','Референс');d.innerHTML='<button type="button" class="ry-pop-x" aria-label="Закрыть">×</button><video controls playsinline></video>';document.body.appendChild(d);var v=d.querySelector('video');document.addEventListener('click',function(e){var b=e.target.closest('.ry-ref');if(!b)return;v.src=b.dataset.v;d.showModal();var p=v.play();if(p&&p.catch)p.catch(function(){})});d.addEventListener('click',function(e){if(e.target===d||e.target.closest('.ry-pop-x'))d.close()});d.addEventListener('close',function(){v.pause();v.removeAttribute('src');v.load()});if(/[?&]refs=slides/.test(location.search))document.getElementById('ryze').classList.add('refs-slides')})();</script>
+</main>
+
+`;
+
+mkdirSync(join(root, 'p'), { recursive: true });
+const out = head + '</head>\n<body>\n' + main + tail;
+writeFileSync(join(root, 'p/ryze-7q4m.html'), out);
+console.log('ok', out.length);
