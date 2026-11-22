@@ -216,7 +216,7 @@ const main = `
   <section class="v3-chapter ap-intro" aria-label="RYZE">
     <p class="ap-sub">Когда роликов сотня, видно, какой хук и какой блок держат досмотр, и удачное переносится в следующие сценарии. Ниже сначала ролики по заданию, потом — как это устроено у меня в Notion, по шагам от формата до команды.</p>
     <p class="ry-scheme-h">Типичная структура сценария</p>
-    <ol class="ry-scheme"><li class="ry-hk"><span>Хук с промисом</span><em>С эмоциями</em></li><li class="ry-grp"><div><ol><li><span>Боль</span></li><li><span>Пруф</span></li><li><span>Страх</span></li><li><span>Отработка возражений</span></li><li><span>Результат</span></li><li><span>Срочность</span></li><li><span>Призыв к действию</span></li></ol><em>История-отзыв</em></div></li></ol>
+    <ol class="ry-scheme"><li class="ry-hk"><span>Эмоциональный хук</span><em>+ промис</em></li><li class="ry-grp"><div><ol><li><span>Боль</span></li><li><span>Пруф</span></li><li><span>Страх</span></li><li><span>Отработка возражений</span></li><li><span>Результат</span></li><li><span>Срочность</span></li><li><span>Призыв к действию</span></li></ol><em>История-отзыв</em></div></li></ol>
   </section>
 
   <section class="v3-chapter" id="r0" data-chapter>
