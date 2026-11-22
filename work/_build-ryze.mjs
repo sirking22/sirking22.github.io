@@ -210,7 +210,7 @@ const main = `
   <!--cs-head--><style>.cs-head{margin:clamp(40px,5vw,72px) 0 clamp(64px,8vw,128px)}.cs-nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}.cs-nums p{margin:0;min-width:0}.cs-nums b{display:block;font:var(--display-weight) clamp(48px,5.6vw,96px)/.9 var(--display)}.cs-nums span{display:block;margin-top:12px;max-width:24em;font-size:14px;line-height:1.4;text-wrap:pretty}.cs-scope{margin:16px 0 0;font:400 12px/1.4 var(--mono);color:var(--mute)}.cs-thesis{margin:clamp(40px,5vw,72px) 0 0;max-width:20em;font:var(--display-weight) clamp(34px,4.08vw,68px)/.95 var(--display);text-transform:uppercase;text-wrap:balance}.cs-todo{display:inline-block;margin-top:12px;background:#ffe9a8;color:#000;font:400 12px/1.4 var(--mono)}@media(max-width:700px){.cs-nums{grid-template-columns:minmax(0,1fr);gap:24px}.cs-nums b{font-size:40px}}</style>
   <section class="cs-head" aria-label="Коротко">
     <div class="cs-nums"><p><b>14</b><span>форматов: 9 из разобранных роликов, 5 под мои концепты</span></p><p><b>74</b><span>блока из роликов Holo, Ryze, lisaworldverse и моих концептов: хук, боль, демо, отзыв, призыв</span></p><p><b>29</b><span>фраз: дословно от владельцев бизнеса и маркетологов</span></p></div>
-    <p class="cs-thesis">Концепт → формат → сотня роликов</p>
+    <p class="cs-thesis">Концепты → форматы → сотня роликов</p>
   </section><!--/cs-head-->
 
   <section class="v3-chapter ap-intro" aria-label="RYZE">
