@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ryze — test task — Arseniy Okhotin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/icon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/icon-180.png">
+  <link rel="stylesheet" href="../assets/fonts/_faces.css">
+  <link rel="stylesheet" href="../case-v3.css?v=15">
+
+<script>
+window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
+
+(function () {
+  var id = window.METRIKA_ID;
+  if (!id) return;
+
+  /* Свои и машинные заходы в счёт не идут — 07.09.2026. За две недели из 13
+     визитов живыми были два: остальное дали headless-браузеры (превью-ссылки,
+     краулеры, автоматика) и собственные проверки деплоя.
+     ?dev=1 — свой заход; флаг запоминается в браузере, дальше метка не нужна,
+     снимается через ?dev=0. navigator.webdriver стоит у любого headless. */
+  try {
+    if (location.search.indexOf('dev=0') > -1) localStorage.removeItem('ez_dev');
+    else if (location.search.indexOf('dev=1') > -1) localStorage.setItem('ez_dev', '1');
+    if (localStorage.getItem('ez_dev') === '1') return;
+  } catch (e) {}
+  if (navigator.webdriver) return;
+
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  for (var j=0;j<e.scripts.length;j++){if(e.scripts[j].src===r){return;}}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,
+  a.parentNode.insertBefore(k,a)})
+  (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=' + id, 'ym');
+
+  ym(id, 'init', { ssr: true, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true, referrer: document.referrer, url: location.href });
+
+  /* Цели. Сам заход почти ничего не говорит: важно, ушёл ли человек в кейс
+     или написал. */
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('behance.net') > -1) ym(id, 'reachGoal', 'behance');
+    else if (href.indexOf('t.me/') > -1) ym(id, 'reachGoal', 'telegram');
+    else if (href.indexOf('mailto:') === 0) ym(id, 'reachGoal', 'mail');
+  });
+})();
+</script>
+  <link rel="canonical" href="https://okhotin.site/p/ryze-7q4m-en.html">
+</head>
+<body>
+
+<header class="v3-bar">
+  <a href="../en/index.html">←_ALL_WORK</a>
+  <span class="crumbs"><span class="path">OKHOTIN_/_WORK_/_</span><b>RYZE</b><span class="count" data-count>01_/_06</span></span>
+  <nav class="steps" aria-label="Language">
+  </nav>
+</header>
+
+<main class="v3" id="ryze">
+  <nav class="ry-nav" aria-label="Sections"><ol><li><a href="#r0">Videos</a></li><li><a href="#r1">Format</a></li><li><a href="#r2">Breakdown</a></li><li><a href="#r3">Edit</a></li><li><a href="#r4">Skills</a></li><li><a href="#r5">About me</a></li></ol></nav>
+  <!-- Черновик 19.11.2026: текст не утверждён владельцем, кадры — места под скриншоты. -->
+  <header class="v3-head">
+    <h1>Ryze Production</h1>
+    <p class="v3-meta">
+      <span>19.11.2026</span>
+      TEST_TASK
+      <span>HEAD OF CREATIVE</span>
+      PARTS_1–3
+    </p>
+  </header>
+
+  <style>
+.ry-lead{margin:0 0 clamp(48px,6vw,96px)}
+.ry-lead>p:first-child{max-width:34em;margin:0 0 32px;font-size:clamp(20px,1.6vw,28px);line-height:1.3;text-wrap:pretty}
+.ry-nums{list-style:none;margin:0;padding:20px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:1px solid var(--line)}
+.ry-nums b{display:block;margin-bottom:8px;font-size:clamp(28px,2.6vw,44px);font-weight:400;line-height:1.1}
+.ry-nums span{display:block;font-size:16px;line-height:1.4;text-wrap:pretty}
+.ry-loop{list-style:none;display:flex;flex-wrap:wrap;gap:8px 12px;margin:32px 0 0;padding:0;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.ry-loop li:not(:last-child)::after{content:"→";margin-left:12px}
+.ry-loop a{color:var(--ink);text-underline-offset:3px}
+#ryze .ry-loop{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 24px;counter-reset:ch -1}
+#ryze .ry-loop li::after{content:none}
+#ryze .ry-loop li::before{counter-increment:ch;content:"0" counter(ch);display:inline-block;width:3.2ch;color:var(--muted,#8a8a8a)}
+@media (max-width:719px){#ryze .ry-loop{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+#ryze .ry-skills{margin-top:32px}
+#ryze .ry-tl-grid{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:24px;align-items:start}
+#ryze .ry-tl-grid video{display:block;width:100%;height:auto}
+#ryze .ry-tl-t{overflow-x:auto}
+#ryze .ry-tl table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.35}
+#ryze .ry-tl th,#ryze .ry-tl td{text-align:left;vertical-align:top;padding:6px 12px 6px 0;border-bottom:1px solid rgba(128,128,128,.25)}
+#ryze .ry-tl th{font-weight:500;color:var(--muted,#8a8a8a)}
+@media (max-width:719px){#ryze .ry-tl-grid{grid-template-columns:minmax(0,1fr)}#ryze .ry-tl-grid video{max-width:320px}}
+.ry-box{aspect-ratio:var(--r);display:grid;place-items:center;border:1px dashed var(--line);font:400 12px/1.4 var(--mono);letter-spacing:.02em}
+.ry-flow{margin:0 0 clamp(32px,4vw,64px);padding:24px 0 0;border-top:1px solid var(--line)}
+.ry-row{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0 0 12px;padding:0}
+.ry-row li{position:relative;padding:14px 14px 16px;border:1px solid var(--line);font-size:16px;line-height:1.35}
+.ry-row li b{display:block;margin-bottom:6px;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.ry-row.is-back li{border-style:dashed}
+.ry-note{margin:12px 0 0;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.ry-skills{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;border-top:1px solid var(--line)}
+.ry-skills li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.35}
+.ry-skills code{font:400 12px/1.6 var(--mono);white-space:nowrap}
+.ry-me{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px}
+.ry-me li{padding-top:16px;border-top:1px solid var(--line);font-size:16px;line-height:1.45;text-wrap:pretty}
+.ry-me b{display:block;margin-bottom:8px;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.ry-me a{color:var(--ink);text-underline-offset:3px}
+@media (max-width:900px){.ry-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media (max-width:700px){.ry-nums,.ry-skills,.ry-me{grid-template-columns:minmax(0,1fr)}.ry-row{grid-template-columns:minmax(0,1fr)}}
+.ry-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:24px;height:var(--bar);margin:0 calc(-1 * var(--side));padding:0 var(--side);background:var(--bg);border-bottom:1px solid var(--line);font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em}
+.ry-nav ol{list-style:none;flex:1 1 auto;min-width:0;display:flex;gap:24px;margin:0;padding:0;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 24px),transparent)}
+.ry-nav ol::-webkit-scrollbar{display:none}
+.ry-nav a{color:var(--mute);text-decoration:none}
+.ry-nav a:hover,.ry-nav a[aria-current="true"]{color:var(--ink)}
+.ry-nav [data-count]{flex:none}
+#ryze .v3-head{margin-top:32px}
+#ryze .ry-side{width:100%;display:grid;grid-template-columns:minmax(0,calc((100vh - var(--bar) - 96px) * var(--r))) minmax(240px,320px);gap:32px;justify-content:start;align-items:start}
+#ryze .ry-side>img,#ryze .ry-side>video{width:100%;height:auto}
+#ryze .ry-side>figcaption,#ryze .ry-tl>figcaption{position:static;display:block;max-height:none;overflow:visible;margin:0;padding:0;background:none;opacity:1;visibility:visible;pointer-events:auto;color:var(--mute);font:400 14px/1.5 var(--copy)}
+#ryze .ry-tl>figcaption{margin-top:12px;max-width:60ch}
+#ryze .ry-side>figcaption b,#ryze .ry-tl>figcaption b{display:block;margin:0 0 8px;color:var(--ink);font:400 12px/1.4 var(--mono)}
+#ryze .ry-side>figcaption strong{display:block;margin:0 0 8px;color:var(--ink);font-weight:500}
+#r0>.ry-side+*,#r0>*+.ry-side{margin-top:64px}
+#r0>.ry-side+.ry-tl{margin-top:24px}
+@media (max-width:719px){#ryze .ry-side{grid-template-columns:minmax(0,calc((100vh - var(--bar) - 96px) * var(--r)));gap:12px}#r0>.ry-side+*,#r0>*+.ry-side{margin-top:48px}}
+@media (max-width:640px){.ry-nav [data-count]{display:none}.ry-nav ol{gap:16px}}
+.ry-car{position:relative}
+.ry-track{position:relative;display:flex;gap:32px;align-items:start;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.ry-track::-webkit-scrollbar{display:none}
+#ryze .ry-slide{flex:0 0 100%;min-width:0;margin:0;scroll-snap-align:start;display:grid;grid-template-columns:minmax(0,calc((100vh - var(--bar) - 160px) * var(--r))) minmax(240px,320px);gap:32px;justify-content:start;align-items:start}
+#ryze .ry-slide.is-flow{grid-template-columns:minmax(0,1fr) minmax(240px,320px)}
+#ryze .ry-slide>img,#ryze .ry-slide>video{width:100%;height:auto}
+#ryze .ry-slide .ry-flow{margin:0;padding:0;border:0}
+#ryze .ry-slide>figcaption{position:static;display:block;max-height:none;overflow:visible;margin:0;padding:0;background:none;opacity:1;visibility:visible;pointer-events:auto;color:var(--ink);font:400 14px/1.6 var(--copy)}
+#ryze .ry-slide>figcaption b{display:block;margin:0 0 8px;color:var(--ink);font:400 12px/1.4 var(--mono)}
+#ryze .ry-slide>figcaption p{margin:0 0 12px}
+#ryze .ry-slide .ry-sc{display:block;color:var(--mute);font:400 12px/1.45 var(--mono)}
+.ry-car .m2-ctrl{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
+.ry-car .m2-ctrl button:disabled{opacity:.35;cursor:default}
+@media (max-width:719px){#ryze .ry-slide,#ryze .ry-slide.is-flow{grid-template-columns:minmax(0,1fr);gap:12px}#ryze .ry-slide .ry-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:8px}#ryze .ry-slide .ry-row li{padding:10px 10px 12px;font-size:14px}}
+#ryze .ry-side{justify-content:center}
+#ryze .ry-out{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+#ryze .ry-out>li{padding-top:16px;border-top:1px solid var(--ink);font:400 14px/1.6 var(--copy);text-wrap:pretty}
+#ryze .ry-out>li>p{margin:0 0 8px}
+#ryze .ry-out b{display:block;margin:0 0 8px;font-weight:500;font-size:16px;line-height:1.35}
+#ryze .ry-out ul{margin:0 0 8px;padding-left:1.2em}
+#ryze .ry-out-note{margin-top:32px;font:400 14px/1.6 var(--copy)}
+.ry-car .m2-thumbs span{display:grid;place-items:center;height:100%;padding:4px;border:1px solid var(--line);font:400 10px/1.2 var(--mono);text-transform:uppercase;text-align:center}
+@media (max-width:900px){#ryze .ry-out{grid-template-columns:minmax(0,1fr)}}
+#ryze .ry-side.has-b{--r:var(--ra)}
+#ryze.refs-slides .ry-side.has-b{--r:var(--rb)}
+#ryze .ry-side>.ry-vb,#ryze.refs-slides .ry-side>.ry-va,#ryze.refs-slides .ry-ref:not(.is-only){display:none}
+#ryze.refs-slides .ry-side>.ry-vb{display:block}
+.ry-ref{display:flex;align-items:center;gap:12px;margin-top:16px;padding:0;border:0;background:none;color:var(--ink);font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.02em;text-align:left;cursor:pointer}
+.ry-ref img{flex:none;width:54px;height:96px;object-fit:cover;border:1px solid var(--line)}
+.ry-ref:hover span,.ry-ref:focus-visible span{text-decoration:underline}
+.ry-pop{padding:0;border:0;background:#000;overflow:visible;max-width:none;max-height:none}
+.ry-pop::backdrop{background:rgba(0,0,0,.82)}
+.ry-pop video{display:block;width:auto;height:auto;max-width:92vw;max-height:88vh}
+.ry-pop-x{position:absolute;top:-44px;right:0;width:40px;height:40px;padding:0;border:0;background:none;color:#fff;font:400 28px/1 var(--mono);cursor:pointer}
+/* 17.11: подзаголовок как подпись под заголовком главной (.home p.hero-sub) */.ap-intro .ap-sub{margin:clamp(20px,2vw,36px) 0 0;max-width:36em;font:400 clamp(15px,1.05vw,19px)/1.4 var(--mono);letter-spacing:0;text-wrap:pretty}
+.ap-intro .ap-claim{max-width:none;font:var(--display-weight) clamp(40px,5vw,80px)/.95 var(--display);text-transform:uppercase;text-wrap:balance}
+.ap-values{list-style:none;margin:0;padding:20px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;border-top:1px solid var(--line)}
+/* 17.11: подписи как «Гипотеза:» в кейсах (.m1 .copy strong): жирный того же кегля, абзац под ним; внутри пункта 4px, между пунктами 24px */.ap-values b{display:block;margin-bottom:4px;font:700 14px/1.6 var(--copy);letter-spacing:0}
+.ap-values span{display:block;font:400 14px/1.6 var(--copy);text-wrap:pretty}
+.ap-infra{font:400 13px/1.5 var(--mono);color:var(--mute);max-width:70ch}
+.ry-lang-off{opacity:.4;cursor:default}
+#ryze .ry-arr{font-family:var(--mono);font-size:.62em;vertical-align:.17em}
+@media (max-width:600px){#ryze .ry-car .m2-thumbs{display:flex;gap:6px}#ryze .ry-car .m2-thumbs button{flex:1 1 0;min-width:0;max-width:72px;width:auto}#ryze .ry-car .m2-thumbs img{width:100%;object-fit:cover}}
+.ry-nav{top:var(--bar)}
+#ryze .v3-chapter{scroll-margin-top:calc(var(--bar) * 2 + 16px)}
+#ryze .ry-vals{grid-template-columns:repeat(3,minmax(0,1fr))}
+#ryze .ry-vals{gap:32px;margin:48px 0 0;padding:0;border-top:0}
+#ryze .ry-vals b{margin:0;font:600 clamp(40px,6vw,72px)/1 var(--display);letter-spacing:0}
+#ryze .ry-vals span{margin-top:8px;font-size:14px;line-height:1.35}
+#ryze .ry-scheme-h{margin:clamp(40px,4vw,64px) 0 16px;font:400 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.04em}
+#ryze .ry-scheme{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 0}
+#ryze .ry-scheme li{display:flex;align-items:center}
+#ryze .ry-scheme li:not(:last-child)::after{content:'→';padding:0 8px;font-family:var(--mono)}
+#ryze .ry-scheme span{padding:8px 14px;border:1px solid var(--line);font:400 15px/1.2 var(--copy)}
+#ryze .ry-scheme>li:first-child span{border-color:var(--ink);font-weight:700}
+#ryze .ry-scheme{padding-bottom:28px;row-gap:40px}
+#ryze .ry-grp>div{position:relative;padding:6px;border:1px solid var(--line)}
+#ryze .ry-hk{position:relative}
+#ryze .ry-hk em{position:absolute;left:0;top:calc(50% + 23px);font:400 12px/1.4 var(--mono);font-style:normal;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+#ryze .ry-grp ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;row-gap:8px}
+#ryze .ry-grp em{position:absolute;left:-1px;top:calc(100% + 6px);font:400 12px/1.4 var(--mono);font-style:normal;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+#ryze .ry-out b{font-weight:700}
+#ryze .ap-intro{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:32px;align-items:start}
+#ryze .ap-intro .ap-claim{grid-column:1/3;margin:0}
+#ryze .ap-intro .ap-sub{grid-column:1/3;margin:0;max-width:462px}
+#ryze .ap-intro .ry-vals{grid-column:1/-1;grid-template-columns:repeat(4,minmax(0,1fr))}
+#ryze .ap-intro .ry-scheme-h,#ryze .ap-intro .ry-scheme{grid-column:1/-1}
+#ryze .ap-intro .ry-scheme-h{margin:56px 0 16px}
+@media (max-width:1023px){#ryze .ap-intro{grid-template-columns:minmax(0,1fr)}#ryze .ap-intro>*,#ryze .ap-intro .ap-claim,#ryze .ap-intro .ap-sub,#ryze .ap-intro .ry-vals{grid-column:1/-1}#ryze .ap-intro .ap-sub{margin-top:24px}}
+@media (max-width:700px){#ryze .ap-intro .ry-vals{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}}
+#ryze .ry-out-h{margin-top:clamp(96px,9vw,144px)}
+#ryze .ry-out{margin-top:clamp(32px,3vw,48px)}
+#ryze .ry-me{grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 32px;margin-top:clamp(40px,4vw,64px)}
+#ryze .ry-me li{padding-top:16px;font:400 14px/1.6 var(--copy)}
+#ryze .ry-me b{margin:0 0 8px;font:600 16px/1.35 var(--copy);text-transform:none;letter-spacing:0}
+@media (min-width:1024px){#ryze .ry-side.ry-opt{padding-left:calc((320px + 32px) / 2)}}
+@media (max-width:1023px){#ryze .ry-vals,#ryze .ry-me{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){#ryze .ry-vals,#ryze .ry-me{grid-template-columns:minmax(0,1fr)}}
+  </style>
+
+  <!--cs-head--><style>.cs-head{margin:clamp(40px,5vw,72px) 0 clamp(64px,8vw,128px)}.cs-nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}.cs-nums p{margin:0;min-width:0}.cs-nums b{display:block;font:var(--display-weight) clamp(48px,5.6vw,96px)/.9 var(--display)}.cs-nums span{display:block;margin-top:12px;max-width:24em;font-size:14px;line-height:1.4;text-wrap:pretty}.cs-scope{margin:16px 0 0;font:400 12px/1.4 var(--mono);color:var(--mute)}.cs-thesis{margin:clamp(40px,5vw,72px) 0 0;max-width:20em;font:var(--display-weight) clamp(34px,4.08vw,68px)/.95 var(--display);text-transform:uppercase;text-wrap:balance}.cs-todo{display:inline-block;margin-top:12px;background:#ffe9a8;color:#000;font:400 12px/1.4 var(--mono)}@media(max-width:700px){.cs-nums{grid-template-columns:minmax(0,1fr);gap:24px}.cs-nums b{font-size:40px}}</style>
+  <section class="cs-head" aria-label="Summary">
+    <div class="cs-nums"><p><b>14</b><span>formats: 9 from analyzed videos, 5 for my concepts</span></p><p><b>74</b><span>blocks from Holo, Ryze and lisaworldverse videos and my concepts: hook, pain, demo, testimonial, call to action</span></p><p><b>29</b><span>phrases, word for word, from business owners and marketers</span></p></div>
+    <p class="cs-thesis">Concepts → formats → a hundred videos</p>
+  </section><!--/cs-head-->
+
+  <section class="v3-chapter ap-intro" aria-label="RYZE">
+    <p class="ap-sub">With a hundred videos you can see which hook and which block keep people watching, and what works carries over to the next scripts. Below are the videos for the brief first, then how it works in my Notion, step by step from format to team.</p>
+    <p class="ry-scheme-h">Typical script structure</p>
+    <ol class="ry-scheme"><li class="ry-hk"><span>Emotional hook</span><em>+ promise</em></li><li class="ry-grp"><div><ol><li><span>Pain</span></li><li><span>Proof</span></li><li><span>Fear</span></li><li><span>Objection handling</span></li><li><span>Result</span></li><li><span>Urgency</span></li><li><span>Call to action</span></li></ol><em>Testimonial story</em></div></li></ol>
+  </section>
+
+  <section class="v3-chapter" id="r0" data-chapter>
+    <p class="v3-label"><span>RYZE_/_01</span><span></span></p>
+    <div class="m1">
+      <h2>Videos</h2>
+      <div class="copy"><p><b>One format in full; the rest are variants at different depths.</b></p><p>I studied Holo’s videos, including winners in the Meta Ad Library, and made variants based on them.</p><p><b>What’s not here.</b> Most of the Holo videos I analyzed are live footage with the interface laid over it. Ryze’s screens and numbers go in during the edit, so the interface is shown in detail in the first format and in “2099”. In the other concepts it’s implied.</p></div>
+    </div>
+    <figure class="m4 ry-side ry-opt" style="--r:9/16">
+      <video src="../assets/ryze-p1-f1-animatic.mp4?v=1119b" poster="../assets/ryze-p1-f1-animatic.webp?v=1119b" width="720" height="1280" controls autoplay muted loop playsinline preload="metadata" aria-label="Animatic “Shouldn’t you be at work?”"></video>
+      <figcaption><b>RYZE_/_01.1</b><strong>“Shouldn’t you be at work?”: a second-by-second script, storyboard and frames.</strong>The script shows how the hook turns into the story and where Ryze comes in. This is an animatic: storyboard frames with captions timed to the script. There’s no sound: voice and music are added when the video is assembled.</figcaption>
+    </figure>
+    <figure class="m4 ry-side ry-opt" style="--r:736/640">
+      <img src="../assets/ryze-p1-episodes.webp" width="736" height="640" alt="Two more episodes in this format, “Fishing” and “Stadium”. Only the location changes; the monologue and the Ryze screens stay the same." loading="lazy" decoding="async">
+      <figcaption><b>RYZE_/_01.2</b><strong>Two more episodes in this format, “Fishing” and “Stadium”.</strong>Only the location changes; the monologue and the Ryze screens stay the same.</figcaption>
+    </figure>
+    <figure class="m4 ry-side" style="--r:1112/640">
+      <img src="../assets/ryze-p1-news.webp" width="1112" height="640" alt="A hook with a setup and a transition into the story. The “News” scene, three frames. Passers-by watch a TV in a shop window: “Black day for ad agencies”. In an interview, an agency owner complains that a client didn’t leave for another agency. A marketer admits she was the one who left: she now runs ads without an agency. Then her story: pain, fear, result." loading="lazy" decoding="async">
+      <figcaption><b>RYZE_/_01.3</b><strong>A hook with a setup and a transition into the story.</strong>The “News” scene, three frames. Passers-by watch a TV in a shop window: “Black day for ad agencies”. In an interview, an agency owner complains that a client didn’t leave for another agency. A marketer admits she was the one who left: she now runs ads without an agency. Then her story: pain, fear, result.<button type="button" class="ry-ref is-only" data-v="../assets/ryze-ref-agency.mp4" aria-label="Reference: open the video"><img src="../assets/ryze-ref-agency-thumb.webp" alt="" width="54" height="96" loading="lazy"><span>▶ Reference</span></button></figcaption>
+    </figure>
+    <figure class="m4 ry-side ry-opt" style="--r:720/1280">
+      <video src="../assets/ryze-p1-office.mp4?v=1119e" poster="../assets/ryze-p1-office-poster.webp?v=1119e" width="720" height="1280" controls autoplay muted loop playsinline preload="metadata" aria-label=" The “Office” scene: a two-frame animatic, 6 seconds. He films a competitor’s office window across the street: the boss is furious, papers are flying. Then he flips to the front camera: he’s on a bench opposite, sipping juice through a straw."></video>
+      <figcaption><b>RYZE_/_01.4</b>The “Office” scene: a two-frame animatic, 6 seconds. He films a competitor’s office window across the street: the boss is furious, papers are flying. Then he flips to the front camera: he’s on a bench opposite, sipping juice through a straw.</figcaption>
+    </figure>
+    <figure class="m4 ry-side ry-opt" style="--r:720/1280">
+      <video src="../assets/ryze-p1-sleep.mp4?v=1119e" poster="../assets/ryze-p1-sleep-poster.webp?v=1119e" width="720" height="1280" controls autoplay muted loop playsinline preload="metadata" aria-label=" The “He’s asleep” scene: a four-frame animatic, 12 seconds. It’s 8 a.m. and the business owner is still asleep, though at this hour he used to be in the ad dashboards already. His wife films it like a big event. He sits down to breakfast and explains: Ryze runs the ads, and nothing changes without his approval."></video>
+      <figcaption><b>RYZE_/_01.5</b>The “He’s asleep” scene: a four-frame animatic, 12 seconds. It’s 8 a.m. and the business owner is still asleep, though at this hour he used to be in the ad dashboards already. His wife films it like a big event. He sits down to breakfast and explains: Ryze runs the ads, and nothing changes without his approval.</figcaption>
+    </figure>
+    <figure class="m4 ry-side ry-opt" style="--r:720/1280">
+      <video src="../assets/ryze-p1-kids.mp4?v=1119e" poster="../assets/ryze-p1-kids-poster.webp?v=1119e" width="720" height="1280" controls autoplay muted loop playsinline preload="metadata" aria-label="A kid hook with a transition through the dad. The “Asking my kids what their dad does for a living” format: a mom films her son in the car. “What does your dad do for a living?” “Hmm… He tells the computer approve. And computer makes the ads.” Dad in the kitchen: “So… I’m actually a marketer. A colleague told me about this AI tool for ads.” The video stops at the transition; from there it runs like the first format."></video>
+      <figcaption><b>RYZE_/_01.6</b><strong>A kid hook with a transition through the dad.</strong>The “Asking my kids what their dad does for a living” format: a mom films her son in the car. “What does your dad do for a living?” “Hmm… He tells the computer approve. And computer makes the ads.” Dad in the kitchen: “So… I’m actually a marketer. A colleague told me about this AI tool for ads.” The video stops at the transition; from there it runs like the first format.<button type="button" class="ry-ref is-only" data-v="../assets/ryze-ref-kids.mp4" aria-label="Reference: open the video"><img src="../assets/ryze-ref-kids-thumb.webp" alt="" width="54" height="96" loading="lazy"><span>▶ Reference</span></button></figcaption>
+    </figure>
+    <figure class="m4 ry-side ry-opt has-b" style="--ra:360/640;--rb:648/640">
+      <img class="ry-va" src="../assets/ryze-p1-car-a.webp" width="360" height="640" alt="Three formats shown as setups only. “Busy in an awkward place”. Reference for the device, Holo: turbulence and panic in the cabin while the pilot calmly works on ads. Adaptation: a traffic jam, horns behind, and the hero at the car window calmly talks to the camera." loading="lazy" decoding="async"><img class="ry-vb" src="../assets/ryze-p1-car-b.webp" width="648" height="640" alt="" loading="lazy" decoding="async">
+      <figcaption><b>RYZE_/_01.7</b><strong>Three formats shown as setups only.</strong>“Busy in an awkward place”. Reference for the device, Holo: turbulence and panic in the cabin while the pilot calmly works on ads. Adaptation: a traffic jam, horns behind, and the hero at the car window calmly talks to the camera.<button type="button" class="ry-ref" data-v="../assets/ryze-ref-car.mp4" aria-label="Reference: open the video"><img src="../assets/ryze-ref-car-thumb.webp" alt="" width="54" height="96" loading="lazy"><span>▶ Reference</span></button></figcaption>
+    </figure>
+    <figure class="m4 ry-side has-b" style="--ra:1112/640;--rb:1656/640">
+      <img class="ry-va" src="../assets/ryze-p1-thumb-a.webp" width="1112" height="640" alt="“Thumbs up”, built on a winning Holo ad. Reference: a selfie in the dark, a caption in a white box, a thumbs up. Adaptation: the same move in three frames: surprise, thumb, like." loading="lazy" decoding="async"><img class="ry-vb" src="../assets/ryze-p1-thumb-b.webp" width="1656" height="640" alt="" loading="lazy" decoding="async">
+      <figcaption><b>RYZE_/_01.8</b><strong>“Thumbs up”, built on a winning Holo ad.</strong>Reference: a selfie in the dark, a caption in a white box, a thumbs up. Adaptation: the same move in three frames: surprise, thumb, like.<button type="button" class="ry-ref" data-v="../assets/ryze-ref-thumb.mp4" aria-label="Reference: open the video"><img src="../assets/ryze-ref-thumb-thumb.webp" alt="" width="54" height="96" loading="lazy"><span>▶ Reference</span></button></figcaption>
+    </figure>
+    <figure class="m4 ry-side ry-opt has-b" style="--ra:736/640;--rb:1280/640">
+      <img class="ry-va" src="../assets/ryze-p1-dance-a.webp?v=1119g" width="736" height="640" alt="“Dancing in the background”, built on a winning Holo ad. Reference: a mechanic dances in his garage while the story and numbers appear in caption boxes. Adaptation: a marketer dances in the office, story first, then numbers." loading="lazy" decoding="async"><img class="ry-vb" src="../assets/ryze-p1-dance-b.webp?v=1119g" width="1280" height="640" alt="" loading="lazy" decoding="async">
+      <figcaption><b>RYZE_/_01.9</b><strong>“Dancing in the background”, built on a winning Holo ad.</strong>Reference: a mechanic dances in his garage while the story and numbers appear in caption boxes. Adaptation: a marketer dances in the office, story first, then numbers.<button type="button" class="ry-ref" data-v="../assets/ryze-ref-dance.mp4" aria-label="Reference: open the video"><img src="../assets/ryze-ref-dance-thumb.webp" alt="" width="54" height="96" loading="lazy"><span>▶ Reference</span></button></figcaption>
+    </figure>
+    <figure class="m4 ry-side ry-opt" style="--r:1112/1296">
+      <img src="../assets/ryze-p1-shoulder.webp?v=1119c" width="1112" height="1296" alt="Adapting someone else’s live format: “this guy from 2099”. One over-the-shoulder shot with a slow zoom into the screen. The laptop shows Ryze’s internal interface: spend by channel and what it suggests fixing. On the phone, three actions wait for approval. The numbers on the screens are demo values." loading="lazy" decoding="async">
+      <figcaption><b>RYZE_/_01.10</b><strong>Adapting someone else’s live format: “this guy from 2099”.</strong>One over-the-shoulder shot with a slow zoom into the screen. The laptop shows Ryze’s internal interface: spend by channel and what it suggests fixing. On the phone, three actions wait for approval. The numbers on the screens are demo values.<button type="button" class="ry-ref is-only" data-v="../assets/ryze-ref-2099.mp4" aria-label="Original: open the video"><img src="../assets/ryze-ref-2099-thumb.webp" alt="" width="54" height="96" loading="lazy"><span>▶ Original</span></button></figcaption>
+    </figure>
+    <figure class="m4 ry-side ry-opt has-b" style="--ra:736/640;--rb:1280/640">
+      <img class="ry-va" src="../assets/ryze-p1-ded-a.webp?v=1119f" width="736" height="640" alt="Live-action videos, separately. Example: the grandpa “Are you happy?”. The original and the same shot with a different person, with new lines fitted to the original gestures. These frames show the technique; the ad itself uses our own footage shot to the same scheme." loading="lazy" decoding="async"><img class="ry-vb" src="../assets/ryze-p1-ded-b.webp?v=1119f" width="1280" height="640" alt="" loading="lazy" decoding="async">
+      <figcaption><b>RYZE_/_01.11</b><strong>Live-action videos, separately. Example: the grandpa “Are you happy?”.</strong>The original and the same shot with a different person, with new lines fitted to the original gestures. These frames show the technique; the ad itself uses our own footage shot to the same scheme.<button type="button" class="ry-ref" data-v="../assets/ryze-ref-ded.mp4" aria-label="Original: open the video"><img src="../assets/ryze-ref-ded-thumb.webp" alt="" width="54" height="96" loading="lazy"><span>▶ Original</span></button></figcaption>
+    </figure>
+    <div class="m1 ry-out-h">
+      <h2>Takeaways</h2>
+    </div>
+    <ol class="ry-out"><li><p><b>1. The hook comes first, then the blocks.</b> After the hook comes the usual block structure: promise, pain, proof, fear, objection handling, result, urgency, call to action. Concepts and formats are assembled from blocks. With many videos, stats build up per block, and blocks can be ranked by how they perform.</p></li><li><p><b>2. In the analyzed videos, emotion, sound and picture hold attention together.</b> In Holo’s videos a live voice starts in the first second, the hook lasts 3–5 seconds, and the person on screen gestures and reacts naturally. That emotion builds trust or interest.</p></li><li><p><b>3. The go-to device is a hook followed by a customer testimonial told as a story.</b> After the hook the customer tells their story: pains, fears, how they were resolved, proof. The other option is a quick promise in the first seconds.</p></li><li><p><b>On look-alikes.</b> I think making look-alikes of successful videos is fine: within reason, there’s no shame in copying what worked. But I don’t stop there. Look-alikes are where devices develop, and the ones that work can then be combined.</p></li><li><p><b>Live-action videos.</b> They’re worth trying. There are three ways to keep the emotion of a live video:</p><ul><li>reshoot it to the same scheme;</li><li>shoot it live and replace the people afterwards, keeping the emotions;</li><li>on channels where it’s allowed, regenerate the live video.</li></ul><p>Someone else’s video goes into an ad only with the creator’s license and the consent of the person on screen.</p></li></ol>
+    <p class="ry-out-note">How this turns into a hundred videos and where block stats build up is below, in the sections from “Format” to “Skills”.</p>
+  </section>
+
+  <section class="v3-chapter" id="r1" data-chapter>
+    <p class="v3-label"><span>RYZE_/_02</span><span></span></p>
+    <div class="m1">
+      <h2>Format</h2>
+    </div>
+    <div class="ry-car" aria-roledescription="карусель" aria-label="Format">
+      <div class="ry-track">
+        <figure class="ry-slide" style="--r:2584/1428" data-t="Format">
+          <img src="../assets/ryze-shot-formats.webp" width="2584" height="1428" alt="The “Formats” database: 14 formats, 9 from the analyzed videos and 5 for my concepts. A one-line pitch, shooting type, source video and the concepts in each format." loading="lazy" decoding="async">
+          <figcaption><b>RYZE_/_02.2</b><p>A format is the angle and point of view: the shooting type and the core setup. A street interview with a mic, a chat between two friends, a selfie, a mockumentary, or a mix. The format is set first, and the first concept comes out of it. In the “Shouldn’t you be at work?” concept, the hero is relaxing during working hours, a friend asks why he isn’t at work, and he answers that Ryze runs his ads. In the next episodes the single camera position, the friend’s question and the hero’s answer stay; the place and the activity change: a barbecue, fishing, a stadium.</p><span class="ry-sc">The “Formats” database: 14 formats, 9 from the analyzed videos and 5 for my concepts. A one-line pitch, shooting type, source video and the concepts in each format.</span></figcaption>
+        </figure>
+        <figure class="ry-slide" style="--r:2584/1422" data-t="Concept and blocks">
+          <video src="../assets/ryze-blocks-all.mp4" poster="../assets/ryze-blocks-all.webp" width="2584" height="1422" autoplay muted loop playsinline preload="metadata" aria-label="The full “Blocks” database: 74 blocks by type: hook, transition, pain, product demo, objection handling, promise, testimonial, call to action. Each has its mechanism, channel and source video."></video>
+          <figcaption><b>RYZE_/_02.4</b><p>A concept is a specific video: script, references, frames, materials. In effect it’s the brief for whoever makes it. The transition, pain, product demo, testimonial and call to action change from concept to concept and depend little on the format.</p><span class="ry-sc">The full “Blocks” database: 74 blocks by type: hook, transition, pain, product demo, objection handling, promise, testimonial, call to action. Each has its mechanism, channel and source video.</span></figcaption>
+        </figure>
+        <figure class="ry-slide" style="--r:2584/1422" data-t="Hooks">
+          <img src="../assets/ryze-shot-hooks.webp" width="2584" height="1422" alt="Hooks: 19 of the 74 blocks, each with a frame from the video, the line and the source video." loading="lazy" decoding="async">
+          <figcaption><b>RYZE_/_02.3</b><span class="ry-sc">Hooks: 19 of the 74 blocks, each with a frame from the video, the line and the source video.</span></figcaption>
+        </figure>
+        <figure class="ry-slide is-flow" style="--r:2/1" data-t="Metrics come back">
+          <div class="ry-flow" aria-label="How metrics come back into the format">
+      <ol class="ry-row">
+        <li><b>Format</b>shooting type, point of view, setup</li>
+        <li><b>Concept</b>script, references, frames</li>
+        <li><b>Blocks</b>hook, pain, demo, testimonial, CTA</li>
+        <li><b>Asset</b>edited video</li>
+        <li><b>Release</b>published on Instagram, YouTube, TikTok</li>
+      </ol>
+      <ol class="ry-row is-back">
+        <li><b>KPI facts</b>views, 3 s hold, completion, clicks</li>
+        <li><b>KPI cards</b>summary by release</li>
+        <li><b>← Block</b>which hook holds the first seconds</li>
+        <li><b>← Concept</b>which video to shoot in variants</li>
+        <li><b>← Format</b>scale, rework or close</li>
+      </ol>
+          </div>
+          <figcaption><b>RYZE_/_02.1</b><span class="ry-sc">Release metrics go back into the block, the concept and the format. Tasks and projects are the frame around this and aren’t shown on the diagram.</span></figcaption>
+        </figure>
+        <figure class="ry-slide" style="--r:2584/780" data-t="Concept stats">
+          <img src="../assets/ryze-shot-concepts.webp" width="2584" height="780" alt="Concept metrics: 3-second hold, completion rate, CTR and conversion, next to each concept’s format. The numbers are demo values." loading="lazy" decoding="async">
+          <figcaption><b>RYZE_/_02.5</b><p>With a hundred videos, every block builds up stats. The retention graph shows at which block viewers drop off, and a hook is tested with two versions of the same video with different openings. The block that wins goes into new scripts. The links between the databases are already in place; the numbers below are demo values for now.</p><span class="ry-sc">Concept metrics: 3-second hold, completion rate, CTR and conversion, next to each concept’s format. The numbers are demo values.</span></figcaption>
+        </figure>
+      </div>
+      <div class="m2-ctrl"><p class="m2-cap" data-t></p><div class="m2-nav"><button type="button" data-p aria-label="Previous slide">←</button><span data-n></span><button type="button" data-x aria-label="Next slide">→</button></div></div>
+      <div class="m2-thumbs"></div>
+    </div>
+  </section>
+
+  <section class="v3-chapter" id="r2" data-chapter>
+    <p class="v3-label"><span>RYZE_/_03</span><span></span></p>
+    <div class="m1">
+      <h2>Reference breakdown</h2>
+    </div>
+    <div class="ry-car" aria-roledescription="карусель" aria-label="Reference breakdown">
+      <div class="ry-track">
+        <figure class="ry-slide" style="--r:2584/1286" data-t="Block-by-block breakdown">
+          <img src="../assets/ryze-shot-refs.webp" width="2584" height="1286" alt="The “References” database: videos analyzed from the brief (six Holo, two Ryze, lisaworldverse) and from my own selection." loading="lazy" decoding="async">
+          <figcaption><b>RYZE_/_03.1</b><p>I break a reference video down by what each line does: hook, transition, pain, demo, testimonial, call to action. Each block goes into the database with its line, its device and what holds attention. Six Holo videos, two Ryze videos and the lisaworldverse video from the brief gave 60 blocks; my concepts added 14 more.</p><span class="ry-sc">The “References” database: videos analyzed from the brief (six Holo, two Ryze, lisaworldverse) and from my own selection.</span></figcaption>
+        </figure>
+        <figure class="ry-slide" style="--r:3200/2000" data-t="Concept blocks">
+          <img src="../assets/ryze-storyboard.png" width="3200" height="2000" alt="Blocks of the “Monsters on the market” concept: the line, the scene, what holds attention, and reference frames from Holo and Ryze videos for each block." loading="lazy" decoding="async">
+          <figcaption><b>RYZE_/_03.2</b><span class="ry-sc">Blocks of the “Monsters on the market” concept: the line, the scene, what holds attention, and reference frames from Holo and Ryze videos for each block.</span></figcaption>
+        </figure>
+        <figure class="ry-slide" style="--r:2768/1420" data-t="Voice of the audience">
+          <video src="../assets/ryze-personas.mp4" poster="../assets/ryze-personas.webp" width="2768" height="1420" autoplay muted loop playsinline preload="metadata" aria-label="Audience personas: three personas, each with buyers’ phrases word for word. Shown: “Ad specialist”, 8 phrases."></video>
+          <figcaption><b>RYZE_/_03.3</b><p>Repeats turn into established devices. Every hook in the analyzed videos goes for emotion. The story comes through the hero’s personal experience, like a testimonial. That a hook should trigger emotion or trust is still a hypothesis; the next videos will test it. Hook setups grow out of the voice of the audience: 29 phrases about pain, fear of AI and what makes a person start looking for a service. The phrases are sorted into three buyer personas; one of them is an ad specialist.</p><span class="ry-sc">Audience personas: three personas, each with buyers’ phrases word for word. Shown: “Ad specialist”, 8 phrases.</span></figcaption>
+        </figure>
+      </div>
+      <div class="m2-ctrl"><p class="m2-cap" data-t></p><div class="m2-nav"><button type="button" data-p aria-label="Previous slide">←</button><span data-n></span><button type="button" data-x aria-label="Next slide">→</button></div></div>
+      <div class="m2-thumbs"></div>
+    </div>
+  </section>
+
+  <section class="v3-chapter" id="r3" data-chapter>
+    <p class="v3-label"><span>RYZE_/_04</span><span></span></p>
+    <div class="m1">
+      <h2>Edit timeline</h2>
+      <div class="copy"><p>The script is assembled on a timeline: blocks by the second, a start frame and an end frame for every shot, separate tracks for references and for variant B. Line length is based on the speech rate in the references: 3.4 words per second on average.</p></div>
+    </div>
+    <figure class="m4" style="--r:2767/1424">
+      <img src="../assets/ryze-shot-timeline-f1.webp" width="2767" height="1424" alt="The edit timeline of concept F1 “Shouldn’t you be at work?”: 34.9 s, blocks and frames by the second, with the line and what carries weight on the right. The “Fishing” and “Stadium” episodes are built in the same format." loading="lazy" decoding="async">
+      <figcaption><b>RYZE_/_04.1</b>The edit timeline of concept F1 “Shouldn’t you be at work?”: 34.9 s, blocks and frames by the second, with the line and what carries weight on the right. The “Fishing” and “Stadium” episodes are built in the same format.</figcaption>
+    </figure>
+  </section>
+
+  <section class="v3-chapter" id="r4" data-chapter>
+    <p class="v3-label"><span>RYZE_/_05</span><span></span></p>
+    <div class="m1">
+      <h2>Skills and the team</h2>
+      <div class="copy"><p>A skill is an instruction for the model that connects the knowledge base to a specific task. When the model builds the next script, the skill feeds it blocks and devices from the base. Once live metrics come in, the blocks with the best numbers will go first.</p><p>The team’s skills live in GitHub. Editors, designers and AI creators edit their own skills and collect reference examples. Every edit is a separate change with a reason, visible to the whole team and easy to roll back. Once a week I or the leads review the edits and decide which one becomes the standard. A device goes through three levels: working, established, rule.</p><p>The same skills handle briefing and sign-off, and analytics can be connected to them. At RAWMID, after the standards, a typical task needed 0.7 revisions instead of 2.4 — <a href="../en/work/notion-system.html">the “Standards” case</a>.</p></div>
+    </div>
+    <ul class="ry-skills">
+      <li>Collecting references<code>ref-collect</code></li>
+      <li>Breaking a video into blocks<code>video-ref</code></li>
+      <li>Concept from the voice of the audience<code>concept-pipeline</code></li>
+      <li>Shot frames<code>image-prompt</code></li>
+      <li>Craft techniques<code>craft-techniques</code></li>
+      <li>Edit<code>video-edit</code></li>
+      <li>Hypothesis testing<code>hypothesis-test</code></li>
+      <li>Takeaway → rule for everyone<code>knowledge-scale</code></li>
+    </ul>
+  </section>
+
+  <section class="v3-chapter" id="r5" data-chapter>
+    <p class="v3-label"><span>RYZE_/_06</span><span></span></p>
+    <div class="m1">
+      <h2>About me</h2>
+      <div class="copy"><p>Creative director. I build the system a team uses to ship many videos and see which of them work.</p></div>
+    </div>
+    <ul class="ry-me">
+      <li><b>AI pipeline</b><a href="../en/work/ai-pipeline.html">Case</a>: from data to frames and metrics. It was used to build <a href="../en/work/dyson-v15.html">Dyson</a> and <a href="../en/work/airbnb-month.html">Airbnb</a>.</li>
+      <li><b>My experience, honestly</b>I’ve worked with AI for four years, every day for the last two-plus. I haven’t made many AI videos yet. This task goes as far as the edit timeline; I didn’t do video generation or lip-sync.</li>
+      <li><b>Production with a team</b>RAWMID: a team of 10+, a shooting guide, <a href="../en/work/rawmid-video.html">video</a> and <a href="https://www.instagram.com/rawmid/reels/" rel="noopener">Reels</a>.</li>
+      <li><b>Reference breakdown</b>I break down other people’s ads all the time. The block database above was built the same way.</li>
+      <li><b>Knowledge stays in the company</b>A rule found on one video is written into the base and the skill. Anyone on the team can repeat it, and it doesn’t leave with the person.</li>
+      <li><b>Portfolio</b><a href="../en/index.html">All cases</a> on this site. I built the site myself too.</li>
+    </ul>
+  </section>
+  <script>(function(){var a=[].slice.call(document.querySelectorAll('.ry-nav a')),s=a.map(function(x){return document.querySelector(x.getAttribute('href'))});function f(){var y=innerHeight*.35,i=0;s.forEach(function(e,j){if(e&&e.getBoundingClientRect().top<=y)i=j});a.forEach(function(x,j){x.setAttribute('aria-current',String(j===i))})}addEventListener('scroll',f,{passive:true});f()})();</script>
+  <script>(function(){if(!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting&&v.paused){v.muted=true;var p=v.play();if(p)p.catch(function(){})}})},{threshold:.25});[].forEach.call(document.querySelectorAll('#ryze video[autoplay]'),function(v){io.observe(v)})})();</script>
+  <script>document.querySelectorAll('.ry-car').forEach(function(c){var t=c.querySelector('.ry-track'),s=[].slice.call(t.children),n=c.querySelector('[data-n]'),l=c.querySelector('.m2-cap'),p=c.querySelector('[data-p]'),x=c.querySelector('[data-x]'),cur=0,th=c.querySelector('.m2-thumbs');s.forEach(function(e,j){var m=e.querySelector('img,video'),b=document.createElement('button'),u=m?(m.tagName==='VIDEO'?m.getAttribute('poster'):m.getAttribute('src')):'';b.type='button';b.setAttribute('aria-label','Slide '+(j+1));b.innerHTML=u?'<img src="'+u+'" alt="" loading="lazy">':'<span>'+e.dataset.t+'</span>';b.addEventListener('click',function(){go(j)});th.appendChild(b)});function d2(v){return(v<10?'0':'')+v}function upd(){var i=0,m=1e9;s.forEach(function(e,j){var k=Math.abs(e.offsetLeft-t.scrollLeft);if(k<m){m=k;i=j}});cur=i;n.textContent=d2(i+1)+'_/_'+d2(s.length);l.textContent=s[i].dataset.t;p.disabled=i===0;x.disabled=i===s.length-1;[].forEach.call(th.children,function(b,j){b.setAttribute('aria-current',String(j===i))})}function go(i){i=Math.max(0,Math.min(s.length-1,i));t.scrollTo({left:s[i].offsetLeft,behavior:'smooth'})}p.addEventListener('click',function(){go(cur-1)});x.addEventListener('click',function(){go(cur+1)});c.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')go(cur-1);if(e.key==='ArrowRight')go(cur+1)});t.addEventListener('scroll',upd,{passive:true});addEventListener('resize',function(){go(cur)});upd()});</script>
+  <script>(function(){var d=document.createElement('dialog');d.className='ry-pop';d.setAttribute('aria-label','Reference');d.innerHTML='<button type="button" class="ry-pop-x" aria-label="Close">×</button><video controls playsinline></video>';document.body.appendChild(d);var v=d.querySelector('video');document.addEventListener('click',function(e){var b=e.target.closest('.ry-ref');if(!b)return;v.src=b.dataset.v;d.showModal();var p=v.play();if(p&&p.catch)p.catch(function(){})});d.addEventListener('click',function(e){if(e.target===d||e.target.closest('.ry-pop-x'))d.close()});d.addEventListener('close',function(){v.pause();v.removeAttribute('src');v.load()});if(/[?&]refs=slides/.test(location.search))document.getElementById('ryze').classList.add('refs-slides')})();</script>
+</main>
+
+<script>
+(function () {
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+
+  // Счётчик главы в прилипшей навигации
+  var chapters = [].slice.call(document.querySelectorAll('[data-chapter]'));
+  var count = document.querySelector('[data-count]');
+  function onScroll() {
+    var y = window.innerHeight * 0.35, idx = 0;
+    chapters.forEach(function (c, i) { if (c.getBoundingClientRect().top <= y) idx = i; });
+    count.textContent = pad(idx + 1) + '_/_' + pad(chapters.length);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Карусель M2
+  document.querySelectorAll('[data-carousel]').forEach(function (car) {
+    var slides = [].slice.call(car.querySelectorAll('.m2-stage img'));
+    var thumbs = car.querySelector('[data-thumbs]');
+    var label = document.documentElement.lang === 'en' ? 'Frame ' : 'Frame ';
+    var cur = 0;
+    slides.forEach(function (s, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', label + (i + 1));
+      b.innerHTML = '<img src="' + s.getAttribute('src') + '" alt="" loading="lazy" decoding="async">';
+      b.addEventListener('click', function () { go(i); });
+      thumbs.appendChild(b);
+    });
+    function go(i) {
+      cur = (i + slides.length) % slides.length;
+      slides.forEach(function (s, j) { s.classList.toggle('is-active', j === cur); });
+      [].forEach.call(thumbs.children, function (t, j) { t.setAttribute('aria-current', String(j === cur)); });
+      car.querySelector('[data-counter]').textContent = pad(cur + 1) + '_/_' + pad(slides.length);
+      car.querySelector('[data-i]').textContent = cur + 1;
+      car.querySelector('[data-captext]').textContent = slides[cur].dataset.cap;
+    }
+    car.querySelector('[data-prev]').addEventListener('click', function () { go(cur - 1); });
+    car.querySelector('[data-next]').addEventListener('click', function () { go(cur + 1); });
+    car.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') go(cur - 1);
+      if (e.key === 'ArrowRight') go(cur + 1);
+    });
+    go(0);
+  });
+})();
+</script>
+<script src="../zoom.js?v=3" defer></script>
+</body>
+</html>
