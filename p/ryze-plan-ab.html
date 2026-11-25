@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ryze — план испытательного срока — Арсений Охотин</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/icon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/icon-180.png">
+  <link rel="stylesheet" href="../assets/fonts/_faces.css">
+
+<script>
+window.METRIKA_ID = 111837200; /* счётчик создан 21.08.2026 */
+
+(function () {
+  var id = window.METRIKA_ID;
+  if (!id) return;
+
+  /* Свои и машинные заходы в счёт не идут — 07.09.2026. За две недели из 13
+     визитов живыми были два: остальное дали headless-браузеры (превью-ссылки,
+     краулеры, автоматика) и собственные проверки деплоя.
+     ?dev=1 — свой заход; флаг запоминается в браузере, дальше метка не нужна,
+     снимается через ?dev=0. navigator.webdriver стоит у любого headless. */
+  try {
+    if (location.search.indexOf('dev=0') > -1) localStorage.removeItem('ez_dev');
+    else if (location.search.indexOf('dev=1') > -1) localStorage.setItem('ez_dev', '1');
+    if (localStorage.getItem('ez_dev') === '1') return;
+  } catch (e) {}
+  if (navigator.webdriver) return;
+
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  for (var j=0;j<e.scripts.length;j++){if(e.scripts[j].src===r){return;}}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,
+  a.parentNode.insertBefore(k,a)})
+  (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=' + id, 'ym');
+
+  ym(id, 'init', { ssr: true, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true, referrer: document.referrer, url: location.href });
+
+  /* Цели. Сам заход почти ничего не говорит: важно, ушёл ли человек в кейс
+     или написал. */
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('behance.net') > -1) ym(id, 'reachGoal', 'behance');
+    else if (href.indexOf('t.me/') > -1) ym(id, 'reachGoal', 'telegram');
+    else if (href.indexOf('mailto:') === 0) ym(id, 'reachGoal', 'mail');
+  });
+})();
+</script>
+<script>document.documentElement.className=new URLSearchParams(location.search).get('v')==='b'?'vb':'va';</script>
+<style>
+@font-face{font-family:'Yanone Kaffeesatz';font-weight:700;font-display:swap;src:url('../assets/fonts/yanone-700-cyrillic.woff2') format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Yanone Kaffeesatz';font-weight:700;font-display:swap;src:url('../assets/fonts/yanone-700-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Caveat';font-weight:500;font-display:swap;src:url('../assets/fonts/caveat-500-cyrillic.woff2') format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Caveat';font-weight:500;font-display:swap;src:url('../assets/fonts/caveat-500-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+:root{--o:#FF4B08;--ink:#0c0c0c;--pap:#f1efea;--cond:'Yanone Kaffeesatz','Arial Narrow',sans-serif;--hand:'Caveat','Segoe Print',cursive;--sans:'Inter',system-ui,sans-serif;--mono:Consolas,'Cascadia Mono','SF Mono',Menlo,monospace;--pad:clamp(20px,5.2vw,72px)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:hidden;overflow-x:clip;-webkit-text-size-adjust:100%}
+body{font:400 17px/1.5 var(--sans);background:var(--ink);color:var(--pap);overflow-x:hidden;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ol{list-style:none}
+.only-b{display:none}
+.s{position:relative;min-height:100vh;padding:calc(var(--pad) + 32px) var(--pad) var(--pad);display:flex;flex-direction:column;justify-content:center;overflow:hidden;isolation:isolate}
+.in{position:relative;z-index:1;width:100%;max-width:1240px;margin:0 auto}
+.d{background:var(--ink);color:var(--pap)}
+.l{background:var(--pap);color:var(--ink)}
+.meta{position:absolute;z-index:2;top:0;left:0;right:0;display:flex;justify-content:space-between;gap:16px;padding:20px var(--pad);font:12px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;opacity:.55}
+.bg{position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.9);transform-origin:60% 12%;filter:grayscale(1) contrast(1.3) brightness(.8);opacity:.22;pointer-events:none}
+.kick{font:13px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin-bottom:22px}
+.h{display:block;font:700 clamp(42px,5.6vw,88px)/.92 var(--cond);text-transform:uppercase;letter-spacing:.005em}
+.xl{display:block;font:700 clamp(112px,19vw,280px)/.8 var(--cond);letter-spacing:-.01em}
+.o{color:var(--o)}
+.lead{max-width:620px;font-size:clamp(16px,1.3vw,19px);line-height:1.5;margin-top:22px;opacity:.86}
+.lead+.lead{margin-top:12px}
+.note{max-width:780px;margin-top:32px;font:13px/1.55 var(--mono);opacity:.6}
+.hn{display:inline-block;margin-top:12px;font:12px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:center}
+/* обложка */
+.cover h1{margin-bottom:clamp(36px,6vh,72px)}
+.cover .h{font-size:clamp(36px,4.6vw,66px);margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid currentColor}
+.stats>div{padding:20px 24px 0 0}
+.stats>div+div{padding-left:24px;border-left:1px solid rgba(241,239,234,.25)}
+.stats b{font:700 56px/1 var(--cond)}
+.stats p{font-size:14px;opacity:.75;margin-top:8px;max-width:300px}
+.sig{margin-top:40px;font:13px/1.4 var(--mono);opacity:.55}
+.spark{position:absolute;right:0;top:-20px;width:150px;height:150px;fill:none;stroke:var(--o);stroke-width:6;stroke-linecap:round;filter:url(#rough)}
+/* поток */
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr) 30px) minmax(0,.9fr);align-items:stretch;margin-top:44px}
+.nd{position:relative;display:flex;flex-direction:column;gap:8px;padding:16px;border:1.5px solid currentColor}
+.nd b{font:700 26px/1 var(--cond);text-transform:uppercase}
+.nd p{font-size:13.5px;line-height:1.4;opacity:.8}
+.nd em{margin-top:auto;padding-top:8px;font:13px/1.3 var(--mono);font-style:normal}
+.stack{display:grid;gap:10px}
+.tag{align-self:flex-start;font:11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 7px;background:var(--ink);color:var(--pap)}
+.out{background:var(--o);border-color:var(--o);color:#fff;justify-content:flex-end}
+.out b{font-size:64px}
+.ar{display:flex;align-items:center;justify-content:center;font-style:normal}
+.ar svg{width:26px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pb{display:none}
+/* хуки */
+.clips{display:grid;gap:12px}
+.clip{position:relative;display:grid;grid-template-columns:28% minmax(0,1fr) auto;height:68px}
+.clip span{display:flex;align-items:center;padding:0 14px;font:13px/1.2 var(--mono)}
+.hk{background:var(--o);color:#fff}
+.bd{background:repeating-linear-gradient(90deg,rgba(241,239,234,.16) 0 1px,transparent 1px 52px),#1e1e1e;color:rgba(241,239,234,.8)}
+.cn{opacity:.7}
+/* цена */
+.price{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:end}
+.bars{margin-top:clamp(32px,5vh,56px)}
+.bar{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:4px 28px;align-items:center;padding:14px 0;border-top:1px solid rgba(12,12,12,.18)}
+.bar>span{font-weight:500;font-size:15px}
+.bar small{grid-column:1;font:12.5px/1.3 var(--mono);opacity:.6}
+.tr{grid-column:2;grid-row:1/span 2;display:flex;align-items:center;gap:14px}
+.tr i{display:block;height:40px;width:calc(var(--w)*.78%);background:var(--ink)}
+.key .tr i{background:var(--o)}
+.tr b{font:700 34px/1 var(--cond);white-space:nowrap}
+.key .tr b{color:var(--o)}
+/* сито */
+.sieve{display:flex;align-items:flex-end;gap:clamp(16px,3vw,44px);margin-top:40px}
+.sieve p{font:13px/1.4 var(--mono);opacity:.75;max-width:220px;margin-top:14px}
+.sieve .ar{align-self:center}
+.sieve .ar svg{width:48px;height:40px}
+.sieve .s2 .xl{font-size:clamp(84px,14vw,210px)}
+.sieve .s3 .xl{font-size:clamp(64px,10vw,150px)}
+/* недели */
+.weeks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:48px}
+.weeks li{position:relative;display:flex;flex-direction:column;gap:12px;padding-top:26px;border-top:2px solid currentColor}
+.weeks li::before{content:"";position:absolute;top:-8px;left:0;width:14px;height:14px;background:var(--ink)}
+.weeks li:last-child::before{background:var(--o)}
+.wk{font:700 34px/1 var(--cond);text-transform:uppercase}
+.weeks p{font-size:14.5px;line-height:1.5}
+.you{margin-top:auto;padding:12px 14px;background:var(--ink);color:var(--pap);font:13px/1.45 var(--mono)!important}
+.you b{color:var(--o);font-weight:400}
+/* отчёт */
+.paper{position:relative;background:#fbfaf7;color:var(--ink);padding:28px 30px 26px;font:13px/1.55 var(--mono);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.stamp{display:inline-block;margin-bottom:14px;font:11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;border:1px solid currentColor;padding:5px 7px;opacity:.55}
+.ph b{display:block;font:700 30px/1 var(--cond);text-transform:uppercase}
+.ph span{opacity:.6}
+.kpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0;padding:14px 0;border-top:1px solid #0002;border-bottom:1px solid #0002}
+.kpi b{display:block;font:700 30px/1 var(--cond)}
+.kpi span{font-size:11.5px;opacity:.7}
+.secs{display:grid;grid-template-columns:1fr 1fr;gap:14px 22px}
+.secs h4{font:600 12px/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.dec{margin-top:18px;padding:12px 14px;border-left:4px solid var(--o);background:#ff4b0812}
+.dec b{color:var(--o)}
+/* основа */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:44px}
+.card{position:relative;padding:22px;border:1.5px solid currentColor;display:flex;flex-direction:column;gap:10px}
+.card i{font:12px/1 var(--mono);font-style:normal;opacity:.55}
+.card b{font:700 30px/1 var(--cond);text-transform:uppercase}
+.card p{font-size:14.5px;line-height:1.5;opacity:.85}
+.card.wide{grid-column:1/-1}
+/* калибровка */
+.cal{width:100%;max-width:760px;border-collapse:collapse;margin-top:40px;font:15px/1 var(--mono)}
+.cal th,.cal td{position:relative;padding:16px 8px;text-align:center;border-bottom:1px solid rgba(241,239,234,.2)}
+.cal th:first-child,.cal td:first-child{text-align:left;padding-left:0;opacity:.7}
+.cal thead th{font:700 30px/1 var(--cond);opacity:.5}
+.cal .x{color:var(--o);opacity:1!important}
+.cal td.x{background:rgba(255,75,8,.12)}
+.rule{margin-top:18px;max-width:900px;font:700 clamp(30px,3.6vw,52px)/1.02 var(--cond);text-transform:uppercase}
+/* тестовое */
+.gal{display:grid;grid-template-columns:1112fr 736fr 1112fr;gap:16px;margin-top:40px;align-items:start}
+.gal img{width:100%}
+.gal figcaption{margin-top:10px;font:13px/1.4 var(--mono);opacity:.75}
+.btn{position:relative;display:inline-block;margin-top:32px;padding:14px 20px;border:1.5px solid currentColor;font:13px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.btn:hover{background:var(--ink);color:var(--pap)}
+/* вопросы */
+.qs{margin-top:44px}
+.qs li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:24px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(241,239,234,.22)}
+.qs i{font:700 72px/.8 var(--cond);font-style:normal;color:var(--o)}
+.qs p{font-size:clamp(19px,1.9vw,26px);line-height:1.35;max-width:820px}
+/* переключатель */
+.sw{position:fixed;z-index:20;right:16px;bottom:16px;display:flex;background:rgba(12,12,12,.88);border:1px solid rgba(241,239,234,.25)}
+.sw button{font:12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--pap);background:none;border:0;padding:11px 14px;cursor:pointer}
+.sw button[aria-pressed="true"]{background:var(--o);color:#fff}
+
+/* ===== вариант Б: рукописный ===== */
+.vb body{background:#f4efe4}
+.vb .only-b{display:block}
+.vb .pa{display:none}.vb .pb{display:inline}
+.vb .d{background:#ebe4d5;color:#161412}
+.vb .l{background:#f6f2ea;color:#161412}
+.vb .bg{display:none}
+.vb .meta{opacity:.5}
+.vb .h{font:600 clamp(36px,4.4vw,66px)/1.04 var(--sans);text-transform:none;letter-spacing:-.025em}
+.vb .cover .h{font-size:clamp(34px,4.2vw,62px)}
+.vb .xl{font-family:var(--hand);font-weight:500;line-height:.82;letter-spacing:0}
+.vb .hn{font:500 28px/1.1 var(--hand);letter-spacing:0;text-transform:none;color:var(--o);opacity:1;transform:rotate(-3deg)}
+.vb .stats{border-top:0}
+.vb .stats>div+div{border-left:0}
+.vb .stats b{font:500 64px/1 var(--hand)}
+.vb .nd,.vb .card,.vb .clip,.vb .btn{border-color:transparent}
+.vb .nd::before,.vb .card::before,.vb .clip::before,.vb .btn::before{content:"";position:absolute;inset:0;border:2px solid currentColor;filter:url(#rough);pointer-events:none}
+.vb .nd b,.vb .card b{font:500 26px/1 var(--hand);text-transform:none}.vb .card b{font-size:32px}
+.vb .out{background:var(--o);color:#fff;transform:rotate(-1.5deg)}
+.vb .out::before{display:none}
+.vb .out b{font-size:56px}
+.vb .tag{background:none;color:var(--o);font:500 28px/1 var(--hand);padding:0;text-transform:none;letter-spacing:0}
+.vb .ar svg{filter:url(#rough);stroke-width:2.4}
+.vb .hk{background:none;color:var(--o);font:500 24px/1 var(--hand);border-right:2px dashed rgba(22,20,18,.35)}
+.vb .bd{background:none;color:inherit}
+.vb .bar{border-top:1px dashed rgba(22,20,18,.3)}
+.vb .tr i{background:repeating-linear-gradient(-45deg,#161412 0 2px,transparent 2px 8px);filter:url(#rough)}
+.vb .key .tr i{background:repeating-linear-gradient(-45deg,var(--o) 0 3px,transparent 3px 8px)}
+.vb .tr b{font:500 42px/1 var(--hand)}
+.vb .weeks li{border-top-color:transparent}
+.vb .weeks li::after{content:"";position:absolute;top:-2px;left:0;right:-28px;border-top:2.5px solid currentColor;filter:url(#rough)}
+.vb .weeks li:last-child::after{right:0}
+.vb .weeks li::before{border-radius:50%;background:#161412}
+.vb .weeks li:last-child::before{background:var(--o)}
+.vb .wk{font:500 38px/1 var(--hand);text-transform:none}
+.vb .you{background:none;color:inherit;padding:0;font:500 25px/1.15 var(--hand)!important}
+.vb .you b{font-weight:500}
+.vb .paper{transform:rotate(-1.2deg);box-shadow:0 18px 40px rgba(60,40,10,.18)}
+.vb .paper::before{content:"";position:absolute;top:-14px;left:50%;width:120px;height:30px;margin-left:-60px;background:rgba(222,205,150,.75);transform:rotate(2deg)}
+.vb .ph b,.vb .kpi b{font-family:var(--hand);font-weight:500;text-transform:none}
+.vb .ring{position:relative;display:inline-block}
+.vb .ring::after{content:"";position:absolute;inset:-.1em -.16em -.04em;border:3px solid var(--o);border-radius:50%;transform:rotate(-4deg);filter:url(#rough);pointer-events:none}
+.vb .cal{font:500 24px/1 var(--hand)}
+.vb .cal thead th{font:500 30px/1 var(--hand)}
+.vb .cal th,.vb .cal td{border-bottom:1px dashed rgba(22,20,18,.3)}
+.vb .cal td.x{background:none}
+.vb .cal td.x::after{content:"";position:absolute;inset:4px 0;border:2.5px solid var(--o);border-radius:50%;filter:url(#rough)}
+.vb .rule{font:500 clamp(32px,3.6vw,52px)/1.1 var(--hand);text-transform:none}
+.vb .gal figure{background:#fff;padding:10px 10px 14px;box-shadow:0 12px 30px rgba(60,40,10,.16)}
+.vb .gal figure:nth-child(1){transform:rotate(-2deg)}.vb .gal figure:nth-child(2){transform:rotate(1.5deg) translateY(14px)}.vb .gal figure:nth-child(3){transform:rotate(-1deg)}
+.vb .gal figcaption{font:500 23px/1.15 var(--hand);opacity:1}
+.vb .btn{font:500 28px/1 var(--hand);text-transform:none;letter-spacing:0;color:var(--o)}
+.vb .btn:hover{background:none;color:#161412}
+.vb .qs li{border-top:1px dashed rgba(22,20,18,.3)}
+.vb .qs i{font:500 84px/.8 var(--hand)}
+.vb .sw{background:rgba(246,242,234,.94);border-color:rgba(22,20,18,.25)}
+.vb .sw button{color:#161412}
+.vb .sw button[aria-pressed="true"]{color:#fff}
+
+/* ===== развороты глав ===== */
+.op{justify-content:flex-start;padding-top:calc(var(--pad) + 72px)}
+.op .art{position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:cover;object-position:right bottom}
+.op .h{font-size:clamp(64px,9vw,150px);max-width:46vw}
+.op .lead{max-width:min(40vw,520px)}
+.va .ib,.vb .ia{display:none}
+/* ===== вариант А: серая бумага, фото с глубиной резкости ===== */
+.va{--o:#E8541E;--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 -.18'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.va body{background:#cfccc6}
+.va .s{background-color:#d4d1cb;background-image:var(--grain);color:#1a1918}
+.va .d{background-color:#c5c2bc}
+.va .bg{display:none}
+.va .stats{border-top-color:rgba(26,25,24,.5)}
+.va .stats>div+div{border-left-color:rgba(26,25,24,.22)}
+.va .bd{background:repeating-linear-gradient(90deg,rgba(212,209,203,.14) 0 1px,transparent 1px 52px),#1a1918;color:#d4d1cb}
+.va .cal th,.va .cal td{border-bottom-color:rgba(26,25,24,.2)}
+.va .cal td.x{background:rgba(232,84,30,.16)}
+.va .qs li{border-top-color:rgba(26,25,24,.22)}
+.va .dec{background:rgba(232,84,30,.08)}
+.va .paper{box-shadow:0 30px 70px rgba(40,36,30,.28)}
+.va .op::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(212,209,203,.94) 0,rgba(212,209,203,.7) 34%,rgba(212,209,203,0) 62%)}
+.va .op .art{filter:saturate(.9)}
+/* ===== вариант Б: рисунки, цвет главы ===== */
+.vb body{background:#F2EFE8}
+.vb .d,.vb .l,.vb .op{background:#F2EFE8}
+.vb .d{background:#ebe7df}
+.vb #s1,.vb #c1,.vb #s2,.vb #s3,.vb #s10,.vb #s11{--o:#2B50E8}
+.vb #c2,.vb #s4,.vb #s5{--o:#E5432D}
+.vb #c3,.vb #s6,.vb #s7{--o:#D99512}
+.vb #c4,.vb #s8,.vb #s9{--o:#1F9E6E}
+.vb .dec{background:none}
+.vb .op .h{font:500 clamp(80px,11vw,170px)/.9 var(--hand);color:var(--o)}
+@media (max-width:900px){.s.op{min-height:auto;padding-top:84px;flex-direction:column;align-items:stretch}.op .art{position:relative;inset:auto;height:auto;order:2;margin-top:24px}.va .op::after{display:none}.op .h{max-width:none;font-size:64px}.vb .op .h{font-size:84px}.op .lead{max-width:none}.op .art{object-position:72% bottom}.va .op::after{background:linear-gradient(180deg,rgba(212,209,203,.95) 0,rgba(212,209,203,.75) 38%,rgba(212,209,203,0) 60%)}}
+
+@media (min-width:901px) and (min-height:700px){html{scroll-snap-type:y proximity}.s{scroll-snap-align:start}}
+@media (max-width:900px){
+.s{min-height:auto;padding:76px 20px 56px}
+.meta{padding:20px;font-size:11px}
+.split,.price{grid-template-columns:1fr}
+.stats{grid-template-columns:1fr}
+.stats>div,.stats>div+div{padding:16px 0;border-left:0;border-bottom:1px solid rgba(241,239,234,.2)}
+.spark{width:90px;height:90px;top:-40px}
+.flow{display:flex;flex-direction:column}
+.ar{height:34px}.ar svg{transform:rotate(90deg)}
+.sieve .ar svg{transform:rotate(90deg);width:36px;height:30px}
+.weeks,.cards,.gal,.secs,.kpi{grid-template-columns:1fr}
+.card.wide{grid-column:auto}
+.sieve{flex-direction:column;align-items:flex-start;gap:8px}
+.bar{grid-template-columns:1fr}.tr{grid-column:1;grid-row:auto}
+.clip{grid-template-columns:40% minmax(0,1fr) auto;height:56px}.clip span{font-size:12px;padding:0 10px}
+.vb .hk{font-size:20px}
+.qs li{grid-template-columns:52px minmax(0,1fr);gap:14px}.qs i{font-size:46px}.vb .qs i{font-size:56px}
+.paper{padding:22px 18px}
+.cal{font-size:13px}.cal th,.cal td{padding:12px 4px}.cal thead th{font-size:22px}.vb .cal{font-size:19px}
+.sw{right:10px;bottom:10px}.sw button{padding:10px;font-size:11px}
+}
+
+/* 24.11 v3: развороты глав — картинка не больше 2/3, текст рядом, не поверх; контраст Б */
+@media (min-width:901px){
+.s.op{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);column-gap:calc(var(--pad)*1.2);align-items:center;padding-top:calc(var(--pad) + 44px)}
+.op .art{position:relative;inset:auto;z-index:1;grid-column:2;grid-row:1;width:100%;height:auto;max-height:calc(100vh - 2*var(--pad) - 64px);object-fit:contain;object-position:center}
+.op .in{grid-column:1;grid-row:1;position:relative;z-index:2;align-self:center}
+.op .h{font-size:clamp(44px,5.4vw,92px);max-width:none}
+.vb .op .h{font-size:clamp(60px,7.2vw,124px)}
+.op .lead{max-width:none}
+.va .op::after{display:none}
+}
+.vb .op{color:#161412}
+.vb{--ot:var(--o)}
+.vb #c3,.vb #s6,.vb #s7{--ot:#8F5E00}
+.vb #c4,.vb #s8,.vb #s9{--ot:#13774F}
+.vb #c3 .h{color:#B07800}
+.vb #c4 .h{color:#1A8A5F}
+.vb .you b,.vb .dec b,.vb .cal td.x,.vb .cal th.x{color:var(--ot)}
+.va .s{background-image:url(../assets/ryze-a-paper.webp);background-size:cover;background-position:center;background-blend-mode:soft-light}
+@media (min-width:901px){
+.sieve{display:grid;grid-template-columns:repeat(5,auto);justify-content:start;column-gap:clamp(16px,3vw,44px);row-gap:0}
+.sieve>div{display:contents}
+.sieve b.xl{align-self:last baseline}
+.sieve p{align-self:start}
+.sieve .s1 b{grid-area:1/1}.sieve .s1 p{grid-area:2/1}
+.sieve .ar:nth-child(2){grid-area:1/2;align-self:center}
+.sieve .s2 b{grid-area:1/3}.sieve .s2 p{grid-area:2/3}
+.sieve .ar:nth-child(4){grid-area:1/4;align-self:center}
+.sieve .s3 b{grid-area:1/5}.sieve .s3 p{grid-area:2/5}
+}
+.va .s.d,.va .s.l,.va .s.op{background-color:#d4d1cb}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="rough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter></svg>
+
+<section class="s d cover" id="s1">
+  <img class="bg" src="../assets/ryze-p1-news.webp" alt="">
+  <div class="meta"><span>Ryze · план испытательного срока</span><span>01 / 11</span></div>
+  <div class="in">
+    <svg class="spark only-b" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 10 62 50M58 112 59 70M8 60l42 1M112 58 70 60M24 22l28 28M98 100 69 70M100 20 69 51M20 98l31-29"/></svg>
+    <p class="kick">План испытательного срока · креативный директор</p>
+    <h1><span class="xl o">Сотня</span><span class="h">роликов в день.<br>От вас — <span class="ring">одно решение</span> в неделю</span></h1>
+    <div class="stats">
+      <div><b>~100</b><p>роликов в день к концу второй недели, без вашего участия в производстве</p></div>
+      <div><b>1 ч</b><p>в неделю — ваше время на креатив: пятничный отчёт и одно решение</p></div>
+      <div><b>5 %</b><p>роликов в среднем становятся победителями (Motion, 578 тыс. креативов). Поднимать эту долю — моя работа</p></div>
+    </div>
+    <p class="sig">Арсений Охотин · okhotin.site</p>
+  </div>
+</section>
+
+<section class="s op" id="c1">
+  <img class="art ia" src="../assets/ryze-st-a-team.webp" alt="">
+  <img class="art ib" src="../assets/ryze-st-b-team.webp" alt="">
+  <div class="meta"><span>Глава 1</span><span>Команда</span></div>
+  <div class="in"><p class="kick">Глава 1</p><h2 class="h">Команда</h2><p class="lead">15 UGC-креаторов, 5 дизайнеров и 3 старших дают сотню роликов в день</p></div>
+</section>
+
+<section class="s l" id="s2">
+  <div class="meta"><span>Plan / 01</span><span>02 / 11</span></div>
+  <div class="in">
+    <h2 class="h">Как команда даёт сотню</h2>
+    <p class="lead">Сотня в день — это около 12 гипотез, в каждой по 8 вариантов. План гипотез на неделю и эталоны форматов ставлю я, из плана каждый день идёт около 12. Продюсер пишет под них сценарии, я принимаю сценарий до съёмки, пока правка дешёвая.</p>
+    <div class="flow">
+      <div class="nd"><span class="tag">я</span><b>Сценарии</b><p>Продюсер пишет под мой план гипотез на неделю. Принимаю до съёмки</p><em>~12 гипотез в день из плана</em></div>
+      <i class="ar"><svg viewBox="0 0 28 24"><path class="pa" d="M1 12h25M19 5l7 7-7 7"/><path class="pb" d="M1 13c6-5 12 3 24-1M18 6l8 6-8 7"/></svg></i>
+      <div class="stack">
+        <div class="nd"><b>15 UGC-креаторов</b><p>2 тела × 3 хука в день</p><em>~90</em></div>
+        <div class="nd"><b>5 дизайнеров</b><p>ИИ-форматы: мультик, сцена, моушен</p><em>10–15</em></div>
+      </div>
+      <i class="ar"><svg viewBox="0 0 28 24"><path class="pa" d="M1 12h25M19 5l7 7-7 7"/><path class="pb" d="M1 11c7 4 13-4 24 1M18 6l8 6-8 7"/></svg></i>
+      <div class="nd"><b>3 старших</b><p>Две группы UGC и дизайн. Принимают по чек-листу, я говорю с тремя, а не с двадцатью</p></div>
+      <i class="ar"><svg viewBox="0 0 28 24"><path class="pa" d="M1 12h25M19 5l7 7-7 7"/><path class="pb" d="M1 13c6-5 12 3 24-1M18 6l8 6-8 7"/></svg></i>
+      <div class="nd"><span class="tag">я</span><b>Моя приёмка</b><p>Все новые форматы и выборочно 10 % проверенных</p><em>~40 мин</em></div>
+      <i class="ar"><svg viewBox="0 0 28 24"><path class="pa" d="M1 12h25M19 5l7 7-7 7"/><path class="pb" d="M1 11c7 4 13-4 24 1M18 6l8 6-8 7"/></svg></i>
+      <div class="nd out"><b>~100</b><p>роликов в день уходят в тест</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s d" id="s3">
+  <img class="bg" src="../assets/ryze-p1-episodes.webp" alt="">
+  <div class="meta"><span>Plan / 01</span><span>03 / 11</span></div>
+  <div class="in split">
+    <div>
+      <h2 class="h">Тело снято один раз, <span class="o">хуков три</span></h2>
+      <p class="lead">Ролик собирается из частей. Одно тело и три хука дают три ролика и сразу показывают, какой хук держит досмотр.</p>
+      <p class="lead">Монтаж сотни — шаблонами, в шаблоне меняются хук, актёр и призыв.</p>
+    </div>
+    <div>
+      <div class="clips">
+        <div class="clip"><span class="hk">Хук A · 3 с</span><span class="bd">Тело 1</span><span class="cn">ролик 1</span></div>
+        <div class="clip"><span class="hk">Хук B · 3 с</span><span class="bd">Тело 1</span><span class="cn">ролик 2</span></div>
+        <div class="clip"><span class="hk">Хук C · 3 с</span><span class="bd">Тело 1</span><span class="cn">ролик 3</span></div>
+      </div>
+      <span class="hn">одно тело — три ролика</span>
+    </div>
+  </div>
+</section>
+
+<section class="s op" id="c2">
+  <img class="art ia" src="../assets/ryze-st-a-money.webp" alt="">
+  <img class="art ib" src="../assets/ryze-st-b-money.webp" alt="">
+  <div class="meta"><span>Глава 2</span><span>Деньги</span></div>
+  <div class="in"><p class="kick">Глава 2</p><h2 class="h">Деньги</h2><p class="lead">Цена одного победителя и два сита перед платным тестом</p></div>
+</section>
+
+<section class="s l" id="s4">
+  <div class="meta"><span>Plan / 02</span><span>04 / 11</span></div>
+  <div class="in">
+    <div class="price">
+      <div><b class="xl o ring">$700</b><span class="hn">при двух ситах</span></div>
+      <div>
+        <h2 class="h">Цена одного победителя</h2>
+        <p class="lead">Считаю расход на сотню и делю на число победителей. Рекламный кабинет ведёт ваш закупщик, я решаю, что производить и что выключать по порогу цены клиента.</p>
+        <p class="lead">Проверка ролика до решения — около трёх целевых цен клиента (правило Flighted для Meta). При 100 роликах в день только проверка — тысячи долларов ежедневно. Поэтому два рычага: доля попаданий и сито перед платным тестом.</p>
+      </div>
+    </div>
+    <div class="bars">
+      <div class="bar" style="--w:100"><span>Все 100 роликов в платный тест</span><div class="tr"><i></i><b>$1 200</b></div><small>$6 000 в день · 5 победителей</small></div>
+      <div class="bar" style="--w:72"><span>То же, доля попаданий поднята до 7 %</span><div class="tr"><i></i><b>~$860</b></div><small>$6 000 в день · 7 победителей</small></div>
+      <div class="bar key" style="--w:58"><span>Два сита</span><div class="tr"><i></i><b>$700</b></div><small>$3 500 в день · 5 победителей</small></div>
+    </div>
+    <p class="note">Числа примерные: производство $10 за ролик, первый показ $10, полный тест $50 — допущение, подставлю ваши. Доля 5 % — средняя по данным Motion, у аккаунтов разного размера от 3,8 до 8,2 %.</p>
+  </div>
+</section>
+
+<section class="s d" id="s5">
+  <img class="bg" src="../assets/ryze-p1-thumb-a.webp" alt="">
+  <div class="meta"><span>Plan / 02</span><span>05 / 11</span></div>
+  <div class="in">
+    <h2 class="h">Два сита</h2>
+    <div class="sieve">
+      <div class="s1"><b class="xl">100</b><p>роликов — первый показ, по $10 на ролик</p></div>
+      <i class="ar"><svg viewBox="0 0 28 24"><path class="pa" d="M1 12h25M19 5l7 7-7 7"/><path class="pb" d="M1 13c6-5 12 3 24-1M18 6l8 6-8 7"/></svg></i>
+      <div class="s2"><b class="xl">30</b><p>верхних по досмотру первых секунд и кликам — полный тест, по $50 на ролик</p></div>
+      <i class="ar"><svg viewBox="0 0 28 24"><path class="pa" d="M1 12h25M19 5l7 7-7 7"/><path class="pb" d="M1 11c7 4 13-4 24 1M18 6l8 6-8 7"/></svg></i>
+      <div class="s3"><b class="xl o ring">5</b><p>победителей — в масштаб</p></div>
+    </div>
+    <p class="lead">Сито проверяю сразу: 10 роликов из отсева в неделю прогоняю полным тестом ($500) и сравниваю. Если среди них находятся победители, порог сита сдвигаю.</p>
+  </div>
+</section>
+
+<section class="s op" id="c3">
+  <img class="art ia" src="../assets/ryze-st-a-friday.webp" alt="">
+  <img class="art ib" src="../assets/ryze-st-b-weeks.webp" alt="">
+  <div class="meta"><span>Глава 3</span><span>Недели</span></div>
+  <div class="in"><p class="kick">Глава 3</p><h2 class="h">Недели</h2><p class="lead">Первые четыре недели и пятничный отчёт на одну страницу</p></div>
+</section>
+
+<section class="s l" id="s6">
+  <div class="meta"><span>Plan / 03</span><span>06 / 11</span></div>
+  <div class="in">
+    <h2 class="h">Первые четыре недели</h2>
+    <p class="lead">Первые три дня ничего не ломаю. Сначала цифры и то, как ролик сейчас идёт от сценария до запуска.</p>
+    <ol class="weeks">
+      <li><span class="wk">Дни 1–3</span><p>Цифры по роликам за 30 дней от закупщика. Разметка последних ~100 роликов: формат, хук, актёр, длина. По одному циклу с теми, кто сейчас ведёт UGC и дизайн.</p><p class="you"><b>Вам:</b> одна страница — стартовые числа и что меняю</p></li>
+      <li><span class="wk">Неделя 1</span><p>Доска: ролик — задача со стадиями. Эталоны трёх-четырёх работающих форматов, чек-лист приёмки, старшие групп. Утром цифры с закупщиком, 15 минут со старшими.</p><p class="you"><b>Вам:</b> первый пятничный отчёт</p></li>
+      <li><span class="wk">Неделя 2</span><p>Выход на ~100 в день. У каждой гипотезы порог «сработало» записан до запуска. Запуск сита и его проверка.</p><p class="you"><b>Вам:</b> сотня в день и второй пятничный отчёт</p></li>
+      <li><span class="wk">Недели 3–4</span><p>Доля победителей и цена победителя против стартовых чисел. Проигравшие ролики дают правила для эталонов.</p><p class="you"><b>Вам:</b> доля победителей выше стартовой</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="s d" id="s7">
+  <div class="meta"><span>Plan / 03</span><span>07 / 11</span></div>
+  <div class="in split">
+    <div>
+      <h2 class="h">Что вы получаете в пятницу</h2>
+      <p class="lead">Одна страница вместо просмотра роликов и согласований. Сверху три числа, ниже что выиграло, чему научились, деньги и одно решение, которое за вами.</p>
+    </div>
+    <div class="paper">
+      <span class="stamp">пример, числа условные</span>
+      <p class="ph"><b>Креатив, неделя 2</b><span>Пт · 5 минут чтения</span></p>
+      <div class="kpi">
+        <div><b>486</b><span>роликов (план 500)</span></div>
+        <div><b>27 · 5,6 %</b><span>победителей (неделя 1: 4,8 %)</span></div>
+        <div><b>$650</b><span>цена победителя (неделя 1, без сита: $1 250)</span></div>
+      </div>
+      <div class="secs">
+        <div><h4>Что выиграло</h4><p>Формат «владелец ночью над кабинетом»: 9 из 27 победителей. Лучший хук — цифра потерь в первые две секунды.</p></div>
+        <div><h4>Чему научились</h4><p>Ролики длиннее 35 секунд теряют досмотр на переходе к экрану продукта. Мост сократили до одной фразы, правка вошла в эталон.</p></div>
+        <div><h4>Деньги</h4><p>Проверка $12,7 тыс., масштаб победителей $58 тыс. Сито отсеяло 70 % роликов. На контрольных 10 из отсева победителей не нашлось.</p></div>
+        <div><h4>Гипотезы на неделю 3</h4><p>Сырая съёмка на телефон против постановки. Отзыв владельца салона против отзыва маркетолога.</p></div>
+      </div>
+      <p class="dec"><b>Решение за вами:</b> переводим ИИ-мультики из эксперимента в постоянный формат? Да — дизайнеры делают их каждый день, нет — оставляю 10 % на пробу.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s op" id="c4">
+  <img class="art ia" src="../assets/ryze-st-a-hands.webp" alt="">
+  <img class="art ib" src="../assets/ryze-st-b-system.webp" alt="">
+  <div class="meta"><span>Глава 4</span><span>Система</span></div>
+  <div class="in"><p class="kick">Глава 4</p><h2 class="h">Система</h2><p class="lead">База гипотез, банк хуков и калибровка вкуса</p></div>
+</section>
+
+<section class="s l" id="s8">
+  <div class="meta"><span>Plan / 04</span><span>08 / 11</span></div>
+  <div class="in">
+    <h2 class="h">На чём это держится</h2>
+    <p class="lead">Каждая правка попадает в базу и становится правилом для команды. Неделя за неделей поток дешевле и точнее.</p>
+    <div class="cards">
+      <div class="card"><i>01</i><b>База гипотез</b><p>У каждой порог успеха записан до запуска, поэтому вывод нельзя подогнать задним числом.</p></div>
+      <div class="card"><i>02</i><b>Банк хуков и блоков</b><p>Снятое один раз собирается в новые ролики, у каждого блока свои цифры досмотра.</p></div>
+      <div class="card"><i>03</i><b>Claude</b><p>Собирает референсы и размечает ролики по блокам. Решения принимаю я.</p></div>
+      <div class="card wide"><i>04</i><b>Калибровка вкуса</b><p>Старшие и я отвечаем «да / нет» по одним и тем же роликам. Расхождения разбираем и записываем правилами. Так моя планка переходит к двадцати людям без моего просмотра каждого ролика.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s d" id="s9">
+  <div class="meta"><span>Plan / 04 · пример</span><span>09 / 11</span></div>
+  <div class="in">
+    <h2 class="h">Калибровка: одни и те же ролики, каждый отвечает отдельно</h2>
+    <table class="cal">
+      <thead><tr><th></th><th>1</th><th>2</th><th class="x">3</th><th>4</th><th>5</th><th>6</th></tr></thead>
+      <tbody>
+        <tr><td>Старший</td><td>да</td><td>нет</td><td class="x">да</td><td>да</td><td>нет</td><td>да</td></tr>
+        <tr><td>Я</td><td>да</td><td>нет</td><td class="x">нет</td><td>да</td><td>нет</td><td>да</td></tr>
+      </tbody>
+    </table>
+    <p class="lead">Ролик 3 — расходимся. Разбираем вместе, вывод идёт в чек-лист:</p>
+    <p class="rule">«В первую секунду в кадре лицо или цифра, иначе на доработку»</p>
+    <p class="lead">В следующий раз старший решает так же без меня.</p>
+  </div>
+</section>
+
+<section class="s l" id="s10">
+  <div class="meta"><span>Тестовое</span><span>10 / 11</span></div>
+  <div class="in">
+    <h2 class="h">Что уже сделано под Ryze</h2>
+    <p class="lead">Страница тестового: форматы, хуки и блоки сценария под Ryze.</p>
+    <div class="gal">
+      <figure><img src="../assets/ryze-p1-news.webp" width="1112" height="640" alt="Сценка «Новости» из тестового"><figcaption>Хук с завязкой: сценка «Новости»</figcaption></figure>
+      <figure><img src="../assets/ryze-p1-episodes.webp" width="736" height="640" alt="Эпизоды одного формата"><figcaption>Один формат — новые эпизоды</figcaption></figure>
+      <figure><img src="../assets/ryze-p1-thumb-a.webp" width="1112" height="640" alt="Схема чужого победителя"><figcaption>Схема чужого победителя под Ryze</figcaption></figure>
+    </div>
+    <a class="btn" href="ryze-7q4m.html">Открыть страницу тестового →</a>
+  </div>
+</section>
+
+<section class="s d" id="s11">
+  <div class="meta"><span>Вопросы</span><span>11 / 11</span></div>
+  <div class="in">
+    <h2 class="h">Три вопроса к вам</h2>
+    <p class="lead">С этими числами пересчитаю цену победителя уже на ваших данных.</p>
+    <ol class="qs">
+      <li><i>01</i><p>Сколько в день уходит на рекламу и какая часть из этого — на проверку новых роликов?</p></li>
+      <li><i>02</i><p>Кто у вас победитель: ролик с какой ценой регистрации, пробного периода или оплаты?</p></li>
+      <li><i>03</i><p>Сколько роликов в день выходит сейчас и кто монтирует UGC?</p></li>
+    </ol>
+    <p class="sig">Арсений Охотин · okhotin.site</p>
+  </div>
+</section>
+
+<nav class="sw" aria-label="Стиль страницы"><button type="button" data-v="a">А · фото</button><button type="button" data-v="b">Б · рисунки</button></nav>
+<script>
+(function(){var r=document.documentElement,bs=document.querySelectorAll('.sw button');
+function set(x){r.className='v'+x;bs.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-v')===x)});try{var u=new URL(location.href);u.searchParams.set('v',x);history.replaceState(null,'',u)}catch(e){}}
+set(r.className==='vb'?'b':'a');bs.forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('data-v'))})});})();
+</script>
+</body>
+</html>
